@@ -11,7 +11,7 @@ Bir şeyi değiştirmek istersen önce burayı değiştir, sonra metinde aynı k
 | Ayar | Değer |
 |---|---|
 | Abi | **EMRE** (15 yaş) |
-| Kardeş | **CAN** (9 yaş) |
+| Kız kardeş | **ELİF** (9 yaş) |
 | Dede | **İSMAİL DEDE** (78 yaş) |
 | Anne | **ANNE** (40 yaş, sadece sesi duyulur) |
 | Varlık | **O** (sesleri taklit eden şey) |
@@ -29,10 +29,10 @@ Bir şeyi değiştirmek istersen önce burayı değiştir, sonra metinde aynı k
 | Karakter | Ses tarifi (Voice Design'a yapıştır) | Stability | Similarity | Style |
 |---|---|---|---|---|
 | **EMRE** | Genç Türk erkek, 15 yaşında, sakin ve koruyucu, hafif kısık, alçak ve net konuşan, İstanbul Türkçesi | 50 | 75 | 20 |
-| **CAN** | Küçük Türk erkek çocuk, ince ve tatlı ses, meraklı, korkunca titreyen, hızlı ve nefes nefese konuşan | 40 | 75 | 35 |
+| **ELİF** | Küçük Türk kız çocuk, 9 yaşında, ince ve tatlı ses, meraklı, korkunca titreyen, hızlı ve nefes nefese konuşan | 40 | 75 | 35 |
 | **İSMAİL DEDE** | Yaşlı Türk erkek, 78 yaşında, derin ve pürüzlü ses, yavaş ve ağır konuşan, her cümlenin sonunda kısa bir sessizlik | 60 | 80 | 15 |
 | **ANNE** | Türk kadın, 40 yaşında, sıcak ve şefkatli, hafif endişeli | 55 | 75 | 20 |
-| **O** | Ayrı ses yok. ANNE ve CAN seslerini kullanır (aşağıdaki "O" notuna bak) | — | — | — |
+| **O** | Ayrı ses yok. ANNE ve ELİF seslerini kullanır (aşağıdaki "O" notuna bak) | — | — | — |
 
 **"O" (varlık) için ses hilesi:** Varlık, taklit ettiği kişinin **kendi sesiyle** konuşur. Aynı ses ID'sini kullan, sadece:
 - Stability'yi **25**'e düşür (ses biraz "yanlış" ve kararsız gelir)
@@ -91,11 +91,11 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 |---|---|---|
 | R01 | ANNE *(arabadan, uzaktan)* | `[warmly] Sadece bir hafta, söz. Dedenizi üzmeyin, tamam mı?` |
 
-**GÖRSEL:** Çocuklar sırt çantalarıyla evin önünde. CAN abisinin montunun kolunu tutuyor. Evin karanlık üst kat penceresine bakıyor.
+**GÖRSEL:** Çocuklar sırt çantalarıyla evin önünde. ELİF abisinin montunun kolunu tutuyor. Evin karanlık üst kat penceresine bakıyor.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R02 | CAN | `[whispers] Abi… bu ev bize bakıyor gibi.` |
+| R02 | ELİF | `[whispers] Abi… bu ev bize bakıyor gibi.` |
 | R03 | EMRE | `[sighs] Saçmalama. Sadece eski bir ev.` |
 
 **GÖRSEL:** Kapı gıcırdayarak açılır. Elinde gaz lambasıyla İSMAİL DEDE. Boynunda, ipe geçirilmiş **paslı büyük bir anahtar.** *(Bu anahtarı net göster. Sahne 4'te önemli.)*
@@ -116,11 +116,11 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 |---|---|---|
 | R05 | İSMAİL DEDE | `Burası mutfak. Şurası benim odam. Sizin odanız da merdivenin yanında.` |
 
-**GÖRSEL:** Kamera koridorun sonuna kayar. Lamba ışığının zar zor ulaştığı yerde, diğerlerinden daha koyu bir kapı. Üzerinde **ağır bir asma kilit**, ahşapta tırnak izine benzeyen çizikler. CAN parmağıyla gösteriyor.
+**GÖRSEL:** Kamera koridorun sonuna kayar. Lamba ışığının zar zor ulaştığı yerde, diğerlerinden daha koyu bir kapı. Üzerinde **ağır bir asma kilit**, ahşapta tırnak izine benzeyen çizikler. ELİF parmağıyla gösteriyor.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R06 | CAN | `[curious] Dede, şu kapı neden kilitli?` |
+| R06 | ELİF | `[curious] Dede, şu kapı neden kilitli?` |
 
 **GÖRSEL:** Dede duruyor. Yavaşça döner. Yakın plan: yüzünün yarısı lambanın ışığında, yarısı karanlıkta. Eli istemsizce boynundaki anahtara gidiyor.
 
@@ -146,12 +146,12 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 
 **SES:** Derin sessizlik… sonra koridorun sonundan: **tak… tak… tak.**
 
-**GÖRSEL:** CAN'ın gözleri karanlıkta açılır.
+**GÖRSEL:** ELİF'in gözleri karanlıkta açılır.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R11 | CAN | `[whispers] [scared] Abi… uyuyor musun? Biri kapıyı çalıyor.` |
-| R12 | EMRE | `[sleepy] Rüzgârdır Can. Uyu hadi.` |
+| R11 | ELİF | `[whispers] [scared] Abi… uyuyor musun? Biri kapıyı çalıyor.` |
+| R12 | EMRE | `[sleepy] Rüzgârdır Elif. Uyu hadi.` |
 
 **SES:** Vuruşlar tekrar gelir. Bu sefer **daha yakın**, sanki koridorun ortasından: **TAK. TAK. TAK.**
 
@@ -159,19 +159,19 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 
 | # | Karakter | Replik |
 |---|---|---|
-| R13 | O *(ANNE sesiyle, boğuk, duvarın ardından)* | `[whispers] Can… kapıyı aç oğlum. Benim… annen.` |
+| R13 | O *(ANNE sesiyle, boğuk, duvarın ardından)* | `[whispers] Elif… kapıyı aç kızım. Benim… annen.` |
 
-**GÖRSEL:** CAN sevinçle doğrulur, yorganı atmak üzere.
-
-| # | Karakter | Replik |
-|---|---|---|
-| R14 | CAN | `[excited] Abi! Annem… annem gelmiş!` |
-
-**GÖRSEL:** EMRE hızla uzanıp CAN'ın bileğini yakalar. Yakın plan: EMRE'nin yüzü bembeyaz.
+**GÖRSEL:** ELİF sevinçle doğrulur, yorganı atmak üzere.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R15 | EMRE | `[tense whisper] Annem şehirde, Can. Arabanın gittiğini kendi gözümüzle gördük.` |
+| R14 | ELİF | `[excited] Abi! Annem… annem gelmiş!` |
+
+**GÖRSEL:** EMRE hızla uzanıp ELİF'in bileğini yakalar. Yakın plan: EMRE'nin yüzü bembeyaz.
+
+| # | Karakter | Replik |
+|---|---|---|
+| R15 | EMRE | `[tense whisper] Annem şehirde, Elif. Arabanın gittiğini kendi gözümüzle gördük.` |
 | R16 | EMRE | `[whispers] Yorganın altına gir. Ne duyarsan duy… kalkma.` |
 
 **SES:** Koridorda ağır ve yavaş uzaklaşan ayak sesleri. Sonra sessizlik.
@@ -202,22 +202,22 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 
 ### SAHNE 5 — YASAK ODA · 1:50 → 2:20 (30 sn)
 
-**GÖRSEL:** EMRE hızla yatak odasına geri döner. **CAN'ın yatağı boş.** Yorgan yere atılmış.
+**GÖRSEL:** EMRE hızla yatak odasına geri döner. **ELİF'in yatağı boş.** Yorgan yere atılmış.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R19 | O *(CAN sesiyle, yasak odadan)* | `Abi! Gel… buraya gel. Burada biri var… seni tanıyor.` |
+| R19 | O *(ELİF sesiyle, yasak odadan)* | `Abi! Gel… buraya gel. Burada biri var… seni tanıyor.` |
 
 **GÖRSEL:** EMRE koridorun sonuna yürür. Kamera arkasından takip eder (omuz üstü çekim). Kapıyı iter. Gıcırtı.
 
 **GÖRSEL — ODANIN İÇİ (renkler solar, neredeyse siyah-beyaz):**
 - Duvarlar baştan aşağı **eski siyah-beyaz fotoğraflarla** kaplı.
 - Yakın plan: tek bir fotoğraf. **İki küçük erkek kardeş**, kolkola. Altında el yazısıyla: *"İsmail ve Yusuf — 1979"*. Küçük olanın **yüzü tırnakla kazınmış.**
-- Odanın köşesinde, duvara dönük duran küçük bir siluet. **CAN'ın pijaması.** Kıpırdamıyor.
+- Odanın köşesinde, duvara dönük duran küçük bir siluet. **ELİF'in pembe pijaması, saçları önüne dökülmüş.** Kıpırdamıyor.
 
 | # | Karakter | Replik |
 |---|---|---|
-| R20 | EMRE | `[relieved, then angry] Can! Ne işin var burada? Hadi, çık dışarı!` |
+| R20 | EMRE | `[relieved, then angry] Elif! Ne işin var burada? Hadi, çık dışarı!` |
 
 **GÖRSEL:** Siluet kıpırdamıyor. 2 saniye sessizlik.
 
@@ -227,7 +227,7 @@ Harfler yavaşça, sanki tırnakla kazınmış gibi çizilir. Sonra bir kez titr
 
 | # | Karakter | Replik |
 |---|---|---|
-| R21 | CAN *(gerçek CAN, uykulu, koridordan)* | `[sleepy, confused] Abi…? Kiminle konuşuyorsun?` |
+| R21 | ELİF *(gerçek ELİF, uykulu, koridordan)* | `[sleepy, confused] Abi…? Kiminle konuşuyorsun?` |
 
 **GÖRSEL:** EMRE donar. Yakın plan: gözleri. Yavaşça köşeye bakar.
 Köşedeki siluet, **başını yavaş yavaş, olması gerekenden fazla** çevirmeye başlıyor…
@@ -244,7 +244,7 @@ Köşedeki siluet, **başını yavaş yavaş, olması gerekenden fazla** çevirm
 
 | # | Karakter | Replik |
 |---|---|---|
-| R22 | O *(CAN sesiyle, fısıltı)* | `[whispers] Sıra sende… abi.` |
+| R22 | O *(ELİF sesiyle, fısıltı)* | `[whispers] Sıra sende… abi.` |
 
 **2:23:** Siyah ekranın ortasında, yavaşça beliren beyaz yazı:
 
@@ -277,27 +277,27 @@ Toplam ~150 kelime diyalog var, yaklaşık 65–70 sn konuşmaya denk geliyor. G
 
 ```
 R01 | ANNE        | [warmly] Sadece bir hafta, söz. Dedenizi üzmeyin, tamam mı?
-R02 | CAN         | [whispers] Abi… bu ev bize bakıyor gibi.
+R02 | ELİF        | [whispers] Abi… bu ev bize bakıyor gibi.
 R03 | EMRE        | [sighs] Saçmalama. Sadece eski bir ev.
 R04 | DEDE        | Hoş geldiniz evlatlar. İçeri girin… hava kararıyor.
 R05 | DEDE        | Burası mutfak. Şurası benim odam. Sizin odanız da merdivenin yanında.
-R06 | CAN         | [curious] Dede, şu kapı neden kilitli?
+R06 | ELİF        | [curious] Dede, şu kapı neden kilitli?
 R07 | DEDE        | [serious] Bu evde tek bir kuralım var. Koridorun sonundaki odaya… asla girmeyeceksiniz.
 R08 | EMRE        | İçinde ne var ki?
 R09 | DEDE        | [pause] Hiçbir şey. Öyle kalsın diye kilitli.
 R10 | DEDE        | [whispers] Bir de… o kapı çalarsa, sakın açmayın.
-R11 | CAN         | [whispers] [scared] Abi… uyuyor musun? Biri kapıyı çalıyor.
-R12 | EMRE        | [sleepy] Rüzgârdır Can. Uyu hadi.
-R13 | O (ANNE)    | [whispers] Can… kapıyı aç oğlum. Benim… annen.
-R14 | CAN         | [excited] Abi! Annem… annem gelmiş!
-R15 | EMRE        | [tense whisper] Annem şehirde, Can. Arabanın gittiğini kendi gözümüzle gördük.
+R11 | ELİF        | [whispers] [scared] Abi… uyuyor musun? Biri kapıyı çalıyor.
+R12 | EMRE        | [sleepy] Rüzgârdır Elif. Uyu hadi.
+R13 | O (ANNE)    | [whispers] Elif… kapıyı aç kızım. Benim… annen.
+R14 | ELİF        | [excited] Abi! Annem… annem gelmiş!
+R15 | EMRE        | [tense whisper] Annem şehirde, Elif. Arabanın gittiğini kendi gözümüzle gördük.
 R16 | EMRE        | [whispers] Yorganın altına gir. Ne duyarsan duy… kalkma.
 R17 | EMRE        | [whispers] Dede… dede, uyan.
 R18 | EMRE        | [scared whisper] Anahtar… anahtar nerede?
-R19 | O (CAN)     | Abi! Gel… buraya gel. Burada biri var… seni tanıyor.
-R20 | EMRE        | [relieved, then angry] Can! Ne işin var burada? Hadi, çık dışarı!
-R21 | CAN         | [sleepy, confused] Abi…? Kiminle konuşuyorsun?
-R22 | O (CAN)     | [whispers] Sıra sende… abi.
+R19 | O (ELİF)    | Abi! Gel… buraya gel. Burada biri var… seni tanıyor.
+R20 | EMRE        | [relieved, then angry] Elif! Ne işin var burada? Hadi, çık dışarı!
+R21 | ELİF        | [sleepy, confused] Abi…? Kiminle konuşuyorsun?
+R22 | O (ELİF)    | [whispers] Sıra sende… abi.
 ```
 
 ---
@@ -327,5 +327,5 @@ R22 | O (CAN)     | [whispers] Sıra sende… abi.
 - **Yusuf:** Dedenin 1979'da o odada kaybolan küçük kardeşi. Dizinin ana sırrı.
 - **Kazınmış yüz:** Varlık, aldığı kardeşin yüzünü fotoğraflardan siler.
 - **Üç vuruş:** Varlığın imzası. Dizinin müzikal motifi olabilir.
-- **"Sıra sende":** Her kuşakta bir kardeş. Bu sefer sıra Emre ile Can'da.
+- **"Sıra sende":** Her kuşakta bir kardeş. Bu sefer sıra Emre ile Elif'te.
 - **Dede gerçekten uyuyor muydu?** 2. Bölüm buradan açılabilir.
