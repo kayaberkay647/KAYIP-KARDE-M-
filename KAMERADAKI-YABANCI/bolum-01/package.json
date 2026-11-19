@@ -1,0 +1,36 @@
+{
+  "name": "kameradaki-yabanci-bolum-01",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KAMERADAKİ YABANCI — 1. Bölüm: GECE 03.13 (Remotion, 1080x1920, 30 fps, 120 sn / 3600 kare, 18 sahne)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "scan": "tsx scripts/scan-assets.ts",
+    "validate": "tsx scripts/scan-assets.ts && tsx scripts/validate.ts",
+    "validate:final": "tsx scripts/scan-assets.ts && tsx scripts/validate.ts --final",
+    "prompts": "tsx scripts/export-production.ts",
+    "voices": "tsx scripts/generate-voices.ts",
+    "sfx": "tsx scripts/generate-sfx.ts",
+    "render:animatic": "npm run validate && remotion render src/index.ts KY-E01-Animatic out/KY_E01_animatic.mp4",
+    "render": "npm run validate:final && remotion render src/index.ts KY-E01 out/KY_E01_GECE_0313.mp4",
+    "still": "remotion still src/index.ts KY-E01-Animatic",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@remotion/cli": "4.0.545",
+    "@remotion/media-utils": "4.0.545",
+    "@remotion/noise": "4.0.545",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.545"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "19.2.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
