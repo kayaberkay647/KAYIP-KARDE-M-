@@ -49,7 +49,7 @@ ALTYAZI=0 node 3_render.js 4     # altyazısız sürüm
 - Arda: Microsoft **tr-TR-AhmetNeural**, Defne / İkinci Defne / çocuk fısıltısı: **tr-TR-EmelNeural** (edge-tts ile).
 - İkinci Defne aynı ses kimliğidir; yavaşlatılır, boğuklaştırılır, yankı + ters yankı + ince ikiz katman eklenir.
 - Fısıltılar LPC tabanlı fısıltı dönüştürmesiyle, korku titremesi perde/genlik titreşimiyle üretilir.
-- **ElevenLabs ile değiştirmek:** `proje/ses/diyalog/elevenlabs/L01.mp3 … L29.mp3` dosyalarını koyup üç adımı yeniden çalıştırın. Betik bu dosyaları TTS yerine kullanır; dudak senkronu sesin enerjisinden yeniden hesaplanır. Ticari yayın için lisanslı bir ses (ElevenLabs vb.) önerilir.
+- **ElevenLabs ile değiştirmek:** sahneye göre yazılmış etiketli metinler, ses tasarımları ve ayarlar `senaryo/ElevenLabs-Seslendirme-Metni.md` içinde. Üretilen dosyaları `proje/ses/diyalog/elevenlabs/L01.mp3 … L29.mp3` (veya .wav) adıyla koyup üç adımı yeniden çalıştırın. Betik bu dosyaları TTS yerine kullanır, dudak senkronunu sesten yeniden hesaplar; fısıltı/titreme eklemez, yalnızca oda akustiğini ekler. Ticari yayın için lisanslı bir ses (ElevenLabs vb.) önerilir.
 
 ## Düzenleme
 

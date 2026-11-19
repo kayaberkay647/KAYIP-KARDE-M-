@@ -10,9 +10,11 @@ Adım 1: Diyalog seslerini üretir, işler, zamanlar.
   animasyon/veri/diyalog.js          → altyazı + dudak senkronu verisi (animasyon okur)
   altyazi/kameradaki_ikinci_kardes_bolum_01.srt
 
-ElevenLabs kullanmak istersen: ses/diyalog/elevenlabs/ klasörüne L01.mp3 … L29.mp3 koy
+ElevenLabs kullanmak istersen: ses/diyalog/elevenlabs/ klasörüne L01.mp3 … L29.mp3 (ya da .wav) koy
 (tek parça, tüm replik). Bu betik onları TTS yerine kullanır; kelime zamanlaması
-sesin enerji eğrisinden tahmin edilir.
+sesin enerji eğrisinden tahmin edilir. Fısıltı/titreme/nefes eklenmez (oyuncunun performansı);
+yalnızca oda akustiği (uzak, kapı arkası, ikinci Defne yankısı, çocuk fısıltısı yankısı) eklenir.
+Metinler ve ayarlar: senaryo/ElevenLabs-Seslendirme-Metni.md
 
 Kullanım:  python3 1_diyalog_uret.py
 Gerekenler: pip install edge-tts numpy scipy soundfile ; ffmpeg
@@ -310,11 +312,13 @@ def main():
     for r in REPLIKLER:
         kim = r["kim"]; tem = SESLER[kim]
         hiz = tem["hiz"] + r.get("hiz", 0); perde = tem["perde"] + r.get("perde", 0)
-        eleven = os.path.join(ELEVEN, r["id"] + ".mp3")
+        eleven = next((os.path.join(ELEVEN, r["id"] + u) for u in (".mp3", ".wav") if os.path.exists(os.path.join(ELEVEN, r["id"] + u))), None)
         parcalar = []   # (ses dizisi, kelimeler[(t,dur,txt)])
-        if os.path.exists(eleven):
+        if eleven:
             x = sessizlik_kirp(oku(eleven))
+            bas = max(0, ilk_ses(x) - int(0.08 * SR)); x = x[bas:]     # baştaki sessizliği videodaki zamana göre kırp
             parcalar.append((x, enerji_zamanlama(x, ALTYAZI_METNI[r["id"]]), 0.0))
+            print(f"  {r['id']}: ElevenLabs kaydı kullanılıyor ({os.path.basename(eleven)})")
         else:
             for i, (metin, ara) in enumerate(r["parca"]):
                 yol = os.path.join(HAM, f"{r['id']}_{i}.mp3")
@@ -332,8 +336,9 @@ def main():
             yeni = np.zeros(max(len(kuru), kon + len(x))); yeni[:len(kuru)] += kuru; yeni[kon:kon + len(x)] += x
             kuru = yeni
             for (o, d, w) in kel: kelimeler.append((kon / SR + o, d, w))
-        # ses rengi işlemleri
-        if kim == "COCUK":
+        # ses rengi işlemleri (yalnızca TTS için; ElevenLabs kaydında fısıltı/titreme/nefes oyuncunun performansıdır)
+        if eleven: r = {**r, "fisilti": 0, "nefes": 0, "titreme": 0}
+        if kim == "COCUK" and not eleven:
             kuru = perde_kaydir(kuru, 1.10)
             kelimeler = [(o / 1.10, d / 1.10, w) for o, d, w in kelimeler]
         if r.get("fisilti", 0) > 0:
