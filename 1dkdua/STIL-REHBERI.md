@@ -8,7 +8,7 @@ Bu rehber bütün 1dkdua videolarının standardıdır. Yeni bir video bu kurall
 | | |
 |---|---|
 | Format | 9:16 dikey, **1080×1920**, **30 FPS** sabit |
-| Görüntü | H.264 High, CRF 14, `preset slow`, `tune animation`, yuv420p, BT.709 |
+| Görüntü | H.264 High, CRF 16, `preset slow`, `tune animation`, yuv420p, BT.709 |
 | Ses | AAC 256 kb/s, 44,1 kHz stereo |
 | Süre | Konuşmanın gerçek süresi + 6–7 sn kapanış |
 | Kararlılık | Her kare yalnızca `t` saniyesine bağlı (deterministik). Rastgelelik tohumlu, doku sabit: titreme yok |

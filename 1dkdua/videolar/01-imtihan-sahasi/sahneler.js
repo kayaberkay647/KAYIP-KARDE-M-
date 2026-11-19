@@ -437,7 +437,7 @@ const S_HOCA = {
 // Patika: ön soldan kemere, kemerden ufka. I ve J sahneleri aynı yerleşimi paylaşır (süreklilik).
 const KEMER = { x: 60, y: 340, s: 96 };
 function patikaNokta(u) { // u: 0 (ön sol) → 1 (ufuk)
-  const p = [[-560, 980], [-240, 600], [60, 342], [110, 200], [128, 40]];
+  const p = [[-780, 1150], [-240, 600], [60, 342], [110, 200], [128, 40]];
   const n = p.length - 1, k = Math.min(n - 1, Math.floor(u * n)), f = u * n - k;
   const a = p[Math.max(0, k - 1)], b = p[k], c = p[k + 1], d = p[Math.min(n, k + 2)];
   const cr = (i) => .5 * ((2 * b[i]) + (-a[i] + c[i]) * f + (2 * a[i] - 5 * b[i] + 4 * c[i] - d[i]) * f * f + (-a[i] + 3 * b[i] - 3 * c[i] + d[i]) * f * f * f);

@@ -19,7 +19,7 @@ const FPS = 30;
   const f0 = Math.round((+basS || 0) * FPS), f1 = Math.round((bitS ? +bitS : sure) * FPS);
   const ff = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-',
     '-vf', 'scale=in_range=full:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p',
-    '-c:v', 'libx264', '-preset', 'slow', '-crf', '14', '-tune', 'animation', '-profile:v', 'high', '-r', String(FPS),
+    '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-tune', 'animation', '-profile:v', 'high', '-r', String(FPS),
     '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-color_range', 'tv', '-movflags', '+faststart', cikti], { stdio: ['pipe', 'inherit', 'inherit'] });
   const bekleyen = new Map(); let siradaki = f0, dagit = f0; const bas = Date.now();
   const yaz = async () => {
