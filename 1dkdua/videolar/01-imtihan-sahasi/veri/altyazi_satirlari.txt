@@ -1,0 +1,21 @@
+#SKIP:[47]
+# Görünen altyazı metni :: her görünen kelimenin karşılık geldiği ASR kelime sayısı
+Dünyada insan çok malı mülkü olsa,
+bütün dünyaya malik olsa insan,
+yapacağı şey daha fazla yemek yemektir.
+Çok çok yapacağı daha güzel elbiseler giymektir.
+Çöplüktür, çöpe gider.
+Başka da gideceği yer yoktur.
+İnsan daha güzel hanelerde oturur.
+Harap olmaya mahkûmdur o haneler.
+Hani Karunların haneleri, sarayları nerededir?
+İnsan gider.
+Dünya metaı da gider. :: 1 2 1 1
+Rabbü'l-âlemîn, :: 3
+Kur'ân-ı Azîmüşşân'da buyurur, der ki: :: 3 1 1 1 1
+“Dünyadan nasibini unutma.”
+Dünya imtihan sahasıdır insanoğlu için.
+Rabbü'l-âlemîn o insanoğlunu :: 3 1 1
+o imtihan sahasına sokar,
+ama insan bilir ki
+o{47.86} imtihan sahasında durmayacaktır.

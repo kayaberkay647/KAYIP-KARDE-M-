@@ -1,0 +1,629 @@
+{
+ "satirlar": [
+  {
+   "metin": "Dünyada insan çok malı mülkü olsa,",
+   "kelimeler": [
+    {
+     "m": "Dünyada",
+     "s": 0.28,
+     "e": 0.54,
+     "asr": "Dünyada"
+    },
+    {
+     "m": "insan",
+     "s": 0.54,
+     "e": 0.94,
+     "asr": "insan"
+    },
+    {
+     "m": "çok",
+     "s": 2.55,
+     "e": 2.58,
+     "asr": "çok"
+    },
+    {
+     "m": "malı",
+     "s": 2.58,
+     "e": 3.0,
+     "asr": "malı"
+    },
+    {
+     "m": "mülkü",
+     "s": 3.0,
+     "e": 3.3,
+     "asr": "mülkü"
+    },
+    {
+     "m": "olsa,",
+     "s": 3.3,
+     "e": 3.48,
+     "asr": "olsa,"
+    }
+   ],
+   "bas": 0.28,
+   "son": 3.48
+  },
+  {
+   "metin": "bütün dünyaya malik olsa insan,",
+   "kelimeler": [
+    {
+     "m": "bütün",
+     "s": 4.25,
+     "e": 4.32,
+     "asr": "bütün"
+    },
+    {
+     "m": "dünyaya",
+     "s": 4.34,
+     "e": 4.9,
+     "asr": "dünyaya"
+    },
+    {
+     "m": "malik",
+     "s": 4.9,
+     "e": 5.38,
+     "asr": "malik"
+    },
+    {
+     "m": "olsa",
+     "s": 5.38,
+     "e": 5.52,
+     "asr": "olsa"
+    },
+    {
+     "m": "insan,",
+     "s": 5.52,
+     "e": 5.82,
+     "asr": "insan,"
+    }
+   ],
+   "bas": 4.25,
+   "son": 5.82
+  },
+  {
+   "metin": "yapacağı şey daha fazla yemek yemektir.",
+   "kelimeler": [
+    {
+     "m": "yapacağı",
+     "s": 6.94,
+     "e": 7.4,
+     "asr": "yapacağı"
+    },
+    {
+     "m": "şey",
+     "s": 7.4,
+     "e": 7.54,
+     "asr": "şey"
+    },
+    {
+     "m": "daha",
+     "s": 7.54,
+     "e": 7.8,
+     "asr": "daha"
+    },
+    {
+     "m": "fazla",
+     "s": 7.8,
+     "e": 8.1,
+     "asr": "fazla"
+    },
+    {
+     "m": "yemek",
+     "s": 8.1,
+     "e": 8.44,
+     "asr": "yemek"
+    },
+    {
+     "m": "yemektir.",
+     "s": 8.44,
+     "e": 9.1,
+     "asr": "yemektir."
+    }
+   ],
+   "bas": 6.94,
+   "son": 9.1
+  },
+  {
+   "metin": "Çok çok yapacağı daha güzel elbiseler giymektir.",
+   "kelimeler": [
+    {
+     "m": "Çok",
+     "s": 10.0,
+     "e": 10.08,
+     "asr": "Çok"
+    },
+    {
+     "m": "çok",
+     "s": 10.08,
+     "e": 10.3,
+     "asr": "çok"
+    },
+    {
+     "m": "yapacağı",
+     "s": 10.3,
+     "e": 10.9,
+     "asr": "yapacağı"
+    },
+    {
+     "m": "daha",
+     "s": 10.9,
+     "e": 11.0,
+     "asr": "daha"
+    },
+    {
+     "m": "güzel",
+     "s": 11.0,
+     "e": 11.32,
+     "asr": "güzel"
+    },
+    {
+     "m": "elbiseler",
+     "s": 11.32,
+     "e": 11.82,
+     "asr": "elbiseler"
+    },
+    {
+     "m": "giymektir.",
+     "s": 11.82,
+     "e": 12.58,
+     "asr": "giymektir."
+    }
+   ],
+   "bas": 10.0,
+   "son": 12.58
+  },
+  {
+   "metin": "Çöplüktür, çöpe gider.",
+   "kelimeler": [
+    {
+     "m": "Çöplüktür,",
+     "s": 13.16,
+     "e": 13.68,
+     "asr": "Çöplüktür,"
+    },
+    {
+     "m": "çöpe",
+     "s": 13.72,
+     "e": 14.06,
+     "asr": "çöpe"
+    },
+    {
+     "m": "gider.",
+     "s": 14.06,
+     "e": 14.28,
+     "asr": "gider."
+    }
+   ],
+   "bas": 13.16,
+   "son": 14.28
+  },
+  {
+   "metin": "Başka da gideceği yer yoktur.",
+   "kelimeler": [
+    {
+     "m": "Başka",
+     "s": 15.01,
+     "e": 15.16,
+     "asr": "Başka"
+    },
+    {
+     "m": "da",
+     "s": 15.16,
+     "e": 15.26,
+     "asr": "da"
+    },
+    {
+     "m": "gideceği",
+     "s": 15.26,
+     "e": 15.66,
+     "asr": "gideceği"
+    },
+    {
+     "m": "yer",
+     "s": 15.66,
+     "e": 15.8,
+     "asr": "yer"
+    },
+    {
+     "m": "yoktur.",
+     "s": 15.8,
+     "e": 16.18,
+     "asr": "yoktur."
+    }
+   ],
+   "bas": 15.01,
+   "son": 16.18
+  },
+  {
+   "metin": "İnsan daha güzel hanelerde oturur.",
+   "kelimeler": [
+    {
+     "m": "İnsan",
+     "s": 17.72,
+     "e": 18.0,
+     "asr": "İnsan"
+    },
+    {
+     "m": "daha",
+     "s": 18.0,
+     "e": 18.14,
+     "asr": "daha"
+    },
+    {
+     "m": "güzel",
+     "s": 18.14,
+     "e": 18.54,
+     "asr": "güzel"
+    },
+    {
+     "m": "hanelerde",
+     "s": 19.12,
+     "e": 19.54,
+     "asr": "hanelerde"
+    },
+    {
+     "m": "oturur.",
+     "s": 19.54,
+     "e": 20.0,
+     "asr": "oturur."
+    }
+   ],
+   "bas": 17.72,
+   "son": 20.0
+  },
+  {
+   "metin": "Harap olmaya mahkûmdur o haneler.",
+   "kelimeler": [
+    {
+     "m": "Harap",
+     "s": 21.07,
+     "e": 21.28,
+     "asr": "Harap"
+    },
+    {
+     "m": "olmaya",
+     "s": 21.28,
+     "e": 21.56,
+     "asr": "olmaya"
+    },
+    {
+     "m": "mahkûmdur",
+     "s": 21.56,
+     "e": 22.08,
+     "asr": "mahkumdur"
+    },
+    {
+     "m": "o",
+     "s": 22.08,
+     "e": 22.18,
+     "asr": "o"
+    },
+    {
+     "m": "haneler.",
+     "s": 22.18,
+     "e": 22.64,
+     "asr": "haneler."
+    }
+   ],
+   "bas": 21.07,
+   "son": 22.64
+  },
+  {
+   "metin": "Hani Karunların haneleri, sarayları nerededir?",
+   "kelimeler": [
+    {
+     "m": "Hani",
+     "s": 23.82,
+     "e": 23.9,
+     "asr": "Hani"
+    },
+    {
+     "m": "Karunların",
+     "s": 23.9,
+     "e": 24.5,
+     "asr": "Karunların"
+    },
+    {
+     "m": "haneleri,",
+     "s": 25.27,
+     "e": 25.58,
+     "asr": "haneleri,"
+    },
+    {
+     "m": "sarayları",
+     "s": 25.62,
+     "e": 26.1,
+     "asr": "sarayları"
+    },
+    {
+     "m": "nerededir?",
+     "s": 26.1,
+     "e": 26.56,
+     "asr": "nerededir?"
+    }
+   ],
+   "bas": 23.82,
+   "son": 26.56
+  },
+  {
+   "metin": "İnsan gider.",
+   "kelimeler": [
+    {
+     "m": "İnsan",
+     "s": 28.09,
+     "e": 28.38,
+     "asr": "İnsan"
+    },
+    {
+     "m": "gider.",
+     "s": 28.38,
+     "e": 28.56,
+     "asr": "gider."
+    }
+   ],
+   "bas": 28.09,
+   "son": 28.56
+  },
+  {
+   "metin": "Dünya metaı da gider.",
+   "kelimeler": [
+    {
+     "m": "Dünya",
+     "s": 29.69,
+     "e": 29.92,
+     "asr": "Dünya"
+    },
+    {
+     "m": "metaı",
+     "s": 29.92,
+     "e": 30.32,
+     "asr": "meta'a"
+    },
+    {
+     "m": "da",
+     "s": 30.32,
+     "e": 30.38,
+     "asr": "da"
+    },
+    {
+     "m": "gider.",
+     "s": 30.38,
+     "e": 30.58,
+     "asr": "gider."
+    }
+   ],
+   "bas": 29.69,
+   "son": 30.58
+  },
+  {
+   "metin": "Rabbü'l-âlemîn,",
+   "kelimeler": [
+    {
+     "m": "Rabbü'l-âlemîn,",
+     "s": 31.84,
+     "e": 32.76,
+     "asr": "Rabbü'l-âlemîn,"
+    }
+   ],
+   "bas": 31.84,
+   "son": 32.76
+  },
+  {
+   "metin": "Kur'ân-ı Azîmüşşân'da buyurur, der ki:",
+   "kelimeler": [
+    {
+     "m": "Kur'ân-ı",
+     "s": 33.76,
+     "e": 33.98,
+     "asr": "Kur'an-ı"
+    },
+    {
+     "m": "Azîmüşşân'da",
+     "s": 33.98,
+     "e": 34.66,
+     "asr": "azîmüşşan'da"
+    },
+    {
+     "m": "buyurur,",
+     "s": 34.66,
+     "e": 35.0,
+     "asr": "buyurur"
+    },
+    {
+     "m": "der",
+     "s": 35.0,
+     "e": 35.14,
+     "asr": "der"
+    },
+    {
+     "m": "ki:",
+     "s": 35.14,
+     "e": 35.34,
+     "asr": "ki,"
+    }
+   ],
+   "bas": 33.76,
+   "son": 35.34
+  },
+  {
+   "metin": "“Dünyadan nasibini unutma.”",
+   "kelimeler": [
+    {
+     "m": "“Dünyadan",
+     "s": 35.4,
+     "e": 35.86,
+     "asr": "dünyadan"
+    },
+    {
+     "m": "nasibini",
+     "s": 35.86,
+     "e": 36.42,
+     "asr": "nasibini"
+    },
+    {
+     "m": "unutma.”",
+     "s": 36.42,
+     "e": 36.82,
+     "asr": "unutma."
+    }
+   ],
+   "bas": 35.4,
+   "son": 36.82
+  },
+  {
+   "metin": "Dünya imtihan sahasıdır insanoğlu için.",
+   "kelimeler": [
+    {
+     "m": "Dünya",
+     "s": 37.97,
+     "e": 38.22,
+     "asr": "Dünya"
+    },
+    {
+     "m": "imtihan",
+     "s": 38.22,
+     "e": 38.74,
+     "asr": "imtihan"
+    },
+    {
+     "m": "sahasıdır",
+     "s": 38.74,
+     "e": 39.32,
+     "asr": "sahasıdır"
+    },
+    {
+     "m": "insanoğlu",
+     "s": 39.32,
+     "e": 40.0,
+     "asr": "insanoğlu"
+    },
+    {
+     "m": "için.",
+     "s": 40.0,
+     "e": 40.24,
+     "asr": "için."
+    }
+   ],
+   "bas": 37.97,
+   "son": 40.24
+  },
+  {
+   "metin": "Rabbü'l-âlemîn o insanoğlunu",
+   "kelimeler": [
+    {
+     "m": "Rabbü'l-âlemîn",
+     "s": 41.3,
+     "e": 41.96,
+     "asr": "Rabbü'l-âlemîn"
+    },
+    {
+     "m": "o",
+     "s": 41.96,
+     "e": 42.08,
+     "asr": "o"
+    },
+    {
+     "m": "insanoğlunu",
+     "s": 42.08,
+     "e": 42.8,
+     "asr": "insanoğlunu"
+    }
+   ],
+   "bas": 41.3,
+   "son": 42.8
+  },
+  {
+   "metin": "o imtihan sahasına sokar,",
+   "kelimeler": [
+    {
+     "m": "o",
+     "s": 42.8,
+     "e": 43.0,
+     "asr": "o"
+    },
+    {
+     "m": "imtihan",
+     "s": 43.0,
+     "e": 43.48,
+     "asr": "imtihan"
+    },
+    {
+     "m": "sahasına",
+     "s": 43.48,
+     "e": 44.02,
+     "asr": "sahasına"
+    },
+    {
+     "m": "sokar,",
+     "s": 44.02,
+     "e": 44.46,
+     "asr": "sokar"
+    }
+   ],
+   "bas": 42.8,
+   "son": 44.46
+  },
+  {
+   "metin": "ama insan bilir ki",
+   "kelimeler": [
+    {
+     "m": "ama",
+     "s": 45.26,
+     "e": 45.34,
+     "asr": "ama"
+    },
+    {
+     "m": "insan",
+     "s": 45.34,
+     "e": 45.96,
+     "asr": "insan"
+    },
+    {
+     "m": "bilir",
+     "s": 45.96,
+     "e": 46.48,
+     "asr": "bilir"
+    },
+    {
+     "m": "ki",
+     "s": 46.48,
+     "e": 46.6,
+     "asr": "ki"
+    }
+   ],
+   "bas": 45.26,
+   "son": 46.6
+  },
+  {
+   "metin": "o imtihan sahasında durmayacaktır.",
+   "kelimeler": [
+    {
+     "m": "o",
+     "s": 47.86,
+     "e": 47.88,
+     "asr": "o"
+    },
+    {
+     "m": "imtihan",
+     "s": 47.9,
+     "e": 48.44,
+     "asr": "imtihan"
+    },
+    {
+     "m": "sahasında",
+     "s": 48.44,
+     "e": 49.02,
+     "asr": "sahasında"
+    },
+    {
+     "m": "durmayacaktır.",
+     "s": 49.02,
+     "e": 50.0,
+     "asr": "durmayacaktır."
+    }
+   ],
+   "bas": 47.86,
+   "son": 50.0
+  }
+ ]
+}
