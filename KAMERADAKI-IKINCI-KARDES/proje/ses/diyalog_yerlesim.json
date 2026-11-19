@@ -1,0 +1,205 @@
+[
+ {
+  "id": "L01",
+  "kim": "ARDA",
+  "dosya": "L01_ARDA.wav",
+  "t": 11.25,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L02",
+  "kim": "DEFNE",
+  "dosya": "L02_DEFNE.wav",
+  "t": 15.05,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L03",
+  "kim": "ARDA",
+  "dosya": "L03_ARDA.wav",
+  "t": 23.1,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L04",
+  "kim": "DEFNE",
+  "dosya": "L04_DEFNE.wav",
+  "t": 26.55,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L05",
+  "kim": "DEFNE",
+  "dosya": "L05_DEFNE.wav",
+  "t": 31.2,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L06",
+  "kim": "ARDA",
+  "dosya": "L06_ARDA.wav",
+  "t": 34.75,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L07",
+  "kim": "ARDA",
+  "dosya": "L07_ARDA.wav",
+  "t": 43.3,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L08",
+  "kim": "DEFNE",
+  "dosya": "L08_DEFNE.wav",
+  "t": 47.0,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L09",
+  "kim": "DEFNE",
+  "dosya": "L09_DEFNE.wav",
+  "t": 49.85,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L10",
+  "kim": "ARDA",
+  "dosya": "L10_ARDA.wav",
+  "t": 53.45,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L11",
+  "kim": "DEFNE",
+  "dosya": "L11_DEFNE.wav",
+  "t": 61.1,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L12",
+  "kim": "ARDA",
+  "dosya": "L12_ARDA.wav",
+  "t": 64.75,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L13",
+  "kim": "ARDA",
+  "dosya": "L13_ARDA.wav",
+  "t": 73.6,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L14",
+  "kim": "ARDA",
+  "dosya": "L14_ARDA.wav",
+  "t": 76.7,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L15",
+  "kim": "ARDA",
+  "dosya": "L15_ARDA.wav",
+  "t": 85.1,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L16",
+  "kim": "DEFNE",
+  "dosya": "L16_DEFNE.wav",
+  "t": 87.05,
+  "ortam": "uzak"
+ },
+ {
+  "id": "L17",
+  "kim": "ARDA",
+  "dosya": "L17_ARDA.wav",
+  "t": 94.45,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L18",
+  "kim": "DEFNE",
+  "dosya": "L18_DEFNE.wav",
+  "t": 97.35,
+  "ortam": "uzak"
+ },
+ {
+  "id": "L19",
+  "kim": "ARDA",
+  "dosya": "L19_ARDA.wav",
+  "t": 100.05,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L20",
+  "kim": "DEFNE",
+  "dosya": "L20_DEFNE.wav",
+  "t": 103.25,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L21",
+  "kim": "DEFNE",
+  "dosya": "L21_DEFNE.wav",
+  "t": 110.45,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L22",
+  "kim": "ARDA",
+  "dosya": "L22_ARDA.wav",
+  "t": 113.85,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L23",
+  "kim": "IKINCI",
+  "dosya": "L23_IKINCI.wav",
+  "t": 122.60002083333333,
+  "ortam": "kapi"
+ },
+ {
+  "id": "L24",
+  "kim": "DEFNE",
+  "dosya": "L24_DEFNE.wav",
+  "t": 126.95,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L25",
+  "kim": "ARDA",
+  "dosya": "L25_ARDA.wav",
+  "t": 130.35,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L26",
+  "kim": "IKINCI",
+  "dosya": "L26_IKINCI.wav",
+  "t": 132.95002083333335,
+  "ortam": "hayalet"
+ },
+ {
+  "id": "L27",
+  "kim": "DEFNE",
+  "dosya": "L27_DEFNE.wav",
+  "t": 142.45,
+  "ortam": "yakin"
+ },
+ {
+  "id": "L28",
+  "kim": "IKINCI",
+  "dosya": "L28_IKINCI.wav",
+  "t": 144.95002083333335,
+  "ortam": "hayalet"
+ },
+ {
+  "id": "L29",
+  "kim": "COCUK",
+  "dosya": "L29_COCUK.wav",
+  "t": 147.95,
+  "ortam": "cocuk"
+ }
+]

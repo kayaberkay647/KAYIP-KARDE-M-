@@ -2,3 +2,7 @@
 *.webm
 .gecici_ses.wav
 node_modules/
+KAMERADAKI-IKINCI-KARDES/proje/ses/efekt/
+KAMERADAKI-IKINCI-KARDES/proje/ses/bolum_01_ses.wav
+KAMERADAKI-IKINCI-KARDES/proje/.render_gecici/
+__pycache__/

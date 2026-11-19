@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kameradaki İkinci Kardeş</title>
+<style>
+  @font-face { font-family: "Inter"; src: url("fontlar/Inter-SemiBold.otf"); font-weight: 600; }
+  @font-face { font-family: "Inter"; src: url("fontlar/Inter-Bold.otf"); font-weight: 700; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontlar/JetBrainsMono-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "JetBrains Mono"; src: url("fontlar/JetBrainsMono-Bold.ttf"); font-weight: 600 700; }
+  :root { --bg: #07080b; --panel: #11141a; --text: #e6e9ee; --soft: #8a93a2; --accent: #6aa0ff; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: "Inter", system-ui, sans-serif; }
+  body.render { background: #000; }
+  #sahne { position: relative; height: min(88vh, calc(100vw * 16 / 9)); aspect-ratio: 9 / 16; margin: 1vh auto 0; background: #000; }
+  body.render #sahne { height: 1920px; margin: 0; }
+  canvas { width: 100%; height: 100%; display: block; }
+  #kontrol { display: flex; gap: 10px; align-items: center; justify-content: center; padding: 10px 16px; flex-wrap: wrap; }
+  #kontrol button { background: #1b2130; color: var(--text); border: 1px solid #2a3446; border-radius: 6px; padding: 7px 14px; cursor: pointer; font: inherit; }
+  #kontrol input[type=range] { width: min(60vw, 420px); accent-color: var(--accent); }
+  #zaman { font-variant-numeric: tabular-nums; color: var(--soft); min-width: 92px; }
+  body.render #kontrol { display: none; }
+</style>
+</head>
+<body>
+<div id="sahne"><canvas id="c" width="1080" height="1920"></canvas></div>
+<div id="kontrol">
+  <button id="oynat">▶ Oynat</button>
+  <input id="ilerleme" type="range" min="0" max="150" step="0.01" value="0">
+  <span id="zaman">0:00 / 2:30</span>
+  <label><input id="alt" type="checkbox" checked> Altyazı</label>
+</div>
+<audio id="ses" preload="auto"><source src="../ses/bolum_01_ses.flac" type="audio/flac"><source src="../ses/bolum_01_ses.wav" type="audio/wav"></audio>
+<script src="veri/diyalog.js"></script>
+<script src="veri/yurume.js"></script>
+<script src="js/cekirdek.js"></script>
+<script src="js/karakter.js"></script>
+<script src="js/mekan.js"></script>
+<script src="js/cekim.js"></script>
+<script src="js/sahneler.js"></script>
+<script src="js/ana.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.has('render')) document.body.classList.add('render');
+  if (q.get('altyazi') === '0') ALTYAZI_ACIK = false;
+  const ses = document.getElementById('ses'), btn = document.getElementById('oynat'), bar = document.getElementById('ilerleme'), zm = document.getElementById('zaman');
+  const fmt = s => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  let oynuyor = false, sonT = +(q.get('t') || 0);
+  function ciz(t) { kare(t); bar.value = t; zm.textContent = fmt(t) + ' / 2:30'; }
+  function dongu() { if (!oynuyor) return; const t = ses.currentTime; if (t >= SURE) { oynuyor = false; btn.textContent = '▶ Oynat'; } ciz(Math.min(t, SURE - 0.001)); requestAnimationFrame(dongu); }
+  btn.onclick = () => { oynuyor = !oynuyor; btn.textContent = oynuyor ? '❚❚ Duraklat' : '▶ Oynat'; if (oynuyor) { ses.currentTime = +bar.value; ses.play().catch(() => { }); dongu(); } else ses.pause(); };
+  bar.oninput = () => { ses.currentTime = +bar.value; if (!oynuyor) ciz(+bar.value); };
+  document.getElementById('alt').onchange = e => { ALTYAZI_ACIK = e.target.checked; if (!oynuyor) ciz(+bar.value); };
+  document.addEventListener('keydown', e => { if (e.code === 'Space') { e.preventDefault(); btn.click(); } });
+  hazirla().then(() => { ciz(sonT); window.HAZIR_SAYFA = true; });
+</script>
+</body>
+</html>
