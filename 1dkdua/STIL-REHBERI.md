@@ -85,6 +85,7 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
 - **ADAM:** krem sarık + zeytin külah, kısa koyu kahve sakal, zeytin kaftan, krem entari, hardal kuşak, kahve yemeni.
 - **HOCA:** beyaz büyük sarık, siyah gür sakal, koyu cübbe, koyu kuşak, beyaz entari.
 - **TALEBE1/2:** toprak ve yeşil-gri tonlarda, arkadan.
+- **COCUK** (04): `motor/mahser.js`; `govdeBoy` ile çocuk oranı, `parlayanCocuk()` ışık halesiyle çizer.
 - **KADIN** (03): ev sahibi hanım; krem başörtüsü (yüz ovali açıkta), bordo entari, altın kuşak. Kadın karakterler aynı iskeletle `ortu` paletiyle çizilir.
 - **YASLI_HOCA** (02): beyaz büyük sarık, beyaz sakal ve kaş, yuvarlak gözlük, beyaz gömlek, gri-bej hırka.
 - **FAKIR** (02): gri sakal, sade sarık, yamalı kahve cübbe.
@@ -114,6 +115,8 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
   varlıkları yalnızca **nur** (yumuşak ışık sütunu/halesi, `nur()`) ve mekânla (Yeşil Kubbe, Bakî, kerpiç ev) simgelenir.
 - Vefat etmiş kişiler yalnızca kefenli, yüzsüz biçimle gösterilir. Kabir azabı, cehennem gibi konular korku öğesi
   kullanılmadan, sembolik ve sade anlatılır.
+- Yas ve vefat temaları (04): vefat eden kişi/çocuk **hiçbir zaman bedeniyle ya da yüzüyle** gösterilmez; yalnızca beyaz kefen paketi ve ışık kullanılır. Ahiretteki çocuklar `COCUK` paletiyle, sade yüzlü ışık figürleri olarak çizilir (ışıklı hale, büyük baş, kısa gövde).
+- Sahabe ve peygamberler gök fenerleri, ışıklı pencere ve mekânla simgelenir (`gokFeneri`, `nur`, `medine`).
 - Arapça cümleler altyazıda Türkçe transkripsiyonla (Sümme yürfeu…, Allâhümme'rham…) yazılır; konuşmacı mealini söylediyse
   meal ayrıca eklenmez.
 

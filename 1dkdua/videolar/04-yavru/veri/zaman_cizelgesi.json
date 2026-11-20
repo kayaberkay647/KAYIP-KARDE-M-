@@ -1,0 +1,1499 @@
+{
+ "satirlar": [
+  {
+   "metin": "İki yaşında bir oğlum vefat etti,",
+   "kelimeler": [
+    {
+     "m": "İki",
+     "s": 0.06,
+     "e": 0.2,
+     "asr": "İki"
+    },
+    {
+     "m": "yaşında",
+     "s": 0.2,
+     "e": 0.54,
+     "asr": "yaşında"
+    },
+    {
+     "m": "bir",
+     "s": 0.54,
+     "e": 0.74,
+     "asr": "bir"
+    },
+    {
+     "m": "oğlum",
+     "s": 0.74,
+     "e": 1.0,
+     "asr": "oğlum"
+    },
+    {
+     "m": "vefat",
+     "s": 1.0,
+     "e": 1.36,
+     "asr": "vefat"
+    },
+    {
+     "m": "etti,",
+     "s": 1.36,
+     "e": 1.64,
+     "asr": "etti."
+    }
+   ],
+   "bas": 0.06,
+   "son": 1.64
+  },
+  {
+   "metin": "Daha mesela benim de ikinci çocuğumdu.",
+   "kelimeler": [
+    {
+     "m": "Daha",
+     "s": 2.26,
+     "e": 2.32,
+     "asr": "Daha"
+    },
+    {
+     "m": "mesela",
+     "s": 2.32,
+     "e": 2.74,
+     "asr": "mesela"
+    },
+    {
+     "m": "benim",
+     "s": 2.74,
+     "e": 3.16,
+     "asr": "benim"
+    },
+    {
+     "m": "de",
+     "s": 3.16,
+     "e": 3.36,
+     "asr": "de"
+    },
+    {
+     "m": "ikinci",
+     "s": 3.93,
+     "e": 4.14,
+     "asr": "ikinci"
+    },
+    {
+     "m": "çocuğumdu.",
+     "s": 4.14,
+     "e": 4.86,
+     "asr": "çocuğumdu."
+    }
+   ],
+   "bas": 2.26,
+   "son": 4.86
+  },
+  {
+   "metin": "İki yaşındaydı.",
+   "kelimeler": [
+    {
+     "m": "İki",
+     "s": 4.92,
+     "e": 5.28,
+     "asr": "İki"
+    },
+    {
+     "m": "yaşındaydı.",
+     "s": 5.28,
+     "e": 5.92,
+     "asr": "yaşındaydı."
+    }
+   ],
+   "bas": 4.92,
+   "son": 5.92
+  },
+  {
+   "metin": "Tabii herkes kaçar, ama ben aldım, koydum,",
+   "kelimeler": [
+    {
+     "m": "Tabii",
+     "s": 6.56,
+     "e": 6.62,
+     "asr": "Tabii"
+    },
+    {
+     "m": "herkes",
+     "s": 6.62,
+     "e": 6.94,
+     "asr": "her şey"
+    },
+    {
+     "m": "kaçar,",
+     "s": 6.94,
+     "e": 7.38,
+     "asr": "kaçar"
+    },
+    {
+     "m": "ama",
+     "s": 7.38,
+     "e": 7.56,
+     "asr": "ama"
+    },
+    {
+     "m": "ben",
+     "s": 7.56,
+     "e": 7.8,
+     "asr": "ben"
+    },
+    {
+     "m": "aldım,",
+     "s": 7.8,
+     "e": 8.2,
+     "asr": "aldım,"
+    },
+    {
+     "m": "koydum,",
+     "s": 8.2,
+     "e": 8.58,
+     "asr": "koydum,"
+    }
+   ],
+   "bas": 6.56,
+   "son": 8.58
+  },
+  {
+   "metin": "güzelce yıkadım, seve seve öptüm,",
+   "kelimeler": [
+    {
+     "m": "güzelce",
+     "s": 8.6,
+     "e": 9.06,
+     "asr": "güzelce"
+    },
+    {
+     "m": "yıkadım,",
+     "s": 9.06,
+     "e": 9.44,
+     "asr": "yıkadım,"
+    },
+    {
+     "m": "seve",
+     "s": 9.58,
+     "e": 9.84,
+     "asr": "seve"
+    },
+    {
+     "m": "seve",
+     "s": 9.84,
+     "e": 10.24,
+     "asr": "seve."
+    },
+    {
+     "m": "öptüm,",
+     "s": 10.82,
+     "e": 11.12,
+     "asr": "Öptüm,"
+    }
+   ],
+   "bas": 8.6,
+   "son": 11.12
+  },
+  {
+   "metin": "kokladım, kefenledim,",
+   "kelimeler": [
+    {
+     "m": "kokladım,",
+     "s": 11.12,
+     "e": 11.52,
+     "asr": "kokladım,"
+    },
+    {
+     "m": "kefenledim,",
+     "s": 11.7,
+     "e": 12.36,
+     "asr": "kefenledim,"
+    }
+   ],
+   "bas": 11.12,
+   "son": 12.36
+  },
+  {
+   "metin": "götürdüm namazını kıldım.",
+   "kelimeler": [
+    {
+     "m": "götürdüm",
+     "s": 12.36,
+     "e": 12.9,
+     "asr": "götürdüm"
+    },
+    {
+     "m": "namazını",
+     "s": 12.9,
+     "e": 13.32,
+     "asr": "namazını"
+    },
+    {
+     "m": "kıldım.",
+     "s": 13.32,
+     "e": 13.76,
+     "asr": "kıldım."
+    }
+   ],
+   "bas": 12.36,
+   "son": 13.76
+  },
+  {
+   "metin": "Hem de huzuru buldum.",
+   "kelimeler": [
+    {
+     "m": "Hem",
+     "s": 14.17,
+     "e": 14.2,
+     "asr": "Hem"
+    },
+    {
+     "m": "de",
+     "s": 14.2,
+     "e": 14.28,
+     "asr": "de"
+    },
+    {
+     "m": "huzuru",
+     "s": 14.28,
+     "e": 14.68,
+     "asr": "huzuru"
+    },
+    {
+     "m": "buldum.",
+     "s": 14.68,
+     "e": 15.02,
+     "asr": "buldu."
+    }
+   ],
+   "bas": 14.17,
+   "son": 15.02
+  },
+  {
+   "metin": "Hazreti İbrahim, Peygamberimizin oğlu vefat ederken,",
+   "kelimeler": [
+    {
+     "m": "Hazreti",
+     "s": 15.47,
+     "e": 15.54,
+     "asr": "Hz."
+    },
+    {
+     "m": "İbrahim,",
+     "s": 15.7,
+     "e": 16.38,
+     "asr": "İbrahim,"
+    },
+    {
+     "m": "Peygamberimizin",
+     "s": 16.54,
+     "e": 17.34,
+     "asr": "Peygamberimizin"
+    },
+    {
+     "m": "oğlu",
+     "s": 17.34,
+     "e": 17.52,
+     "asr": "oğlu"
+    },
+    {
+     "m": "vefat",
+     "s": 17.52,
+     "e": 17.84,
+     "asr": "vefat"
+    },
+    {
+     "m": "ederken,",
+     "s": 17.84,
+     "e": 18.36,
+     "asr": "ederken,"
+    }
+   ],
+   "bas": 15.47,
+   "son": 18.36
+  },
+  {
+   "metin": "Hazreti Peygamber'in gözünden yaşlar akmaya başlıyor.",
+   "kelimeler": [
+    {
+     "m": "Hazreti",
+     "s": 18.82,
+     "e": 18.88,
+     "asr": "Hz."
+    },
+    {
+     "m": "Peygamber'in",
+     "s": 19.05,
+     "e": 19.72,
+     "asr": "Peygamberin"
+    },
+    {
+     "m": "gözünden",
+     "s": 19.72,
+     "e": 20.14,
+     "asr": "gözünden"
+    },
+    {
+     "m": "yaşlar",
+     "s": 20.14,
+     "e": 20.68,
+     "asr": "yaşlar"
+    },
+    {
+     "m": "akmaya",
+     "s": 20.68,
+     "e": 21.02,
+     "asr": "akmaya"
+    },
+    {
+     "m": "başlıyor.",
+     "s": 21.02,
+     "e": 21.54,
+     "asr": "başlıyor."
+    }
+   ],
+   "bas": 18.82,
+   "son": 21.54
+  },
+  {
+   "metin": "Sahabe-i Kiram şaşırıyor.",
+   "kelimeler": [
+    {
+     "m": "Sahabe-i",
+     "s": 22.17,
+     "e": 22.6,
+     "asr": "Sahabe-i"
+    },
+    {
+     "m": "Kiram",
+     "s": 22.6,
+     "e": 22.86,
+     "asr": "Kiram"
+    },
+    {
+     "m": "şaşırıyor.",
+     "s": 22.86,
+     "e": 23.46,
+     "asr": "şaşırıyor."
+    }
+   ],
+   "bas": 22.17,
+   "son": 23.46
+  },
+  {
+   "metin": "“Ya Resulallah, siz de mi ağlıyorsunuz?”",
+   "kelimeler": [
+    {
+     "m": "“Ya",
+     "s": 23.79,
+     "e": 23.82,
+     "asr": "Ya"
+    },
+    {
+     "m": "Resulallah,",
+     "s": 23.82,
+     "e": 24.78,
+     "asr": "Resulallah'tır,"
+    },
+    {
+     "m": "siz",
+     "s": 25.21,
+     "e": 25.3,
+     "asr": "siz"
+    },
+    {
+     "m": "de",
+     "s": 25.3,
+     "e": 25.5,
+     "asr": "de"
+    },
+    {
+     "m": "mi",
+     "s": 25.5,
+     "e": 25.64,
+     "asr": "mi"
+    },
+    {
+     "m": "ağlıyorsunuz?”",
+     "s": 25.64,
+     "e": 26.44,
+     "asr": "ağlıyorsunuz?"
+    }
+   ],
+   "bas": 23.79,
+   "son": 26.44
+  },
+  {
+   "metin": "Efendimiz diyor, ağlamak iki kısımdır.",
+   "kelimeler": [
+    {
+     "m": "Efendimiz",
+     "s": 26.66,
+     "e": 26.94,
+     "asr": "Efendimiz"
+    },
+    {
+     "m": "diyor,",
+     "s": 26.94,
+     "e": 27.32,
+     "asr": "diyor,"
+    },
+    {
+     "m": "ağlamak",
+     "s": 27.46,
+     "e": 28.1,
+     "asr": "ağlamak"
+    },
+    {
+     "m": "iki",
+     "s": 28.24,
+     "e": 28.28,
+     "asr": "iki"
+    },
+    {
+     "m": "kısımdır.",
+     "s": 28.28,
+     "e": 28.76,
+     "asr": "kısım."
+    }
+   ],
+   "bas": 26.66,
+   "son": 28.76
+  },
+  {
+   "metin": "Bir rahmetin gereği gözyaşı dökersin,",
+   "kelimeler": [
+    {
+     "m": "Bir",
+     "s": 28.76,
+     "e": 28.9,
+     "asr": "Bir"
+    },
+    {
+     "m": "rahmetin",
+     "s": 28.9,
+     "e": 29.48,
+     "asr": "rahmetin"
+    },
+    {
+     "m": "gereği",
+     "s": 29.48,
+     "e": 30.0,
+     "asr": "gereği"
+    },
+    {
+     "m": "gözyaşı",
+     "s": 30.49,
+     "e": 30.86,
+     "asr": "gözyaşı"
+    },
+    {
+     "m": "dökersin,",
+     "s": 30.86,
+     "e": 31.52,
+     "asr": "dökersin."
+    }
+   ],
+   "bas": 28.76,
+   "son": 31.52
+  },
+  {
+   "metin": "bir de isyan ederek ağlarsın.",
+   "kelimeler": [
+    {
+     "m": "bir",
+     "s": 31.9,
+     "e": 31.94,
+     "asr": "Bir"
+    },
+    {
+     "m": "de",
+     "s": 31.94,
+     "e": 32.1,
+     "asr": "de"
+    },
+    {
+     "m": "isyan",
+     "s": 32.1,
+     "e": 32.64,
+     "asr": "isyan"
+    },
+    {
+     "m": "ederek",
+     "s": 32.64,
+     "e": 33.1,
+     "asr": "ederek"
+    },
+    {
+     "m": "ağlarsın.",
+     "s": 33.1,
+     "e": 33.82,
+     "asr": "ağlarsın."
+    }
+   ],
+   "bas": 31.9,
+   "son": 33.82
+  },
+  {
+   "metin": "İsyan ederek ağlamayın,",
+   "kelimeler": [
+    {
+     "m": "İsyan",
+     "s": 34.01,
+     "e": 34.3,
+     "asr": "İsyan"
+    },
+    {
+     "m": "ederek",
+     "s": 34.3,
+     "e": 34.68,
+     "asr": "ederek"
+    },
+    {
+     "m": "ağlamayın,",
+     "s": 34.68,
+     "e": 35.46,
+     "asr": "ağlamayın,"
+    }
+   ],
+   "bas": 34.01,
+   "son": 35.46
+  },
+  {
+   "metin": "rahmetin gereği gözyaşı dökebilirsin.",
+   "kelimeler": [
+    {
+     "m": "rahmetin",
+     "s": 35.48,
+     "e": 36.08,
+     "asr": "rahmetin"
+    },
+    {
+     "m": "gereği",
+     "s": 36.08,
+     "e": 36.54,
+     "asr": "gereği"
+    },
+    {
+     "m": "gözyaşı",
+     "s": 36.54,
+     "e": 37.22,
+     "asr": "gözyaşı"
+    },
+    {
+     "m": "dökebilirsin.",
+     "s": 37.22,
+     "e": 37.88,
+     "asr": "tökebilirsin."
+    }
+   ],
+   "bas": 35.48,
+   "son": 37.88
+  },
+  {
+   "metin": "Onun için biz de tabii",
+   "kelimeler": [
+    {
+     "m": "Onun",
+     "s": 38.33,
+     "e": 38.38,
+     "asr": "Onun"
+    },
+    {
+     "m": "için",
+     "s": 38.38,
+     "e": 38.64,
+     "asr": "için"
+    },
+    {
+     "m": "biz",
+     "s": 38.64,
+     "e": 38.86,
+     "asr": "biz"
+    },
+    {
+     "m": "de",
+     "s": 38.86,
+     "e": 39.0,
+     "asr": "de"
+    },
+    {
+     "m": "tabii",
+     "s": 39.0,
+     "e": 39.26,
+     "asr": "tabii"
+    }
+   ],
+   "bas": 38.33,
+   "son": 39.26
+  },
+  {
+   "metin": "iki damla gözümüze yaş gelmiştir, ama",
+   "kelimeler": [
+    {
+     "m": "iki",
+     "s": 39.79,
+     "e": 39.84,
+     "asr": "iki"
+    },
+    {
+     "m": "damla",
+     "s": 39.84,
+     "e": 40.2,
+     "asr": "damla"
+    },
+    {
+     "m": "gözümüze",
+     "s": 40.2,
+     "e": 40.74,
+     "asr": "gözümüze"
+    },
+    {
+     "m": "yaş",
+     "s": 40.74,
+     "e": 40.92,
+     "asr": "yaş"
+    },
+    {
+     "m": "gelmiştir,",
+     "s": 40.92,
+     "e": 41.48,
+     "asr": "gelmiştir"
+    },
+    {
+     "m": "ama",
+     "s": 41.48,
+     "e": 41.62,
+     "asr": "ama"
+    }
+   ],
+   "bas": 39.79,
+   "son": 41.62
+  },
+  {
+   "metin": "bir de şu var,",
+   "kelimeler": [
+    {
+     "m": "bir",
+     "s": 42.21,
+     "e": 42.26,
+     "asr": "bir"
+    },
+    {
+     "m": "de",
+     "s": 42.26,
+     "e": 42.48,
+     "asr": "de"
+    },
+    {
+     "m": "şu",
+     "s": 42.48,
+     "e": 42.68,
+     "asr": "şu"
+    },
+    {
+     "m": "var,",
+     "s": 42.68,
+     "e": 42.92,
+     "asr": "var,"
+    }
+   ],
+   "bas": 42.21,
+   "son": 42.92
+  },
+  {
+   "metin": "Allah Resulü bir müjde vermiş.",
+   "kelimeler": [
+    {
+     "m": "Allah",
+     "s": 43.39,
+     "e": 43.48,
+     "asr": "Allah"
+    },
+    {
+     "m": "Resulü",
+     "s": 43.48,
+     "e": 43.9,
+     "asr": "Resulü"
+    },
+    {
+     "m": "bir",
+     "s": 43.9,
+     "e": 44.02,
+     "asr": "bir"
+    },
+    {
+     "m": "müjde",
+     "s": 44.02,
+     "e": 44.28,
+     "asr": "müjde"
+    },
+    {
+     "m": "vermiş.",
+     "s": 44.28,
+     "e": 44.72,
+     "asr": "vermiş."
+    }
+   ],
+   "bas": 43.39,
+   "son": 44.72
+  },
+  {
+   "metin": "Ahirette, mahkeme-i kübrada, mahşerde,",
+   "kelimeler": [
+    {
+     "m": "Ahirette,",
+     "s": 45.22,
+     "e": 45.78,
+     "asr": "Ahirette,"
+    },
+    {
+     "m": "mahkeme-i",
+     "s": 46.51,
+     "e": 46.98,
+     "asr": "mahkeme-i"
+    },
+    {
+     "m": "kübrada,",
+     "s": 46.98,
+     "e": 47.42,
+     "asr": "kübrada,"
+    },
+    {
+     "m": "mahşerde,",
+     "s": 47.52,
+     "e": 48.08,
+     "asr": "mahşerde"
+    }
+   ],
+   "bas": 45.22,
+   "son": 48.08
+  },
+  {
+   "metin": "Rabbim bizi huzuruna alırken,",
+   "kelimeler": [
+    {
+     "m": "Rabbim",
+     "s": 48.68,
+     "e": 48.96,
+     "asr": "Rabbim"
+    },
+    {
+     "m": "bizi",
+     "s": 48.96,
+     "e": 49.12,
+     "asr": "bizi"
+    },
+    {
+     "m": "huzuruna",
+     "s": 49.12,
+     "e": 49.64,
+     "asr": "huzuruna"
+    },
+    {
+     "m": "alırken,",
+     "s": 49.64,
+     "e": 50.28,
+     "asr": "alırken"
+    }
+   ],
+   "bas": 48.68,
+   "son": 50.28
+  },
+  {
+   "metin": "mahşer meydanı, insanlar su susayacak.",
+   "kelimeler": [
+    {
+     "m": "mahşer",
+     "s": 50.28,
+     "e": 51.14,
+     "asr": "mahşer"
+    },
+    {
+     "m": "meydanı,",
+     "s": 51.14,
+     "e": 51.62,
+     "asr": "meydani,"
+    },
+    {
+     "m": "insanlar",
+     "s": 52.2,
+     "e": 52.5,
+     "asr": "insanlar"
+    },
+    {
+     "m": "su",
+     "s": 52.5,
+     "e": 52.78,
+     "asr": "su"
+    },
+    {
+     "m": "susayacak.",
+     "s": 52.78,
+     "e": 53.26,
+     "asr": "satacak,"
+    }
+   ],
+   "bas": 50.28,
+   "son": 53.26
+  },
+  {
+   "metin": "Su, su.",
+   "kelimeler": [
+    {
+     "m": "Su,",
+     "s": 53.36,
+     "e": 53.56,
+     "asr": "su,"
+    },
+    {
+     "m": "su.",
+     "s": 53.72,
+     "e": 53.94,
+     "asr": "su."
+    }
+   ],
+   "bas": 53.36,
+   "son": 53.94
+  },
+  {
+   "metin": "İnsanların yani aklı baliğ olmadan",
+   "kelimeler": [
+    {
+     "m": "İnsanların",
+     "s": 54.45,
+     "e": 55.18,
+     "asr": "İnsanların"
+    },
+    {
+     "m": "yani",
+     "s": 55.18,
+     "e": 55.58,
+     "asr": "yani"
+    },
+    {
+     "m": "aklı",
+     "s": 56.32,
+     "e": 56.64,
+     "asr": "akıl"
+    },
+    {
+     "m": "baliğ",
+     "s": 56.64,
+     "e": 56.92,
+     "asr": "balık"
+    },
+    {
+     "m": "olmadan",
+     "s": 56.92,
+     "e": 57.5,
+     "asr": "olmadan"
+    }
+   ],
+   "bas": 54.45,
+   "son": 57.5
+  },
+  {
+   "metin": "ölen çocukları, yavruları,",
+   "kelimeler": [
+    {
+     "m": "ölen",
+     "s": 57.5,
+     "e": 57.96,
+     "asr": "ölen"
+    },
+    {
+     "m": "çocukları,",
+     "s": 57.96,
+     "e": 58.66,
+     "asr": "çocukları,"
+    },
+    {
+     "m": "yavruları,",
+     "s": 58.76,
+     "e": 59.46,
+     "asr": "yavruları,"
+    }
+   ],
+   "bas": 57.5,
+   "son": 59.46
+  },
+  {
+   "metin": "Peygamber Efendimiz'in havzından o insanlara su götürecek.",
+   "kelimeler": [
+    {
+     "m": "Peygamber",
+     "s": 59.46,
+     "e": 60.14,
+     "asr": "Peygamber"
+    },
+    {
+     "m": "Efendimiz'in",
+     "s": 60.14,
+     "e": 60.84,
+     "asr": "Efendimiz'in"
+    },
+    {
+     "m": "havzından",
+     "s": 60.84,
+     "e": 61.56,
+     "asr": "havzundan"
+    },
+    {
+     "m": "o",
+     "s": 61.56,
+     "e": 61.66,
+     "asr": "o"
+    },
+    {
+     "m": "insanlara",
+     "s": 61.66,
+     "e": 62.22,
+     "asr": "insanlara"
+    },
+    {
+     "m": "su",
+     "s": 62.22,
+     "e": 62.44,
+     "asr": "su"
+    },
+    {
+     "m": "götürecek.",
+     "s": 62.44,
+     "e": 63.04,
+     "asr": "götürecek."
+    }
+   ],
+   "bas": 59.46,
+   "son": 63.04
+  },
+  {
+   "metin": "Herkes diyecek ki,",
+   "kelimeler": [
+    {
+     "m": "Herkes",
+     "s": 63.12,
+     "e": 63.52,
+     "asr": "Herkes"
+    },
+    {
+     "m": "diyecek",
+     "s": 63.52,
+     "e": 63.98,
+     "asr": "diyecek"
+    },
+    {
+     "m": "ki,",
+     "s": 63.98,
+     "e": 64.1,
+     "asr": "ki"
+    }
+   ],
+   "bas": 63.12,
+   "son": 64.1
+  },
+  {
+   "metin": "“Oğlum, yavrum ben senin annenim, babanım.”",
+   "kelimeler": [
+    {
+     "m": "“Oğlum,",
+     "s": 64.1,
+     "e": 64.38,
+     "asr": "oğlum,"
+    },
+    {
+     "m": "yavrum",
+     "s": 64.77,
+     "e": 65.06,
+     "asr": "yavrum"
+    },
+    {
+     "m": "ben",
+     "s": 65.06,
+     "e": 65.18,
+     "asr": "ben"
+    },
+    {
+     "m": "senin",
+     "s": 65.18,
+     "e": 65.56,
+     "asr": "senin"
+    },
+    {
+     "m": "annenim,",
+     "s": 65.56,
+     "e": 66.06,
+     "asr": "annenin"
+    },
+    {
+     "m": "babanım.”",
+     "s": 66.06,
+     "e": 66.66,
+     "asr": "babanım."
+    }
+   ],
+   "bas": 64.1,
+   "son": 66.66
+  },
+  {
+   "metin": "Çocuklar derlermiş ki,",
+   "kelimeler": [
+    {
+     "m": "Çocuklar",
+     "s": 66.97,
+     "e": 67.32,
+     "asr": "Çocuklar"
+    },
+    {
+     "m": "derlermiş",
+     "s": 67.32,
+     "e": 67.98,
+     "asr": "derlermiş"
+    },
+    {
+     "m": "ki,",
+     "s": 67.98,
+     "e": 68.12,
+     "asr": "ki,"
+    }
+   ],
+   "bas": 66.97,
+   "son": 68.12
+  },
+  {
+   "metin": "“Yok biz annemizi, babamızı kokusundan tanırız.”",
+   "kelimeler": [
+    {
+     "m": "“Yok",
+     "s": 68.12,
+     "e": 68.28,
+     "asr": "yok"
+    },
+    {
+     "m": "biz",
+     "s": 68.43,
+     "e": 68.42,
+     "asr": "biz"
+    },
+    {
+     "m": "annemizi,",
+     "s": 68.42,
+     "e": 69.0,
+     "asr": "annemizi"
+    },
+    {
+     "m": "babamızı",
+     "s": 69.0,
+     "e": 69.66,
+     "asr": "babamızı"
+    },
+    {
+     "m": "kokusundan",
+     "s": 70.07,
+     "e": 70.62,
+     "asr": "kokusundan"
+    },
+    {
+     "m": "tanırız.”",
+     "s": 70.62,
+     "e": 71.2,
+     "asr": "tanırız."
+    }
+   ],
+   "bas": 68.12,
+   "son": 71.2
+  },
+  {
+   "metin": "Bakarlarmış, “sen benim annem, babam değilsin.”",
+   "kelimeler": [
+    {
+     "m": "Bakarlarmış,",
+     "s": 71.47,
+     "e": 72.08,
+     "asr": "Bakarlarmış,"
+    },
+    {
+     "m": "“sen",
+     "s": 72.12,
+     "e": 72.3,
+     "asr": "sen"
+    },
+    {
+     "m": "benim",
+     "s": 72.3,
+     "e": 72.6,
+     "asr": "benim"
+    },
+    {
+     "m": "annem,",
+     "s": 72.6,
+     "e": 72.96,
+     "asr": "annem"
+    },
+    {
+     "m": "babam",
+     "s": 72.96,
+     "e": 73.26,
+     "asr": "babam"
+    },
+    {
+     "m": "değilsin.”",
+     "s": 73.26,
+     "e": 73.86,
+     "asr": "değilsin."
+    }
+   ],
+   "bas": 71.47,
+   "son": 73.86
+  },
+  {
+   "metin": "Resulullah bu müjdeyi verdiği için,",
+   "kelimeler": [
+    {
+     "m": "Resulullah",
+     "s": 74.3,
+     "e": 74.74,
+     "asr": "Resulullah"
+    },
+    {
+     "m": "bu",
+     "s": 74.74,
+     "e": 74.94,
+     "asr": "bu"
+    },
+    {
+     "m": "müjdeyi",
+     "s": 74.94,
+     "e": 75.32,
+     "asr": "müjdeyi"
+    },
+    {
+     "m": "verdiği",
+     "s": 75.32,
+     "e": 75.72,
+     "asr": "verdiği"
+    },
+    {
+     "m": "için,",
+     "s": 75.72,
+     "e": 76.0,
+     "asr": "için,"
+    }
+   ],
+   "bas": 74.3,
+   "son": 76.0
+  },
+  {
+   "metin": "böyle sahabe-i kiramlar çok sevinmiş.",
+   "kelimeler": [
+    {
+     "m": "böyle",
+     "s": 76.53,
+     "e": 76.58,
+     "asr": "böyle"
+    },
+    {
+     "m": "sahabe-i",
+     "s": 76.58,
+     "e": 77.32,
+     "asr": "sahabe-i"
+    },
+    {
+     "m": "kiramlar",
+     "s": 77.32,
+     "e": 77.76,
+     "asr": "kiramlar"
+    },
+    {
+     "m": "çok",
+     "s": 77.76,
+     "e": 77.94,
+     "asr": "çok"
+    },
+    {
+     "m": "sevinmiş.",
+     "s": 77.94,
+     "e": 78.52,
+     "asr": "sevinmiş."
+    }
+   ],
+   "bas": 76.53,
+   "son": 78.52
+  },
+  {
+   "metin": "Yani bir yavrunuz ölürse,",
+   "kelimeler": [
+    {
+     "m": "Yani",
+     "s": 79.07,
+     "e": 79.2,
+     "asr": "Yani"
+    },
+    {
+     "m": "bir",
+     "s": 79.2,
+     "e": 79.4,
+     "asr": "bir"
+    },
+    {
+     "m": "yavrunuz",
+     "s": 79.4,
+     "e": 80.04,
+     "asr": "yavrunuz"
+    },
+    {
+     "m": "ölürse,",
+     "s": 80.04,
+     "e": 80.58,
+     "asr": "ölürse,"
+    }
+   ],
+   "bas": 79.07,
+   "son": 80.58
+  },
+  {
+   "metin": "ahirette size faydası vardır.",
+   "kelimeler": [
+    {
+     "m": "ahirette",
+     "s": 81.11,
+     "e": 81.48,
+     "asr": "ahirette"
+    },
+    {
+     "m": "size",
+     "s": 81.57,
+     "e": 81.72,
+     "asr": "size"
+    },
+    {
+     "m": "faydası",
+     "s": 81.72,
+     "e": 82.28,
+     "asr": "faydası"
+    },
+    {
+     "m": "vardır.",
+     "s": 82.28,
+     "e": 82.58,
+     "asr": "vardır."
+    }
+   ],
+   "bas": 81.11,
+   "son": 82.58
+  },
+  {
+   "metin": "Böyle bir şefkate ihtiyacımız var.",
+   "kelimeler": [
+    {
+     "m": "Böyle",
+     "s": 82.95,
+     "e": 83.06,
+     "asr": "Böyle"
+    },
+    {
+     "m": "bir",
+     "s": 83.06,
+     "e": 83.38,
+     "asr": "bir"
+    },
+    {
+     "m": "şefkate",
+     "s": 83.85,
+     "e": 84.24,
+     "asr": "şefkati"
+    },
+    {
+     "m": "ihtiyacımız",
+     "s": 84.24,
+     "e": 85.54,
+     "asr": "ihtiyacımız"
+    },
+    {
+     "m": "var.",
+     "s": 85.54,
+     "e": 85.82,
+     "asr": "var."
+    }
+   ],
+   "bas": 82.95,
+   "son": 85.82
+  },
+  {
+   "metin": "Böyle bir dar günde,",
+   "kelimeler": [
+    {
+     "m": "Böyle",
+     "s": 86.26,
+     "e": 86.34,
+     "asr": "Böyle"
+    },
+    {
+     "m": "bir",
+     "s": 86.34,
+     "e": 86.62,
+     "asr": "bir"
+    },
+    {
+     "m": "dar",
+     "s": 87.23,
+     "e": 87.28,
+     "asr": "dar"
+    },
+    {
+     "m": "günde,",
+     "s": 87.28,
+     "e": 87.68,
+     "asr": "günde,"
+    }
+   ],
+   "bas": 86.26,
+   "son": 87.68
+  },
+  {
+   "metin": "böyle bir merhamete ihtiyacımız var.",
+   "kelimeler": [
+    {
+     "m": "böyle",
+     "s": 87.7,
+     "e": 87.88,
+     "asr": "böyle"
+    },
+    {
+     "m": "bir",
+     "s": 87.88,
+     "e": 88.08,
+     "asr": "bir"
+    },
+    {
+     "m": "merhamete",
+     "s": 88.08,
+     "e": 88.72,
+     "asr": "merhamete"
+    },
+    {
+     "m": "ihtiyacımız",
+     "s": 88.72,
+     "e": 89.26,
+     "asr": "ihtiyacımız"
+    },
+    {
+     "m": "var.",
+     "s": 89.26,
+     "e": 89.52,
+     "asr": "var."
+    }
+   ],
+   "bas": 87.7,
+   "son": 89.52
+  },
+  {
+   "metin": "Onun için, her kimin bir yavrusu ölmüşse üzülmesin,",
+   "kelimeler": [
+    {
+     "m": "Onun",
+     "s": 89.79,
+     "e": 89.88,
+     "asr": "Onun"
+    },
+    {
+     "m": "için,",
+     "s": 89.88,
+     "e": 90.16,
+     "asr": "için,"
+    },
+    {
+     "m": "her",
+     "s": 90.3,
+     "e": 90.62,
+     "asr": "her"
+    },
+    {
+     "m": "kimin",
+     "s": 90.62,
+     "e": 91.12,
+     "asr": "kimin"
+    },
+    {
+     "m": "bir",
+     "s": 91.12,
+     "e": 91.28,
+     "asr": "bir"
+    },
+    {
+     "m": "yavrusu",
+     "s": 91.28,
+     "e": 91.8,
+     "asr": "yavrusu"
+    },
+    {
+     "m": "ölmüşse",
+     "s": 91.8,
+     "e": 92.28,
+     "asr": "ölmüşse"
+    },
+    {
+     "m": "üzülmesin,",
+     "s": 92.28,
+     "e": 93.14,
+     "asr": "üzülmesin,"
+    }
+   ],
+   "bas": 89.79,
+   "son": 93.14
+  },
+  {
+   "metin": "ahirette ondan çok fayda görecek,",
+   "kelimeler": [
+    {
+     "m": "ahirette",
+     "s": 93.56,
+     "e": 93.98,
+     "asr": "ahirette"
+    },
+    {
+     "m": "ondan",
+     "s": 94.03,
+     "e": 94.22,
+     "asr": "ondan"
+    },
+    {
+     "m": "çok",
+     "s": 94.22,
+     "e": 94.54,
+     "asr": "çok"
+    },
+    {
+     "m": "fayda",
+     "s": 94.54,
+     "e": 94.98,
+     "asr": "fayda"
+    },
+    {
+     "m": "görecek,",
+     "s": 94.98,
+     "e": 95.48,
+     "asr": "görecek,"
+    }
+   ],
+   "bas": 93.56,
+   "son": 95.48
+  },
+  {
+   "metin": "merhamet görecek.",
+   "kelimeler": [
+    {
+     "m": "merhamet",
+     "s": 95.85,
+     "e": 96.2,
+     "asr": "merhamet"
+    },
+    {
+     "m": "görecek.",
+     "s": 96.2,
+     "e": 96.6,
+     "asr": "görecek."
+    }
+   ],
+   "bas": 95.85,
+   "son": 96.6
+  }
+ ]
+}

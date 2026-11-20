@@ -26,7 +26,7 @@ import sys, json, numpy as np, soundfile as sf
 from scipy.signal import butter, sosfilt
 
 cfg = json.load(open(sys.argv[1], encoding='utf-8'))
-SR = 44100; SURE = float(cfg['sure']); N = int(SR * SURE); T = np.arange(N) / SR
+SR = sf.info(sys.argv[2]).samplerate; SURE = float(cfg['sure']); N = int(SR * SURE); T = np.arange(N) / SR  # SR: konuşmanın örnekleme hızı (44,1 / 48 kHz)
 R = np.random.default_rng(1907)
 def db(x): return 10 ** (x / 20)
 def bp(x, lo, hi, o=2): return sosfilt(butter(o, [lo, hi], 'bandpass', fs=SR, output='sos'), x)

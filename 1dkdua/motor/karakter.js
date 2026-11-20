@@ -82,7 +82,7 @@ function basCiz(pal, o = {}) {
   X.save(); X.rotate(o.egim || 0);
   const bs = pal.buyukSarik ? 1.12 : 1;
   // kulah tepesi
-  if (!pal.ortu) { X.save(); X.scale(bs, bs); elips(.06, -.8, .19, .13); doldur(pal.kulah); X.restore(); }
+  if (!pal.ortu && !pal.cocuk) { X.save(); X.scale(bs, bs); elips(.06, -.8, .19, .13); doldur(pal.kulah); X.restore(); }
   // kulak
   elips(-.17, -.02, .075, .12); doldur(pal.tenK);
   // yüz
@@ -100,6 +100,10 @@ function basCiz(pal, o = {}) {
     X.fillStyle = dGrad(-.5, 0, .3, 0, [[0, koyu(pal.ortu, .22)], [.55, pal.ortu], [1, acik(pal.ortu, .12)]]); X.fill();
     X.beginPath(); X.moveTo(.22, -.3); X.quadraticCurveTo(.1, -.4, -.12, -.42); X.moveTo(.14, .46); X.quadraticCurveTo(-.1, .6, -.3, .5); X.moveTo(-.2, -.3); X.quadraticCurveTo(-.36, 0, -.3, .3); cizgi(koyu(pal.ortu, .28), .022, .6);
     X.beginPath(); X.moveTo(.35, -.27); X.quadraticCurveTo(.2, -.2, .15, -.19); X.quadraticCurveTo(.05, -.05, .08, .27); X.quadraticCurveTo(.15, .4, .22, .43); cizgi(koyu(pal.ortu, .35), .024, .75);
+  } else if (pal.cocuk) { // örgü takke
+    egri([[-.36, -.08], [-.42, -.36], [-.14, -.6], [.22, -.58], [.42, -.32], [.37, -.2], [.12, -.27], [-.12, -.2]], true); doldur(pal.takke);
+    X.save(); egri([[-.36, -.08], [-.42, -.36], [-.14, -.6], [.22, -.58], [.42, -.32], [.37, -.2], [.12, -.27], [-.12, -.2]], true); X.clip(); X.strokeStyle = rgb(pal.sarikK, .8); X.lineWidth = .02; for (let k = -6; k < 8; k++) { X.beginPath(); X.moveTo(-.5 + k * .12, -.1); X.lineTo(-.3 + k * .12, -.65); X.stroke(); } X.restore();
+    X.beginPath(); X.moveTo(-.12, -.2); X.quadraticCurveTo(.12, -.27, .37, -.2); cizgi(pal.sarikK, .03, .9);
   } else {
   // sakal
   X.beginPath(); X.moveTo(-.22, -.04);
@@ -129,7 +133,7 @@ function basCiz(pal, o = {}) {
     X.beginPath(); X.moveTo(.13, -.11); X.lineTo(-.15, -.08); cizgi('#3A3230', .022); X.restore();
   }
   // sarık
-  if (!pal.ortu) {
+  if (!pal.ortu && !pal.cocuk) {
   X.save(); X.scale(bs, bs);
   X.beginPath(); X.moveTo(-.37, -.08);
   X.bezierCurveTo(-.48, -.56, -.12, -.86, .14, -.79);
@@ -179,11 +183,12 @@ function insanAyakta(o) {
   const fa = .34 * Math.sin(ph) * wk, ka = Math.max(0, Math.cos(ph)) * .14 * wk, kb = Math.max(0, -Math.cos(ph)) * .14 * wk;
   yemeni(-fa - .1, kb, pal, .25); yemeni(fa + .08, ka, pal, 0);
   X.translate(0, bob); X.rotate(o.govdeEgim || 0);
+  const by = pal.govdeBoy || 1; if (by !== 1) X.scale(1, by); // çocuk oranı: gövde kısa, baş büyük
   const sw = .28 * Math.sin(ph) * wk;
   const kA = o.kolA || [-.08 - sw, .18], kO = o.kolO || [.06 + sw, .22];
   const arkaKol = kolCiz(-.45, -5.5, kA[0], kA[1], pal, true);
   govdeAyakta(pal, hs, t);
-  X.save(); X.translate(.06, -6.62); X.scale(.98, .98); basCiz(pal, { kirp: o.kirp ?? kirp(t, o.tohum || 1), agiz: o.agiz, egim: o.egim }); X.restore();
+  X.save(); X.translate(.06, -6.62); X.scale(.98 * (pal.basOlcek || 1), .98 * (pal.basOlcek || 1) / by); basCiz(pal, { kirp: o.kirp ?? kirp(t, o.tohum || 1), agiz: o.agiz, egim: o.egim }); X.restore();
   let onKol;
   if (o.oncesi) o.oncesi();
   onKol = kolCiz(.32, -5.52, kO[0], kO[1], pal, false);

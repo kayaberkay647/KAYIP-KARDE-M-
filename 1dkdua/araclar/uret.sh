@@ -16,7 +16,7 @@ echo "2/3 Kareler çiziliyor…"
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node araclar/render.js "$V" "cikti/.${AD}_goruntu.mp4" "$ISCI"
 echo "3/3 Ses ve görüntü birleştiriliyor…"
 ffmpeg -loglevel error -y -i "cikti/.${AD}_goruntu.mp4" -i "$V/ses/miks.wav" -map 0:v:0 -map 1:a:0 \
-  -c:v copy -c:a aac -b:a 256k -ar 44100 -ac 2 -metadata:s:a:0 language=tur -metadata title="1dkdua | Hikmetli Kareler" \
+  -c:v copy -c:a aac -b:a 256k -ac 2 -metadata:s:a:0 language=tur -metadata title="1dkdua | Hikmetli Kareler" \
   -movflags +faststart -shortest "cikti/1dkdua_${AD}.mp4"
 rm -f "cikti/.${AD}_goruntu.mp4"
 ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate,sample_rate -of compact "cikti/1dkdua_${AD}.mp4"
