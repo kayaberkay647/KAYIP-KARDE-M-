@@ -1,0 +1,690 @@
+{
+ "satirlar": [
+  {
+   "metin": "Seccadede alnın,",
+   "kelimeler": [
+    {
+     "m": "Seccadede",
+     "s": 0.82,
+     "e": 1.22,
+     "asr": "Seccadede"
+    },
+    {
+     "m": "alnın,",
+     "s": 1.22,
+     "e": 1.72,
+     "asr": "alnın,"
+    }
+   ],
+   "bas": 0.82,
+   "son": 1.72
+  },
+  {
+   "metin": "ellerin ve dizlerin geldiği",
+   "kelimeler": [
+    {
+     "m": "ellerin",
+     "s": 2.95,
+     "e": 3.32,
+     "asr": "ellerin"
+    },
+    {
+     "m": "ve",
+     "s": 3.32,
+     "e": 3.48,
+     "asr": "ve"
+    },
+    {
+     "m": "dizlerin",
+     "s": 3.48,
+     "e": 3.82,
+     "asr": "dizlerin"
+    },
+    {
+     "m": "geldiği",
+     "s": 3.82,
+     "e": 4.24,
+     "asr": "geldiği"
+    }
+   ],
+   "bas": 2.95,
+   "son": 4.24
+  },
+  {
+   "metin": "yerler biraz aşınmış olmalı.",
+   "kelimeler": [
+    {
+     "m": "yerler",
+     "s": 4.24,
+     "e": 4.48,
+     "asr": "yerler"
+    },
+    {
+     "m": "biraz",
+     "s": 4.48,
+     "e": 4.84,
+     "asr": "biraz"
+    },
+    {
+     "m": "aşınmış",
+     "s": 4.84,
+     "e": 5.36,
+     "asr": "aşınmış"
+    },
+    {
+     "m": "olmalı.",
+     "s": 5.36,
+     "e": 5.86,
+     "asr": "olmalı."
+    }
+   ],
+   "bas": 4.24,
+   "son": 5.86
+  },
+  {
+   "metin": "Seccade böyle tertemiz ise ne demek?",
+   "kelimeler": [
+    {
+     "m": "Seccade",
+     "s": 7.07,
+     "e": 7.32,
+     "asr": "Seccada"
+    },
+    {
+     "m": "böyle",
+     "s": 7.32,
+     "e": 7.48,
+     "asr": "böyle"
+    },
+    {
+     "m": "tertemiz",
+     "s": 7.48,
+     "e": 8.2,
+     "asr": "tertemiz"
+    },
+    {
+     "m": "ise",
+     "s": 8.2,
+     "e": 8.36,
+     "asr": "ise"
+    },
+    {
+     "m": "ne",
+     "s": 8.36,
+     "e": 8.6,
+     "asr": "ne"
+    },
+    {
+     "m": "demek?",
+     "s": 8.6,
+     "e": 8.84,
+     "asr": "demek?"
+    }
+   ],
+   "bas": 7.07,
+   "son": 8.84
+  },
+  {
+   "metin": "Kimse namaz kılmıyor.",
+   "kelimeler": [
+    {
+     "m": "Kimse",
+     "s": 9.79,
+     "e": 10.12,
+     "asr": "Kimse"
+    },
+    {
+     "m": "namaz",
+     "s": 10.12,
+     "e": 10.42,
+     "asr": "namaz"
+    },
+    {
+     "m": "kılmıyor.",
+     "s": 10.42,
+     "e": 10.7,
+     "asr": "kılmıyor."
+    }
+   ],
+   "bas": 9.79,
+   "son": 10.7
+  },
+  {
+   "metin": "Bazen işte misafir olduğum yerlerde",
+   "kelimeler": [
+    {
+     "m": "Bazen",
+     "s": 11.58,
+     "e": 11.82,
+     "asr": "Bazen"
+    },
+    {
+     "m": "işte",
+     "s": 11.82,
+     "e": 12.04,
+     "asr": "işte"
+    },
+    {
+     "m": "misafir",
+     "s": 12.04,
+     "e": 12.54,
+     "asr": "misafir"
+    },
+    {
+     "m": "olduğum",
+     "s": 12.54,
+     "e": 12.86,
+     "asr": "olduğum"
+    },
+    {
+     "m": "yerlerde",
+     "s": 13.36,
+     "e": 13.58,
+     "asr": "yerlerde"
+    }
+   ],
+   "bas": 11.58,
+   "son": 13.58
+  },
+  {
+   "metin": "namaz vakti geliyor, istiyorum.",
+   "kelimeler": [
+    {
+     "m": "namaz",
+     "s": 13.58,
+     "e": 13.98,
+     "asr": "namaz"
+    },
+    {
+     "m": "vakti",
+     "s": 13.98,
+     "e": 14.24,
+     "asr": "vakti"
+    },
+    {
+     "m": "geliyor,",
+     "s": 14.24,
+     "e": 14.34,
+     "asr": "geliyor,"
+    },
+    {
+     "m": "istiyorum.",
+     "s": 14.44,
+     "e": 14.62,
+     "asr": "istiyorum."
+    }
+   ],
+   "bas": 13.58,
+   "son": 14.62
+  },
+  {
+   "metin": "Bekliyorum ve içerde dolaplardan,",
+   "kelimeler": [
+    {
+     "m": "Bekliyorum",
+     "s": 15.65,
+     "e": 16.0,
+     "asr": "Bekliyorum"
+    },
+    {
+     "m": "ve",
+     "s": 16.0,
+     "e": 16.12,
+     "asr": "ve"
+    },
+    {
+     "m": "içerde",
+     "s": 16.12,
+     "e": 16.46,
+     "asr": "içeride"
+    },
+    {
+     "m": "dolaplardan,",
+     "s": 16.46,
+     "e": 17.02,
+     "asr": "dolaplardan,"
+    }
+   ],
+   "bas": 15.65,
+   "son": 17.02
+  },
+  {
+   "metin": "bohçalardan bir seccade çıkarıp getiriyorlar.",
+   "kelimeler": [
+    {
+     "m": "bohçalardan",
+     "s": 17.12,
+     "e": 17.62,
+     "asr": "bohçalardan"
+    },
+    {
+     "m": "bir",
+     "s": 17.62,
+     "e": 17.82,
+     "asr": "bir"
+    },
+    {
+     "m": "seccade",
+     "s": 17.82,
+     "e": 18.22,
+     "asr": "seccade"
+    },
+    {
+     "m": "çıkarıp",
+     "s": 18.22,
+     "e": 18.62,
+     "asr": "çıkarıp"
+    },
+    {
+     "m": "getiriyorlar.",
+     "s": 18.62,
+     "e": 19.22,
+     "asr": "getiriyorlar."
+    }
+   ],
+   "bas": 17.12,
+   "son": 19.22
+  },
+  {
+   "metin": "O sizi sevdiklerinden öyle yapıyor.",
+   "kelimeler": [
+    {
+     "m": "O",
+     "s": 19.61,
+     "e": 19.64,
+     "asr": "O"
+    },
+    {
+     "m": "sizi",
+     "s": 19.72,
+     "e": 19.78,
+     "asr": "sizi"
+    },
+    {
+     "m": "sevdiklerinden",
+     "s": 20.05,
+     "e": 20.58,
+     "asr": "sevdiklerinden"
+    },
+    {
+     "m": "öyle",
+     "s": 20.58,
+     "e": 20.82,
+     "asr": "ölü"
+    },
+    {
+     "m": "yapıyor.",
+     "s": 20.82,
+     "e": 21.08,
+     "asr": "yapıyor."
+    }
+   ],
+   "bas": 19.61,
+   "son": 21.08
+  },
+  {
+   "metin": "Umuyorum öyledir. İnşallah öyledir.",
+   "kelimeler": [
+    {
+     "m": "Umuyorum",
+     "s": 21.14,
+     "e": 21.42,
+     "asr": "Umuyorum"
+    },
+    {
+     "m": "öyledir.",
+     "s": 21.42,
+     "e": 21.98,
+     "asr": "öyledir."
+    },
+    {
+     "m": "İnşallah",
+     "s": 22.71,
+     "e": 22.96,
+     "asr": "İnşallah"
+    },
+    {
+     "m": "öyledir.",
+     "s": 22.96,
+     "e": 23.44,
+     "asr": "öyledir."
+    }
+   ],
+   "bas": 21.14,
+   "son": 23.44
+  },
+  {
+   "metin": "Seni secdeye varıyorum, naftalin kokusundan",
+   "kelimeler": [
+    {
+     "m": "Seni",
+     "s": 23.77,
+     "e": 24.08,
+     "asr": "Sece"
+    },
+    {
+     "m": "secdeye",
+     "s": 24.01,
+     "e": 24.26,
+     "asr": "secdeye"
+    },
+    {
+     "m": "varıyorum,",
+     "s": 24.25,
+     "e": 24.62,
+     "asr": "varıyorum,"
+    },
+    {
+     "m": "naftalin",
+     "s": 24.97,
+     "e": 25.04,
+     "asr": "naftalin"
+    },
+    {
+     "m": "kokusundan",
+     "s": 25.3,
+     "e": 25.46,
+     "asr": "kokusundan"
+    }
+   ],
+   "bas": 23.77,
+   "son": 25.46
+  },
+  {
+   "metin": "nefesim kesiliyor, deterjan kokusundan.",
+   "kelimeler": [
+    {
+     "m": "nefesim",
+     "s": 25.46,
+     "e": 25.86,
+     "asr": "nefesim"
+    },
+    {
+     "m": "kesiliyor,",
+     "s": 25.86,
+     "e": 26.24,
+     "asr": "kesiliyor,"
+    },
+    {
+     "m": "deterjan",
+     "s": 26.76,
+     "e": 27.1,
+     "asr": "deterjan"
+    },
+    {
+     "m": "kokusundan.",
+     "s": 27.1,
+     "e": 27.62,
+     "asr": "kokusundan."
+    }
+   ],
+   "bas": 25.46,
+   "son": 27.62
+  },
+  {
+   "metin": "Bunu sevmiyorum ben.",
+   "kelimeler": [
+    {
+     "m": "Bunu",
+     "s": 27.99,
+     "e": 28.0,
+     "asr": "Bunu"
+    },
+    {
+     "m": "sevmiyorum",
+     "s": 28.33,
+     "e": 28.5,
+     "asr": "sevmiyorum"
+    },
+    {
+     "m": "ben.",
+     "s": 28.6,
+     "e": 28.76,
+     "asr": "ben."
+    }
+   ],
+   "bas": 27.99,
+   "son": 28.76
+  },
+  {
+   "metin": "Seccade odur ki desin bana: alın yapışmış,",
+   "kelimeler": [
+    {
+     "m": "Seccade",
+     "s": 29.85,
+     "e": 30.12,
+     "asr": "seccade"
+    },
+    {
+     "m": "odur",
+     "s": 30.12,
+     "e": 30.38,
+     "asr": "odur"
+    },
+    {
+     "m": "ki",
+     "s": 30.38,
+     "e": 30.5,
+     "asr": "ki"
+    },
+    {
+     "m": "desin",
+     "s": 30.5,
+     "e": 30.92,
+     "asr": "desin,"
+    },
+    {
+     "m": "bana:",
+     "s": 30.92,
+     "e": 31.28,
+     "asr": "bana"
+    },
+    {
+     "m": "alın",
+     "s": 31.28,
+     "e": 31.6,
+     "asr": "alın"
+    },
+    {
+     "m": "yapışmış,",
+     "s": 31.6,
+     "e": 32.04,
+     "asr": "yapışmış."
+    }
+   ],
+   "bas": 29.85,
+   "son": 32.04
+  },
+  {
+   "metin": "Burada namaz kılınmış, burada Allah denilmiş ve",
+   "kelimeler": [
+    {
+     "m": "Burada",
+     "s": 33.43,
+     "e": 33.48,
+     "asr": "Burada"
+    },
+    {
+     "m": "namaz",
+     "s": 33.64,
+     "e": 33.88,
+     "asr": "namaz"
+    },
+    {
+     "m": "kılınmış,",
+     "s": 33.88,
+     "e": 34.22,
+     "asr": "kılınmış,"
+    },
+    {
+     "m": "burada",
+     "s": 34.28,
+     "e": 34.4,
+     "asr": "burada"
+    },
+    {
+     "m": "Allah",
+     "s": 34.4,
+     "e": 34.84,
+     "asr": "Allah"
+    },
+    {
+     "m": "denilmiş",
+     "s": 34.84,
+     "e": 35.4,
+     "asr": "denilmiş."
+    },
+    {
+     "m": "ve",
+     "s": 35.4,
+     "e": 35.7,
+     "asr": "Ve"
+    }
+   ],
+   "bas": 33.43,
+   "son": 35.7
+  },
+  {
+   "metin": "o Allah'ın sözünün titreşimleri seccadeye geçmiş.",
+   "kelimeler": [
+    {
+     "m": "o",
+     "s": 35.7,
+     "e": 35.82,
+     "asr": "o"
+    },
+    {
+     "m": "Allah'ın",
+     "s": 35.82,
+     "e": 36.46,
+     "asr": "Allah'ın"
+    },
+    {
+     "m": "sözünün",
+     "s": 36.99,
+     "e": 37.3,
+     "asr": "sözünün"
+    },
+    {
+     "m": "titreşimleri",
+     "s": 37.55,
+     "e": 38.1,
+     "asr": "titreşimleri"
+    },
+    {
+     "m": "seccadeye",
+     "s": 38.57,
+     "e": 38.96,
+     "asr": "seccadeye"
+    },
+    {
+     "m": "geçmiş.",
+     "s": 38.96,
+     "e": 39.36,
+     "asr": "geçmiş."
+    }
+   ],
+   "bas": 35.7,
+   "son": 39.36
+  },
+  {
+   "metin": "Beni kimsecikler okşamaz.",
+   "kelimeler": [
+    {
+     "m": "Beni",
+     "s": 40.3,
+     "e": 40.38,
+     "asr": "Beni"
+    },
+    {
+     "m": "kimsecikler",
+     "s": 40.6,
+     "e": 41.04,
+     "asr": "kimse çıkıp"
+    },
+    {
+     "m": "okşamaz.",
+     "s": 41.36,
+     "e": 41.44,
+     "asr": "okşamaz."
+    }
+   ],
+   "bas": 40.3,
+   "son": 41.44
+  },
+  {
+   "metin": "Madem öp beni alnımdan sen, öp seccadem.",
+   "kelimeler": [
+    {
+     "m": "Madem",
+     "s": 41.52,
+     "e": 42.0,
+     "asr": "Madem"
+    },
+    {
+     "m": "öp",
+     "s": 42.46,
+     "e": 42.66,
+     "asr": "öp"
+    },
+    {
+     "m": "beni",
+     "s": 42.73,
+     "e": 42.78,
+     "asr": "beni"
+    },
+    {
+     "m": "alnımdan",
+     "s": 42.9,
+     "e": 43.26,
+     "asr": "alnından"
+    },
+    {
+     "m": "sen,",
+     "s": 43.26,
+     "e": 43.8,
+     "asr": "sen,"
+    },
+    {
+     "m": "öp",
+     "s": 43.8,
+     "e": 44.02,
+     "asr": "öp"
+    },
+    {
+     "m": "seccadem.",
+     "s": 44.1,
+     "e": 44.5,
+     "asr": "seccadem."
+    }
+   ],
+   "bas": 41.52,
+   "son": 44.5
+  },
+  {
+   "metin": "Seccade böyle olmalı.",
+   "kelimeler": [
+    {
+     "m": "Seccade",
+     "s": 44.92,
+     "e": 45.18,
+     "asr": "Seccade"
+    },
+    {
+     "m": "böyle",
+     "s": 45.18,
+     "e": 45.36,
+     "asr": "böyle"
+    },
+    {
+     "m": "olmalı.",
+     "s": 45.36,
+     "e": 45.76,
+     "asr": "olmalı."
+    }
+   ],
+   "bas": 44.92,
+   "son": 45.76
+  }
+ ]
+}

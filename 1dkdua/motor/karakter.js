@@ -21,6 +21,13 @@ const YASLI_HOCA = {
   kaftan: '#8E8473', kaftanK: '#6C6455', kaftanA: '#A79D8B', trim: '#C9B48A',
   entari: '#F5F2EC', entariK: '#DDD7CC', kusak: '#5E574C', kusakK: '#4A443B', ayakkabi: '#2A201A', buyukSarik: 1, gozluk: 1, yasli: 1
 };
+// Ev sahibi (03): başörtülü, orta yaşlı hanım
+const KADIN = {
+  ten: '#D5A584', tenK: '#B07E5E', sakal: '#000', goz: '#2A1E16', kas: '#4A382C', ortu: '#ECE0C6',
+  sarik: '#ECE0C6', sarikK: '#C9B994', kulah: '#ECE0C6',
+  kaftan: '#8A4B4B', kaftanK: '#683434', kaftanA: '#A86868', trim: '#E2C27A',
+  entari: '#9A5A58', entariK: '#7A4240', kusak: '#D4A84B', kusakK: '#A97F2C', ayakkabi: '#4A3A2E'
+};
 const FAKIR = {
   ten: '#B98060', tenK: '#946148', sakal: '#9A958D', kas: '#8E8880', goz: '#2A1E16', yasli: 1,
   sarik: '#B9AA8F', sarikK: '#978A72', kulah: '#6E5A44',
@@ -75,7 +82,7 @@ function basCiz(pal, o = {}) {
   X.save(); X.rotate(o.egim || 0);
   const bs = pal.buyukSarik ? 1.12 : 1;
   // kulah tepesi
-  X.save(); X.scale(bs, bs); elips(.06, -.8, .19, .13); doldur(pal.kulah); X.restore();
+  if (!pal.ortu) { X.save(); X.scale(bs, bs); elips(.06, -.8, .19, .13); doldur(pal.kulah); X.restore(); }
   // kulak
   elips(-.17, -.02, .075, .12); doldur(pal.tenK);
   // yüz
@@ -88,6 +95,12 @@ function basCiz(pal, o = {}) {
   // yanak ve gölge
   X.save(); X.clip(); X.fillStyle = rGrad(.2, .02, 0, .16, [[0, '#D9735A', .22], [1, '#D9735A', 0]]); X.fillRect(0, -.2, .45, .4);
   X.fillStyle = dGrad(-.3, 0, .1, 0, [[0, pal.tenK, .55], [1, pal.tenK, 0]]); X.fillRect(-.35, -.5, .5, 1); X.restore();
+  if (pal.ortu) { // başörtüsü: alnın üstünü, yanları ve boynu örter; yüz ovali açıkta kalır
+    egri([[.35, -.27], [.13, -.53], [-.24, -.53], [-.5, -.22], [-.55, .26], [-.42, .64], [-.08, .78], [.22, .58], [.21, .42], [.08, .27], [.05, 0], [.15, -.19]], true);
+    X.fillStyle = dGrad(-.5, 0, .3, 0, [[0, koyu(pal.ortu, .22)], [.55, pal.ortu], [1, acik(pal.ortu, .12)]]); X.fill();
+    X.beginPath(); X.moveTo(.22, -.3); X.quadraticCurveTo(.1, -.4, -.12, -.42); X.moveTo(.14, .46); X.quadraticCurveTo(-.1, .6, -.3, .5); X.moveTo(-.2, -.3); X.quadraticCurveTo(-.36, 0, -.3, .3); cizgi(koyu(pal.ortu, .28), .022, .6);
+    X.beginPath(); X.moveTo(.35, -.27); X.quadraticCurveTo(.2, -.2, .15, -.19); X.quadraticCurveTo(.05, -.05, .08, .27); X.quadraticCurveTo(.15, .4, .22, .43); cizgi(koyu(pal.ortu, .35), .024, .75);
+  } else {
   // sakal
   X.beginPath(); X.moveTo(-.22, -.04);
   X.quadraticCurveTo(-.22, .30, -.02, .52); X.quadraticCurveTo(.22, .66, .36, .40);
@@ -96,6 +109,7 @@ function basCiz(pal, o = {}) {
   doldur(pal.sakal);
   // bıyık
   X.beginPath(); X.moveTo(.41, .09); X.quadraticCurveTo(.36, .16, .24, .2); X.quadraticCurveTo(.31, .11, .41, .09); X.closePath(); doldur(pal.sakal);
+  }
   // ağız (konuşurken)
   const ag = o.agiz || 0;
   if (ag > .05) { elips(.33, .215, .055, .025 + ag * .06); doldur('#4A2418'); }
@@ -115,6 +129,7 @@ function basCiz(pal, o = {}) {
     X.beginPath(); X.moveTo(.13, -.11); X.lineTo(-.15, -.08); cizgi('#3A3230', .022); X.restore();
   }
   // sarık
+  if (!pal.ortu) {
   X.save(); X.scale(bs, bs);
   X.beginPath(); X.moveTo(-.37, -.08);
   X.bezierCurveTo(-.48, -.56, -.12, -.86, .14, -.79);
@@ -124,6 +139,7 @@ function basCiz(pal, o = {}) {
   X.fillStyle = dGrad(-.4, 0, .45, 0, [[0, pal.sarikK, .9], [.55, pal.sarik, 0]]); X.fillRect(-.6, -1, 1.2, 1.1);
   for (let i = 0; i < 4; i++) { const yy = -.16 - i * .15; X.beginPath(); X.moveTo(-.5, yy + .18); X.quadraticCurveTo(0, yy - .12 + i * .02, .55, yy - .02); cizgi(pal.sarikK, .045, .85); }
   X.restore(); X.restore();
+  }
   X.restore();
 }
 

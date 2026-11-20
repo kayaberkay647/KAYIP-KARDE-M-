@@ -1,0 +1,22 @@
+#SKIP:[58]
+# Görünen altyazı metni :: her görünen kelimenin karşılık geldiği ASR kelime sayısı.
+Seccadede alnın,
+ellerin ve dizlerin geldiği
+yerler biraz aşınmış olmalı.
+Seccade böyle tertemiz ise ne demek?
+Kimse namaz kılmıyor.
+Bazen işte misafir olduğum yerlerde
+namaz vakti geliyor, istiyorum.
+Bekliyorum ve içerde dolaplardan,
+bohçalardan bir seccade çıkarıp getiriyorlar.
+O sizi{19.72} sevdiklerinden{20.05} öyle yapıyor.
+Umuyorum öyledir. İnşallah öyledir.
+Seni{23.77} secdeye{24.01} varıyorum,{24.25} naftalin{24.97} kokusundan{25.30}
+nefesim kesiliyor, deterjan kokusundan.
+Bunu sevmiyorum{28.33} ben.{28.60}
+Seccade{29.85} odur ki desin bana: alın yapışmış,
+Burada namaz{33.64} kılınmış, burada Allah denilmiş ve{35.40}
+o{35.70} Allah'ın sözünün{36.99} titreşimleri{37.55} seccadeye geçmiş. :: 1 2 1 1 1 1
+Beni kimsecikler{40.60} okşamaz.{41.36} :: 1 2 1
+Madem öp{42.46} beni{42.73} alnımdan{42.90} sen, öp{43.80} seccadem.{44.10}
+Seccade böyle olmalı.

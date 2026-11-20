@@ -85,6 +85,7 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
 - **ADAM:** krem sarık + zeytin külah, kısa koyu kahve sakal, zeytin kaftan, krem entari, hardal kuşak, kahve yemeni.
 - **HOCA:** beyaz büyük sarık, siyah gür sakal, koyu cübbe, koyu kuşak, beyaz entari.
 - **TALEBE1/2:** toprak ve yeşil-gri tonlarda, arkadan.
+- **KADIN** (03): ev sahibi hanım; krem başörtüsü (yüz ovali açıkta), bordo entari, altın kuşak. Kadın karakterler aynı iskeletle `ortu` paletiyle çizilir.
 - **YASLI_HOCA** (02): beyaz büyük sarık, beyaz sakal ve kaş, yuvarlak gözlük, beyaz gömlek, gri-bej hırka.
 - **FAKIR** (02): gri sakal, sade sarık, yamalı kahve cübbe.
 - Adam serinin "her insanı"dır: konuşmada genel insan, soru soran ya da dua eden kişi varsa o canlandırır.
@@ -116,6 +117,13 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
 - Arapça cümleler altyazıda Türkçe transkripsiyonla (Sümme yürfeu…, Allâhümme'rham…) yazılır; konuşmacı mealini söylediyse
   meal ayrıca eklenmez.
 
+## 11b. Nesne ve sahne dili
+
+- Tek bir **kahraman nesne** (03'te seccade) videonun görsel çapasıdır; yukarıdan, yandan eğik ve terasta aynı nesne farklı ışıkta döner.
+- Söylenen her kelime nesnede **karşılık bulur**: "alnın, ellerin, dizlerin" dendiği anda ilgili yer altın ışıkla yanar.
+- Kokular, zaman katmanları, titreşim gibi soyut ifadeler somutlaştırılır: duman ve baloncuklar, saydam geçmiş figürler, yayılan altın halkalar.
+- Hareket ve konuşma: kelimenin gerçek başlangıcı ses enerjisinden bulunur (Whisper zamanları sessizlik sonrası ilk kelimede kayabilir; elle düzeltme `kelime{saniye}` ile yapılır).
+
 ## 12. Süreç (yeni video)
 
 ```bash
@@ -127,6 +135,7 @@ python3 -I araclar/ara_kapisi.py dfn.wav whisper.json videolar/<ad>/ses/konusma_
 # 2. Altyazı satırlarını düzelt (veri/altyazi_satirlari.txt), zaman çizelgesini üret
 python3 -I araclar/zaman_cizelgesi.py whisper.json videolar/<ad>/ses/konusma_temiz.wav videolar/<ad>/veri/altyazi_satirlari.txt videolar/<ad>/veri/zaman_cizelgesi.json
 # → veri/zaman_cizelgesi.json ve tarayıcı için veri/zaman_cizelgesi.js (ses zarfı dahil)
+# Şüpheli kelime başlangıcı: satırda  kelime{saniye}  yazın; kesin zaman için DFN'li sesin 20 ms enerjisine bakın.
 # 3. SENARYO.md → sahneler.js, index.html'de önizle, kontrol kareleri al
 node araclar/kare.js videolar/<ad> /tmp/kareler 1 5 10
 # 4. Ses planı: videolar/<ad>/ortam.json (02'yi örnek alın)
