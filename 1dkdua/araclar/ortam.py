@@ -21,6 +21,7 @@ ortam.json anahtarları (zamanlar saniye, seviyeler dBFS):
   baykus   [[t,seviye]]
   adim     [[t,seviye,pan,parlaklik]]
   akorlar  [[a,b,[frekanslar],seviye]]     atmosfer pedi (sahneye göre akor)
+  konusma_kazanc_db                        konuşmayı ölçekler (ör. çok sıcak kayıtlar için -4); hedef: konuşma RMS ≈ -18 dB
 """
 import sys, json, numpy as np, soundfile as sf
 from scipy.signal import butter, sosfilt
@@ -165,6 +166,7 @@ ST = yedek; PED *= (0.85 + .15 * np.sin(2 * np.pi * T / 7.3))[:, None]
 # ── konuşma (dokunulmaz) + kısma ──
 konusma, sr = sf.read(sys.argv[2], dtype='float64'); assert sr == SR, sr
 if konusma.ndim == 1: konusma = np.stack([konusma, konusma], 1)
+konusma = konusma * db(cfg.get('konusma_kazanc_db', 0))  # videolar arası tutarlı seviye için (yalnızca ölçekleme; hız/perde değişmez)
 K = np.zeros((N, 2)); K[:min(N, len(konusma))] = konusma[:N]
 e = np.maximum(lp(np.abs(K.mean(1)), 8), 0); e = np.clip(20 * np.log10(e + 1e-6) + 46, 0, 22) / 22
 g = np.empty(N); s = 0.0; a_, r_ = 1 - np.exp(-1 / (.05 * SR)), 1 - np.exp(-1 / (.45 * SR))

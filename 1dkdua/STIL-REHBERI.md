@@ -106,6 +106,7 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
 - Atmosfer pedi: sahneye göre değişen yumuşak akor, −40 dB; kapanışta −35 dB.
 - Ses planı her videonun `ortam.json` dosyasındadır (`araclar/ortam.py`): rüzgâr, oda, uğultu, kuş, güvercin, çan, karga,
   çeşme, ırmak, ateş, gıcırtı, gümbürtü, süpürme, ışıltı, ışık pedi, cırcır, baykuş, adım, akorlar.
+- Seviye: konuşma RMS ≈ −18 dB, bitmiş video ≈ −15 LUFS. Çok sıcak kayıtlar `ortam.json` içinde `konusma_kazanc_db` ile ölçeklenir (yalnızca seviye; 04'te −4,2 dB).
 - Kaynakta fon müziği yoksa konuşma **hiç işlenmez** (02'de olduğu gibi); varsa §12'deki ayrıştırma uygulanır.
 - Birden fazla konuşmacı varsa (ör. röportajcı) ses perdesiyle ayrılır; konuşan karakterin ağzı yalnızca kendi bölümünde oynar.
 
