@@ -85,6 +85,9 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
 - **ADAM:** krem sarık + zeytin külah, kısa koyu kahve sakal, zeytin kaftan, krem entari, hardal kuşak, kahve yemeni.
 - **HOCA:** beyaz büyük sarık, siyah gür sakal, koyu cübbe, koyu kuşak, beyaz entari.
 - **TALEBE1/2:** toprak ve yeşil-gri tonlarda, arkadan.
+- **YASLI_HOCA** (02): beyaz büyük sarık, beyaz sakal ve kaş, yuvarlak gözlük, beyaz gömlek, gri-bej hırka.
+- **FAKIR** (02): gri sakal, sade sarık, yamalı kahve cübbe.
+- Adam serinin "her insanı"dır: konuşmada genel insan, soru soran ya da dua eden kişi varsa o canlandırır.
 - Paletler sahnede değiştirilmez; yalnızca gece ışığı için ton kaydırılır. Oranlar: baş yüksekliği = 1 birim, ayakta boy ≈ 7,4 birim.
 
 ## 10. Kapanış
@@ -99,6 +102,19 @@ Gündüz sahneleri sıcak pastel (şeftali-krem gökyüzü), alacakaranlık mor-
   kelime aralarındaki kalıntı 60 ms geçişli kapıyla −14 dB bastırılır. Kontrol: `miks − ortam − konuşma ≈ 0`.
 - Ortam: sahneye özgü (rüzgâr, kuş, çan, karga, çeşme, cırcır, adım), konuşmanın **20–24 dB altında**; konuşma anında ~6 dB daha kısılır.
 - Atmosfer pedi: sahneye göre değişen yumuşak akor, −40 dB; kapanışta −35 dB.
+- Ses planı her videonun `ortam.json` dosyasındadır (`araclar/ortam.py`): rüzgâr, oda, uğultu, kuş, güvercin, çan, karga,
+  çeşme, ırmak, ateş, gıcırtı, gümbürtü, süpürme, ışıltı, ışık pedi, cırcır, baykuş, adım, akorlar.
+- Kaynakta fon müziği yoksa konuşma **hiç işlenmez** (02'de olduğu gibi); varsa §12'deki ayrıştırma uygulanır.
+- Birden fazla konuşmacı varsa (ör. röportajcı) ses perdesiyle ayrılır; konuşan karakterin ağzı yalnızca kendi bölümünde oynar.
+
+## 11a. Dinî tasvir ilkesi
+
+- Peygamberler (özellikle Peygamber Efendimiz s.a.v.), Ehl-i Beyt ve sahabe **insan figürü olarak çizilmez**;
+  varlıkları yalnızca **nur** (yumuşak ışık sütunu/halesi, `nur()`) ve mekânla (Yeşil Kubbe, Bakî, kerpiç ev) simgelenir.
+- Vefat etmiş kişiler yalnızca kefenli, yüzsüz biçimle gösterilir. Kabir azabı, cehennem gibi konular korku öğesi
+  kullanılmadan, sembolik ve sade anlatılır.
+- Arapça cümleler altyazıda Türkçe transkripsiyonla (Sümme yürfeu…, Allâhümme'rham…) yazılır; konuşmacı mealini söylediyse
+  meal ayrıca eklenmez.
 
 ## 12. Süreç (yeni video)
 
@@ -113,6 +129,8 @@ python3 -I araclar/zaman_cizelgesi.py whisper.json videolar/<ad>/ses/konusma_tem
 # → veri/zaman_cizelgesi.json ve tarayıcı için veri/zaman_cizelgesi.js (ses zarfı dahil)
 # 3. SENARYO.md → sahneler.js, index.html'de önizle, kontrol kareleri al
 node araclar/kare.js videolar/<ad> /tmp/kareler 1 5 10
-# 4. Üret
+# 4. Ses planı: videolar/<ad>/ortam.json (02'yi örnek alın)
+# 5. Üret ve kontrol et
 araclar/uret.sh videolar/<ad>
+araclar/kontrol.sh cikti/1dkdua_<ad>.mp4
 ```

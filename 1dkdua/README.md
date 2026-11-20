@@ -9,10 +9,12 @@ Konuşma kayıtlarından 9:16 sinematik 2D animasyon üreten, kodla çizen motor
 │   ├── motor.js             kamera/parallax, kâğıt dokusu, başlık, altyazı panosu, kapanış, geçişler
 │   ├── karakter.js          ADAM, HOCA, TALEBE: ayakta, yürüyen, oturan, arkadan
 │   ├── cevre.js             gökyüzü, tepe, zeytin, servi, konak, sütun, kemer, kandil, yıldız, ay…
+│   ├── ahiret.js            mezar taşları, kabir kesiti, kefen, Mescid-i Nebevî, hurma, kerpiç ev, nur
 │   └── fontlar/             Cinzel, Cormorant Garamond, EB Garamond (OFL)
 ├── araclar/                 ses ayrıştırma, döküm, zaman çizelgesi, ortam sesi, render
 ├── videolar/
-│   └── 01-imtihan-sahasi/   SENARYO.md, sahneler.js, index.html, veri/, ses/
+│   ├── 01-imtihan-sahasi/   SENARYO.md, sahneler.js, index.html, veri/, ses/
+│   └── 02-kabir-ve-berzah/  + ortam.json (ses planı)
 └── cikti/                   bitmiş MP4'ler
 ```
 

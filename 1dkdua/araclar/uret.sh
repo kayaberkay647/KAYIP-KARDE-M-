@@ -7,7 +7,11 @@ KOK="$(cd "$(dirname "$0")/.." && pwd)"; cd "$KOK"
 V="${1:?video klasörü}"; ISCI="${2:-4}"; AD="$(basename "$V")"
 mkdir -p cikti
 echo "1/3 Ortam sesi ve miks…"
-python3 -I araclar/ortam_sesi.py "$V/ses/konusma_temiz.wav" "$V/ses/miks.wav" "$V/ses/ortam.wav"
+if [ -f "$V/ortam.json" ]; then
+  python3 -I araclar/ortam.py "$V/ortam.json" "$V/ses/konusma_temiz.wav" "$V/ses/miks.wav" "$V/ses/ortam.wav"
+else  # 01 gibi eski videolar: sahneleri kodun içinde tanımlı ortam betiği
+  python3 -I araclar/ortam_sesi.py "$V/ses/konusma_temiz.wav" "$V/ses/miks.wav" "$V/ses/ortam.wav"
+fi
 echo "2/3 Kareler çiziliyor…"
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node araclar/render.js "$V" "cikti/.${AD}_goruntu.mp4" "$ISCI"
 echo "3/3 Ses ve görüntü birleştiriliyor…"

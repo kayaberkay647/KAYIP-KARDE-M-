@@ -1,0 +1,1434 @@
+{
+ "satirlar": [
+  {
+   "metin": "Ölülere dua, sadaka…",
+   "kelimeler": [
+    {
+     "m": "Ölülere",
+     "s": 0.36,
+     "e": 0.8,
+     "asr": "Ölülere"
+    },
+    {
+     "m": "dua,",
+     "s": 0.8,
+     "e": 1.32,
+     "asr": "dua,"
+    },
+    {
+     "m": "sadaka…",
+     "s": 2.2,
+     "e": 2.78,
+     "asr": "sadaka."
+    }
+   ],
+   "bas": 0.36,
+   "son": 2.78
+  },
+  {
+   "metin": "Sümme yürfeu anhüm bi-duâin",
+   "kelimeler": [
+    {
+     "m": "Sümme",
+     "s": 3.51,
+     "e": 3.84,
+     "asr": "sümme"
+    },
+    {
+     "m": "yürfeu",
+     "s": 3.84,
+     "e": 4.44,
+     "asr": "yürfeu"
+    },
+    {
+     "m": "anhüm",
+     "s": 4.44,
+     "e": 5.02,
+     "asr": "anhüm"
+    },
+    {
+     "m": "bi-duâin",
+     "s": 5.02,
+     "e": 5.96,
+     "asr": "bi-duâin"
+    }
+   ],
+   "bas": 3.51,
+   "son": 5.96
+  },
+  {
+   "metin": "ev kırâeti Kur'ânin ev sadakatin.",
+   "kelimeler": [
+    {
+     "m": "ev",
+     "s": 6.62,
+     "e": 6.66,
+     "asr": "ev"
+    },
+    {
+     "m": "kırâeti",
+     "s": 6.66,
+     "e": 7.34,
+     "asr": "kırâeti"
+    },
+    {
+     "m": "Kur'ânin",
+     "s": 7.34,
+     "e": 8.2,
+     "asr": "Kur'ânin"
+    },
+    {
+     "m": "ev",
+     "s": 8.2,
+     "e": 8.3,
+     "asr": "ev"
+    },
+    {
+     "m": "sadakatin.",
+     "s": 8.51,
+     "e": 9.2,
+     "asr": "sadakatin."
+    }
+   ],
+   "bas": 6.62,
+   "son": 9.2
+  },
+  {
+   "metin": "Ölülere Kur'an okursanız, sadaka verirseniz,",
+   "kelimeler": [
+    {
+     "m": "Ölülere",
+     "s": 9.92,
+     "e": 10.26,
+     "asr": "Ölülere"
+    },
+    {
+     "m": "Kur'an",
+     "s": 10.26,
+     "e": 10.82,
+     "asr": "Kur'an"
+    },
+    {
+     "m": "okursanız,",
+     "s": 10.82,
+     "e": 11.5,
+     "asr": "okursanız."
+    },
+    {
+     "m": "sadaka",
+     "s": 12.05,
+     "e": 12.3,
+     "asr": "Sadaka"
+    },
+    {
+     "m": "verirseniz,",
+     "s": 12.3,
+     "e": 13.26,
+     "asr": "verirseniz."
+    }
+   ],
+   "bas": 9.92,
+   "son": 13.26
+  },
+  {
+   "metin": "Allah o bereketi hürmetine",
+   "kelimeler": [
+    {
+     "m": "Allah",
+     "s": 13.75,
+     "e": 13.96,
+     "asr": "Allah"
+    },
+    {
+     "m": "o",
+     "s": 13.96,
+     "e": 14.4,
+     "asr": "o"
+    },
+    {
+     "m": "bereketi",
+     "s": 14.4,
+     "e": 14.96,
+     "asr": "bereketi"
+    },
+    {
+     "m": "hürmetine",
+     "s": 14.96,
+     "e": 15.56,
+     "asr": "hürmetine"
+    }
+   ],
+   "bas": 13.75,
+   "son": 15.56
+  },
+  {
+   "metin": "onların üzerinden azabı kaldırır.",
+   "kelimeler": [
+    {
+     "m": "onların",
+     "s": 16.29,
+     "e": 16.6,
+     "asr": "onların"
+    },
+    {
+     "m": "üzerinden",
+     "s": 16.6,
+     "e": 17.26,
+     "asr": "üzerinden"
+    },
+    {
+     "m": "azabı",
+     "s": 18.28,
+     "e": 18.54,
+     "asr": "azabı"
+    },
+    {
+     "m": "kaldırır.",
+     "s": 18.54,
+     "e": 19.0,
+     "asr": "kaldırır."
+    }
+   ],
+   "bas": 16.29,
+   "son": 19.0
+  },
+  {
+   "metin": "Ancak Peygamber Efendimiz",
+   "kelimeler": [
+    {
+     "m": "Ancak",
+     "s": 19.71,
+     "e": 20.04,
+     "asr": "Ancak"
+    },
+    {
+     "m": "Peygamber",
+     "s": 20.77,
+     "e": 21.16,
+     "asr": "Peygamber"
+    },
+    {
+     "m": "Efendimiz",
+     "s": 21.16,
+     "e": 21.52,
+     "asr": "Efendimiz"
+    }
+   ],
+   "bas": 19.71,
+   "son": 21.52
+  },
+  {
+   "metin": "aleyhissalâtü vesselâm diyor ki:",
+   "kelimeler": [
+    {
+     "m": "aleyhissalâtü",
+     "s": 21.52,
+     "e": 22.38,
+     "asr": "aleyhisselatu"
+    },
+    {
+     "m": "vesselâm",
+     "s": 22.38,
+     "e": 23.04,
+     "asr": "vesselam"
+    },
+    {
+     "m": "diyor",
+     "s": 23.51,
+     "e": 23.54,
+     "asr": "diyor"
+    },
+    {
+     "m": "ki:",
+     "s": 23.54,
+     "e": 23.82,
+     "asr": "ki."
+    }
+   ],
+   "bas": 21.52,
+   "son": 23.82
+  },
+  {
+   "metin": "Kabir bütün insanları “hoş geldin” eder.",
+   "kelimeler": [
+    {
+     "m": "Kabir",
+     "s": 24.67,
+     "e": 25.12,
+     "asr": "Kabir"
+    },
+    {
+     "m": "bütün",
+     "s": 25.68,
+     "e": 25.74,
+     "asr": "bütün"
+    },
+    {
+     "m": "insanları",
+     "s": 25.74,
+     "e": 26.62,
+     "asr": "insanları"
+    },
+    {
+     "m": "“hoş",
+     "s": 26.62,
+     "e": 27.02,
+     "asr": "hoş"
+    },
+    {
+     "m": "geldin”",
+     "s": 27.02,
+     "e": 27.42,
+     "asr": "geldin"
+    },
+    {
+     "m": "eder.",
+     "s": 27.42,
+     "e": 27.6,
+     "asr": "eder."
+    }
+   ],
+   "bas": 24.67,
+   "son": 27.6
+  },
+  {
+   "metin": "Sıkar. Sıkar, diyor.",
+   "kelimeler": [
+    {
+     "m": "Sıkar.",
+     "s": 27.68,
+     "e": 28.24,
+     "asr": "Sıkar."
+    },
+    {
+     "m": "Sıkar,",
+     "s": 28.88,
+     "e": 29.14,
+     "asr": "Sıkar"
+    },
+    {
+     "m": "diyor.",
+     "s": 29.14,
+     "e": 29.34,
+     "asr": "diyor."
+    }
+   ],
+   "bas": 27.68,
+   "son": 29.34
+  },
+  {
+   "metin": "Sıkarken, diyor,",
+   "kelimeler": [
+    {
+     "m": "Sıkarken,",
+     "s": 30.35,
+     "e": 30.76,
+     "asr": "Sıkarken"
+    },
+    {
+     "m": "diyor,",
+     "s": 30.76,
+     "e": 31.1,
+     "asr": "diyor."
+    }
+   ],
+   "bas": 30.35,
+   "son": 31.1
+  },
+  {
+   "metin": "müşrikleri, kâfirleri azap olarak sıkar.",
+   "kelimeler": [
+    {
+     "m": "müşrikleri,",
+     "s": 31.2,
+     "e": 32.04,
+     "asr": "Müşrikleri,"
+    },
+    {
+     "m": "kâfirleri",
+     "s": 32.18,
+     "e": 32.84,
+     "asr": "kafirleri"
+    },
+    {
+     "m": "azap",
+     "s": 32.84,
+     "e": 33.3,
+     "asr": "azab"
+    },
+    {
+     "m": "olarak",
+     "s": 33.3,
+     "e": 33.46,
+     "asr": "olarak"
+    },
+    {
+     "m": "sıkar.",
+     "s": 33.46,
+     "e": 34.16,
+     "asr": "sıkar."
+    }
+   ],
+   "bas": 31.2,
+   "son": 34.16
+  },
+  {
+   "metin": "Müminleri “hoş geldin” gibi sıkar.",
+   "kelimeler": [
+    {
+     "m": "Müminleri",
+     "s": 35.26,
+     "e": 35.84,
+     "asr": "Müminleri"
+    },
+    {
+     "m": "“hoş",
+     "s": 35.84,
+     "e": 36.2,
+     "asr": "hoş"
+    },
+    {
+     "m": "geldin”",
+     "s": 36.2,
+     "e": 36.62,
+     "asr": "geldin"
+    },
+    {
+     "m": "gibi",
+     "s": 36.62,
+     "e": 36.8,
+     "asr": "gibi"
+    },
+    {
+     "m": "sıkar.",
+     "s": 36.8,
+     "e": 37.3,
+     "asr": "sıkar."
+    }
+   ],
+   "bas": 35.26,
+   "son": 37.3
+  },
+  {
+   "metin": "Ama, diyor, Allah birkaç kişiyi sıkmamaya",
+   "kelimeler": [
+    {
+     "m": "Ama,",
+     "s": 38.01,
+     "e": 38.12,
+     "asr": "Ama"
+    },
+    {
+     "m": "diyor,",
+     "s": 38.12,
+     "e": 38.38,
+     "asr": "diyor"
+    },
+    {
+     "m": "Allah",
+     "s": 38.38,
+     "e": 38.72,
+     "asr": "Allah"
+    },
+    {
+     "m": "birkaç",
+     "s": 40.13,
+     "e": 40.5,
+     "asr": "birkaç"
+    },
+    {
+     "m": "kişiyi",
+     "s": 40.5,
+     "e": 40.98,
+     "asr": "kişiyi"
+    },
+    {
+     "m": "sıkmamaya",
+     "s": 40.98,
+     "e": 41.96,
+     "asr": "sıkmamaya"
+    }
+   ],
+   "bas": 38.01,
+   "son": 41.96
+  },
+  {
+   "metin": "Peygamber müjde vermiştir.",
+   "kelimeler": [
+    {
+     "m": "Peygamber",
+     "s": 41.96,
+     "e": 42.72,
+     "asr": "Peygamber"
+    },
+    {
+     "m": "müjde",
+     "s": 43.44,
+     "e": 43.62,
+     "asr": "müjde"
+    },
+    {
+     "m": "vermiştir.",
+     "s": 43.62,
+     "e": 44.22,
+     "asr": "vermiştir."
+    }
+   ],
+   "bas": 41.96,
+   "son": 44.22
+  },
+  {
+   "metin": "Onlardan birisi kimdir?",
+   "kelimeler": [
+    {
+     "m": "Onlardan",
+     "s": 44.83,
+     "e": 45.08,
+     "asr": "Onlardan"
+    },
+    {
+     "m": "birisi",
+     "s": 45.08,
+     "e": 45.54,
+     "asr": "birisi"
+    },
+    {
+     "m": "kimdir?",
+     "s": 45.54,
+     "e": 46.02,
+     "asr": "kimdir?"
+    }
+   ],
+   "bas": 44.83,
+   "son": 46.02
+  },
+  {
+   "metin": "Hazreti Ali'nin annesini kabir sıkmayacaktır.",
+   "kelimeler": [
+    {
+     "m": "Hazreti",
+     "s": 46.99,
+     "e": 47.44,
+     "asr": "Hazreti"
+    },
+    {
+     "m": "Ali'nin",
+     "s": 47.44,
+     "e": 47.9,
+     "asr": "Ali'nin"
+    },
+    {
+     "m": "annesini",
+     "s": 47.9,
+     "e": 48.52,
+     "asr": "annesini"
+    },
+    {
+     "m": "kabir",
+     "s": 48.52,
+     "e": 48.98,
+     "asr": "kabir"
+    },
+    {
+     "m": "sıkmayacaktır.",
+     "s": 48.98,
+     "e": 49.94,
+     "asr": "sıkmayacaktır."
+    }
+   ],
+   "bas": 46.99,
+   "son": 49.94
+  },
+  {
+   "metin": "Sebep? Peygamber Efendimiz diyor ki:",
+   "kelimeler": [
+    {
+     "m": "Sebep?",
+     "s": 50.61,
+     "e": 50.94,
+     "asr": "Sebep?"
+    },
+    {
+     "m": "Peygamber",
+     "s": 51.85,
+     "e": 52.3,
+     "asr": "Peygamber"
+    },
+    {
+     "m": "Efendimiz",
+     "s": 52.3,
+     "e": 52.54,
+     "asr": "Efendimiz"
+    },
+    {
+     "m": "diyor",
+     "s": 52.54,
+     "e": 53.04,
+     "asr": "diyor"
+    },
+    {
+     "m": "ki:",
+     "s": 53.04,
+     "e": 53.24,
+     "asr": "ki"
+    }
+   ],
+   "bas": 50.61,
+   "son": 53.24
+  },
+  {
+   "metin": "“Bana anne görevini yapmıştır,",
+   "kelimeler": [
+    {
+     "m": "“Bana",
+     "s": 53.25,
+     "e": 53.54,
+     "asr": "bana"
+    },
+    {
+     "m": "anne",
+     "s": 53.54,
+     "e": 53.94,
+     "asr": "anne"
+    },
+    {
+     "m": "görevini",
+     "s": 53.94,
+     "e": 54.52,
+     "asr": "görevini"
+    },
+    {
+     "m": "yapmıştır,",
+     "s": 54.52,
+     "e": 55.14,
+     "asr": "yapmıştır."
+    }
+   ],
+   "bas": 53.25,
+   "son": 55.14
+  },
+  {
+   "metin": "onun yanında büyüdüm.”",
+   "kelimeler": [
+    {
+     "m": "onun",
+     "s": 55.18,
+     "e": 55.34,
+     "asr": "Onun"
+    },
+    {
+     "m": "yanında",
+     "s": 55.34,
+     "e": 55.82,
+     "asr": "yanında"
+    },
+    {
+     "m": "büyüdüm.”",
+     "s": 55.82,
+     "e": 56.38,
+     "asr": "büyüdüm."
+    }
+   ],
+   "bas": 55.18,
+   "son": 56.38
+  },
+  {
+   "metin": "Fâtıma annemizi, vefat ederken,",
+   "kelimeler": [
+    {
+     "m": "Fâtıma",
+     "s": 57.44,
+     "e": 57.82,
+     "asr": "Fatıma"
+    },
+    {
+     "m": "annemizi,",
+     "s": 57.82,
+     "e": 58.34,
+     "asr": "annemizi"
+    },
+    {
+     "m": "vefat",
+     "s": 58.34,
+     "e": 58.66,
+     "asr": "vefat"
+    },
+    {
+     "m": "ederken,",
+     "s": 58.66,
+     "e": 59.16,
+     "asr": "ederken"
+    }
+   ],
+   "bas": 57.44,
+   "son": 59.16
+  },
+  {
+   "metin": "Hazreti Ali'nin annesi,",
+   "kelimeler": [
+    {
+     "m": "Hazreti",
+     "s": 59.16,
+     "e": 59.74,
+     "asr": "Hazreti"
+    },
+    {
+     "m": "Ali'nin",
+     "s": 59.74,
+     "e": 60.12,
+     "asr": "Ali'nin"
+    },
+    {
+     "m": "annesi,",
+     "s": 60.12,
+     "e": 60.7,
+     "asr": "annesi"
+    }
+   ],
+   "bas": 59.16,
+   "son": 60.7
+  },
+  {
+   "metin": "Resûlullah kendi gömleğini, onu kefen etmiştir.",
+   "kelimeler": [
+    {
+     "m": "Resûlullah",
+     "s": 61.37,
+     "e": 61.9,
+     "asr": "Resulullah"
+    },
+    {
+     "m": "kendi",
+     "s": 61.9,
+     "e": 62.24,
+     "asr": "kendi"
+    },
+    {
+     "m": "gömleğini,",
+     "s": 62.24,
+     "e": 62.94,
+     "asr": "gömleğin"
+    },
+    {
+     "m": "onu",
+     "s": 62.94,
+     "e": 63.16,
+     "asr": "onu"
+    },
+    {
+     "m": "kefen",
+     "s": 63.16,
+     "e": 63.62,
+     "asr": "kefen"
+    },
+    {
+     "m": "etmiştir.",
+     "s": 63.62,
+     "e": 64.34,
+     "asr": "etmiştir."
+    }
+   ],
+   "bas": 61.37,
+   "son": 64.34
+  },
+  {
+   "metin": "Uzanmıştır, mezarında yatmıştır.",
+   "kelimeler": [
+    {
+     "m": "Uzanmıştır,",
+     "s": 65.07,
+     "e": 65.7,
+     "asr": "Uzanmıştır."
+    },
+    {
+     "m": "mezarında",
+     "s": 65.7,
+     "e": 66.24,
+     "asr": "Mezarında"
+    },
+    {
+     "m": "yatmıştır.",
+     "s": 66.24,
+     "e": 67.08,
+     "asr": "yatmıştır."
+    }
+   ],
+   "bas": 65.07,
+   "son": 67.08
+  },
+  {
+   "metin": "Şöyle demiştir:",
+   "kelimeler": [
+    {
+     "m": "Şöyle",
+     "s": 67.68,
+     "e": 67.84,
+     "asr": "Şöyle"
+    },
+    {
+     "m": "demiştir:",
+     "s": 67.84,
+     "e": 68.5,
+     "asr": "demiştir."
+    }
+   ],
+   "bas": 67.68,
+   "son": 68.5
+  },
+  {
+   "metin": "Allâhümme'rham ümmî Fâtımate binte Esed.",
+   "kelimeler": [
+    {
+     "m": "Allâhümme'rham",
+     "s": 68.97,
+     "e": 69.86,
+     "asr": "Allahümme merhem"
+    },
+    {
+     "m": "ümmî",
+     "s": 69.86,
+     "e": 70.36,
+     "asr": "ümmi"
+    },
+    {
+     "m": "Fâtımate",
+     "s": 70.36,
+     "e": 71.02,
+     "asr": "Fatimete"
+    },
+    {
+     "m": "binte",
+     "s": 71.04,
+     "e": 71.44,
+     "asr": "binti"
+    },
+    {
+     "m": "Esed.",
+     "s": 71.44,
+     "e": 72.0,
+     "asr": "Esed'in."
+    }
+   ],
+   "bas": 68.97,
+   "son": 72.0
+  },
+  {
+   "metin": "“Allah'ım, Esed'in kızı annem",
+   "kelimeler": [
+    {
+     "m": "“Allah'ım,",
+     "s": 72.71,
+     "e": 73.2,
+     "asr": "Allah'ım"
+    },
+    {
+     "m": "Esed'in",
+     "s": 73.82,
+     "e": 74.24,
+     "asr": "Esed'in"
+    },
+    {
+     "m": "kızı",
+     "s": 74.24,
+     "e": 74.68,
+     "asr": "kızı"
+    },
+    {
+     "m": "annem",
+     "s": 74.68,
+     "e": 75.32,
+     "asr": "annem"
+    }
+   ],
+   "bas": 72.71,
+   "son": 75.32
+  },
+  {
+   "metin": "Fâtıma'ya merhamet eyle.”",
+   "kelimeler": [
+    {
+     "m": "Fâtıma'ya",
+     "s": 75.32,
+     "e": 75.98,
+     "asr": "Fatıma'ya"
+    },
+    {
+     "m": "merhamet",
+     "s": 76.45,
+     "e": 76.92,
+     "asr": "merhamet"
+    },
+    {
+     "m": "eyle.”",
+     "s": 76.92,
+     "e": 77.2,
+     "asr": "eyle."
+    }
+   ],
+   "bas": 75.32,
+   "son": 77.2
+  },
+  {
+   "metin": "Onu sıkmayacaktır.",
+   "kelimeler": [
+    {
+     "m": "Onu",
+     "s": 77.28,
+     "e": 77.86,
+     "asr": "Onu"
+    },
+    {
+     "m": "sıkmayacaktır.",
+     "s": 77.86,
+     "e": 78.98,
+     "asr": "sıkmayacaktır."
+    }
+   ],
+   "bas": 77.28,
+   "son": 78.98
+  },
+  {
+   "metin": "Bir de peygamberleri sıkmayacaktır.",
+   "kelimeler": [
+    {
+     "m": "Bir",
+     "s": 79.47,
+     "e": 79.5,
+     "asr": "Bir"
+    },
+    {
+     "m": "de",
+     "s": 79.5,
+     "e": 79.64,
+     "asr": "de"
+    },
+    {
+     "m": "peygamberleri",
+     "s": 79.64,
+     "e": 80.46,
+     "asr": "Peygamberleri"
+    },
+    {
+     "m": "sıkmayacaktır.",
+     "s": 80.46,
+     "e": 81.42,
+     "asr": "sıkmayacaktır."
+    }
+   ],
+   "bas": 79.47,
+   "son": 81.42
+  },
+  {
+   "metin": "Peki hocam, izleyen herkesin",
+   "kelimeler": [
+    {
+     "m": "Peki",
+     "s": 81.99,
+     "e": 82.08,
+     "asr": "Peki"
+    },
+    {
+     "m": "hocam,",
+     "s": 82.08,
+     "e": 82.5,
+     "asr": "hocam"
+    },
+    {
+     "m": "izleyen",
+     "s": 83.06,
+     "e": 83.42,
+     "asr": "izleyen"
+    },
+    {
+     "m": "herkesin",
+     "s": 83.42,
+     "e": 84.1,
+     "asr": "herkesin"
+    }
+   ],
+   "bas": 81.99,
+   "son": 84.1
+  },
+  {
+   "metin": "en sonunda gideceği yere geldik.",
+   "kelimeler": [
+    {
+     "m": "en",
+     "s": 84.49,
+     "e": 84.5,
+     "asr": "en"
+    },
+    {
+     "m": "sonunda",
+     "s": 84.5,
+     "e": 84.88,
+     "asr": "sonunda"
+    },
+    {
+     "m": "gideceği",
+     "s": 84.88,
+     "e": 85.34,
+     "asr": "gideceği"
+    },
+    {
+     "m": "yere",
+     "s": 85.34,
+     "e": 85.52,
+     "asr": "yere"
+    },
+    {
+     "m": "geldik.",
+     "s": 85.52,
+     "e": 86.06,
+     "asr": "geldik."
+    }
+   ],
+   "bas": 84.49,
+   "son": 86.06
+  },
+  {
+   "metin": "Velev ki öldük. Kabirde bizi ne bekliyor?",
+   "kelimeler": [
+    {
+     "m": "Velev ki",
+     "s": 86.81,
+     "e": 87.02,
+     "asr": "Belki"
+    },
+    {
+     "m": "öldük.",
+     "s": 87.02,
+     "e": 87.48,
+     "asr": "öldük."
+    },
+    {
+     "m": "Kabirde",
+     "s": 87.9,
+     "e": 88.16,
+     "asr": "Kabirde"
+    },
+    {
+     "m": "bizi",
+     "s": 88.16,
+     "e": 88.34,
+     "asr": "bizi"
+    },
+    {
+     "m": "ne",
+     "s": 88.34,
+     "e": 88.48,
+     "asr": "ne"
+    },
+    {
+     "m": "bekliyor?",
+     "s": 88.48,
+     "e": 88.86,
+     "asr": "bekliyor?"
+    }
+   ],
+   "bas": 86.81,
+   "son": 88.86
+  },
+  {
+   "metin": "Kabir ya cennet bahçesinden bir bahçedir,",
+   "kelimeler": [
+    {
+     "m": "Kabir",
+     "s": 89.41,
+     "e": 89.86,
+     "asr": "Kabir"
+    },
+    {
+     "m": "ya",
+     "s": 89.86,
+     "e": 90.52,
+     "asr": "ya"
+    },
+    {
+     "m": "cennet",
+     "s": 90.52,
+     "e": 91.08,
+     "asr": "cennet"
+    },
+    {
+     "m": "bahçesinden",
+     "s": 91.08,
+     "e": 91.64,
+     "asr": "bahçesinden"
+    },
+    {
+     "m": "bir",
+     "s": 91.64,
+     "e": 91.9,
+     "asr": "bir"
+    },
+    {
+     "m": "bahçedir,",
+     "s": 91.9,
+     "e": 92.56,
+     "asr": "bahçedir"
+    }
+   ],
+   "bas": 89.41,
+   "son": 92.56
+  },
+  {
+   "metin": "veya cehennem çukurundan bir çukurdur.",
+   "kelimeler": [
+    {
+     "m": "veya",
+     "s": 93.33,
+     "e": 93.36,
+     "asr": "veya"
+    },
+    {
+     "m": "cehennem",
+     "s": 93.36,
+     "e": 94.04,
+     "asr": "cehennem"
+    },
+    {
+     "m": "çukurundan",
+     "s": 94.04,
+     "e": 94.58,
+     "asr": "çukurundan"
+    },
+    {
+     "m": "bir",
+     "s": 94.58,
+     "e": 94.7,
+     "asr": "bir"
+    },
+    {
+     "m": "çukurdur.",
+     "s": 94.7,
+     "e": 95.28,
+     "asr": "çukurdur."
+    }
+   ],
+   "bas": 93.33,
+   "son": 95.28
+  },
+  {
+   "metin": "Kabir budur.",
+   "kelimeler": [
+    {
+     "m": "Kabir",
+     "s": 95.62,
+     "e": 96.0,
+     "asr": "Kabir"
+    },
+    {
+     "m": "budur.",
+     "s": 96.0,
+     "e": 96.3,
+     "asr": "budur."
+    }
+   ],
+   "bas": 95.62,
+   "son": 96.3
+  },
+  {
+   "metin": "Kimin için cennet bahçesinden bir bahçe?",
+   "kelimeler": [
+    {
+     "m": "Kimin",
+     "s": 96.86,
+     "e": 97.04,
+     "asr": "Kimin"
+    },
+    {
+     "m": "için",
+     "s": 97.04,
+     "e": 97.26,
+     "asr": "için"
+    },
+    {
+     "m": "cennet",
+     "s": 97.26,
+     "e": 97.82,
+     "asr": "cennet"
+    },
+    {
+     "m": "bahçesinden",
+     "s": 97.82,
+     "e": 98.4,
+     "asr": "bahçesinden"
+    },
+    {
+     "m": "bir",
+     "s": 98.94,
+     "e": 98.96,
+     "asr": "bir"
+    },
+    {
+     "m": "bahçe?",
+     "s": 98.96,
+     "e": 99.38,
+     "asr": "bahçe?"
+    }
+   ],
+   "bas": 96.86,
+   "son": 99.38
+  },
+  {
+   "metin": "İman edenler için.",
+   "kelimeler": [
+    {
+     "m": "İman",
+     "s": 99.91,
+     "e": 100.14,
+     "asr": "İman"
+    },
+    {
+     "m": "edenler",
+     "s": 100.14,
+     "e": 100.6,
+     "asr": "edenler"
+    },
+    {
+     "m": "için.",
+     "s": 100.6,
+     "e": 100.86,
+     "asr": "için."
+    }
+   ],
+   "bas": 99.91,
+   "son": 100.86
+  },
+  {
+   "metin": "İman etmeyenler için de",
+   "kelimeler": [
+    {
+     "m": "İman",
+     "s": 101.74,
+     "e": 101.94,
+     "asr": "İman"
+    },
+    {
+     "m": "etmeyenler",
+     "s": 101.94,
+     "e": 102.54,
+     "asr": "etmeyenler"
+    },
+    {
+     "m": "için",
+     "s": 102.54,
+     "e": 102.76,
+     "asr": "için"
+    },
+    {
+     "m": "de",
+     "s": 102.76,
+     "e": 102.96,
+     "asr": "de"
+    }
+   ],
+   "bas": 101.74,
+   "son": 102.96
+  },
+  {
+   "metin": "cehennem çukurundan bir çukurdur.",
+   "kelimeler": [
+    {
+     "m": "cehennem",
+     "s": 103.74,
+     "e": 104.16,
+     "asr": "cehennem"
+    },
+    {
+     "m": "çukurundan",
+     "s": 104.16,
+     "e": 104.68,
+     "asr": "çukurundan"
+    },
+    {
+     "m": "bir",
+     "s": 104.68,
+     "e": 104.84,
+     "asr": "bir"
+    },
+    {
+     "m": "çukurdur.",
+     "s": 104.84,
+     "e": 105.36,
+     "asr": "çukurdur."
+    }
+   ],
+   "bas": 103.74,
+   "son": 105.36
+  },
+  {
+   "metin": "Ruh… Ölen insanların ruhlarını",
+   "kelimeler": [
+    {
+     "m": "Ruh…",
+     "s": 105.79,
+     "e": 106.14,
+     "asr": "Ruh"
+    },
+    {
+     "m": "Ölen",
+     "s": 106.56,
+     "e": 106.76,
+     "asr": "ölen"
+    },
+    {
+     "m": "insanların",
+     "s": 106.76,
+     "e": 107.52,
+     "asr": "insanların"
+    },
+    {
+     "m": "ruhlarını",
+     "s": 107.52,
+     "e": 108.14,
+     "asr": "ruhlarını"
+    }
+   ],
+   "bas": 105.79,
+   "son": 108.14
+  },
+  {
+   "metin": "Allah kıyamete kadar berzah âleminde muhafaza eder.",
+   "kelimeler": [
+    {
+     "m": "Allah",
+     "s": 108.14,
+     "e": 108.44,
+     "asr": "Allah"
+    },
+    {
+     "m": "kıyamete",
+     "s": 108.44,
+     "e": 109.22,
+     "asr": "kıyamete"
+    },
+    {
+     "m": "kadar",
+     "s": 109.22,
+     "e": 109.56,
+     "asr": "kadar"
+    },
+    {
+     "m": "berzah",
+     "s": 110.29,
+     "e": 110.64,
+     "asr": "berzak"
+    },
+    {
+     "m": "âleminde",
+     "s": 110.64,
+     "e": 111.16,
+     "asr": "aleminde"
+    },
+    {
+     "m": "muhafaza",
+     "s": 111.16,
+     "e": 111.74,
+     "asr": "muhafaza"
+    },
+    {
+     "m": "eder.",
+     "s": 111.74,
+     "e": 111.98,
+     "asr": "eder."
+    }
+   ],
+   "bas": 108.14,
+   "son": 111.98
+  },
+  {
+   "metin": "Müminlerin ruhları cennet gibi bir yerdedir,",
+   "kelimeler": [
+    {
+     "m": "Müminlerin",
+     "s": 112.83,
+     "e": 113.42,
+     "asr": "Müminlerin"
+    },
+    {
+     "m": "ruhları",
+     "s": 113.92,
+     "e": 114.32,
+     "asr": "ruhları"
+    },
+    {
+     "m": "cennet",
+     "s": 114.32,
+     "e": 115.26,
+     "asr": "cennet"
+    },
+    {
+     "m": "gibi",
+     "s": 115.26,
+     "e": 115.42,
+     "asr": "gibi."
+    },
+    {
+     "m": "bir",
+     "s": 115.42,
+     "e": 116.12,
+     "asr": "Bir"
+    },
+    {
+     "m": "yerdedir,",
+     "s": 116.12,
+     "e": 116.9,
+     "asr": "yerdedir,"
+    }
+   ],
+   "bas": 112.83,
+   "son": 116.9
+  },
+  {
+   "metin": "kâfirlerin ruhları da cehennem gibi bir yerdedir.",
+   "kelimeler": [
+    {
+     "m": "kâfirlerin",
+     "s": 117.72,
+     "e": 118.24,
+     "asr": "kafirlerin"
+    },
+    {
+     "m": "ruhları",
+     "s": 118.24,
+     "e": 118.66,
+     "asr": "ruhları"
+    },
+    {
+     "m": "da",
+     "s": 118.66,
+     "e": 118.86,
+     "asr": "da"
+    },
+    {
+     "m": "cehennem",
+     "s": 119.29,
+     "e": 119.68,
+     "asr": "cehennem"
+    },
+    {
+     "m": "gibi",
+     "s": 119.68,
+     "e": 119.8,
+     "asr": "gibi"
+    },
+    {
+     "m": "bir",
+     "s": 119.8,
+     "e": 120.04,
+     "asr": "bir"
+    },
+    {
+     "m": "yerdedir.",
+     "s": 120.04,
+     "e": 120.58,
+     "asr": "yerdedir."
+    }
+   ],
+   "bas": 117.72,
+   "son": 120.58
+  }
+ ]
+}

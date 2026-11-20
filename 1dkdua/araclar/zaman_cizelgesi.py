@@ -38,7 +38,7 @@ for raw in open(lines_p, encoding="utf-8"):
         grp = asr[k:k+c]; k += c
         s, e = grp[0]["s"], grp[-1]["e"]
         m = re.fullmatch(r"(.*)\{([\d.]+)\}", d)  # elle düzeltme: kelime{saniye}
-        st = float(m.group(2)) if m else refine(s, e); d = m.group(1) if m else d
+        st = float(m.group(2)) if m else refine(s, e); d = (m.group(1) if m else d).replace("~", " ")  # ~ = kelime içi boşluk
         words.append({"m": d, "s": st, "e": round(e, 3), "asr": "".join(g["w"] for g in grp).strip()})
     disp = [w["m"] for w in words]
     lines.append({"metin": " ".join(disp), "kelimeler": words, "bas": words[0]["s"], "son": words[-1]["e"]})

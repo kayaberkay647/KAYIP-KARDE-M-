@@ -14,6 +14,19 @@ const HOCA = {
   entari: '#F2EEE4', entariK: '#D9D2C2', kusak: '#3B3735', kusakK: '#2A2726', ayakkabi: '#2A201A', buyukSarik: 1
 };
 const TALEBE1 = { ...ADAM, sarik: '#E9DFC8', sarikK: '#CDBE9C', kulah: '#8A4B32', kaftan: '#8A5A3A', kaftanK: '#6A4329', kaftanA: '#A3734F', kusak: '#D8C9A4', kusakK: '#BBA982' };
+// Yaşlı Hoca (02'nin konuşmacısı): beyaz sakal ve kaş, yuvarlak gözlük, beyaz gömlek, gri-bej hırka
+const YASLI_HOCA = {
+  ten: '#D3A27F', tenK: '#AE7C5C', sakal: '#ECE8E1', kas: '#E4DED4', goz: '#2A221C',
+  sarik: '#F7F4EE', sarikK: '#DAD3C5', kulah: '#F7F4EE',
+  kaftan: '#8E8473', kaftanK: '#6C6455', kaftanA: '#A79D8B', trim: '#C9B48A',
+  entari: '#F5F2EC', entariK: '#DDD7CC', kusak: '#5E574C', kusakK: '#4A443B', ayakkabi: '#2A201A', buyukSarik: 1, gozluk: 1, yasli: 1
+};
+const FAKIR = {
+  ten: '#B98060', tenK: '#946148', sakal: '#9A958D', kas: '#8E8880', goz: '#2A1E16', yasli: 1,
+  sarik: '#B9AA8F', sarikK: '#978A72', kulah: '#6E5A44',
+  kaftan: '#7A6450', kaftanK: '#5A4838', kaftanA: '#937B63', trim: '#6A5442',
+  entari: '#D9CDB4', entariK: '#BFB296', kusak: '#6E7B3A', kusakK: '#55602C', ayakkabi: '#4A3A2E'
+};
 const TALEBE2 = { ...ADAM, sarik: '#E4DCC9', sarikK: '#C7BB9F', kulah: '#4E5A3A', kaftan: '#5C6B5E', kaftanK: '#445147', kaftanA: '#76857A', kusak: '#C99A45', kusakK: '#A27832' };
 
 // Yürüme: faz yürünen mesafeden türetilir (ayak kayması olmaz). mesafe birim cinsinden.
@@ -90,7 +103,17 @@ function basCiz(pal, o = {}) {
   const k = 1 - (o.kirp || 0) * .9;
   elips(.235, -.1, .042, .055 * k); doldur(pal.goz);
   if (k > .5) { elips(.248, -.118, .013, .015); doldur('#FFF6E6', .8); }
-  X.beginPath(); X.moveTo(.15, -.205); X.quadraticCurveTo(.24, -.235, .33, -.2); cizgi(pal.sakal, .045);
+  X.beginPath(); X.moveTo(.15, -.205); X.quadraticCurveTo(.24, -.235, .33, -.2); cizgi(pal.kas || pal.sakal, pal.kas ? .06 : .045);
+  if (pal.yasli) { // göz kenarı ve yanak çizgileri
+    X.beginPath(); X.moveTo(.15, -.07); X.quadraticCurveTo(.12, -.04, .1, -.08); X.moveTo(.16, -.03); X.quadraticCurveTo(.13, -.0, .11, -.03); cizgi(pal.tenK, .018, .8);
+    X.beginPath(); X.moveTo(.3, .02); X.quadraticCurveTo(.27, .08, .28, .12); cizgi(pal.tenK, .018, .6);
+  }
+  if (pal.gozluk) { // yuvarlak gözlük
+    X.save(); X.beginPath(); X.arc(.235, -.1, .105, 0, TAU); X.fillStyle = 'rgba(220,235,240,.18)'; X.fill(); cizgi('#3A3230', .028);
+    X.beginPath(); X.arc(.235, -.1, .08, Math.PI * 1.1, Math.PI * 1.45); cizgi('#FFFFFF', .016, .55);
+    X.beginPath(); X.moveTo(.34, -.11); X.quadraticCurveTo(.38, -.13, .41, -.1); cizgi('#3A3230', .024);
+    X.beginPath(); X.moveTo(.13, -.11); X.lineTo(-.15, -.08); cizgi('#3A3230', .022); X.restore();
+  }
   // sarık
   X.save(); X.scale(bs, bs);
   X.beginPath(); X.moveTo(-.37, -.08);
