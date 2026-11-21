@@ -74,7 +74,7 @@ REPLIKLER = [
  dict(id="L16", kim="DEFNE", t=87.05, parca=[("Abi?",0),("Ne oldu?",0.25)], hiz=6, ortam="uzak"),
  # SAHNE 10  (89–99)
  dict(id="L17", kim="ARDA",  t=94.45, parca=[("Defne...",0),("Sakın hareket etme.",0.45)], hiz=-8, fisilti=0.58, titreme=0.5, ses=-1),
- dict(id="L18", kim="DEFNE", t=97.35, parca=[("Abi, niye?",0),("Ne var?",0.15)], hiz=10, ortam="uzak"),
+ dict(id="L18", kim="DEFNE", t=96.90, parca=[("Abi, niye?",0),("Ne var?",0.15)], hiz=10, ortam="uzak"),
  # SAHNE 11  (99–109)
  dict(id="L19", kim="ARDA",  t=100.05, parca=[("Defne, sakince kalk.",0),("Bana doğru gel.",0.35)], hiz=-6, titreme=0.45, fisilti=0.15),
  dict(id="L20", kim="DEFNE", t=103.25, parca=[("Abi, beni korkutma.",0),("Ne oluyor?",0.2)], hiz=12, perde=4, nefes=0.25, titreme=0.3),
@@ -83,14 +83,14 @@ REPLIKLER = [
  dict(id="L22", kim="ARDA",  t=113.85, parca=[("Gözünü arkaya çevirme.",0),("Gel yanıma.",0.3)], hiz=-4, fisilti=0.55, titreme=0.4),
  # SAHNE 13  (119–129)
  dict(id="L23", kim="IKINCI",t=124.00, parca=[("Abi...",0),("Buraya gelsene.",0.6)], hiz=0, ortam="kapi"),
- dict(id="L24", kim="DEFNE", t=126.95, parca=[("Abi...",0),("Ben buradayım.",0.35)], hiz=2, fisilti=0.66, titreme=0.35),
+ dict(id="L24", kim="DEFNE", t=126.60, parca=[("Abi...",0),("Ben buradayım.",0.35)], hiz=2, fisilti=0.66, titreme=0.35),
  # SAHNE 14  (129–139)
  dict(id="L25", kim="ARDA",  t=130.35, parca=[("Sen...",0),("Sen kimsin?",0.35)], hiz=-6, fisilti=0.35, titreme=0.5),
  dict(id="L26", kim="IKINCI",t=134.05, parca=[("Abi...",0),("Beni tanımadın mı?",0.55)], hiz=-2, ortam="hayalet"),
  # SAHNE 15  (139–150)
  dict(id="L27", kim="DEFNE", t=142.45, parca=[("Abi...",0),("Ben gerçek Defne'yim.",0.4)], hiz=0, titreme=0.75, nefes=0.25, fisilti=0.2),
  dict(id="L28", kim="IKINCI",t=146.05, parca=[("Ben de öyle.",0)], hiz=-4, ortam="hayalet"),
- dict(id="L29", kim="COCUK", t=147.95, parca=[("Hangimize inanacaksın?",0)], hiz=0, fisilti=0.97, ortam="cocuk", ses=-4),
+ dict(id="L29", kim="COCUK", t=147.78, parca=[("Hangimize inanacaksın?",0)], hiz=0, fisilti=0.97, ortam="cocuk", ses=-4),
 ]
 
 ALTYAZI_METNI = {  # ekranda görünen metin (tek satırda tutulan orijinal yazım)
@@ -126,6 +126,8 @@ ALTYAZI_METNI = {  # ekranda görünen metin (tek satırda tutulan orijinal yaz�
 }
 
 SAHNE_BITIS = [9,19,29,39,49,59,69,79,89,99,109,119,129,139,150]
+# Çocuk fısıltısı ElevenLabs'ta Defne'nin sesiyle üretildiyse perdesi inceltilir (gerçek çocuk sesi kullanırsan False yap)
+ELEVEN_COCUK_INCELT = True
 
 # ---------------------------------------------------------------------------
 def tts_indir(metin, ses, hiz, perde, hedef):
@@ -338,7 +340,7 @@ def main():
             for (o, d, w) in kel: kelimeler.append((kon / SR + o, d, w))
         # ses rengi işlemleri (yalnızca TTS için; ElevenLabs kaydında fısıltı/titreme/nefes oyuncunun performansıdır)
         if eleven: r = {**r, "fisilti": 0, "nefes": 0, "titreme": 0}
-        if kim == "COCUK" and not eleven:
+        if kim == "COCUK" and (not eleven or ELEVEN_COCUK_INCELT):
             kuru = perde_kaydir(kuru, 1.10)
             kelimeler = [(o / 1.10, d / 1.10, w) for o, d, w in kelimeler]
         if r.get("fisilti", 0) > 0:

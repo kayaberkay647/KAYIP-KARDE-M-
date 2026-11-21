@@ -126,7 +126,7 @@ function durumArda(t) {
       // Defne'nin kolunu tutar
       D.telefon = t < 139.2 ? null : 'iki';
       D.eller = { sol: { x: -21, y: 59, tel: true }, sag: { x: 27, y: 52, on: true } };
-      D.bas = anim(t, [[119.0, 0], [119.4, -0.6], [120.6, -0.6], [121.1, 0], [126.8, 0], [127.2, -0.5], [128.9, -0.5], [129.3, 0],
+      D.bas = anim(t, [[119.0, 0], [119.4, -0.6], [120.6, -0.6], [121.1, 0], [126.4, 0], [126.8, -0.5], [128.9, -0.5], [129.3, 0],
         [137.6, 0], [138.0, -0.3], [139.0, 0], [141.6, 0], [142.0, -0.35], [143.0, -0.35], [143.6, 0]]);
       D.nod = anim(t, [[119.0, 0.1], [121.0, 0.0], [139.2, 0.0], [139.9, 0.4]]);
       D.bakY = anim(t, [[119.0, 0.2], [121.0, 0.0], [139.2, 0.0], [139.9, 0.7]]);
@@ -212,8 +212,8 @@ function durumDefne(t) {
   if (yk) Object.assign(D, yk); else { const s = yurumeSon('DEFNE_kor'); Object.assign(D, { x: s.x, z: s.z, yon: anim(t, [[119.7, 1.0], [120.8, 0.05]]) }); }
   D.eller = { sol: { x: -24, y: 46, on: true }, sag: { x: 19, y: 58 } };
   if (t > 129.4) D.eller = { sol: { x: -27, y: 38, on: true }, sag: { x: -8, y: 36, on: true } };   // abisinin koluna sarılır
-  D.bas = anim(t, [[119.7, 0.6], [120.6, 0.6], [121.1, 0], [127.0, 0], [127.3, 0.55], [128.9, 0.55], [129.3, 0.1], [141.5, 0.1], [142.4, 0.95], [146, 0.95]]);
-  D.bakX = anim(t, [[121, 0], [127.0, 0], [127.3, 0.5], [128.9, 0.5], [129.3, 0], [141.5, 0], [142.4, 0.55]]);
+  D.bas = anim(t, [[119.7, 0.6], [120.6, 0.6], [121.1, 0], [126.6, 0], [126.9, 0.55], [128.9, 0.55], [129.3, 0.1], [141.5, 0.1], [142.4, 0.95], [146, 0.95]]);
+  D.bakX = anim(t, [[121, 0], [126.6, 0], [126.9, 0.5], [128.9, 0.5], [129.3, 0], [141.5, 0], [142.4, 0.55]]);
   D.ifade = ifadeZaman(t, [[118.6, 'dehset'], [120.2, 'korkmus'], [121.6, 'dehset', 0.3], [124.4, 'dehset'], [127.0, 'dehset'], [129.5, 'dehset'], [142.4, 'korkmus'], [145.0, 'dehset']]);
   D.nefesHiz = 1.25; D.nefesGenlik = 2.1;
   D.kirpEk = [121.7, 133.3];
@@ -634,15 +634,15 @@ cekim(119, 123.2, 13, (ctx, t) => {
   const k = karisK(iki, yuzeOdak(K, D, 2.6, 0.42), eio(seg(t, 120.8, 123.2)));
   koridorCek(ctx, K, t, { k2: suzul(k, t), karakterler: canliKarakterler(t), kapiAci: kapiAcisi(t), blur: 2 * seg(t, 120.8, 123.2), odakD: K.derinlik(D.x, 1, D.z) });
 }, { tip: 'erit', sure: 0.3 });
-cekim(123.2, 126.7, 13, (ctx, t) => {
-  const kz = lerp(3.55, 4.75, ss(seg(t, 123.2, 126.7)));
+cekim(123.2, 126.45, 13, (ctx, t) => {
+  const kz = lerp(3.55, 4.75, ss(seg(t, 123.2, 126.45)));
   const K = K_KOR_ILERI(kz, -0.1, 1.5);
   const kp = K.p(0, 1.05, 7.4);
-  koridorCek(ctx, K, t, { k2: { x: kp[0], y: kp[1] + 80, z: lerp(1.35, 1.5, seg(t, 123.2, 126.7)), ox: W / 2, oy: H * 0.45 }, karakterler: canliKarakterler(t), kapiAci: kapiAcisi(t) });
+  koridorCek(ctx, K, t, { k2: { x: kp[0], y: kp[1] + 80, z: lerp(1.35, 1.5, seg(t, 123.2, 126.45)), ox: W / 2, oy: H * 0.45 }, karakterler: canliKarakterler(t), kapiAci: kapiAcisi(t) });
 });
-cekim(126.7, 129, 13, (ctx, t) => {
+cekim(126.45, 129, 13, (ctx, t) => {
   const K = K_KOR_GERI(5.4, -0.15), D = durumDefne(t);
-  const k = karisK(yuzeOdak(K, D, 4.2, 0.42), yuzeOdak(K, D, 4.8, 0.42), eio(seg(t, 126.7, 129)));
+  const k = karisK(yuzeOdak(K, D, 4.2, 0.42), yuzeOdak(K, D, 4.8, 0.42), eio(seg(t, 126.45, 129)));
   koridorCek(ctx, K, t, { k2: k, karakterler: canliKarakterler(t), kapiAci: kapiAcisi(t), blur: 7, odakD: K.derinlik(D.x, 1, D.z) });
 });
 

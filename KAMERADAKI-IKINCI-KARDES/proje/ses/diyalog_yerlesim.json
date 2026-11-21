@@ -122,7 +122,7 @@
   "id": "L18",
   "kim": "DEFNE",
   "dosya": "L18_DEFNE.wav",
-  "t": 97.35,
+  "t": 96.9,
   "ortam": "uzak"
  },
  {
@@ -164,7 +164,7 @@
   "id": "L24",
   "kim": "DEFNE",
   "dosya": "L24_DEFNE.wav",
-  "t": 126.95,
+  "t": 126.6,
   "ortam": "yakin"
  },
  {
@@ -199,7 +199,7 @@
   "id": "L29",
   "kim": "COCUK",
   "dosya": "L29_COCUK.wav",
-  "t": 147.95,
+  "t": 147.78,
   "ortam": "cocuk"
  }
 ]

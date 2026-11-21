@@ -4,9 +4,18 @@ Her replik videodaki sahneye, kamera açısına ve zamanlamaya göre yazıldı. 
 
 ---
 
+## 0. Videoda kullanılan üretim
+
+Videodaki sesler bu metinlerle **Eleven v4** modelinde üretildi:
+
+- Arda: hazır ses **Will**
+- Defne, İkinci Defne, çocuk fısıltısı: hazır ses **Jessica**
+
+Testlerde v3 bazı Türkçe fısıltıları İngilizceye kaydırdı; v4 Türkçe kaldı ve etiketleri uyguladı. Ücretsiz pakette API yalnızca hazır seslere izin veriyor. Ücretli pakette aşağıdaki Türkçe sesler önerilir; betiği `proje/araclar/0_elevenlabs_uret.py` ile yeniden çalıştırmak yeterli.
+
 ## 1. Model
 
-- **Önerilen: Eleven v3.** Türkçeyi destekler ve `[whispers]`, `[trembling]` gibi duygu etiketlerini anlar.
+- **Önerilen: Eleven v4** (testlerde Türkçe fısıltıları en iyi uygulayan model). Eleven v3 de etiketleri anlar ama bazı Türkçe fısıltılarda İngilizceye kayabiliyor.
   - Stability: Arda ve Defne için **Natural**. Fısıltı ve korku etiketleri yeterince etkili olmazsa o repliği **Creative** ile yeniden üret. İkinci Defne için **Robust** (düz, değişmeyen, tekinsiz ton).
 - **Multilingual v2 kullanacaksan:** köşeli parantezleri ve içindekileri sil; `...` ve noktalama kalsın. Duyguyu aşağıdaki ayarlarla ver.
 - Her karakter için **tek bir ses ID'si** kullan ve ayarlarını bölüm boyunca değiştirme; yalnızca etiketler değişsin. İkinci Defne, Defne ile **aynı ses ID'sini** kullanır.
@@ -194,7 +203,7 @@ Dosya adları: `L01.mp3 … L29.mp3`
 *Ekranda:* Arda'nın yüzü (Defne salondan sesleniyor).
 *Ton:* Şaşkın, huzursuz, salondan seslenir gibi; kısa ve hızlı.
 ```
-[confused, uneasy, calling out] Abi, niye? Ne var?
+[uneasy, calling out] Abi, niye? Ne var?
 ```
 
 ### SAHNE 11 · 01:39–01:49 · Salon kapısında
@@ -251,7 +260,7 @@ Dosya adları: `L01.mp3 … L29.mp3`
 *Ekranda:* İki kardeşin yüzü; Defne abisinin koluna sarılıyor.
 *Ton:* Zorlanarak, kısık ve boğuk; ilk "Sen..." boğazda kalıyor, sonra yeniden deniyor.
 ```
-[hoarse, struggling to speak, frightened] Sen... [short pause] Sen kimsin?
+[hoarse, frightened] Sen... Sen kimsin?
 ```
 
 **L26 — İKİNCİ DEFNE** · başlar 2:14.2 · hedef 2.3 sn · en fazla 4.8 sn

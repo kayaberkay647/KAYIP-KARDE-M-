@@ -345,7 +345,7 @@ def efektler():
     ekle(E, kumas(0.7, 7), 139.2, -28)
     ekle(E, parazit(0.22, 12), 147.8, -12)
     ekle(E, parazit(0.12, 13, 0.6), 148.6, -18)
-    ekle(E, derin_vurus(), 149.3, -9)
+    ekle(E, derin_vurus(), 149.45, -9)
     # --- ayak sesleri (yurume.js ile eş zamanlı) ---
     for ad, Y in YURUME.items():
         if ad == 'SES_adim': continue

@@ -1,0 +1,351 @@
+{
+ "L02": {
+  "kim": "DEFNE",
+  "metin": "[relaxed, amused, smiling] Abi, kesin yine kamera saçmalıyordur.",
+  "secilen": "L02_0.mp3",
+  "sure": 2.86,
+  "hedef": 2.2,
+  "enfazla": 3.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L02_0.mp3"
+  ]
+ },
+ "L03": {
+  "kim": "ARDA",
+  "metin": "[surprised, suddenly serious] Bir dakika... [short pause] Defne, bu sen misin?",
+  "secilen": "L03_0.mp3",
+  "sure": 3.08,
+  "hedef": 2.9,
+  "enfazla": 3.3,
+  "sigiyor": true,
+  "denemeler": [
+   "L03_0.mp3"
+  ]
+ },
+ "L04": {
+  "kim": "DEFNE",
+  "metin": "[curious, light] Ne olmuş? Göstersene.",
+  "secilen": "L04_0.mp3",
+  "sure": 1.65,
+  "hedef": 1.5,
+  "enfazla": 2.3,
+  "sigiyor": true,
+  "denemeler": [
+   "L04_0.mp3"
+  ]
+ },
+ "L05": {
+  "kim": "DEFNE",
+  "metin": "[confused, a little defensive] Abi, ben koridora falan çıkmadım ki.",
+  "secilen": "L05_0.mp3",
+  "sure": 2.48,
+  "hedef": 2.0,
+  "enfazla": 3.4,
+  "sigiyor": true,
+  "denemeler": [
+   "L05_0.mp3"
+  ]
+ },
+ "L06": {
+  "kim": "ARDA",
+  "metin": "[suspicious, questioning] Nasıl çıkmadın? [short pause] Üstündeki kıyafet bile aynı.",
+  "secilen": "L06_0.mp3",
+  "sure": 3.2,
+  "hedef": 3.1,
+  "enfazla": 4.1,
+  "sigiyor": true,
+  "denemeler": [
+   "L06_0.mp3"
+  ]
+ },
+ "L07": {
+  "kim": "ARDA",
+  "metin": "[quietly, stunned, almost to himself] Şuna bak... [short pause] Aynı anda iki yerdesin.",
+  "secilen": "L07_0.mp3",
+  "sure": 2.97,
+  "hedef": 2.8,
+  "enfazla": 3.5,
+  "sigiyor": true,
+  "denemeler": [
+   "L07_0.mp3"
+  ]
+ },
+ "L08": {
+  "kim": "DEFNE",
+  "metin": "[starting to panic, breathy, fast] Abi, bu nasıl oluyor?",
+  "secilen": "L08_0.mp3",
+  "sure": 1.74,
+  "hedef": 1.2,
+  "enfazla": 1.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L08_0.mp3"
+  ]
+ },
+ "L09": {
+  "kim": "DEFNE",
+  "metin": "[softly, frightened, small voice] Abi... [short pause] O kız bana benziyor.",
+  "secilen": "L09_0.mp3",
+  "sure": 2.94,
+  "hedef": 1.9,
+  "enfazla": 3.4,
+  "sigiyor": true,
+  "denemeler": [
+   "L09_0.mp3"
+  ]
+ },
+ "L10": {
+  "kim": "ARDA",
+  "metin": "[slowly, gravely] Benziyor değil Defne... [long pause] Resmen sensin.",
+  "secilen": "L10_0.mp3",
+  "sure": 4.18,
+  "hedef": 4.1,
+  "enfazla": 5.4,
+  "sigiyor": true,
+  "denemeler": [
+   "L10_0.mp3"
+  ]
+ },
+ "L11": {
+  "kim": "DEFNE",
+  "metin": "[anxious, half-whispering, fast] Abi, duyuyor musun? [quick breath] Koridordan geliyor.",
+  "secilen": "L11_0.mp3",
+  "sure": 2.77,
+  "hedef": 2.4,
+  "enfazla": 3.5,
+  "sigiyor": true,
+  "denemeler": [
+   "L11_0.mp3"
+  ]
+ },
+ "L12": {
+  "kim": "ARDA",
+  "metin": "[trying to sound calm, low and protective] Sen burada dur. [short pause] Bir bakıp geleceğim.",
+  "secilen": "L12_0.mp3",
+  "sure": 2.43,
+  "hedef": 2.7,
+  "enfazla": 4.1,
+  "sigiyor": true,
+  "denemeler": [
+   "L12_0.mp3"
+  ]
+ },
+ "L13": {
+  "kim": "ARDA",
+  "metin": "[cautious, firm, not shouting] Kim var orada?",
+  "secilen": "L13_0.mp3",
+  "sure": 1.1,
+  "hedef": 0.9,
+  "enfazla": 2.9,
+  "sigiyor": true,
+  "denemeler": [
+   "L13_0.mp3"
+  ]
+ },
+ "L14": {
+  "kim": "ARDA",
+  "metin": "[quietly, uneasy] Defne, sen mi bir şey yaptın?",
+  "secilen": "L14_2.mp3",
+  "sure": 2.0,
+  "hedef": 2.0,
+  "enfazla": 2.1,
+  "sigiyor": true,
+  "denemeler": [
+   "L14_0.mp3",
+   "L14_1.mp3",
+   "L14_2.mp3"
+  ]
+ },
+ "L15": {
+  "kim": "ARDA",
+  "metin": "[whispers, in disbelief] Yok artık...",
+  "secilen": "L15_0.mp3",
+  "sure": 1.09,
+  "hedef": 0.8,
+  "enfazla": 1.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L15_0.mp3"
+  ]
+ },
+ "L16": {
+  "kim": "DEFNE",
+  "metin": "[calling from another room, worried] Abi? Ne oldu?",
+  "secilen": "L16_0.mp3",
+  "sure": 1.37,
+  "hedef": 1.1,
+  "enfazla": 1.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L16_0.mp3"
+  ]
+ },
+ "L17": {
+  "kim": "ARDA",
+  "metin": "[urgent whisper, voice trembling] Defne... Sakın hareket etme.",
+  "secilen": "L17_0.mp3",
+  "sure": 2.03,
+  "hedef": 2.6,
+  "enfazla": 2.7,
+  "sigiyor": true,
+  "denemeler": [
+   "L17_0.mp3"
+  ]
+ },
+ "L18": {
+  "kim": "DEFNE",
+  "metin": "[uneasy, calling out] Abi, niye? Ne var?",
+  "secilen": "L18_4.mp3",
+  "sure": 2.0,
+  "hedef": 1.4,
+  "enfazla": 1.5,
+  "sigiyor": false,
+  "denemeler": [
+   "L18_0.mp3",
+   "L18_1.mp3",
+   "L18_2.mp3",
+   "L18_3.mp3",
+   "L18_4.mp3",
+   "L18_5.mp3"
+  ]
+ },
+ "L19": {
+  "kim": "ARDA",
+  "metin": "[controlled but scared, voice shaking slightly] Defne, sakince kalk. Bana doğru gel.",
+  "secilen": "L19_1.mp3",
+  "sure": 2.94,
+  "hedef": 3.0,
+  "enfazla": 3.0,
+  "sigiyor": true,
+  "denemeler": [
+   "L19_0.mp3",
+   "L19_1.mp3"
+  ]
+ },
+ "L20": {
+  "kim": "DEFNE",
+  "metin": "[scared, pleading, breathing fast] Abi, beni korkutma. Ne oluyor?",
+  "secilen": "L20_0.mp3",
+  "sure": 2.62,
+  "hedef": 1.9,
+  "enfazla": 5.6,
+  "sigiyor": true,
+  "denemeler": [
+   "L20_0.mp3"
+  ]
+ },
+ "L21": {
+  "kim": "DEFNE",
+  "metin": "[nervous, shaky, insisting] Arda, bir şey söylesene.",
+  "secilen": "L21_0.mp3",
+  "sure": 1.92,
+  "hedef": 1.4,
+  "enfazla": 3.2,
+  "sigiyor": true,
+  "denemeler": [
+   "L21_0.mp3"
+  ]
+ },
+ "L22": {
+  "kim": "ARDA",
+  "metin": "[tense, urgent whisper] Gözünü arkaya çevirme. [short pause] Gel yanıma.",
+  "secilen": "L22_0.mp3",
+  "sure": 2.37,
+  "hedef": 2.7,
+  "enfazla": 5.0,
+  "sigiyor": true,
+  "denemeler": [
+   "L22_0.mp3"
+  ]
+ },
+ "L23": {
+  "kim": "IKINCI",
+  "metin": "[very calm, soft, slow, emotionless] Abi... [short pause] Buraya gelsene.",
+  "secilen": "L23_0.mp3",
+  "sure": 2.24,
+  "hedef": 2.2,
+  "enfazla": 2.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L23_0.mp3"
+  ]
+ },
+ "L24": {
+  "kim": "DEFNE",
+  "metin": "[terrified whisper, trembling] Abi... Ben buradayım.",
+  "secilen": "L24_1.mp3",
+  "sure": 2.28,
+  "hedef": 1.5,
+  "enfazla": 1.9,
+  "sigiyor": false,
+  "denemeler": [
+   "L24_0.mp3",
+   "L24_1.mp3",
+   "L24_2.mp3"
+  ]
+ },
+ "L25": {
+  "kim": "ARDA",
+  "metin": "[hoarse, frightened] Sen... Sen kimsin?",
+  "secilen": "L25_3.mp3",
+  "sure": 2.48,
+  "hedef": 1.8,
+  "enfazla": 3.5,
+  "sigiyor": true,
+  "denemeler": [
+   "L25_0.mp3",
+   "L25_1.mp3",
+   "L25_2.mp3",
+   "L25_3.mp3"
+  ]
+ },
+ "L26": {
+  "kim": "IKINCI",
+  "metin": "[very calm, slow, eerily gentle] Abi... [short pause] Beni tanımadın mı?",
+  "secilen": "L26_0.mp3",
+  "sure": 2.34,
+  "hedef": 2.3,
+  "enfazla": 4.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L26_0.mp3"
+  ]
+ },
+ "L27": {
+  "kim": "DEFNE",
+  "metin": "[trembling with fear, on the verge of tears, quiet] Abi... Ben gerçek Defne'yim.",
+  "secilen": "L27_0.mp3",
+  "sure": 2.95,
+  "hedef": 2.0,
+  "enfazla": 3.5,
+  "sigiyor": true,
+  "denemeler": [
+   "L27_0.mp3"
+  ]
+ },
+ "L28": {
+  "kim": "IKINCI",
+  "metin": "[calm, flat, chilling] Ben de öyle.",
+  "secilen": "L28_0.mp3",
+  "sure": 0.96,
+  "hedef": 1.1,
+  "enfazla": 1.7,
+  "sigiyor": true,
+  "denemeler": [
+   "L28_0.mp3"
+  ]
+ },
+ "L29": {
+  "kim": "COCUK",
+  "metin": "[whispers softly, eerie] Hangimize inanacaksın?",
+  "secilen": "L29_0.mp3",
+  "sure": 1.5,
+  "hedef": 1.4,
+  "enfazla": 1.8,
+  "sigiyor": true,
+  "denemeler": [
+   "L29_0.mp3"
+  ]
+ }
+}
