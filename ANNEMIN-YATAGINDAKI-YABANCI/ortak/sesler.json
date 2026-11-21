@@ -1,0 +1,7 @@
+{
+  "_not": "ANNEMİN YATAĞINDAKİ YABANCI — sabit ses profilleri (ElevenLabs eleven_v3). Bütün bölümlerde aynen kullanılır.",
+  "MERT":  {"ses": "Yunus (AYY MERT)",       "voice_id": "Q5n6GDIjpN0pLOlycRFT", "stability": 0.0, "similarity": 0.8, "style": 0.45},
+  "SEVDA": {"ses": "Elif (AYY SEVDA)",       "voice_id": "4XsbOSxQHw4NUVaEeo2o", "stability": 0.0, "similarity": 0.8, "style": 0.4},
+  "NECLA": {"ses": "Ahu (AYY NECLA)",        "voice_id": "xyqF3vGMQlPk3e7yA4DI", "stability": 0.0, "similarity": 0.8, "style": 0.4},
+  "SINAN": {"ses": "Ozan Karaca (AYY SINAN)", "voice_id": "5nr6ATQepuidiLb6OT3B", "stability": 0.5, "similarity": 0.8, "style": 0.25}
+}
