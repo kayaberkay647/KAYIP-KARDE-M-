@@ -7,13 +7,21 @@ SR, FPS = 44100, 30
 R = {r["id"]: r for r in json.load(open(f"{KOK}/replikler.json"))}
 KORU = {"R14": 0.55, "R35": 0.62, "R05": 0.45, "R27": 0.4, "R23": 0.35}   # bu duraklamalar dramatik, korunur
 
+TEMPO = 1.06   # perdeyi değiştirmeden hafif hızlandırma (duyulmaz)
 def pcm(f):
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True).stdout
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-af", f"atempo={TEMPO}", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True).stdout
     return array.array("h", raw)
 
 def isle(r):
     a = json.load(open(f"{KOK}/ses/{r['id']}_{r['k']}.json"))
     ch, s, e = a["characters"], a["character_start_times_seconds"], a["character_end_times_seconds"]
+    # v3 duygu etiketleri ([crying] vb.) konuşulmaz: hizalamada boşluk gibi say
+    ic = False; ch = list(ch); etiket = set()
+    for j, c0 in enumerate(ch):
+        if c0 == "[": ic = True; etiket.add(j)
+        if ic: ch[j] = " "
+        if c0 == "]": ic = False
+    s = [v / TEMPO for v in s]; e = [v / TEMPO for v in e]
     x = pcm(f"{KOK}/ses/{r['id']}_{r['k']}.mp3")
     # gerçek ses başlangıcı
     esik = 500; bas = next((i for i, v in enumerate(x) if abs(v) > esik), 0); bas = max(0, bas - int(.02 * SR))
@@ -22,12 +30,16 @@ def isle(r):
     # kesilecek aralıklar (iç duraklamalar)
     kes = []; hedef = KORU.get(r["id"], .24)
     for p, q in zip(al, al[1:]):
-        if q - p > 1:
+        if q - p > 1 and any(p < j < q for j in etiket):   # hıçkırık/nefes: en fazla 1 sn, fazlası sonraki kelimeden hemen önce kesilir
+            g0, g1 = e[p] + .05, s[q] - .08
+            if g1 - g0 > 1.0: kes.append((g1 - (g1 - g0 - 1.0), g1))
+        elif q - p > 1:
             g0, g1 = e[p] + .05, s[q] - .04
             if g1 - g0 > hedef + .06:
                 # sessizliğin en sessiz kısmından kes
                 orta = (g0 + g1) / 2; fazla = (g1 - g0) - hedef
                 kes.append((orta - fazla / 2, orta + fazla / 2))
+    kes.sort()
     def eslem(t):  # orijinal zaman → yeni zaman
         d = 0
         for k0, k1 in kes:
@@ -40,6 +52,19 @@ def isle(r):
     # kesim yerlerinde tık olmasın: kısa fade
     n = len(y); fd = int(.01 * SR)
     for k in range(min(fd, n)): y[n - 1 - k] = int(y[n - 1 - k] * k / fd)
+    # SES SEVİYESİ EŞİTLEME: konuşulan bölümlerin RMS'i her karakterde aynı hedefe (-17 dBFS)
+    pen = int(.05 * SR); enerji = []
+    for i0 in range(0, n - pen, pen):
+        sg = y[i0:i0 + pen]; enerji.append(math.sqrt(sum(v * v for v in sg) / pen))
+    esikE = max(enerji) * .18 if enerji else 0
+    aktif = [v for v in enerji if v > esikE] or [1]
+    rms = math.sqrt(sum(v * v for v in aktif) / len(aktif))
+    kazanc = (32767 * 10 ** (-17 / 20)) / max(rms, 1)
+    if r.get("tel"): kazanc *= .9
+    lim = 32767 * 10 ** (-1.5 / 20)
+    for i0 in range(n):  # yumuşak sınırlayıcı (tanh) — tepeler kırpılmaz, bükülür
+        v = y[i0] * kazanc
+        y[i0] = int(lim * math.tanh(v / lim)) if abs(v) > lim * .6 else int(v)
     out = f"{KOK}/ses_islenmis/{r['id']}.wav"; os.makedirs(os.path.dirname(out), exist_ok=True)
     w = wave.open(out, "wb"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(y.tobytes()); w.close()
     sure = len(y) / SR
@@ -104,18 +129,19 @@ if "--mix" in sys.argv:
     # diyaloglar
     dlg = []
     for s in satir:
-        ek = "highpass=f=320,lowpass=f=3300,acompressor=threshold=0.1:ratio=4,volume=1.25" if s["tel"] else ""
-        if s["s"] == 5 and s["k"] == "EMIR": ek = "aecho=0.8:0.5:40:0.18"
+        # oda akustiği: kısa erken yansımalar (stüdyo kuruluğunu kırar) — telefon sesleri hariç
+        ek = "highpass=f=320,lowpass=f=3300,acompressor=threshold=0.1:ratio=4" if s["tel"] else "highpass=f=70,aecho=0.85:0.6:19|33|52:0.13|0.09|0.05,acompressor=threshold=0.25:ratio=2.5:attack=8:release=120,volume=1.35"
         i = gir("-i", f"{KOK}/ses_islenmis/{s['id']}.wav"); ms = int(s["t"] * 1000)
         filt.append(f"[{i}:a]aformat=sample_rates=44100:channel_layouts=stereo,{ek + ',' if ek else ''}volume=1.0,adelay={ms}|{ms}[d{i}]"); dlg.append(f"d{i}")
     filt.append("".join(f"[{d}]" for d in dlg) + f"amix=inputs={len(dlg)}:normalize=0,apad=whole_dur={SURE}[dlg]")
     filt.append("[dlg]asplit=2[dlgA][dlgK]")
     # müzik (diyalog altında kısılır), finalde kesilir
     i = gir("-i", f"{KOK}/muzik.mp3")
-    filt.append(f"[{i}:a]aformat=sample_rates=44100:channel_layouts=stereo,atrim=0:{SURE},volume='if(lt(t,{ev['vurus'] - .4}),0.30,0)':eval=frame,afade=t=in:d=1.5[m0]")
-    filt.append("[m0][dlgK]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=500[muz]")
+    filt.append(f"[{i}:a]aformat=sample_rates=44100:channel_layouts=stereo,atrim=0:{SURE},volume='if(lt(t,{ev['vurus'] - .4}),0.20,0)':eval=frame,afade=t=in:d=1.5[m0]")
+    filt.append("[m0][dlgK]sidechaincompress=threshold=0.012:ratio=10:attack=30:release=600[muz]")
     # yağmur: sürekli, finalde kesilir
     ekle(E("yagmur"), 0, 1, f"atrim=0:{ev['karar']},volume='if(lt(t,{sahne[2]}),0.55,if(lt(t,{sahne[5]}),0.32,if(lt(t,{ev['donus']}),0.2,0.3)))':eval=frame,afade=t=out:st={ev['karar'] - .3:.3f}:d=0.3", dongu=True)
+    ekle(E("sokak"), 0, 1, f"atrim=0:{ev['karar']},volume='if(lt(t,{sahne[5]}),0.35,if(lt(t,{ev['donus']}),0.2,0.3))':eval=frame,afade=t=out:st={ev['karar'] - .3:.3f}:d=0.3", dongu=True)
     ekle(E("vurgu"), ev["vurgu"], .9)
     ekle(E("nefes"), .35, .55)
     ekle(E("baslik"), ev["baslik"], .8)

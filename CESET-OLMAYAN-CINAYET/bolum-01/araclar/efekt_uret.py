@@ -22,6 +22,7 @@ EFEKT = {
     "final_vurgu": (4,  "cinematic thriller ending stinger, big rising hit then sudden silence"),
     "gecmis":      (3,  "soft dreamy whoosh transition into a flashback, airy shimmer"),
     "gecmis_don":  (2,  "soft reverse whoosh returning from flashback"),
+    "sokak":       (22, "distant city street at night in the rain heard from inside an apartment, cars passing slowly on wet asphalt, faraway dog, very subtle, seamless loop"),
     "baslik":      (4,  "dark cinematic title impact boom with subtle metallic ring, mystery series logo sting"),
 }
 os.makedirs(f"{KOK}/efekt", exist_ok=True)

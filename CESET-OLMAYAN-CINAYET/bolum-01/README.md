@@ -1,13 +1,13 @@
 # CESET OLMAYAN CİNAYET — 1. Bölüm: KANLI EV
 
-9:16 dikey, 1080×1920, 30 fps, **120 saniye** 2D animasyon. Polisiye / gizem.
+9:16 dikey, 1080×1920, 30 fps, **2 dk 14 sn** 2D animasyon. Polisiye / gizem.
 Görseller kodla çizilir (tarayıcı canvas), sesler ElevenLabs ile üretildi.
 
 ## İzlemek
 - Video: `node video_disa_aktar.js` → `CesetOlmayanCinayet_Bolum1.mp4` (MP4 dosyaları git'e eklenmez)
 - Tarayıcıda: `index.html` dosyasını aç, **Boşluk** = oynat/durdur. Belirli bir kare: `index.html?t=75`
 
-## Karakterler ve sesler (ElevenLabs, eleven_multilingual_v2)
+## Karakterler ve sesler (ElevenLabs **eleven_v3**, duygu etiketli)
 | Karakter | Ses (hesaptaki adı) | Tasarım |
 |---|---|---|
 | Aylin | Gözde Arıkan (`COC AYLIN`) | Omuz hizası koyu kahve saç, krem kazak, koyu mavi pantolon |
@@ -16,6 +16,10 @@ Görseller kodla çizilir (tarayıcı canvas), sesler ElevenLabs ile üretildi.
 | Zehra Teyze | Sultan (`COC ZEHRA`) | Açık bej başörtüsü, kahverengi hırka |
 | Telefondaki görevli | Eda Atlas (`COC GOREVLI`) | Yalnızca ses (telefon filtresi) |
 | Polis memuru | Mehmet Derindağ (`COC MEMUR`) | Lacivert üniforma, şapka |
+
+Her replik `replikler.json` içindeki `v3` alanında duygu etiketleriyle (`[crying]`, `[panicked]`, `[whispers]`…) seslendirilir; altyazı `m` alanındaki temiz metinden gelir.
+Bütün replikler aynı konuşma seviyesine (-17 dBFS RMS) eşitlenir; diyaloglara hafif oda akustiği eklenir, müzik konuşma sırasında otomatik kısılır.
+Seslendirme sonrası kontrol: `python3 araclar/kontrol.py` (Scribe ile yazıya döküp senaryo metniyle karşılaştırır).
 
 Karakter tasarımları `js/karakter.js` içindeki `KARAKTER` tablosunda sabittir; bütün sahneler aynı çizim fonksiyonunu kullanır.
 
@@ -45,13 +49,13 @@ Zamanlama `araclar/zamanla.py` içindeki `PLAN` listesindedir (replik araları, 
 | Sahne | Başlangıç | Senaryodaki |
 |---|---|---|
 | 1 Şok açılış (+ başlık) | 0:00 | 0:00 |
-| 2 Kaybolan nişanlı | 0:12 | 0:14 |
-| 3 Komşunun şüphesi | 0:23.6 | 0:29 |
-| 4 Komiserin gelişi | 0:39.9 | 0:44 |
-| 5 Son telefon (geçmiş) | 0:58.6 | 1:00 |
-| 6 Gizemli anahtar | 1:11.1 | 1:16 |
-| 7 Kırık saat | 1:26.2 | 1:31 |
-| 8 Şaşırtıcı final | 1:43.3 | 1:47 |
-| Bitiş kartı | 1:58.1 | — |
+| 2 Kaybolan nişanlı | 0:13.6 | 0:14 |
+| 3 Komşunun şüphesi | 0:27.7 | 0:29 |
+| 4 Komiserin gelişi | 0:46.3 | 0:44 |
+| 5 Son telefon (geçmiş) | 1:05.9 | 1:00 |
+| 6 Gizemli anahtar | 1:19.6 | 1:16 |
+| 7 Kırık saat | 1:36.8 | 1:31 |
+| 8 Şaşırtıcı final | 1:57.0 | 1:47 |
 
-Toplam süre 120 saniyedir. Sahne başlangıçları senaryodakinden 1–5 saniye önce geliyor, çünkü 1–2. sahnelerde konuşma payı kısa, 3–4. sahnelerde uzundu. Diyaloglar yapay hızlandırılmadı. Uzun iç duraklamalar kısaltıldı ve ElevenLabs konuşma hızı en fazla %8 artırıldı.
+Toplam süre 133,8 saniye. Duygulu v3 oyunculuğu (hıçkırık, nefes, vurgulu duraklamalar) 120 saniyeye sığmadı; duygu korunarak
+yalnızca uzun duraklamalar kısaltıldı (hıçkırık içerenler en fazla 1 sn) ve konuşma perdesi değişmeden %6 hızlandırıldı (`zamanla.py` → `TEMPO`).

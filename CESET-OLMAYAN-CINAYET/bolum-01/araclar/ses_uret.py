@@ -1,4 +1,4 @@
-# ElevenLabs ile tüm replikleri seslendirir (ses + harf zamanlaması).
+# ElevenLabs (eleven_v3, duygu etiketleri) ile tüm replikleri seslendirir (ses + harf zamanlaması).
 # Kullanım: python3 araclar/ses_uret.py [R05 R07 ...]   (boş = hepsi, var olanlar atlanır; id verilirse yeniden üretilir)
 import json, base64, sys, os, urllib.request, time
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,8 +18,10 @@ for r in json.load(open(f"{KOK}/replikler.json")):
         continue
     vid, st, sim, sty, hiz = SES[r["k"]]
     hiz = round(min(1.15, hiz + r.get("hiz", 0)), 2)
-    govde = json.dumps({"text": r["m"], "model_id": "eleven_multilingual_v2", "language_code": "tr",
-        "voice_settings": {"stability": st, "similarity_boost": sim, "style": sty, "use_speaker_boost": True, "speed": hiz}}).encode()
+    # eleven_v3: duygu etiketli metin; stability yalnızca 0.0 (yaratıcı) / 0.5 (doğal) / 1.0 olabilir
+    V3_ST = {"AYLIN": 0.0, "ZEHRA": 0.0, "EMIR": 0.0, "MURAT": 0.5, "GOREVLI": 0.5, "MEMUR": 0.5}
+    govde = json.dumps({"text": r.get("v3", r["m"]), "model_id": "eleven_v3", "language_code": "tr",
+        "voice_settings": {"stability": V3_ST[r["k"]], "similarity_boost": sim, "style": sty, "use_speaker_boost": True}}).encode()
     for deneme in range(4):
         try:
             req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps?output_format=mp3_44100_128",
