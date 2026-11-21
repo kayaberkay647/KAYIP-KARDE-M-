@@ -62,8 +62,8 @@ Eski bir ortaokulun 7-B sınıfında her sabah tahtada kimsenin yazmadığı bir
 | # | Tahta | Başlık | Özet |
 |---|---|---|---|
 | 1 | **15** | **KİMSE YAZMADI** | Zeynep ile Mert sabah sınıfa ilk girdiklerinde tahtada çocuk yazısıyla "15" bulur. Sayı silinir ama teneffüste geri gelir. Hasan Amca'nın yüzü bembeyaz olur. Gece Zeynep'in sandalyesi kendi kendine geri çekilir. |
-| 2 | **14** | **SİLİNMEYEN** | Sayı artık silinmiyor. Sünger kararıyor, su sürünce yazı daha da beyazlaşıyor. Nuray Öğretmen bunu Mert'in şakası sanıp onu okul sonrası cezaya bırakır. Mert boş sınıfta tebeşir sesini ilk kez kendisi duyar. |
-| 3 | **13** | **SON SIRA** | Zeynep sırasının altında kazınmış "S.E. 89" harflerini ve sıranın gözünde katlanmış, sararmış bir kâğıt bulur: "Beni unuttular." Mert artık inanıyor. |
+| 2 | **14** | **SİLİNMEYEN** | Sayı artık silinmiyor. Sünger kararıyor, su sürünce yazı daha da beyazlaşıyor. Nuray Öğretmen bunu Mert'in şakası sanıp onu okul sonrası cezaya bırakır. Mert boş sınıfta tebeşir sesini ilk kez kendisi duyar, camın yansımasında Zeynep'in sırasında oturan birini görür. Işıklar söner, kapı kilitlenir: "Beni silemezsin… Mert." |
+| 3 | **13** | **SON SIRA** | Hasan Amca kilitli kapıyı açar ve camdaki küçük el izini görür. Zeynep sırasının altında kazınmış "S.E. 89" harflerini ve sıranın gözünde katlanmış, sararmış bir kâğıt bulur: "Beni unuttular." Mert artık inanıyor. |
 | 4 | **12** | **NÖBET** | İkisi nöbetçi kalıp tahtayı telefonla kaydeder. Kayıtta tebeşir havaya kalkar ve sayının altına bir kelime yazar: "ZEYNEP". |
 | 5 | **11** | **BODRUM KAPISI** | Hasan Amca'yı takip ederler. Her akşam bodrum kapısının önüne bir simit ve bir bardak süt bırakıyor. Kapının ardından tırmalama sesleri gelir. Hasan onları yakalar: "Ben de sizin yaşınızdaydım." |
 | 6 | **10** | **YOKLAMA DEFTERİ** | Arşivde 1988-89 yılının 7-B yoklama defterini bulurlar. Serkan Ergün karne gününe kadar her gün "var", tatilden sonra hep "yok". Kenarda kırmızı kalemle: "Kayıp. Aranıyor." Adının üstü taze tebeşirle çizilmiş. |
