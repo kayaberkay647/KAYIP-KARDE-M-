@@ -17,7 +17,7 @@ const CIKTI = path.join(KLASOR, altyazi ? 'CesetOlmayanCinayet_Bolum1.mp4' : 'Ce
   const cikti = process.argv[2] ? CIKTI.replace('.mp4', `_${bas}-${son}.mp4`) : CIKTI;
   const ff = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-',
     '-ss', String(bas), '-t', String(son - bas), '-i', path.join(KLASOR, '.bolum_ses.wav'),
-    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '17', '-preset', 'medium', '-profile:v', 'high', '-r', String(FPS),
+    '-vf', 'hqdn3d=1.5:1.5:3:3', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '21', '-maxrate', '12M', '-bufsize', '24M', '-preset', 'slow', '-tune', 'animation', '-profile:v', 'high', '-r', String(FPS),
     '-c:a', 'aac', '-b:a', '192k', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-ar', '48000', '-shortest', '-movflags', '+faststart', cikti], { stdio: ['pipe', 'inherit', 'inherit'] });
   const f0 = Math.round(bas * FPS), f1 = Math.round(son * FPS);
   for (let f = f0; f < f1; f++) {
