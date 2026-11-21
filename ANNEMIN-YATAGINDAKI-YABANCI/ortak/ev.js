@@ -87,6 +87,13 @@ function salonArka(c, o, t) {
   for (let i = 0; i < 26; i++) if (hash(i * 2.3) > .5) { c.fillStyle = 'rgba(255,208,120,.75)'; c.fillRect(px0 + hash(i) * 440, py1 - 30 - hash(i + 9) * 360, 12, 16); }
   c.restore();
   c.fillStyle = '#fbf4e4'; c.fillRect((px0 + px1) / 2 - 9, py0, 18, py1 - py0); c.fillRect(px0, (py0 + py1) / 2 - 9, px1 - px0, 18);
+  { // tül perde (o.perde: 0 kapalı, 1 aralık)
+    const ar = (o.perde || 0) * 170, orta = (px0 + px1) / 2 - 40;
+    for (const [a, b] of [[px0 - 10, orta - ar], [orta + ar * .2, px1 + 10]]) {
+      if (b - a < 10) continue; c.fillStyle = 'rgba(250,246,236,.42)'; c.fillRect(a, py0 - 10, b - a, py1 - py0 + 20);
+      c.strokeStyle = 'rgba(255,255,255,.35)'; c.lineWidth = 3; for (let x = a + 14; x < b; x += 26) { c.beginPath(); c.moveTo(x, py0 - 10); c.quadraticCurveTo(x + 6, (py0 + py1) / 2, x, py1 + 10); c.stroke(); }
+    }
+  }
   for (const sgn of [-1, 1]) { const bx = sgn < 0 ? px0 - 70 : px1 + 70, sw = gurultu(t * .4, sgn + 5) * 5;
     c.beginPath(); c.moveTo(bx, 230); c.lineTo(bx - sgn * 150, 230); c.quadraticCurveTo(bx - sgn * 140 + sw, 600, bx - sgn * 110 + sw, 960); c.lineTo(bx + sgn * 20, 960); c.closePath();
     const pg = c.createLinearGradient(bx - 150, 0, bx + 150, 0); pg.addColorStop(0, '#d79a35'); pg.addColorStop(.5, '#eab650'); pg.addColorStop(1, '#c68a2c'); c.fillStyle = pg; c.fill(); c.strokeStyle = '#9b6a1e'; c.lineWidth = 3; c.stroke();
@@ -150,6 +157,11 @@ function yatakArka(c, o, t) {
   c.fillStyle = '#d4af5f'; c.beginPath(); c.arc(665, 1035, 6, 0, 7); c.fill(); c.beginPath(); c.arc(665, 1125, 6, 0, 7); c.fill();
   c.fillStyle = '#6a4a2a'; c.fillRect(655, 860, 20, 100); c.beginPath(); c.moveTo(600, 870); c.lineTo(730, 870); c.lineTo(705, 780); c.lineTo(625, 780); c.closePath(); c.fillStyle = '#ffd77a'; c.fill(); c.strokeStyle = '#d4a03a'; c.lineWidth = 3; c.stroke();
   fotoCerceve(c, 580, 880, 60, 78, 'anneMert', '#c9a34a');
+  // berjer koltuk (pencerenin önü)
+  c.fillStyle = 'rgba(40,20,10,.25)'; c.beginPath(); c.ellipse(345, 1335, 150, 20, 0, 0, 7); c.fill();
+  yd(c, 225, 1010, 240, 220, 50); konturlu(c, '#c4703c', 4); yd(c, 205, 1160, 280, 120, 30); konturlu(c, '#d68449', 4);
+  for (const x of [190, 450]) { yd(c, x, 1120, 55, 170, 24); konturlu(c, '#b8622f', 4); }
+  c.fillStyle = '#5a3418'; for (const x of [220, 455]) c.fillRect(x, 1280, 16, 50);
   // oda kapısı (salona açılır) — sağda
   ahsapKapi(c, 1720, 1980, 400, o.kapiAcik ?? 1, (x, y, w, h) => { const og = c.createLinearGradient(0, y, 0, y + h); og.addColorStop(0, '#8a6a46'); og.addColorStop(1, '#4a3420'); c.fillStyle = og; c.fillRect(x, y, w, h); c.fillStyle = 'rgba(255,210,140,.35)'; c.fillRect(x, y, w, h); });
 }
@@ -284,15 +296,16 @@ function insTusla(c, t, lt) {
   c.restore();
 }
 // Komiserin telefonunda arşiv kaydı (isim karartılmış)
-function insArsiv(c, t, lt) {
+function insArsiv(c, t, lt, d = {}) {
+  const yil = d.yil || 1999, yas = d.yas || 7;
   c.fillStyle = '#1b1d24'; c.fillRect(0, 0, W, H);
   c.save(); c.translate(W / 2, H / 2 - 20); const z = 1 + lt * .03; c.scale(z, z);
   yd(c, -300, -620, 600, 1240, 60); c.fillStyle = '#111215'; c.fill(); yd(c, -276, -596, 552, 1192, 44); c.fillStyle = '#f4f5f7'; c.fill();
   c.fillStyle = '#1f3a6e'; yd(c, -276, -596, 552, 130, 44); c.fill(); c.fillRect(-276, -520, 552, 54);
   c.fillStyle = '#fff'; c.font = '800 38px Nunito'; c.textAlign = 'center'; c.fillText('EMNİYET ARŞİV KAYDI', 0, -510);
-  c.textAlign = 'left'; c.fillStyle = '#333'; c.font = '800 40px Nunito'; c.fillText('Dosya: 1997 / 0418', -236, -400);
+  c.textAlign = 'left'; c.fillStyle = '#333'; c.font = '800 40px Nunito'; c.fillText(`Dosya: ${yil} / 0418`, -236, -400);
   c.font = '600 34px Nunito'; c.fillStyle = '#555';
-  const sat = ['Konu: Kayıp kız çocuğu', 'Yaş: 5', 'Durum: Bulunamadı', 'Tanık ifadesi:'];
+  const sat = ['Konu: Kayıp kız çocuğu', `Yaş: ${yas}`, 'Durum: Bulunamadı', 'Tanık ifadesi:'];
   sat.forEach((s, i) => c.fillText(s, -236, -320 + i * 64));
   c.fillStyle = '#111'; c.fillRect(-236, -96, 360, 40); c.fillStyle = '#c0392b'; c.font = '800 30px Nunito'; c.fillText('GİZLİ', 140, -66);
   c.fillStyle = '#ddd'; for (let i = 0; i < 6; i++) c.fillRect(-236, 0 + i * 48, 470 - (i % 3) * 60, 18);
@@ -307,3 +320,157 @@ nesne = function (c, ad, x, y, aci) {
   if (ad !== 'foto') return _nesneTemel(c, ad, x, y, aci);
   c.save(); c.translate(x, y); eskiFoto(c, 0, 10, 110, 140, aci * .2); c.restore();
 };
+
+// ---------- KORİDOR (salon ile yatak odası arası) — dünya 0..3000 ----------
+function koridorArka(c, o, t) {
+  const g = c.createLinearGradient(0, 0, 0, DUVAR_Y); g.addColorStop(0, '#eedab6'); g.addColorStop(1, '#f5e5c6');
+  c.fillStyle = g; c.fillRect(-400, -200, 3800, DUVAR_Y + 200);
+  c.fillStyle = 'rgba(200,150,90,.12)'; for (let x = -400; x < 3400; x += 64) c.fillRect(x, 70, 22, 830);
+  c.fillStyle = '#a8673a'; c.fillRect(-400, 900, 3800, DUVAR_Y - 900); c.fillStyle = '#c07d47'; c.fillRect(-400, 900, 3800, 14);
+  c.strokeStyle = 'rgba(70,35,15,.35)'; c.lineWidth = 4; for (let x = -380; x < 3400; x += 180) c.strokeRect(x, 940, 150, 200);
+  parke(c, -400, 3400, '#9a5e33', '#b9773f');
+  // yolluk halı
+  c.fillStyle = '#9c2f3a'; c.fillRect(-400, 1400, 3800, 260); c.strokeStyle = '#e6b85a'; c.lineWidth = 8; c.strokeRect(-420, 1425, 3840, 210);
+  c.fillStyle = '#21507a'; for (let x = -300; x < 3400; x += 260) { c.beginPath(); c.moveTo(x, 1530); c.lineTo(x + 50, 1480); c.lineTo(x + 100, 1530); c.lineTo(x + 50, 1580); c.fill(); }
+  // kapılar
+  ahsapKapi(c, 300, 560, 400, 0, () => {}); ahsapKapi(c, 1300, 1560, 400, 0, () => {});
+  ahsapKapi(c, 2500, 2760, 400, o.odaAcik ?? .3, (x, y, w, h) => { const og = c.createRadialGradient(x + w * .5, y + 300, 20, x + w * .5, y + 300, 500); og.addColorStop(0, '#8a6a3a'); og.addColorStop(1, '#2a1a0c'); c.fillStyle = og; c.fillRect(x, y, w, h); });
+  // aile fotoğrafları
+  fotoCerceve(c, 700, 420, 150, 190, 'anne', '#5a3418'); fotoCerceve(c, 900, 470, 210, 150, 'anneMert'); fotoCerceve(c, 1700, 430, 160, 200, 'dag', '#7a4a24'); fotoCerceve(c, 1920, 480, 230, 160, 'deniz'); fotoCerceve(c, 2250, 420, 130, 170, 'anneMert', '#3a2414');
+  // aplikler
+  for (const x of [640, 1220, 2200]) { c.fillStyle = '#7a5a2a'; c.fillRect(x - 6, 330, 12, 60); c.beginPath(); c.moveTo(x - 40, 330); c.lineTo(x + 40, 330); c.lineTo(x + 26, 270); c.lineTo(x - 26, 270); c.closePath(); c.fillStyle = '#ffe2a0'; c.fill(); }
+}
+function koridorIsik(c, o, t) {
+  c.save(); c.globalCompositeOperation = 'multiply'; c.fillStyle = 'rgba(110,105,160,.24)'; c.fillRect(-400, -200, 3800, 2400);
+  c.globalCompositeOperation = 'screen';
+  for (const x of [640, 1220, 2200]) { const g = c.createRadialGradient(x, 300, 10, x, 420, 650); g.addColorStop(0, 'rgba(255,200,110,.45)'); g.addColorStop(1, 'rgba(255,200,110,0)'); c.fillStyle = g; c.fillRect(x - 700, -200, 1400, 2400); }
+  c.restore();
+}
+
+// ---------- GEÇMİŞ: 1999, gece, evin önü ----------
+function disGecmis(c, t, lt, d = {}) {
+  const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#0f1834'); g.addColorStop(.55, '#26365e'); g.addColorStop(1, '#3a3a44'); c.fillStyle = g; c.fillRect(0, 0, W, H);
+  // ev cephesi
+  c.fillStyle = '#a77d5a'; c.fillRect(-40, 260, 760, 1080); c.fillStyle = '#7d5a3e'; c.beginPath(); c.moveTo(-80, 270); c.lineTo(340, 60); c.lineTo(760, 270); c.fill();
+  for (const [x, y, isik] of [[60, 380, 1], [380, 380, 0], [60, 760, 1]]) { c.fillStyle = isik ? '#ffd98a' : '#2a2a3a'; c.fillRect(x, y, 220, 260); c.strokeStyle = '#efe4d0'; c.lineWidth = 10; c.strokeRect(x, y, 220, 260); c.beginPath(); c.moveTo(x + 110, y); c.lineTo(x + 110, y + 260); c.stroke(); }
+  c.fillStyle = '#5a3418'; c.fillRect(430, 820, 200, 520); c.fillStyle = 'rgba(255,220,150,.5)'; c.fillRect(440, 830, 180, 500);
+  // kaldırım + yol
+  c.fillStyle = '#6a6a72'; c.fillRect(0, 1340, W, 120); c.fillStyle = '#2c2c34'; c.fillRect(0, 1460, W, 500);
+  c.strokeStyle = 'rgba(230,220,180,.5)'; c.lineWidth = 10; c.setLineDash([80, 60]); c.beginPath(); c.moveTo(0, 1760); c.lineTo(W, 1760); c.stroke(); c.setLineDash([]);
+  // sokak lambası
+  c.fillStyle = '#222'; c.fillRect(930, 300, 18, 1060); c.fillRect(860, 300, 90, 14); c.fillStyle = '#ffe9b0'; c.beginPath(); c.ellipse(865, 330, 34, 18, 0, 0, 7); c.fill();
+  const lg = c.createRadialGradient(865, 340, 10, 865, 900, 900); lg.addColorStop(0, 'rgba(255,225,160,.45)'); lg.addColorStop(1, 'rgba(255,225,160,0)'); c.fillStyle = lg; c.fillRect(0, 0, W, H);
+  // araba (koyu, 90'lar sedan)
+  const ax = 620, ay = 1500;
+  c.fillStyle = 'rgba(0,0,0,.4)'; c.beginPath(); c.ellipse(ax + 250, ay + 135, 420, 30, 0, 0, 7); c.fill();
+  c.fillStyle = '#1c2230'; c.beginPath(); c.moveTo(ax - 120, ay + 120); c.lineTo(ax - 120, ay + 30); c.lineTo(ax + 40, ay + 10); c.lineTo(ax + 120, ay - 90); c.lineTo(ax + 420, ay - 90); c.lineTo(ax + 520, ay + 10); c.lineTo(ax + 640, ay + 30); c.lineTo(ax + 640, ay + 120); c.closePath(); c.fill();
+  c.fillStyle = '#3a4a66'; c.beginPath(); c.moveTo(ax + 140, ay - 75); c.lineTo(ax + 260, ay - 75); c.lineTo(ax + 260, ay + 5); c.lineTo(ax + 70, ay + 5); c.closePath(); c.fill(); c.beginPath(); c.moveTo(ax + 280, ay - 75); c.lineTo(ax + 405, ay - 75); c.lineTo(ax + 490, ay + 5); c.lineTo(ax + 280, ay + 5); c.closePath(); c.fill();
+  const kapi = d.kapi ?? 1; // arka kapı açık
+  if (kapi > 0) { c.fillStyle = '#0c0f16'; c.fillRect(ax + 270, ay - 70, 200, 180); c.fillStyle = '#232b3c'; c.beginPath(); c.moveTo(ax + 470, ay - 75); c.lineTo(ax + 470 + 120 * kapi, ay - 60); c.lineTo(ax + 470 + 120 * kapi, ay + 120); c.lineTo(ax + 470, ay + 125); c.fill(); }
+  for (const x of [ax, ax + 500]) { c.fillStyle = '#0a0a0a'; c.beginPath(); c.arc(x, ay + 120, 58, 0, 7); c.fill(); c.fillStyle = '#777'; c.beginPath(); c.arc(x, ay + 120, 24, 0, 7); c.fill(); }
+  c.fillStyle = '#ffd77a'; c.fillRect(ax + 620, ay + 40, 20, 26); c.fillStyle = '#c0392b'; c.fillRect(ax - 120, ay + 40, 16, 30);
+  // adam (yüzü görünmez, sırtı dönük) ve küçük kız
+  const k = seg(lt, 0, 2.4), mx = lerp(360, 760, k), my = lerp(1430, 1480, k);
+  c.save(); c.filter = 'brightness(.25)'; kisiCiz(c, 'BABA_GENC', { x: mx, y: my, s: 1.08, arka: 1, yuru: k * 5, yon: 1, donuk: 1 }, t); c.restore();
+  kisiCiz(c, 'KIZ', { x: mx - 170, y: my + 20, s: .66, duygu: 'korku', duygu2: 'uzgun', dk: .6, don: -.7, gozyasi: 1, yuru: k * 7, yon: 1, sag: [180, -560], titre: .8, bak: [-.9, -.2], donuk: 1, agizKapali: 0 }, t);
+  const v = c.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1100); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.7)'); c.fillStyle = v; c.fillRect(0, 0, W, H);
+}
+
+// ---------- YAKIN PLANLAR (2. bölüm) ----------
+function dikisKutusu(c, x, y, s, acik) {
+  c.save(); c.translate(x, y); c.scale(s, s);
+  yd(c, -170, -70, 340, 150, 18); konturlu(c, '#3d6f8e', 4);
+  c.fillStyle = '#f2d48a'; for (let i = 0; i < 6; i++) { c.beginPath(); c.arc(-130 + i * 52, 5, 14, 0, 7); c.fill(); c.fillStyle = '#d9707a'; c.beginPath(); c.arc(-130 + i * 52, 5, 6, 0, 7); c.fill(); c.fillStyle = '#f2d48a'; }
+  if (acik > 0) { c.fillStyle = '#2f5a73'; c.beginPath(); c.moveTo(-170, -70); c.lineTo(170, -70); c.lineTo(150 - 20 * acik, -70 - 160 * acik); c.lineTo(-150 + 20 * acik, -70 - 160 * acik); c.closePath(); c.fill(); }
+  else { yd(c, -180, -100, 360, 50, 14); konturlu(c, '#4a82a3', 4); }
+  c.restore();
+}
+function insCekmece(c, t, lt) {
+  c.fillStyle = '#8a5229'; c.fillRect(0, 0, W, H);
+  c.strokeStyle = 'rgba(60,30,10,.45)'; c.lineWidth = 8; c.strokeRect(80, 200, 920, 600);
+  const ac = easeOut(seg(lt, .1, .8));
+  c.fillStyle = '#2a160a'; c.fillRect(80, 960, 920, 560);
+  c.save(); c.translate(0, ac * 220);
+  c.fillStyle = '#9a5e30'; c.fillRect(60, 900, 960, 110); c.fillStyle = '#d4af5f'; c.beginPath(); c.arc(540, 955, 16, 0, 7); c.fill();
+  c.fillStyle = '#6b3a1c'; c.fillRect(80, 1010, 920, 420);
+  dikisKutusu(c, 540 + lerp(0, 40, seg(lt, 1, 2)), 1180 - easeOut(seg(lt, 1, 2)) * 260, 1.9, 0);
+  c.restore();
+  const ten = KARAKTER.MERT.ten; c.fillStyle = ten; c.strokeStyle = renk(ten, -.35); c.lineWidth = 6;
+  const hy = 1150 + ac * 220 - easeOut(seg(lt, 1, 2)) * 260;
+  for (const sg of [-1, 1]) { c.save(); c.translate(540 + sg * 330, hy); c.rotate(sg * .3); c.beginPath(); c.ellipse(0, 0, 70, 95, 0, 0, 7); c.fill(); c.stroke(); c.fillStyle = KARAKTER.MERT.ust; yd(c, -70, 60, 140, 700, 50); c.fill(); c.fillStyle = ten; c.restore(); }
+  c.fillStyle = 'rgba(30,25,50,.3)'; c.fillRect(0, 0, W, H);
+}
+function insKutu(c, t, lt) {
+  c.fillStyle = '#3a2a22'; c.fillRect(0, 0, W, H); c.fillStyle = 'rgba(255,200,120,.18)'; c.beginPath(); c.arc(500, 700, 800, 0, 7); c.fill();
+  const ac = easeOut(seg(lt, .2, 1.1)), z = 1 + lt * .03;
+  c.save(); c.translate(W / 2, 1150); c.scale(z, z);
+  dikisKutusu(c, 0, 0, 2.6, ac);
+  if (ac > .5) {
+    c.save(); c.rotate(-.06); c.fillStyle = '#ead8b0'; c.fillRect(-330, -230, 520, 300); c.strokeStyle = '#b8a070'; c.lineWidth = 4; c.strokeRect(-330, -230, 520, 300);
+    c.beginPath(); c.moveTo(-330, -230); c.lineTo(-70, -60); c.lineTo(190, -230); c.stroke();
+    c.fillStyle = '#3a2410'; c.font = '600 70px Caveat'; c.textAlign = 'center'; c.fillText('Mert\'e', -70, 20); c.restore();
+    c.save(); c.translate(250, -140); c.rotate(.18); c.fillStyle = '#efe4cc'; c.fillRect(-90, -110, 180, 220); c.fillStyle = '#9aa'; c.fillRect(-75, -95, 150, 160); c.restore();
+  }
+  c.restore();
+  for (const sg of [-1, 1]) { c.save(); c.translate(W / 2 + sg * 420, 1050 + Math.sin(lt * 2) * 6); c.rotate(sg * -.4); c.fillStyle = '#8fb7d9'; c.strokeStyle = '#5b86ad'; c.lineWidth = 6; c.beginPath(); c.ellipse(0, 0, 80, 110, 0, 0, 7); c.fill(); c.stroke(); c.fillStyle = KARAKTER.SINAN.ust; yd(c, -70, 80, 140, 700, 50); c.fill(); c.restore(); }
+}
+// Üç kişilik eski fotoğraf: genç anne, küçük Sevda, yüzü yarı gölgede genç adam
+function eskiFoto3(c, x, y, w, h, rot) {
+  c.save(); c.translate(x, y); c.rotate(rot);
+  c.fillStyle = 'rgba(0,0,0,.35)'; c.fillRect(-w / 2 + 14, -h / 2 + 18, w, h);
+  c.fillStyle = '#efe4cc'; c.fillRect(-w / 2, -h / 2, w, h);
+  const ix = -w / 2 + w * .07, iy = -h / 2 + w * .07, iw = w * .86, ih = h - w * .07 - w * .2;
+  c.save(); c.beginPath(); c.rect(ix, iy, iw, ih); c.clip();
+  const gk = c.createLinearGradient(0, iy, 0, iy + ih); gk.addColorStop(0, '#b9c9d6'); gk.addColorStop(1, '#8aa07a'); c.fillStyle = gk; c.fillRect(ix, iy, iw, ih);
+  kisiCiz(c, 'BABA_GENC', { x: ix + iw * .76, y: iy + ih * 1.6, s: ih / 690, duygu: 'notr', agizKapali: 1, don: -.2, donuk: 1 }, 0);
+  // adamın yüzünün üst yarısı gölgede
+  const gg = c.createLinearGradient(ix + iw * .55, 0, ix + iw, 0); gg.addColorStop(0, 'rgba(20,15,15,.0)'); gg.addColorStop(.25, 'rgba(20,15,15,.85)'); c.fillStyle = gg; c.fillRect(ix + iw * .55, iy, iw * .5, ih * .42);
+  kisiCiz(c, 'ANNE_GENC', { x: ix + iw * .34, y: iy + ih * 1.62, s: ih / 720, duygu: 'sicak', agizKapali: 1, don: .2, donuk: 1 }, 0);
+  kisiCiz(c, 'KIZ', { x: ix + iw * .52, y: iy + ih * 1.33, s: ih / 1050, duygu: 'notr', agizKapali: 1, donuk: 1 }, 0);
+  c.fillStyle = 'rgba(200,150,80,.22)'; c.fillRect(ix, iy, iw, ih);
+  c.restore();
+  c.strokeStyle = 'rgba(255,255,255,.5)'; c.lineWidth = w * .006; c.beginPath(); c.moveTo(-w / 2, h * .1); c.lineTo(w / 2, -h * .02); c.stroke();
+  c.fillStyle = 'rgba(150,110,60,.25)'; c.beginPath(); c.ellipse(-w * .3, -h * .35, w * .1, h * .04, .3, 0, 7); c.fill();
+  c.restore();
+}
+function insFoto3(c, t, lt, kimde = 'MERT') {
+  const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#3a2a35'); g.addColorStop(1, '#6a4a34'); c.fillStyle = g; c.fillRect(0, 0, W, H);
+  const z = 1 + lt * .035, tit = gurultu(t * 7, 3) * 4;
+  c.save(); c.translate(W / 2 + tit, H / 2 - 40); c.scale(z, z);
+  const K = KARAKTER[kimde]; for (const s of [-1, 1]) { c.fillStyle = K.ust; yd(c, s * 330 - 70, 330, 140, 700, 50); c.fill(); }
+  eskiFoto3(c, 0, 0, 700, 860, .03);
+  for (const s of [-1, 1]) { c.fillStyle = K.ten; c.strokeStyle = renk(K.ten, -.35); c.lineWidth = 6; c.beginPath(); c.ellipse(s * 330, 320, 70, 110, s * .3, 0, 7); c.fill(); c.stroke(); c.beginPath(); c.ellipse(s * 320, 200, 34, 70, s * -.3, 0, 7); c.fill(); c.stroke(); }
+  c.restore();
+  const v = c.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1100); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.55)'); c.fillStyle = v; c.fillRect(0, 0, W, H);
+}
+// Fotoğrafın arkası: tarih okunur, isim başparmağın altında / bulanık
+function insFotoArka(c, t, lt, yakinlik = 0) {
+  c.fillStyle = '#2e2428'; c.fillRect(0, 0, W, H);
+  const z = 1 + yakinlik * 1.2 + lt * .02; c.save(); c.translate(W / 2 + gurultu(t * 7, 5) * 3, H / 2 - 40 - yakinlik * 120); c.scale(z, z);
+  c.fillStyle = '#e9dcc0'; c.fillRect(-350, -430, 700, 860);
+  c.fillStyle = 'rgba(150,110,60,.2)'; c.beginPath(); c.ellipse(150, 200, 120, 40, .4, 0, 7); c.fill();
+  c.fillStyle = '#2a1a10'; c.font = '600 96px Caveat'; c.textAlign = 'center'; c.fillText('Ekim 1999', 0, -40);
+  c.save(); c.filter = 'blur(7px)'; c.strokeStyle = '#2a1a10'; c.lineWidth = 7; c.lineCap = 'round'; c.beginPath(); c.moveTo(-220, 80);
+  for (let i = 0; i < 26; i++) { const x = -220 + i * 17; c.quadraticCurveTo(x + 8, 80 - 40 * hash(i + 3) - 10, x + 17, 80 + 18 * hash(i + 9)); } c.stroke(); c.restore();
+  const ten = KARAKTER.MERT.ten; c.fillStyle = ten; c.strokeStyle = renk(ten, -.35); c.lineWidth = 6;
+  c.save(); c.translate(-40, 150); c.rotate(-.5); c.beginPath(); c.ellipse(0, 0, 70, 160, 0, 0, 7); c.fill(); c.stroke(); c.restore();
+  c.restore();
+  const v = c.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1100); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.6)'); c.fillStyle = v; c.fillRect(0, 0, W, H);
+}
+// Annenin mektubu — el yazısı, okunan kısım belirginleşir
+function insMektup(c, t, lt, ilerleme) {
+  c.fillStyle = '#2b2226'; c.fillRect(0, 0, W, H); c.fillStyle = 'rgba(255,200,120,.18)'; c.beginPath(); c.arc(300, 500, 800, 0, 7); c.fill();
+  const tit = gurultu(t * 9, 6) * 5;
+  c.save(); c.translate(W / 2 + tit, H / 2 - 60); c.rotate(-.03 + gurultu(t * 2, 7) * .01);
+  c.fillStyle = '#f0e2bf'; c.fillRect(-420, -560, 840, 1120); c.strokeStyle = 'rgba(170,140,90,.35)'; c.lineWidth = 2;
+  for (let y = -440; y < 520; y += 86) { c.beginPath(); c.moveTo(-370, y); c.lineTo(370, y); c.stroke(); }
+  c.strokeStyle = 'rgba(150,120,70,.3)'; c.beginPath(); c.moveTo(-420, -40); c.lineTo(420, -20); c.stroke();
+  const satirlar = ['Sevgili oğlum...', '', 'Bir gün Sevda', 'geri dönerse,', 'bil ki onu', 'koruyamadım.', '', '            Annen'];
+  const toplam = satirlar.join('').length; let say = 0;
+  c.font = '600 76px Caveat'; c.textAlign = 'left';
+  satirlar.forEach((st, i) => { const y = -460 + i * 86; for (const ch of st) { say++; c.fillStyle = say / toplam <= ilerleme ? '#1f2a5a' : 'rgba(31,42,90,.18)'; } c.fillStyle = (say / toplam) <= ilerleme + .02 ? '#1f2a5a' : 'rgba(31,42,90,.2)'; c.fillText(st, -360, y); });
+  c.restore();
+  const ten = KARAKTER.MERT.ten; c.fillStyle = ten; c.strokeStyle = renk(ten, -.35); c.lineWidth = 6;
+  for (const sg of [-1, 1]) { c.save(); c.translate(W / 2 + sg * 430 + tit, 1350); c.rotate(sg * .25); c.beginPath(); c.ellipse(0, 0, 70, 100, 0, 0, 7); c.fill(); c.stroke(); c.fillStyle = KARAKTER.MERT.ust; yd(c, -70, 70, 140, 700, 50); c.fill(); c.restore(); }
+  const v = c.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1100); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.5)'); c.fillStyle = v; c.fillRect(0, 0, W, H);
+}

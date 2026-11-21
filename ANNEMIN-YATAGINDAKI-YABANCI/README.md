@@ -7,7 +7,7 @@ Görseller tarayıcı canvas'ında kodla çizilir, sesler ElevenLabs ile üretil
 | Dosya | İçerik |
 |---|---|
 | `ortak/karakter.js` | Karakter tasarımları ve çizim motoru (`KARAKTER` tablosu) |
-| `ortak/ev.js` | Aile evi: salon, annenin yatak odası, yatak, yakın plan çekimleri (eski fotoğraf, çanta, telefon, arşiv) |
+| `ortak/ev.js` | Aile evi: salon (tül perdeli pencere), koridor, annenin yatak odası (berjer, komodin), 1999 geçmişi (evin önü), yakın planlar (fotoğraflar, çanta, telefon, arşiv, çekmece, dikiş kutusu, mektup) |
 | `ortak/sesler.json` | Ses profilleri (ElevenLabs ses kimliği + ayarlar) |
 | `ortak/font/` | Nunito, Oswald, Caveat |
 
@@ -18,7 +18,14 @@ Görseller tarayıcı canvas'ında kodla çizilir, sesler ElevenLabs ile üretil
 | **Sevda** (34) | Omuz altına inen dalgalı altın sarısı saç; zümrüt yeşili gözler; koyu yeşil hırka, krem bluz, siyah pantolon | Elif (`AYY SEVDA`) |
 | **Necla Hanım** (52) | Açık kahve, arkadan topuz saç; hafif toplu; bordo hırka, koyu etek | Ahu (`AYY NECLA`) |
 | **Komiser Sinan** (41) | Kısa siyah saç, kırçıllı sakal ve şakaklar; koyu gri ceket, siyah gömlek | Ozan Karaca (`AYY SINAN`) |
-| Annenin genç hâli / küçük kız | Yalnızca 1997 tarihli eski fotoğrafta | — |
+| Annenin genç hâli / küçük kız (Sevda, 7) | Eski fotoğraflarda ve 1999 geçmiş sahnesinde | — |
+| Genç adam (`BABA_GENC`) | 1999 fotoğrafında ve geçmiş sahnesinde; yüzü gölgede/sırtı dönük | — |
 
 ## Yeni bölüm eklemek
 `bolum-01` klasörünü örnek alın: `replikler.json` (metin + `v3` duygu etiketli metin), `araclar/zamanla.py` içindeki `PLAN`, `js/sahneler.js` içindeki çekim listesi.
+
+## Zaman çizgisi (bölümler arası tutarlılık)
+- Sevda 1999 Ekim'inde, 7 yaşında kayboldu (bugün 34). Arşiv dosyası: 1999/0418.
+- "Bahar, 1997" fotoğrafı: anne ve 5 yaşındaki Sevda.
+- "Ekim 1999" fotoğrafı: anne, Sevda ve yüzü gölgede genç adam; arkasındaki isim henüz gösterilmedi.
+- 2. bölüm sonunda Sevda adamın Mert'in babası olduğunu iddia ediyor — kanıtlanmadı.

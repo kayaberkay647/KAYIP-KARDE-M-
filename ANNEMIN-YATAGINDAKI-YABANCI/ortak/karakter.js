@@ -9,6 +9,9 @@ const KARAKTER = {
     ust: '#8a2336', ustTip: 'hirka', ic: '#3f3a52', icDesen: 1, alt: '#2c2a33', altTip: 'etek', ayak: '#2d2420', omuz: 128, dudak: '#c06a6a', seed: 13 },
   SINAN: { boy: 1.04, kadin: 0, ten: '#dcae88', sac: '#141416', goz: '#3e2a1c', kas: '#141416', yuz: 'kosegen', sacTip: 'sinan', sakal: .3, sakalRenk: '#55565b',
     ust: '#44474f', ustTip: 'ceket', ic: '#18181c', alt: '#1d1e23', altTip: 'pantolon', ayak: '#121212', omuz: 138, dudak: '#a96a5d', seed: 14 },
+  // yalnızca geçmişte / fotoğrafta
+  BABA_GENC: { boy: 1.04, kadin: 0, ten: '#e2b48e', sac: '#3d2618', goz: '#5a3a20', kas: '#2f1d12', yuz: 'kosegen', sacTip: 'mert', sakal: .35, sakalRenk: '#3d2618',
+    ust: '#5e3d27', ustTip: 'ceket', ic: '#cfc6b4', alt: '#2a2622', altTip: 'pantolon', ayak: '#1d1714', omuz: 138, dudak: '#a86a5a', seed: 17 },
   // yalnızca eski fotoğrafta: annenin genç hâli ve küçük kız
   ANNE_GENC: { boy: .96, kadin: 1, ten: '#f1cdb0', sac: '#4a2a1a', goz: '#5d3a22', kas: '#3b2416', yuz: 'normal', sacTip: 'aylin',
     ust: '#b2463e', ustTip: 'kazak', alt: '#384058', altTip: 'pantolon', ayak: '#3a2e27', omuz: 116, dudak: '#c26e6e', seed: 15 },
@@ -537,11 +540,22 @@ function kisiCiz(c, ad, p, t) {
   p.D = karisDuygu(p.duygu, p.duygu2 || p.duygu, p.dk || 0);
   const A = agizDurum(ad, t); p.agiz = p.agizKapali ? { ac: 0, yu: 0 } : A;
   p.kirp = p.uyku ? 1 : goz_kirp(K.seed, t);
+  // OTOMATİK CANLILIK: dinleyen gözlerini gezdirir, konuşan el jesti yapar ve vurguda kaş kaldırır
+  if (!p.donuk && !p.uyku) {
+    if (!A.konus && !p.bak) p.bak = [p.don * .6 + gurultu(t * .45, K.seed + 3) * .35, gurultu(t * .35, K.seed + 4) * .18];
+    if (A.konus && p.yuru == null) {
+      const j = clamp(gurultu(t * .8, K.seed + 5) * 1.6 + .35, 0, 1) * (p.jest ?? 1);
+      if (p.sag === 'asagi') p.sag = [lerp(150, 100, j), lerp(-330, -505, j)];
+      else if (p.sol === 'asagi') p.sol = [lerp(-150, -100, j), lerp(-330, -505, j)];
+    }
+    p.D = Object.assign({}, p.D, { ki: p.D.ki - A.ac * 6, kd: p.D.kd - A.ac * 3 });
+  }
   const sc = (p.s || 1) * K.boy;
   const nefes = Math.sin(t * 2.1 + K.seed) * .006 * (p.duygu === 'korku' ? 2.2 : 1);
   const bob = p.yuru != null ? Math.abs(Math.sin(p.yuru * Math.PI * 2)) * -10 : 0;
   const titre = (p.titre || 0) * gurultu(t * 18, K.seed) * 2.5;
-  c.save(); c.translate(p.x + titre, p.y); c.scale(sc, sc);
+  const salin = p.yuru == null && !p.otur && !p.donuk ? Math.sin(t * .55 + K.seed) * 3.5 : 0;
+  c.save(); c.translate(p.x + titre + salin, p.y); c.scale(sc, sc);
   // zemin gölgesi
   c.fillStyle = 'rgba(30,20,20,.22)'; c.beginPath(); c.ellipse(0, -4, 150, 26, 0, 0, 7); c.fill();
   c.translate(0, bob);
@@ -549,7 +563,7 @@ function kisiCiz(c, ad, p, t) {
   c.translate(0, (p.otur || 0) * 150);
   c.save(); c.translate(0, -380); c.scale(1, 1 + nefes); c.translate(0, 380);
   const basDon = p.don + (A.konus ? gurultu(t * 2.2, K.seed + 9) * .05 : 0);
-  const basEg = p.egik + gurultu(t * .7, K.seed) * .025 + A.ac * .02;
+  const basEg = p.egik + gurultu(t * .7, K.seed) * .025 + A.ac * .02 + (!A.konus && !p.donuk ? Math.pow(Math.max(0, Math.sin(t * 1.3 + K.seed * 2)), 10) * .045 : 0);
   const sagH = kolHedef(p.sag, 1), solH = kolHedef(p.sol, -1);
   const kolSonra = h => h[1] < -690;
   if (p.arka) {
