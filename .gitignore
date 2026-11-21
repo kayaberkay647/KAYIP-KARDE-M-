@@ -2,3 +2,6 @@
 *.webm
 .gecici_ses.wav
 node_modules/
+.bolum_ses.wav
+CESET-OLMAYAN-CINAYET/bolum-01/ses_islenmis/
+CESET-OLMAYAN-CINAYET/bolum-01/test/
