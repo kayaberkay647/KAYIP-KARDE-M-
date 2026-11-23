@@ -68,7 +68,7 @@ function zamanla() {
   const dogal = sureler.reduce((a, b) => a + b, 0) + bosluk.reduce((a, b) => a + b, 0) + BOLUM.sonKartSure;
   const fazla = Math.max(0, BOLUM.hedefSure - dogal), agirlik = L.length - 1;
   let t = 0;
-  L.forEach((r, i) => { const b = bosluk[i] + (i === 0 ? 0 : fazla / agirlik);  // ilk replik hemen başlar r._bosluk = b; t += b; r.bas = t; r.sure = sureler[i]; r.bit = t + r.sure; t = r.bit; });
+  L.forEach((r, i) => { const b = bosluk[i] + (i === 0 ? 0 : fazla / agirlik); /* ilk replik hemen başlar */ r._bosluk = b; t += b; r.bas = t; r.sure = sureler[i]; r.bit = t + r.sure; t = r.bit; });
   SONKART = t + 0.5; TOPLAM = SONKART + BOLUM.sonKartSure;
   PLANLAR = [];
   L.forEach((r, i) => {

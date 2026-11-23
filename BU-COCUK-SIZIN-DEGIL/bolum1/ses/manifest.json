@@ -1,112 +1,178 @@
 {
   "R01": {
-    "ozet": "a5bf8dfa4c283db55e1288eeb72eb3c3106386e7",
+    "ozet": "c55ccad05fd059e1b39a2d804e16d8728f718589",
     "dosya": "B01_R01_KEMAL.mp3",
-    "sure": 6.60898
+    "sure": 6.530612,
+    "dogruluk": 0.92,
+    "canlilik": 11.9,
+    "duyulan": "Selin Hanım, kızınızın kan grubu AB. Sizin ve eşinizin kan grubuysa sıfır"
   },
   "R02": {
-    "ozet": "776137cf1ac3bec175b32cf753df174f4954c9b4",
+    "ozet": "a0b0d7d8804328f0c2e82b2d1e5431d5d5804bdc",
     "dosya": "B01_R02_KEMAL.mp3",
-    "sure": 2.35102
+    "sure": 2.795102,
+    "dogruluk": 1,
+    "canlilik": 12.8,
+    "duyulan": "Bu çocuk sizin olamaz"
   },
   "R03": {
-    "ozet": "122a9742d3e4f34acd86b392187f2394da25ba7e",
+    "ozet": "8d5934ab0009aeb45e07f82d3c9a8c1916a9fe2d",
     "dosya": "B01_R03_SELIN.mp3",
-    "sure": 3.63102
+    "sure": 5.590204,
+    "dogruluk": 1,
+    "canlilik": 11.4,
+    "duyulan": "Ne? Ne, ne diyorsunuz siz? Defne'yi ben doğurdum"
   },
   "R04": {
-    "ozet": "a2998511c551c3e0401205749762ba6ed00b4898",
+    "ozet": "799878dca0317cec2394e2edce7822c130814583",
     "dosya": "B01_R04_SELIN_IC.mp3",
-    "sure": 4.04898
+    "sure": 3.787755,
+    "dogruluk": 1,
+    "canlilik": 6.6,
+    "duyulan": "Her şey üç gün önce basit bir kulak ağrısıyla başladı"
   },
   "R05": {
-    "ozet": "754282a7f7e245c60cb4ae5266ed9722c7c4d0a6",
+    "ozet": "fa996153a0cba77d5c73fb3b46859bb6076fce6e",
     "dosya": "B01_R05_DEFNE.mp3",
-    "sure": 4.519184
+    "sure": 5.825306,
+    "dogruluk": 1,
+    "canlilik": 7.1,
+    "duyulan": "Anneee! Kulağım çok ağrıyor. [burun çeker] İçinde bir şey vızıldıyor gibi"
   },
   "R06": {
-    "ozet": "3baf619f79f1d7ba07bfebb7ac014cd59f0fe31f",
+    "ozet": "7b4d1b79890852e83625ab42a5117c430a6d1222",
     "dosya": "B01_R06_MURAT.mp3",
-    "sure": 4.597551
+    "sure": 5.433469,
+    "dogruluk": 1,
+    "canlilik": 10.2,
+    "duyulan": "Gel bakayım prensesim. [güler] Kulak iltihabıdır o. Yarın doktora gideriz, tamam mı?"
   },
   "R07": {
-    "ozet": "dfed3ae3164af60df21463aaabb7b4b1d256dde4",
+    "ozet": "b165c3a5557d16272933797d3fe82e85321c675a",
     "dosya": "B01_R07_SELIN_IC.mp3",
-    "sure": 8.986122
+    "sure": 9.978776,
+    "dogruluk": 1,
+    "canlilik": 9.3,
+    "duyulan": "[iç çekme] Doktor küçük bir tüp ameliyatı gerektiğini söyledi. Ameliyattan önce de hepimizden kan aldılar. Sadece bir formalite dediler"
   },
   "R08": {
-    "ozet": "d685711fc95ddd4bb876290842a1bdef3722313e",
+    "ozet": "4297bc70a407cb2fd0dbcf222c96ae1e1e7f07ef",
     "dosya": "B01_R08_KEMAL.mp3",
-    "sure": 3.395918
+    "sure": 4.571429,
+    "dogruluk": 1,
+    "canlilik": 11.4,
+    "duyulan": "Testi iki kez tekrarladık. Sonuç değişmedi"
   },
   "R09": {
-    "ozet": "f1ff0d0880d31bbee9ac6b3eaa8247b990bbe2a5",
+    "ozet": "bf73ac195a8fcaf52f0296eec8d43a81ca948f40",
     "dosya": "B01_R09_SELIN.mp3",
-    "sure": 5.564082
+    "sure": 6.19102,
+    "dogruluk": 1,
+    "canlilik": 13.4,
+    "duyulan": "Bir hata vardır. Laboratuvar karıştırmıştır. Değil mi Murat? Bir şey söylesene"
   },
   "R11": {
-    "ozet": "6fa7e4b7346d20682c9e71aeac17775facdb46ed",
+    "ozet": "dc191f9cd4c32296e8bab62a37f2ca4fcdbb3bbb",
     "dosya": "B01_R11_KEMAL.mp3",
-    "sure": 2.76898
+    "sure": 2.899592,
+    "dogruluk": 1,
+    "canlilik": 12.1,
+    "duyulan": "Murat Bey, siz hiç şaşırmadınız"
   },
   "R12": {
-    "ozet": "c24f54ce13ae0177d88ec50851cf621292599d83",
+    "ozet": "8bf1ac002bf433f13059a2028f1ce7d218f931b0",
     "dosya": "B01_R12_SELIN_IC.mp3",
-    "sure": 5.485714
+    "sure": 5.616327,
+    "dogruluk": 1,
+    "canlilik": 8.7,
+    "duyulan": "Doktor haklıydı. Kocam ne bir soru sordu ne de bir an olsun kızına baktı"
   },
   "R13": {
-    "ozet": "104d20844413b053013126efcc886c2f71828d99",
+    "ozet": "6e8654b21a32505d90a942305bece4d5e6d8a959",
     "dosya": "B01_R13_DEFNE.mp3",
-    "sure": 2.272653
+    "sure": 2.821224,
+    "dogruluk": 1,
+    "canlilik": 9.1,
+    "duyulan": "Anne sen ağladın mı?"
   },
   "R14": {
-    "ozet": "e9e00caa50009fef5f3a2599e297ea42345cded9",
+    "ozet": "b98538e10f3398d2131afba4431ff9eb62ad2486",
     "dosya": "B01_R14_SELIN.mp3",
-    "sure": 3.160816
+    "sure": 5.067755,
+    "dogruluk": 1,
+    "canlilik": 9.5,
+    "duyulan": "[güler] Yok bir tanem. [burun çeker] Gözüme bir şey kaçtı sadece"
   },
   "R15": {
-    "ozet": "cca902d7a10e5ce74a14b8f16e8da24a57587d77",
+    "ozet": "1e3decb32385a41360d50d43f7266bff87702b2d",
     "dosya": "B01_R15_DEFNE.mp3",
-    "sure": 2.690612
+    "sure": 2.403265,
+    "dogruluk": 1,
+    "canlilik": 6.9,
+    "duyulan": "Ameliyat olunca kulağım iyileşecek mi?"
   },
   "R16": {
-    "ozet": "ad5d8b38a0812373dc93c33c83a8d821315fc502",
+    "ozet": "be30fc14dc86847a060dc60e4d9c1d6768e35d72",
     "dosya": "B01_R16_SELIN.mp3",
-    "sure": 3.004082
+    "sure": 3.343673,
+    "dogruluk": 1,
+    "canlilik": 7.6,
+    "duyulan": "İyileşecek. Her şey iyileşecek"
   },
   "R17": {
-    "ozet": "89582217defb401e7762d57a5c1714eb02fb6d4d",
+    "ozet": "9de1aefa3f5983b5b4ee289e4979b613a318e766",
     "dosya": "B01_R17_SELIN_IC.mp3",
-    "sure": 5.642449
+    "sure": 5.485714,
+    "dogruluk": 1,
+    "canlilik": 8.6,
+    "duyulan": "Eve dönerken arabada kimse konuşmadı. Defne arka koltukta uyuyakalmıştı"
   },
   "R18": {
-    "ozet": "496f9b24ac6f23ec37a44627124206ae190cda70",
+    "ozet": "996351b2c45cd51311249aa33af15901cecb144d",
     "dosya": "B01_R18_SELIN_IC.mp3",
-    "sure": 6.530612
+    "sure": 5.982041,
+    "dogruluk": 1,
+    "canlilik": 9.9,
+    "duyulan": "Sonra Murat'ın telefonu titredi. Ekrana hızlıca baktı ve mesajı silmeye çalıştı"
   },
   "R19": {
-    "ozet": "4654487bd2fa967c8d081ca8625aa43f45560421",
+    "ozet": "18ad4ff554b38b39e6bd6b92da4104acf8b2766f",
     "dosya": "B01_R19_SELIN_IC.mp3",
-    "sure": 4.832653
+    "sure": 5.067755,
+    "dogruluk": 1,
+    "canlilik": 9.1,
+    "duyulan": "Ama ben dikiz aynasından okumuştum. İki kelime. Doktor biliyor"
   },
   "R20": {
-    "ozet": "87630b4395c316d74de512ba737839b44081b4f8",
+    "ozet": "729a9c04ec99c5ebb2f8bfdb451c619926876c0a",
     "dosya": "B01_R20_SELIN_IC.mp3",
-    "sure": 4.675918
+    "sure": 4.545306,
+    "dogruluk": 1,
+    "canlilik": 8.5,
+    "duyulan": "Oh, o gece anladım. Kocam bu gerçeği benden çok önce biliyordu"
   },
   "R21": {
-    "ozet": "8fc65cf5446d02a7b975cb36cc7d1d55c64af34b",
+    "ozet": "ef5cd59a84305a0d1d025ee910499d3629b18e0d",
     "dosya": "B01_R21_SELIN.mp3",
-    "sure": 8.124082
+    "sure": 7.862857,
+    "dogruluk": 1,
+    "canlilik": 9.6,
+    "duyulan": "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz"
   },
   "R22": {
-    "ozet": "9838506b201989e9c39537414e8ddef7c5913b05",
+    "ozet": "2795d064a4e51cbfd491511296ee30eaacef0b20",
     "dosya": "B01_R22_SELIN.mp3",
-    "sure": 7.314286
+    "sure": 7.000816,
+    "dogruluk": 0.93,
+    "canlilik": 7.8,
+    "duyulan": "Hikayenin devamını kaçırmamak için takip et. Çünkü ikinci bölümde gizlice bir DNA testi yaptırıyorum"
   },
   "R10": {
-    "ozet": "99719884d02537399fc02a3fb3dda46a2acb6249",
+    "ozet": "a1fcf28a4efcff58660d273ae00d1a7624dcff89",
     "dosya": "B01_R10_MURAT.mp3",
-    "sure": 4.832653
+    "sure": 5.22449,
+    "dogruluk": 1,
+    "canlilik": 10.4,
+    "duyulan": "Sakin ol Selin. Böyle şeyler olur. Yeniden test yaptırırız, olur biter"
   }
 }
