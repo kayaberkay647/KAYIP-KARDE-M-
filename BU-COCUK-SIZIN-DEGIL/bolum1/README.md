@@ -1,39 +1,38 @@
-# BU ÇOCUK SİZİN DEĞİL — 1. Bölüm (yeniden yapım)
+# BU ÇOCUK SİZİN DEĞİL — 1. Bölüm (referans videonun yapısında)
 
-Dikey (9:16, 1080x1920) 2D animasyon · 2:30 · Tüm sesler ElevenLabs.
+Dikey 1080x1920 · 2:30 · Tüm sesler ElevenLabs.
+
+## Referanstan alınan yapı
+| Özellik | Referans | Bu bölüm |
+|---|---|---|
+| Anlatım | İki iç ses (karı + koca) + diyalog | Aslı'nın ve Kerem'in iç sesi + diyalog |
+| Tempo | ~2.1 kelime/sn, replik arası 0.4–0.7 sn | ~2.1 kelime/sn, replik arası ~0.7 sn |
+| Kurgu | Sert kesmeler, plan başına 3–5 sn | Sert kesmeler, plan başına ~3–5 sn |
+| Çerçeve | Karakterler önden, ortada, bütün vücut | Aynı (oturanlar sandalyede ayağa kadar, masada belden yukarı) |
+| Altyazı | Ekranın ~%70'i, 2–4 kelimelik parçalar, konuşma düz / iç ses italik serif | Aynı (kelime zamanlarıyla senkron) |
+| Ses | Konuşmanın altında sürekli yumuşak fon müziği, ortam sesi yok | Aynı (ElevenLabs müzik), sadece telefon ve kalem efekti |
+| Hatıra | Siyah-beyaz | Siyah-beyaz (9 yıl önceki doğum) |
+| Görsel | Krem desenli duvar kâğıdı, perdeli pencere, kenar kararması | Aynı |
 
 ## Dosyalar
 | Dosya | Ne işe yarar |
 |---|---|
-| `bolum1.js` | Senaryo, karakter sesleri, sahneler, ortam sesleri, müzik. **Değişiklikleri burada yap.** |
-| `ses_uret.js` | ElevenLabs'tan diyalog (diyalog modu), ortam sesi, efekt ve müzik üretir → `ses_paketi.js` |
-| `index.html` | Animasyonun kendisi (Chrome'da aç). Karakter çizimi, kamera, ışık, ses miksajı. |
+| `bolum1.js` | Senaryo, karakter sesleri, sahne/plan, müzik ve efekt istemleri. **Değişiklikleri burada yap.** |
+| `ses_uret.js` | ElevenLabs: diyalog modu (sahne sahne), kelime zamanları, fon müziği, efektler → `ses_paketi.js` |
+| `index.html` | Animasyon (Chrome'da aç). Üstte `GORSEL` (altyazı konumu/puntosu) ve `MIKS` (ses dengesi). |
 | `video_disa_aktar.js` | 1080x1920 MP4 çıkarır. |
-| `index_eski_v1.html` | Önceki sürüm (yedek). |
-
-## Karakterler ve sesler
-| Karakter | Ses (ElevenLabs) |
-|---|---|
-| Aslı (anne, anlatıcı) | Zeynep – Warm & Rich |
-| Kerem (baba) | Hasan Yasin – Warm Turkish Narrator |
-| Dr. Nihal (doktor) | Mine – Natural, Steady and Calm |
-| Duru (8) | Gözde (karakter seslendirme) |
-
-## Ses nasıl üretiliyor?
-- **Diyalog modu:** Her sahnenin konuşmaları tek parça üretilir. Karakterler birbirine cevap verir gibi doğal akışla konuşur. Duygu etiketleri (`[crying]`, `[whispers]`, `[sighs]`…) okunmaz, sese yansır.
-- Her sahne için 2 okuma üretilir, yazıya çevrilip metinle karşılaştırılır, en doğru okuma seçilir.
-- **Tempo:** Her sahne saniyede ~2 kelimeye eşitlenir (`hedefTempo`). Ne hızlı ne yavaş, bütün bölümde tutarlı.
-- **Seviye:** Konuşma −16 LUFS (yayın standardı). Ortam sesleri ve müzik konuşmanın altında; biri konuşurken otomatik kısılır.
-- Konuşma kanalında kompresör var: fısıltı ile bağırış arasındaki fark dengelenir.
 
 ## Değiştirmek
-1. `bolum1.js`: replik (`ses` = seslendirilen metin, `metin` = altyazı), duygu, poz, kamera planı.
-2. `node ses_uret.js` (değişmeyen sahneler önbellekten gelir; `node ses_uret.js S3` sadece 3. sahne).
-3. `node video_disa_aktar.js` → `BuCocukSizinDegil_Bolum1.mp4`
+1. `bolum1.js` içinde replik (`ses` = seslendirme metni, `metin` = altyazı), duygu, poz, plan.
+2. `node ses_uret.js` (değişmeyen sahneler önbellekten; `node ses_uret.js S2` sadece 2. sahne).
+3. `node video_disa_aktar.js`
 
-Görsel ayarlar `index.html` başındaki `GORSEL` (altyazı konumu/puntosu), ses dengesi `MIKS` (konuşma seviyesi, konuşurken müzik/ortam kısma oranı).
+## Sesler
+| Karakter | ElevenLabs sesi |
+|---|---|
+| Aslı (+ iç ses) | Zeynep – Warm & Rich |
+| Kerem (+ iç ses) | Hasan Yasin – Warm Turkish Narrator |
+| Dr. Nihal | Mine – Natural, Steady and Calm |
+| Duru | Gözde (karakter seslendirme) |
 
-## Duygular / pozlar / planlar
-- Duygular: `notr, gulumse, merakli, endise, uzgun, aglama, sok, ciddi, supheli, sakin, sefkat, aci, uyku, zorGulumse, umut`
-- Pozlar: `yan, masa, kagit, gogus, agiz, kulak, kollar, gozluk, direksiyon, telefon, alin, saril`
-- Planlar: `nihalOrta, nihalYakin, nihalOmuz, kagitYakin, asliYakin, cift, keremYakin, mutfakGenis, duruMasa, keremDuru, kanTupu, koridorGenis, asliKoridor, duruKoridor, sarilma, arabaGenis, telefon, ayna, asliAraba, keremAraba, kapanis`
+Planlar: `nihalMasa, nihalYakin, kagit, asliOfis, asliYakin, keremOfis, ciftOfis, mutfakGenis, duruMutfak, asliMutfak, keremMutfak, keremYakin, masa, kanTupu, hatira, salonGenis, keremSofa, telefon, telefonSil, asliKapi, duruKapi, asliDuru, asliYakinGece, cizim`

@@ -1,217 +1,1542 @@
 {
   "S1": {
-    "ozet": "e8403d7ab15fa4f5",
+    "ozet": "fa582e2c7ea1430e",
     "segmentler": [
       {
         "id": "R01",
         "bas": 0,
-        "bit": 6.640000000000001
+        "bit": 7.28,
+        "kelime": [
+          {
+            "w": "Aslı",
+            "s": 0.133,
+            "e": 0.32
+          },
+          {
+            "w": "Hanım,",
+            "s": 0.34,
+            "e": 0.76
+          },
+          {
+            "w": "Kerem",
+            "s": 0.83,
+            "e": 1.12
+          },
+          {
+            "w": "Bey…",
+            "s": 1.18,
+            "e": 1.8
+          },
+          {
+            "w": "Duru'nun",
+            "s": 1.91,
+            "e": 2.48
+          },
+          {
+            "w": "kan",
+            "s": 2.54,
+            "e": 2.72
+          },
+          {
+            "w": "tahlili",
+            "s": 2.8,
+            "e": 3.2
+          },
+          {
+            "w": "geldi.",
+            "s": 3.267,
+            "e": 3.68
+          },
+          {
+            "w": "Kan",
+            "s": 5,
+            "e": 5.04
+          },
+          {
+            "w": "grubu",
+            "s": 5.12,
+            "e": 5.52
+          },
+          {
+            "w": "AB.",
+            "s": 5.813,
+            "e": 7.28
+          }
+        ]
       },
       {
         "id": "R02",
-        "bas": 6.640000000000001,
-        "bit": 10.725000000000001
+        "bas": 7.28,
+        "bit": 8.8,
+        "kelime": [
+          {
+            "w": "Tamam…",
+            "s": 7.416,
+            "e": 7.68
+          },
+          {
+            "w": "bir",
+            "s": 7.78,
+            "e": 8.08
+          },
+          {
+            "w": "sorun",
+            "s": 8.133,
+            "e": 8.4
+          },
+          {
+            "w": "mu",
+            "s": 8.453,
+            "e": 8.56
+          },
+          {
+            "w": "var?",
+            "s": 8.6,
+            "e": 8.8
+          }
+        ]
       },
       {
         "id": "R03",
-        "bas": 10.725000000000001,
-        "bit": 18.325
+        "bas": 8.8,
+        "bit": 15.679999999999998,
+        "kelime": [
+          {
+            "w": "Sizin",
+            "s": 9.5,
+            "e": 9.76
+          },
+          {
+            "w": "ikinizin",
+            "s": 9.84,
+            "e": 10.24
+          },
+          {
+            "w": "kan",
+            "s": 10.32,
+            "e": 10.56
+          },
+          {
+            "w": "grubu",
+            "s": 10.608,
+            "e": 10.88
+          },
+          {
+            "w": "sıfır.",
+            "s": 10.96,
+            "e": 11.36
+          },
+          {
+            "w": "İki",
+            "s": 12.56,
+            "e": 12.8
+          },
+          {
+            "w": "sıfırdan…",
+            "s": 12.88,
+            "e": 13.361
+          },
+          {
+            "w": "AB",
+            "s": 13.653,
+            "e": 14.24
+          },
+          {
+            "w": "grubu",
+            "s": 14.304,
+            "e": 14.64
+          },
+          {
+            "w": "bir",
+            "s": 14.66,
+            "e": 14.72
+          },
+          {
+            "w": "çocuk",
+            "s": 14.773,
+            "e": 15.04
+          },
+          {
+            "w": "olamaz.",
+            "s": 15.093,
+            "e": 15.68
+          }
+        ]
       },
       {
         "id": "R04",
-        "bas": 18.325,
-        "bit": 22.499000000000002
+        "bas": 15.679999999999998,
+        "bit": 21.041,
+        "kelime": [
+          {
+            "w": "Doktor",
+            "s": 16.454,
+            "e": 16.56
+          },
+          {
+            "w": "ne",
+            "s": 16.613,
+            "e": 16.72
+          },
+          {
+            "w": "diyordu?",
+            "s": 16.78,
+            "e": 17.2
+          },
+          {
+            "w": "Kulaklarım",
+            "s": 17.36,
+            "e": 18.32
+          },
+          {
+            "w": "uğulduyordu.",
+            "s": 18.347,
+            "e": 18.96
+          },
+          {
+            "w": "Ya",
+            "s": 19.093,
+            "e": 19.36
+          },
+          {
+            "w": "da…",
+            "s": 19.467,
+            "e": 19.88
+          },
+          {
+            "w": "duymak",
+            "s": 19.947,
+            "e": 20.32
+          },
+          {
+            "w": "istemiyordum.",
+            "s": 20.387,
+            "e": 21.041
+          }
+        ]
       },
       {
         "id": "R05",
-        "bas": 22.499000000000002,
-        "bit": 26.259
+        "bas": 21.041,
+        "bit": 24.881,
+        "kelime": [
+          {
+            "w": "Ne",
+            "s": 21.193,
+            "e": 21.201
+          },
+          {
+            "w": "demek",
+            "s": 21.254,
+            "e": 21.521
+          },
+          {
+            "w": "olamaz?",
+            "s": 21.574,
+            "e": 22.521
+          },
+          {
+            "w": "Ben",
+            "s": 22.631,
+            "e": 22.961
+          },
+          {
+            "w": "o",
+            "s": 23.001,
+            "e": 23.041
+          },
+          {
+            "w": "çocuğu",
+            "s": 23.105,
+            "e": 23.481
+          },
+          {
+            "w": "dokuz",
+            "s": 23.511,
+            "e": 23.681
+          },
+          {
+            "w": "ay",
+            "s": 23.761,
+            "e": 23.921
+          },
+          {
+            "w": "karnımda",
+            "s": 23.961,
+            "e": 24.401
+          },
+          {
+            "w": "taşıdım!",
+            "s": 24.454,
+            "e": 24.881
+          }
+        ]
       },
       {
-        "id": "R05b",
-        "bas": 26.259,
-        "bit": 32.419
-      }
-    ],
-    "dogruluk": 1,
-    "duyulan": "Aslı Hanım, Kerem Bey. Duru'nun ameliyat öncesi kan tahlili geldi. Kan grubu AB. Eee, tamam. Bir sorun mu var? Sizin ikinizin kan grubu sıfır. İki sıfır grubundan AB grubu bir çocuk olamaz. Ne demek olamaz? Ben o çocuğu dokuz ay karnımda taşıdım. Testi iki kez tekrarladık. Sonuç aynı. Doğumun yapıldığı hastaneyle görüşmenizi öneririm. Bazen bebekler karışabiliyor."
-  },
-  "S2": {
-    "ozet": "e93b689184847873",
-    "segmentler": [
-      {
         "id": "R06",
-        "bas": 0,
-        "bit": 3.1999999999999997
+        "bas": 24.881,
+        "bit": 28.883,
+        "kelime": [
+          {
+            "w": "İşte",
+            "s": 25.729,
+            "e": 25.761
+          },
+          {
+            "w": "o",
+            "s": 25.841,
+            "e": 25.921
+          },
+          {
+            "w": "gün",
+            "s": 25.961,
+            "e": 26.081
+          },
+          {
+            "w": "geldi.",
+            "s": 26.161,
+            "e": 27.041
+          },
+          {
+            "w": "Dokuz",
+            "s": 27.161,
+            "e": 27.681
+          },
+          {
+            "w": "yıldır",
+            "s": 27.738,
+            "e": 28.081
+          },
+          {
+            "w": "korktuğum",
+            "s": 28.145,
+            "e": 28.641
+          },
+          {
+            "w": "gün.",
+            "s": 28.701,
+            "e": 28.883
+          }
+        ]
       },
       {
         "id": "R07",
-        "bas": 3.1999999999999997,
-        "bit": 8.081
+        "bas": 28.883,
+        "bit": 32.322,
+        "kelime": [
+          {
+            "w": "Testi",
+            "s": 29.997,
+            "e": 30.202
+          },
+          {
+            "w": "iki",
+            "s": 30.232,
+            "e": 30.322
+          },
+          {
+            "w": "kez",
+            "s": 30.382,
+            "e": 30.562
+          },
+          {
+            "w": "tekrarladık.",
+            "s": 30.589,
+            "e": 31.602
+          },
+          {
+            "w": "Sonuç",
+            "s": 31.655,
+            "e": 31.922
+          },
+          {
+            "w": "aynı.",
+            "s": 32.002,
+            "e": 32.322
+          }
+        ]
       },
       {
         "id": "R08",
-        "bas": 8.081,
-        "bit": 14.881
+        "bas": 32.322,
+        "bit": 35.602,
+        "kelime": [
+          {
+            "w": "Laboratuvar",
+            "s": 33.162,
+            "e": 33.522
+          },
+          {
+            "w": "hatasıdır.",
+            "s": 33.582,
+            "e": 34.442
+          },
+          {
+            "w": "Yeniden",
+            "s": 34.492,
+            "e": 34.882
+          },
+          {
+            "w": "yaptırırız.",
+            "s": 34.922,
+            "e": 35.602
+          }
+        ]
       },
       {
         "id": "R09",
-        "bas": 14.881,
-        "bit": 17.121
+        "bas": 35.602,
+        "bit": 39.282000000000004,
+        "kelime": [
+          {
+            "w": "Kerem",
+            "s": 36.222,
+            "e": 36.562
+          },
+          {
+            "w": "Bey…",
+            "s": 36.622,
+            "e": 37.442
+          },
+          {
+            "w": "siz",
+            "s": 38.142,
+            "e": 38.162
+          },
+          {
+            "w": "hiç",
+            "s": 38.222,
+            "e": 38.402
+          },
+          {
+            "w": "şaşırmadınız.",
+            "s": 38.442,
+            "e": 39.282
+          }
+        ]
       },
+      {
+        "id": "R09b",
+        "bas": 39.282000000000004,
+        "bit": 45.042,
+        "kelime": [
+          {
+            "w": "O",
+            "s": 39.992,
+            "e": 40.002
+          },
+          {
+            "w": "an",
+            "s": 40.055,
+            "e": 40.162
+          },
+          {
+            "w": "Kerem'in",
+            "s": 40.222,
+            "e": 40.642
+          },
+          {
+            "w": "yüzüne",
+            "s": 40.682,
+            "e": 40.962
+          },
+          {
+            "w": "baktım.",
+            "s": 41.002,
+            "e": 41.442
+          },
+          {
+            "w": "Hiçbir",
+            "s": 41.602,
+            "e": 42.162
+          },
+          {
+            "w": "şey",
+            "s": 42.222,
+            "e": 42.402
+          },
+          {
+            "w": "yoktu.",
+            "s": 42.469,
+            "e": 42.882
+          },
+          {
+            "w": "Ne",
+            "s": 42.989,
+            "e": 43.202
+          },
+          {
+            "w": "korku…",
+            "s": 43.298,
+            "e": 44.082
+          },
+          {
+            "w": "ne",
+            "s": 44.109,
+            "e": 44.162
+          },
+          {
+            "w": "şaşkınlık.",
+            "s": 44.262,
+            "e": 45.042
+          }
+        ]
+      }
+    ],
+    "dogruluk": 1,
+    "duyulan": "Aslı Hanım, Kerem Bey. Duru'nun kan tahlili geldi. Kan grubu AB. Tamam. Bir sorun mu var? Sizin ikinizin kan grubu sıfır. İki sıfırdan AB grubu bir çocuk olamaz. Doktor ne diyordu? Kulaklarım uğulduyordu. Ya da duymak istemiyordum. Ne demek olamaz? Ben o çocuğu dokuz ay karnımda taşıdım. İşte o gün geldi. Dokuz yıldır korktuğum gün. Testi iki kez tekrarladık. Sonuç aynı. Laboratuvar hatasıdır. Yeniden yaptırırız. Kerem Bey, siz hiç şaşırmadınız. O an Kerem'in yüzüne baktım. Hiçbir şey yoktu. Ne korku ne şaşkınlık."
+  },
+  "S2": {
+    "ozet": "9c590899a4b9ee9e",
+    "segmentler": [
       {
         "id": "R10",
-        "bas": 17.121,
-        "bit": 19.281999999999996
-      },
-      {
-        "id": "R10b",
-        "bas": 19.281999999999996,
-        "bit": 22.720999999999997
+        "bas": 0,
+        "bit": 2.88,
+        "kelime": [
+          {
+            "w": "Üç",
+            "s": 0.147,
+            "e": 0.16
+          },
+          {
+            "w": "gün",
+            "s": 0.22,
+            "e": 0.4
+          },
+          {
+            "w": "önce…",
+            "s": 0.48,
+            "e": 0.88
+          },
+          {
+            "w": "her",
+            "s": 0.98,
+            "e": 1.28
+          },
+          {
+            "w": "şey",
+            "s": 1.34,
+            "e": 1.52
+          },
+          {
+            "w": "o",
+            "s": 1.6,
+            "e": 1.68
+          },
+          {
+            "w": "kadar",
+            "s": 1.733,
+            "e": 2
+          },
+          {
+            "w": "normaldi",
+            "s": 2.069,
+            "e": 2.56
+          },
+          {
+            "w": "ki.",
+            "s": 2.64,
+            "e": 2.88
+          }
+        ]
       },
       {
         "id": "R11",
-        "bas": 22.720999999999997,
-        "bit": 31.281
-      }
-    ],
-    "dogruluk": 1,
-    "duyulan": "Üç gün önce her şey o kadar normaldi ki. Anne, kulağım yine ağrıyor. [burnunu çeker] Bu sefer çok fena. Gel bakayım buraya prenses. Ateşin de var senin. Yarın sabah ilk iş doktora gidiyoruz, tamam mı? Ama iğne yok, değil mi? [güler] İğne yok. Söz. [güler] Baban söz verdiyse tamamdır kızım. Kulağına küçük bir tüp takılacaktı. Ameliyattan önce de üçümüzden kan aldılar. Sadece bir formalite dediler."
-  },
-  "S3": {
-    "ozet": "8e57e61458bf3d81",
-    "segmentler": [
+        "bas": 2.88,
+        "bit": 6.16,
+        "kelime": [
+          {
+            "w": "Anneee…",
+            "s": 4.08,
+            "e": 4.56
+          },
+          {
+            "w": "kulağım",
+            "s": 4.6,
+            "e": 4.96
+          },
+          {
+            "w": "yine",
+            "s": 5.008,
+            "e": 5.2
+          },
+          {
+            "w": "çok",
+            "s": 5.26,
+            "e": 5.44
+          },
+          {
+            "w": "ağrıyor.",
+            "s": 5.52,
+            "e": 6.16
+          }
+        ]
+      },
       {
         "id": "R12",
-        "bas": 0,
-        "bit": 4.401000000000001
+        "bas": 6.16,
+        "bit": 9.04,
+        "kelime": [
+          {
+            "w": "Gel",
+            "s": 6.78,
+            "e": 6.8
+          },
+          {
+            "w": "bakayım",
+            "s": 6.86,
+            "e": 7.12
+          },
+          {
+            "w": "bir",
+            "s": 7.16,
+            "e": 7.28
+          },
+          {
+            "w": "tanem.",
+            "s": 7.34,
+            "e": 7.76
+          },
+          {
+            "w": "Ateşin",
+            "s": 7.8,
+            "e": 8.16
+          },
+          {
+            "w": "de",
+            "s": 8.187,
+            "e": 8.24
+          },
+          {
+            "w": "var",
+            "s": 8.3,
+            "e": 8.48
+          },
+          {
+            "w": "senin.",
+            "s": 8.56,
+            "e": 9.04
+          }
+        ]
       },
       {
         "id": "R13",
-        "bas": 4.401000000000001,
-        "bit": 10.642
+        "bas": 9.04,
+        "bit": 12.638999999999998,
+        "kelime": [
+          {
+            "w": "Yarın",
+            "s": 9.97,
+            "e": 10.08
+          },
+          {
+            "w": "sabah",
+            "s": 10.147,
+            "e": 10.48
+          },
+          {
+            "w": "ilk",
+            "s": 10.58,
+            "e": 10.88
+          },
+          {
+            "w": "iş",
+            "s": 10.933,
+            "e": 11.04
+          },
+          {
+            "w": "doktora",
+            "s": 11.1,
+            "e": 11.44
+          },
+          {
+            "w": "gidiyoruz,",
+            "s": 11.48,
+            "e": 12
+          },
+          {
+            "w": "prenses.",
+            "s": 12.02,
+            "e": 12.639
+          }
+        ]
       },
       {
         "id": "R14",
-        "bas": 10.642,
-        "bit": 15.282
+        "bas": 12.638999999999998,
+        "bit": 15.518999999999998,
+        "kelime": [
+          {
+            "w": "Ama",
+            "s": 13.62,
+            "e": 13.92
+          },
+          {
+            "w": "iğne",
+            "s": 14,
+            "e": 14.32
+          },
+          {
+            "w": "yok,",
+            "s": 14.38,
+            "e": 14.68
+          },
+          {
+            "w": "değil",
+            "s": 14.7,
+            "e": 14.8
+          },
+          {
+            "w": "mi",
+            "s": 14.853,
+            "e": 14.96
+          },
+          {
+            "w": "baba?",
+            "s": 15,
+            "e": 15.519
+          }
+        ]
       },
       {
         "id": "R15",
-        "bas": 15.282,
-        "bit": 21.843999999999998
-      }
-    ],
-    "dogruluk": 1,
-    "duyulan": "Kerem bir şey söylesene. Bu bir hata değil mi? Sakin ol Aslı. Laboratuvarlar karıştırır böyle şeyleri yeniden yaptırırız. Kerem Bey, siz hiç şaşırmadınız. Doktor haklıydı. Kerem ne bir soru sordu ne de dönüp kızına baktı."
-  },
-  "S4": {
-    "ozet": "f1dcf1b91dca68a8",
-    "segmentler": [
+        "bas": 15.518999999999998,
+        "bit": 17.88,
+        "kelime": [
+          {
+            "w": "İğne",
+            "s": 16.387,
+            "e": 16.64
+          },
+          {
+            "w": "yok.",
+            "s": 16.72,
+            "e": 17.24
+          },
+          {
+            "w": "Söz.",
+            "s": 17.31,
+            "e": 17.88
+          }
+        ]
+      },
       {
         "id": "R16",
-        "bas": 0,
-        "bit": 1.681
+        "bas": 17.88,
+        "bit": 23.840000000000003,
+        "kelime": [
+          {
+            "w": "Kızımın",
+            "s": 18.376,
+            "e": 18.64
+          },
+          {
+            "w": "gözlerine",
+            "s": 18.7,
+            "e": 19.28
+          },
+          {
+            "w": "her",
+            "s": 19.34,
+            "e": 19.52
+          },
+          {
+            "w": "baktığımda",
+            "s": 19.56,
+            "e": 20.16
+          },
+          {
+            "w": "aynı",
+            "s": 20.224,
+            "e": 20.48
+          },
+          {
+            "w": "korku.",
+            "s": 20.56,
+            "e": 21.04
+          },
+          {
+            "w": "Bir",
+            "s": 21.18,
+            "e": 21.6
+          },
+          {
+            "w": "gün",
+            "s": 21.68,
+            "e": 21.92
+          },
+          {
+            "w": "biri…",
+            "s": 22,
+            "e": 22.64
+          },
+          {
+            "w": "gerçeği",
+            "s": 22.704,
+            "e": 23.12
+          },
+          {
+            "w": "öğrenecek.",
+            "s": 23.173,
+            "e": 23.84
+          }
+        ]
       },
       {
         "id": "R17",
-        "bas": 1.681,
-        "bit": 4.319
-      },
-      {
-        "id": "R18",
-        "bas": 4.319,
-        "bit": 7.12
-      },
-      {
-        "id": "R19",
-        "bas": 7.12,
-        "bit": 11.76
+        "bas": 23.840000000000003,
+        "bit": 31.920000000000005,
+        "kelime": [
+          {
+            "w": "Kulağına",
+            "s": 24.92,
+            "e": 25.28
+          },
+          {
+            "w": "küçük",
+            "s": 25.333,
+            "e": 25.6
+          },
+          {
+            "w": "bir",
+            "s": 25.64,
+            "e": 25.76
+          },
+          {
+            "w": "tüp",
+            "s": 25.8,
+            "e": 26
+          },
+          {
+            "w": "takılacaktı.",
+            "s": 26.06,
+            "e": 26.88
+          },
+          {
+            "w": "Ameliyattan",
+            "s": 26.987,
+            "e": 27.68
+          },
+          {
+            "w": "önce",
+            "s": 27.728,
+            "e": 27.92
+          },
+          {
+            "w": "de",
+            "s": 27.947,
+            "e": 28
+          },
+          {
+            "w": "üçümüzden",
+            "s": 28.08,
+            "e": 28.56
+          },
+          {
+            "w": "kan",
+            "s": 28.62,
+            "e": 28.8
+          },
+          {
+            "w": "aldılar.",
+            "s": 28.864,
+            "e": 29.36
+          },
+          {
+            "w": "Sadece",
+            "s": 30.091,
+            "e": 30.16
+          },
+          {
+            "w": "bir",
+            "s": 30.2,
+            "e": 30.32
+          },
+          {
+            "w": "formalite…",
+            "s": 30.389,
+            "e": 31.12
+          },
+          {
+            "w": "dediler.",
+            "s": 31.2,
+            "e": 31.92
+          }
+        ]
       }
     ],
     "dogruluk": 1,
-    "duyulan": "Anne sen ağladın mı? Yok bir tanem, gözüme bir şey kaçtı. Ameliyattan sonra kulağım geçecek mi? Geçecek. Söz veriyorum her şey geçecek."
+    "duyulan": "Üç gün önce her şey o kadar normaldi ki. Anneee, kulağım yine çok ağrıyor. Gel bakayım bir tanem. Ateşin de var senin. Yarın sabah ilk iş doktora gidiyoruz prenses. Ama iğne yok değil mi baba? İğne yok, söz. Kızımın gözlerine her baktığımda aynı korku. Bir gün biri gerçeği öğrenecek. Kulağına küçük bir tüp takılacaktı. Ameliyattan önce de üçümüzden kan aldılar. Sadece bir formalite dediler."
   },
-  "S5": {
-    "ozet": "82d4528039babfb8",
+  "S3": {
+    "ozet": "40a6bfd053ad27ae",
     "segmentler": [
       {
-        "id": "R20",
+        "id": "R18",
         "bas": 0,
-        "bit": 5.12
+        "bit": 7.119999999999999,
+        "kelime": [
+          {
+            "w": "Dokuz",
+            "s": 0.136,
+            "e": 0.32
+          },
+          {
+            "w": "yıl",
+            "s": 0.36,
+            "e": 0.48
+          },
+          {
+            "w": "önce",
+            "s": 0.576,
+            "e": 0.96
+          },
+          {
+            "w": "onu",
+            "s": 1.08,
+            "e": 1.44
+          },
+          {
+            "w": "ilk",
+            "s": 1.5,
+            "e": 1.68
+          },
+          {
+            "w": "kucağıma",
+            "s": 1.733,
+            "e": 2.16
+          },
+          {
+            "w": "aldığımda…",
+            "s": 2.217,
+            "e": 3.32
+          },
+          {
+            "w": "dünyanın",
+            "s": 3.369,
+            "e": 3.76
+          },
+          {
+            "w": "en",
+            "s": 3.84,
+            "e": 4
+          },
+          {
+            "w": "mutlu",
+            "s": 4.067,
+            "e": 4.4
+          },
+          {
+            "w": "kadınıydım.",
+            "s": 4.46,
+            "e": 5.12
+          },
+          {
+            "w": "O",
+            "s": 6.07,
+            "e": 6.08
+          },
+          {
+            "w": "benim",
+            "s": 6.133,
+            "e": 6.4
+          },
+          {
+            "w": "kızımdı.",
+            "s": 6.48,
+            "e": 7.12
+          }
+        ]
+      }
+    ],
+    "dogruluk": 1,
+    "duyulan": "Dokuz yıl önce onu ilk kucağıma aldığımda dünyanın en mutlu kadınıydım. O benim kızımdı"
+  },
+  "S4": {
+    "ozet": "2d8e73fc7a7e73f8",
+    "segmentler": [
+      {
+        "id": "R19",
+        "bas": 0,
+        "bit": 3.441,
+        "kelime": [
+          {
+            "w": "Kerem,",
+            "s": 0.216,
+            "e": 0.48
+          },
+          {
+            "w": "bir",
+            "s": 0.58,
+            "e": 0.88
+          },
+          {
+            "w": "şey",
+            "s": 0.92,
+            "e": 1.04
+          },
+          {
+            "w": "söylesene!",
+            "s": 1.093,
+            "e": 1.84
+          },
+          {
+            "w": "Bu",
+            "s": 1.947,
+            "e": 2.16
+          },
+          {
+            "w": "bir",
+            "s": 2.2,
+            "e": 2.32
+          },
+          {
+            "w": "hata,",
+            "s": 2.36,
+            "e": 2.8
+          },
+          {
+            "w": "değil",
+            "s": 2.84,
+            "e": 3.04
+          },
+          {
+            "w": "mi?",
+            "s": 3.12,
+            "e": 3.441
+          }
+        ]
+      },
+      {
+        "id": "R20",
+        "bas": 3.441,
+        "bit": 6.64,
+        "kelime": [
+          {
+            "w": "Sakin",
+            "s": 4.5,
+            "e": 4.64
+          },
+          {
+            "w": "ol,",
+            "s": 4.693,
+            "e": 4.92
+          },
+          {
+            "w": "Aslı.",
+            "s": 4.96,
+            "e": 5.28
+          },
+          {
+            "w": "Böyle",
+            "s": 5.373,
+            "e": 5.84
+          },
+          {
+            "w": "şeyler",
+            "s": 5.897,
+            "e": 6.24
+          },
+          {
+            "w": "olur.",
+            "s": 6.304,
+            "e": 6.64
+          }
+        ]
+      },
+      {
+        "id": "R20b",
+        "bas": 6.64,
+        "bit": 13.68,
+        "kelime": [
+          {
+            "w": "Doğumun",
+            "s": 7.95,
+            "e": 8.08
+          },
+          {
+            "w": "yapıldığı",
+            "s": 8.128,
+            "e": 8.56
+          },
+          {
+            "w": "hastaneyle",
+            "s": 8.624,
+            "e": 9.2
+          },
+          {
+            "w": "görüşmenizi",
+            "s": 9.267,
+            "e": 9.92
+          },
+          {
+            "w": "öneririm.",
+            "s": 9.968,
+            "e": 10.88
+          },
+          {
+            "w": "Bazen…",
+            "s": 11.432,
+            "e": 11.92
+          },
+          {
+            "w": "bebekler",
+            "s": 12.08,
+            "e": 12.8
+          },
+          {
+            "w": "karışabiliyor.",
+            "s": 12.867,
+            "e": 13.68
+          }
+        ]
       },
       {
         "id": "R21",
-        "bas": 5.12,
-        "bit": 10.32
-      },
-      {
-        "id": "R21b",
-        "bas": 10.32,
-        "bit": 11.68
-      },
-      {
-        "id": "R21c",
-        "bas": 11.68,
-        "bit": 15.280000000000001
-      },
+        "bas": 13.68,
+        "bit": 18.159999999999997,
+        "kelime": [
+          {
+            "w": "Kerem",
+            "s": 14.77,
+            "e": 14.96
+          },
+          {
+            "w": "ne",
+            "s": 15.04,
+            "e": 15.2
+          },
+          {
+            "w": "bir",
+            "s": 15.24,
+            "e": 15.36
+          },
+          {
+            "w": "soru",
+            "s": 15.424,
+            "e": 15.68
+          },
+          {
+            "w": "sordu…",
+            "s": 15.773,
+            "e": 16.52
+          },
+          {
+            "w": "ne",
+            "s": 16.613,
+            "e": 16.8
+          },
+          {
+            "w": "de",
+            "s": 16.827,
+            "e": 16.88
+          },
+          {
+            "w": "dönüp",
+            "s": 16.94,
+            "e": 17.2
+          },
+          {
+            "w": "kızına",
+            "s": 17.26,
+            "e": 17.6
+          },
+          {
+            "w": "baktı.",
+            "s": 17.68,
+            "e": 18.16
+          }
+        ]
+      }
+    ],
+    "dogruluk": 1,
+    "duyulan": "Kerem bir şey söylesene. Bu bir hata değil mi? Sakin ol Aslı. Böyle şeyler olur. Doğumun yapıldığı hastaneyle görüşmenizi öneririm. Bazen bebekler karışabiliyor. Kerem ne bir soru sordu ne de dönüp kızına baktı."
+  },
+  "S5": {
+    "ozet": "7cae098d99716039",
+    "segmentler": [
       {
         "id": "R22",
-        "bas": 15.280000000000001,
-        "bit": 21.52
+        "bas": 0,
+        "bit": 3.84,
+        "kelime": [
+          {
+            "w": "O",
+            "s": 0.072,
+            "e": 0.08
+          },
+          {
+            "w": "gece",
+            "s": 0.144,
+            "e": 0.4
+          },
+          {
+            "w": "Kerem",
+            "s": 0.46,
+            "e": 0.8
+          },
+          {
+            "w": "salonda",
+            "s": 0.86,
+            "e": 1.36
+          },
+          {
+            "w": "oturdu.",
+            "s": 1.424,
+            "e": 2.12
+          },
+          {
+            "w": "Gözünü",
+            "s": 2.19,
+            "e": 2.56
+          },
+          {
+            "w": "telefondan",
+            "s": 2.624,
+            "e": 3.2
+          },
+          {
+            "w": "ayırmadı.",
+            "s": 3.253,
+            "e": 3.84
+          }
+        ]
       },
       {
         "id": "R23",
-        "bas": 21.52,
-        "bit": 26.240000000000002
-      }
-    ],
-    "dogruluk": 1,
-    "duyulan": "Eve dönerken arabada kimse konuşmadı. Duru arkada uyuyakalmıştı. Sonra Kerem'in telefonu titredi. Mesaja baktı ve hemen sildi. \"Kimdi?\" \"İşten biri. Önemli değil.\" Ama ben aynadan okumuştum. İki kelime. Doktor biliyor. O gece anladım. Kocam bu gerçeği benden çok önce biliyordu."
-  },
-  "S6": {
-    "ozet": "5028fff11a6a7a5d",
-    "segmentler": [
+        "bas": 3.84,
+        "bit": 6.880000000000001,
+        "kelime": [
+          {
+            "w": "Bilinmeyen",
+            "s": 4.548,
+            "e": 4.96
+          },
+          {
+            "w": "numara…",
+            "s": 5,
+            "e": 5.64
+          },
+          {
+            "w": "Lütfen",
+            "s": 5.78,
+            "e": 6.24
+          },
+          {
+            "w": "o",
+            "s": 6.28,
+            "e": 6.32
+          },
+          {
+            "w": "olmasın.",
+            "s": 6.373,
+            "e": 6.88
+          }
+        ]
+      },
       {
         "id": "R24",
-        "bas": 0,
-        "bit": 5.4399999999999995
+        "bas": 6.880000000000001,
+        "bit": 11.840000000000002,
+        "kelime": [
+          {
+            "w": "Ekrandaki",
+            "s": 7.592,
+            "e": 8.08
+          },
+          {
+            "w": "mesajı",
+            "s": 8.147,
+            "e": 8.6
+          },
+          {
+            "w": "ben",
+            "s": 8.63,
+            "e": 8.72
+          },
+          {
+            "w": "de",
+            "s": 8.773,
+            "e": 8.88
+          },
+          {
+            "w": "gördüm.",
+            "s": 8.933,
+            "e": 9.36
+          },
+          {
+            "w": "İki",
+            "s": 9.5,
+            "e": 9.92
+          },
+          {
+            "w": "kelime…",
+            "s": 9.98,
+            "e": 10.88
+          },
+          {
+            "w": "Doktor",
+            "s": 10.94,
+            "e": 11.28
+          },
+          {
+            "w": "biliyor.",
+            "s": 11.34,
+            "e": 11.84
+          }
+        ]
+      },
+      {
+        "id": "R24b",
+        "bas": 11.840000000000002,
+        "bit": 12.400000000000002,
+        "kelime": [
+          {
+            "w": "Kimdi",
+            "s": 12.044,
+            "e": 12.16
+          },
+          {
+            "w": "o?",
+            "s": 12.24,
+            "e": 12.4
+          }
+        ]
+      },
+      {
+        "id": "R24c",
+        "bas": 12.400000000000002,
+        "bit": 15.920000000000002,
+        "kelime": [
+          {
+            "w": "İş",
+            "s": 13.244,
+            "e": 13.28
+          },
+          {
+            "w": "yerinden.",
+            "s": 13.34,
+            "e": 14.2
+          },
+          {
+            "w": "Önemli",
+            "s": 14.627,
+            "e": 14.88
+          },
+          {
+            "w": "değil,",
+            "s": 14.933,
+            "e": 15.28
+          },
+          {
+            "w": "sen",
+            "s": 15.36,
+            "e": 15.6
+          },
+          {
+            "w": "yat.",
+            "s": 15.66,
+            "e": 15.92
+          }
+        ]
+      },
+      {
+        "id": "R25",
+        "bas": 15.920000000000002,
+        "bit": 19.919,
+        "kelime": [
+          {
+            "w": "Hemen",
+            "s": 16.71,
+            "e": 16.96
+          },
+          {
+            "w": "silmeliyim.",
+            "s": 17.02,
+            "e": 17.6
+          },
+          {
+            "w": "Aslı…",
+            "s": 17.76,
+            "e": 18.64
+          },
+          {
+            "w": "asla",
+            "s": 18.736,
+            "e": 19.12
+          },
+          {
+            "w": "öğrenmemeli.",
+            "s": 19.187,
+            "e": 19.919
+          }
+        ]
+      },
+      {
+        "id": "R26",
+        "bas": 19.919,
+        "bit": 22.880000000000003,
+        "kelime": [
+          {
+            "w": "Anne?",
+            "s": 20.8,
+            "e": 21.28
+          },
+          {
+            "w": "Babam",
+            "s": 21.4,
+            "e": 21.92
+          },
+          {
+            "w": "neden",
+            "s": 21.973,
+            "e": 22.24
+          },
+          {
+            "w": "uyumuyor?",
+            "s": 22.304,
+            "e": 22.88
+          }
+        ]
+      },
+      {
+        "id": "R27",
+        "bas": 22.880000000000003,
+        "bit": 25.040000000000003,
+        "kelime": [
+          {
+            "w": "Uyu",
+            "s": 23.59,
+            "e": 23.68
+          },
+          {
+            "w": "bebeğim.",
+            "s": 23.76,
+            "e": 24.24
+          },
+          {
+            "w": "Annen",
+            "s": 24.28,
+            "e": 24.56
+          },
+          {
+            "w": "burada.",
+            "s": 24.617,
+            "e": 25.04
+          }
+        ]
+      },
+      {
+        "id": "R28",
+        "bas": 25.040000000000003,
+        "bit": 30.880000000000003,
+        "kelime": [
+          {
+            "w": "O",
+            "s": 26.384,
+            "e": 26.416
+          },
+          {
+            "w": "gece",
+            "s": 26.429,
+            "e": 26.48
+          },
+          {
+            "w": "anladım.",
+            "s": 26.56,
+            "e": 27.2
+          },
+          {
+            "w": "Kocam",
+            "s": 27.28,
+            "e": 27.68
+          },
+          {
+            "w": "bu",
+            "s": 27.733,
+            "e": 27.84
+          },
+          {
+            "w": "gerçeği…",
+            "s": 27.936,
+            "e": 28.8
+          },
+          {
+            "w": "benden",
+            "s": 28.92,
+            "e": 29.44
+          },
+          {
+            "w": "çok",
+            "s": 29.54,
+            "e": 29.84
+          },
+          {
+            "w": "önce",
+            "s": 29.904,
+            "e": 30.16
+          },
+          {
+            "w": "biliyordu.",
+            "s": 30.2,
+            "e": 30.88
+          }
+        ]
+      },
+      {
+        "id": "R29",
+        "bas": 30.880000000000003,
+        "bit": 34.32000000000001,
+        "kelime": [
+          {
+            "w": "Ve",
+            "s": 31.019,
+            "e": 31.04
+          },
+          {
+            "w": "o",
+            "s": 31.12,
+            "e": 31.2
+          },
+          {
+            "w": "mesajı",
+            "s": 31.28,
+            "e": 31.84
+          },
+          {
+            "w": "kim",
+            "s": 31.88,
+            "e": 32
+          },
+          {
+            "w": "attıysa…",
+            "s": 32.06,
+            "e": 33.08
+          },
+          {
+            "w": "onu",
+            "s": 33.17,
+            "e": 33.44
+          },
+          {
+            "w": "bulacaktım.",
+            "s": 33.52,
+            "e": 34.32
+          }
+        ]
       }
     ],
     "dogruluk": 1,
-    "duyulan": "Sence o mesajı kim attı? Yorumlara yaz. Devamı ikinci bölümde"
+    "duyulan": "O gece Kerem salonda oturdu. Gözünü telefondan ayırmadı. Bilinmeyen numara. Lütfen o olmasın. Ekrandaki mesajı ben de gördüm. İki kelime. Doktor biliyor. Kimdi o? İş yerinden. Önemli değil. Sen yat. Hemen silmeliyim. Aslı asla öğrenmemeli. Anne. Babam neden uyumuyor? Uyu bebeğim. Annen burada. O gece anladım. Kocam bu gerçeği benden çok önce biliyordu ve o mesajı kim attıysa onu bulacaktım."
   },
-  "efekt_muayene": {
-    "ozet": "6252a1b6f73e5f23"
-  },
-  "efekt_mutfak": {
-    "ozet": "6de77bc70c8071d6"
-  },
-  "efekt_koridor": {
-    "ozet": "efbf760d24800be7"
-  },
-  "efekt_araba": {
-    "ozet": "db4d0ebaa33de7b4"
-  },
-  "efekt_salon": {
-    "ozet": "9b13f1ce637db703"
+  "muzik": {
+    "ozet": "29298bbcef34e42c"
   },
   "efekt_telefon": {
-    "ozet": "398f048da5a6c03b"
+    "ozet": "fbd85f898ac757d7"
   },
-  "efekt_vurus": {
-    "ozet": "d7956b1a216f6f9b"
-  },
-  "efekt_gecis": {
-    "ozet": "4cc76eb2c1d9df02"
-  },
-  "muzik_gizem": {
-    "ozet": "c756c64d11968a5f"
-  },
-  "muzik_ani": {
-    "ozet": "72509338f9a58e1c"
-  },
-  "muzik_gerilim": {
-    "ozet": "a92e001f28b24276"
+  "efekt_kalem": {
+    "ozet": "1f5f628e8fc21cce"
   }
 }
