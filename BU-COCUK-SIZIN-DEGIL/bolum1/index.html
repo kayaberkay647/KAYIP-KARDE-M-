@@ -84,7 +84,9 @@ function zamanla() {
     const P = PAKET.sahneler[s.id];
     s.replikler.forEach((r, i) => {
       const g = P && P.segmentler.find(x => x.id === r.id);
-      if (g) { const sn = P.segmentler[i + 1]; r.segBas = g.bas; r.konus = g.bit - g.bas; r.parca = Math.min(r.konus + .12, (sn ? sn.bas : P.sure) - g.bas); r.kelime = g.kelime; }
+      if (g) { const sn = P.segmentler[i + 1]; r.segBas = g.bas; r.kelime = g.kelime;
+        // bitiş: ses dalgasının gerçekten sustuğu an (yüklenince ölçülür), yoksa segment sonu
+        const son = r._sesSon != null ? r._sesSon : g.bit; r.konus = Math.max(g.bit, son) - g.bas; r.parca = Math.min(r.konus + .15, (sn ? sn.bas : P.sure) - g.bas); }
       else { r.segBas = null; r.konus = Math.max(1.2, r.metin.length * .065); r.parca = r.konus + .12; r.kelime = null; }
     });
   }
@@ -138,6 +140,12 @@ const HAZIR = (async () => {
   const orta = sv.sort((x, y) => x - y)[Math.floor(sv.length / 2)] || 1; for (const r of L) r._kazanc = r._rms ? clamp(orta / r._rms, .75, 3.6) : 1;
   for (const [ad, v] of Object.entries(PAKET.efektler || {})) TAMPON.efekt[ad] = await coz(v.veri);
   if (PAKET.muzik) TAMPON.muzik = await coz(PAKET.muzik.veri);
+  // her repliğin gerçek bitişi: bir sonraki konuşmacıya (ya da dosya sonuna) kadar sesin son duyulduğu an
+  for (const s of SAHNELER) { const b = TAMPON.sahne[s.id], P = PAKET.sahneler[s.id]; if (!b || !P) continue; const d = b.getChannelData(0), sr = b.sampleRate;
+    P.segmentler.forEach((g, i) => { const r = s.replikler.find(x => x.id === g.id); if (!r) return; const sn = P.segmentler[i + 1], ust = Math.min(d.length - 1, Math.floor((sn ? sn.bas : b.duration) * sr)), alt = Math.floor(g.bas * sr);
+      let k = ust; const pen = Math.floor(sr * .02); while (k > alt) { let m = 0; for (let j = Math.max(alt, k - pen); j < k; j++) m = Math.max(m, Math.abs(d[j])); if (m > .02) break; k -= pen; }
+      r._sesSon = Math.max(g.bit, k / sr); }); }
+  zamanla();
 })();
 function agizAc(id, t) {
   const r = aktifReplik(t); if (!r || r.kim !== id) return 0;
