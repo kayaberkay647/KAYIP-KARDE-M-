@@ -5,7 +5,8 @@
     "sure": 6.530612,
     "dogruluk": 0.92,
     "canlilik": 11.9,
-    "duyulan": "Selin Hanım, kızınızın kan grubu AB. Sizin ve eşinizin kan grubuysa sıfır"
+    "duyulan": "Selin Hanım, kızınızın kan grubu AB. Sizin ve eşinizin kan grubuysa sıfır",
+    "hiz": 1.12
   },
   "R02": {
     "ozet": "a0b0d7d8804328f0c2e82b2d1e5431d5d5804bdc",
@@ -13,7 +14,8 @@
     "sure": 2.795102,
     "dogruluk": 1,
     "canlilik": 12.8,
-    "duyulan": "Bu çocuk sizin olamaz"
+    "duyulan": "Bu çocuk sizin olamaz",
+    "hiz": 1.12
   },
   "R03": {
     "ozet": "8d5934ab0009aeb45e07f82d3c9a8c1916a9fe2d",
@@ -21,7 +23,8 @@
     "sure": 5.590204,
     "dogruluk": 1,
     "canlilik": 11.4,
-    "duyulan": "Ne? Ne, ne diyorsunuz siz? Defne'yi ben doğurdum"
+    "duyulan": "Ne? Ne, ne diyorsunuz siz? Defne'yi ben doğurdum",
+    "hiz": 1.12
   },
   "R04": {
     "ozet": "799878dca0317cec2394e2edce7822c130814583",
@@ -29,7 +32,8 @@
     "sure": 3.787755,
     "dogruluk": 1,
     "canlilik": 6.6,
-    "duyulan": "Her şey üç gün önce basit bir kulak ağrısıyla başladı"
+    "duyulan": "Her şey üç gün önce basit bir kulak ağrısıyla başladı",
+    "hiz": 1.12
   },
   "R05": {
     "ozet": "fa996153a0cba77d5c73fb3b46859bb6076fce6e",
@@ -37,7 +41,8 @@
     "sure": 5.825306,
     "dogruluk": 1,
     "canlilik": 7.1,
-    "duyulan": "Anneee! Kulağım çok ağrıyor. [burun çeker] İçinde bir şey vızıldıyor gibi"
+    "duyulan": "Anneee! Kulağım çok ağrıyor. [burun çeker] İçinde bir şey vızıldıyor gibi",
+    "hiz": 1.12
   },
   "R06": {
     "ozet": "7b4d1b79890852e83625ab42a5117c430a6d1222",
@@ -45,7 +50,8 @@
     "sure": 5.433469,
     "dogruluk": 1,
     "canlilik": 10.2,
-    "duyulan": "Gel bakayım prensesim. [güler] Kulak iltihabıdır o. Yarın doktora gideriz, tamam mı?"
+    "duyulan": "Gel bakayım prensesim. [güler] Kulak iltihabıdır o. Yarın doktora gideriz, tamam mı?",
+    "hiz": 1.12
   },
   "R07": {
     "ozet": "b165c3a5557d16272933797d3fe82e85321c675a",
@@ -53,7 +59,8 @@
     "sure": 9.978776,
     "dogruluk": 1,
     "canlilik": 9.3,
-    "duyulan": "[iç çekme] Doktor küçük bir tüp ameliyatı gerektiğini söyledi. Ameliyattan önce de hepimizden kan aldılar. Sadece bir formalite dediler"
+    "duyulan": "[iç çekme] Doktor küçük bir tüp ameliyatı gerektiğini söyledi. Ameliyattan önce de hepimizden kan aldılar. Sadece bir formalite dediler",
+    "hiz": 1.12
   },
   "R08": {
     "ozet": "4297bc70a407cb2fd0dbcf222c96ae1e1e7f07ef",
@@ -61,7 +68,8 @@
     "sure": 4.571429,
     "dogruluk": 1,
     "canlilik": 11.4,
-    "duyulan": "Testi iki kez tekrarladık. Sonuç değişmedi"
+    "duyulan": "Testi iki kez tekrarladık. Sonuç değişmedi",
+    "hiz": 1.12
   },
   "R09": {
     "ozet": "bf73ac195a8fcaf52f0296eec8d43a81ca948f40",
@@ -69,7 +77,8 @@
     "sure": 6.19102,
     "dogruluk": 1,
     "canlilik": 13.4,
-    "duyulan": "Bir hata vardır. Laboratuvar karıştırmıştır. Değil mi Murat? Bir şey söylesene"
+    "duyulan": "Bir hata vardır. Laboratuvar karıştırmıştır. Değil mi Murat? Bir şey söylesene",
+    "hiz": 1.12
   },
   "R11": {
     "ozet": "dc191f9cd4c32296e8bab62a37f2ca4fcdbb3bbb",
@@ -77,7 +86,8 @@
     "sure": 2.899592,
     "dogruluk": 1,
     "canlilik": 12.1,
-    "duyulan": "Murat Bey, siz hiç şaşırmadınız"
+    "duyulan": "Murat Bey, siz hiç şaşırmadınız",
+    "hiz": 1.12
   },
   "R12": {
     "ozet": "8bf1ac002bf433f13059a2028f1ce7d218f931b0",
@@ -85,7 +95,8 @@
     "sure": 5.616327,
     "dogruluk": 1,
     "canlilik": 8.7,
-    "duyulan": "Doktor haklıydı. Kocam ne bir soru sordu ne de bir an olsun kızına baktı"
+    "duyulan": "Doktor haklıydı. Kocam ne bir soru sordu ne de bir an olsun kızına baktı",
+    "hiz": 1.12
   },
   "R13": {
     "ozet": "6e8654b21a32505d90a942305bece4d5e6d8a959",
@@ -93,7 +104,8 @@
     "sure": 2.821224,
     "dogruluk": 1,
     "canlilik": 9.1,
-    "duyulan": "Anne sen ağladın mı?"
+    "duyulan": "Anne sen ağladın mı?",
+    "hiz": 1.12
   },
   "R14": {
     "ozet": "b98538e10f3398d2131afba4431ff9eb62ad2486",
@@ -101,7 +113,8 @@
     "sure": 5.067755,
     "dogruluk": 1,
     "canlilik": 9.5,
-    "duyulan": "[güler] Yok bir tanem. [burun çeker] Gözüme bir şey kaçtı sadece"
+    "duyulan": "[güler] Yok bir tanem. [burun çeker] Gözüme bir şey kaçtı sadece",
+    "hiz": 1.12
   },
   "R15": {
     "ozet": "1e3decb32385a41360d50d43f7266bff87702b2d",
@@ -109,7 +122,8 @@
     "sure": 2.403265,
     "dogruluk": 1,
     "canlilik": 6.9,
-    "duyulan": "Ameliyat olunca kulağım iyileşecek mi?"
+    "duyulan": "Ameliyat olunca kulağım iyileşecek mi?",
+    "hiz": 1.12
   },
   "R16": {
     "ozet": "be30fc14dc86847a060dc60e4d9c1d6768e35d72",
@@ -117,7 +131,8 @@
     "sure": 3.343673,
     "dogruluk": 1,
     "canlilik": 7.6,
-    "duyulan": "İyileşecek. Her şey iyileşecek"
+    "duyulan": "İyileşecek. Her şey iyileşecek",
+    "hiz": 1.12
   },
   "R17": {
     "ozet": "9de1aefa3f5983b5b4ee289e4979b613a318e766",
@@ -125,7 +140,8 @@
     "sure": 5.485714,
     "dogruluk": 1,
     "canlilik": 8.6,
-    "duyulan": "Eve dönerken arabada kimse konuşmadı. Defne arka koltukta uyuyakalmıştı"
+    "duyulan": "Eve dönerken arabada kimse konuşmadı. Defne arka koltukta uyuyakalmıştı",
+    "hiz": 1.12
   },
   "R18": {
     "ozet": "996351b2c45cd51311249aa33af15901cecb144d",
@@ -133,7 +149,8 @@
     "sure": 5.982041,
     "dogruluk": 1,
     "canlilik": 9.9,
-    "duyulan": "Sonra Murat'ın telefonu titredi. Ekrana hızlıca baktı ve mesajı silmeye çalıştı"
+    "duyulan": "Sonra Murat'ın telefonu titredi. Ekrana hızlıca baktı ve mesajı silmeye çalıştı",
+    "hiz": 1.12
   },
   "R19": {
     "ozet": "18ad4ff554b38b39e6bd6b92da4104acf8b2766f",
@@ -141,7 +158,8 @@
     "sure": 5.067755,
     "dogruluk": 1,
     "canlilik": 9.1,
-    "duyulan": "Ama ben dikiz aynasından okumuştum. İki kelime. Doktor biliyor"
+    "duyulan": "Ama ben dikiz aynasından okumuştum. İki kelime. Doktor biliyor",
+    "hiz": 1.12
   },
   "R20": {
     "ozet": "729a9c04ec99c5ebb2f8bfdb451c619926876c0a",
@@ -149,7 +167,8 @@
     "sure": 4.545306,
     "dogruluk": 1,
     "canlilik": 8.5,
-    "duyulan": "Oh, o gece anladım. Kocam bu gerçeği benden çok önce biliyordu"
+    "duyulan": "Oh, o gece anladım. Kocam bu gerçeği benden çok önce biliyordu",
+    "hiz": 1.12
   },
   "R21": {
     "ozet": "ef5cd59a84305a0d1d025ee910499d3629b18e0d",
@@ -157,7 +176,8 @@
     "sure": 7.862857,
     "dogruluk": 1,
     "canlilik": 9.6,
-    "duyulan": "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz"
+    "duyulan": "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz",
+    "hiz": 1.12
   },
   "R22": {
     "ozet": "2795d064a4e51cbfd491511296ee30eaacef0b20",
@@ -165,7 +185,8 @@
     "sure": 7.000816,
     "dogruluk": 0.93,
     "canlilik": 7.8,
-    "duyulan": "Hikayenin devamını kaçırmamak için takip et. Çünkü ikinci bölümde gizlice bir DNA testi yaptırıyorum"
+    "duyulan": "Hikayenin devamını kaçırmamak için takip et. Çünkü ikinci bölümde gizlice bir DNA testi yaptırıyorum",
+    "hiz": 1.12
   },
   "R10": {
     "ozet": "a1fcf28a4efcff58660d273ae00d1a7624dcff89",
@@ -173,6 +194,7 @@
     "sure": 5.22449,
     "dogruluk": 1,
     "canlilik": 10.4,
-    "duyulan": "Sakin ol Selin. Böyle şeyler olur. Yeniden test yaptırırız, olur biter"
+    "duyulan": "Sakin ol Selin. Böyle şeyler olur. Yeniden test yaptırırız, olur biter",
+    "hiz": 1.12
   }
 }

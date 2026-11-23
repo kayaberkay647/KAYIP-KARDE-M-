@@ -5,15 +5,16 @@
 //   node ses_uret.js --deneme 3   → her replik için 3 okuma üretip en iyisini seçer (varsayılan 2)
 //   node ses_uret.js R03 R09      → sadece bu replikleri yeniden üretir
 // Her okuma yazıya çevrilip metinle karşılaştırılır; en doğru ve en canlı (ses dinamiği en yüksek) okuma seçilir.
-// Baştaki/sondaki sessizlik kırpılır. API anahtarı: ELEVENLABS_API_KEY (Claude Code bulut oturumunda otomatik eklenir).
+// Baştaki/sondaki sessizlik kırpılır. Ham sesler ses/ham/ içinde; konusmaHizi uygulanmış hali ses/ içinde. API anahtarı: ELEVENLABS_API_KEY (Claude Code bulut oturumunda otomatik eklenir).
 const fs = require('fs'), path = require('path'), crypto = require('crypto'), { execFileSync } = require('child_process');
 const BOLUM = require('./bolum1.js');
-const KLASOR = path.join(__dirname, 'ses'), MANIFEST = path.join(KLASOR, 'manifest.json');
+const KLASOR = path.join(__dirname, 'ses'), HAM = path.join(KLASOR, 'ham'), MANIFEST = path.join(KLASOR, 'manifest.json');
+const HIZ = BOLUM.konusmaHizi || 1;
 const arg = process.argv.slice(2), HEPSI = arg.includes('--hepsi');
 const DENEME = arg.includes('--deneme') ? +arg[arg.indexOf('--deneme') + 1] : 2;
 const SECILI = arg.filter(a => /^R\d\d$/.test(a));
 const ANAHTAR = process.env.ELEVENLABS_API_KEY ? ['-H', `xi-api-key: ${process.env.ELEVENLABS_API_KEY}`] : [];
-fs.mkdirSync(KLASOR, { recursive: true });
+fs.mkdirSync(HAM, { recursive: true });
 const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, 'utf8')) : {};
 const dosyaAdi = r => `B${String(BOLUM.no).padStart(2, '0')}_${r.id}_${r.kim}.mp3`;
 const sure = f => +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).toString().trim();
@@ -47,7 +48,7 @@ for (let i = 0; i < L.length; i++) {
     previous_text: i > 0 ? L[i - 1].metin : undefined, next_text: i < L.length - 1 ? L[i + 1].metin : undefined,
   };
   const ozet = crypto.createHash('sha1').update(JSON.stringify([ses.id, govde])).digest('hex');
-  const hedef = path.join(KLASOR, dosyaAdi(r));
+  const hedef = path.join(HAM, dosyaAdi(r));
   const zorla = HEPSI || SECILI.includes(r.id);
   if (SECILI.length && !SECILI.includes(r.id)) continue;
   if (!zorla && manifest[r.id] && manifest[r.id].ozet === ozet && fs.existsSync(hedef)) { console.log(`✓ ${r.id} (değişmedi)`); continue; }
@@ -65,10 +66,21 @@ for (let i = 0; i < L.length; i++) {
   adaylar.sort((a, b) => b.puan - a.puan);
   const en = adaylar[0];
   fs.renameSync(en.temiz, hedef); for (const a of adaylar.slice(1)) fs.unlinkSync(a.temiz);
-  manifest[r.id] = { ozet, dosya: dosyaAdi(r), sure: sure(hedef), dogruluk: +en.dogruluk.toFixed(2), canlilik: +en.din.toFixed(1), duyulan: en.duyulan };
+  manifest[r.id] = { ozet, dosya: dosyaAdi(r), hiz: null, sure: sure(hedef), dogruluk: +en.dogruluk.toFixed(2), canlilik: +en.din.toFixed(1), duyulan: en.duyulan };
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2));
   console.log(`${en.dogruluk >= .85 ? '✓' : '⚠'} ${r.id} ${r.kim.padEnd(8)} ${manifest[r.id].sure.toFixed(2)} sn  doğruluk %${Math.round(en.dogruluk * 100)}  canlılık ${en.din.toFixed(1)}  "${en.duyulan}"`);
 }
+
+// Konuşma hızı: ham sesleri ses perdesini koruyarak hızlandır (ElevenLabs'a tekrar istek gitmez)
+for (const r of L) {
+  const ham = path.join(HAM, dosyaAdi(r)), son = path.join(KLASOR, dosyaAdi(r));
+  if (!fs.existsSync(ham)) continue;
+  if (fs.existsSync(son) && manifest[r.id] && manifest[r.id].hiz === HIZ) continue;
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', ham, '-af', HIZ === 1 ? 'anull' : `rubberband=tempo=${HIZ}:transients=mixed:detector=compound:window=standard:pitchq=quality`,
+    '-c:a', 'libmp3lame', '-b:a', '160k', son]);
+  manifest[r.id] = Object.assign(manifest[r.id] || {}, { hiz: HIZ });
+}
+fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2));
 
 // Animasyonun okuduğu ses paketi (tarayıcıda dosya:// ile açınca da çalışsın diye base64 gömülü)
 const paket = { sure: {}, veri: {} };

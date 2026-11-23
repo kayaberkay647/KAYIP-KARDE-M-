@@ -9,8 +9,9 @@ const BOLUM = {
   diziAdi: "BU ÇOCUK SİZİN DEĞİL",
   bolumYazisi: "Bölüm 1",
   hedefSure: 150,            // saniye. Replik araları bu süreyi tutturacak şekilde otomatik açılır.
-  sonKartSure: 4,            // en sondaki "2. Bölüm yakında" kartının süresi
+  sonKartSure: 4.5,            // en sondaki "2. Bölüm yakında" kartının süresi
   model: "eleven_v4",        // ElevenLabs modeli (alternatif: eleven_multilingual_v2)
+  konusmaHizi: 1.12,         // 1.0 = normal. Sesler yeniden üretilmeden hızlandırılır (ses perdesi korunur).
 
   // ElevenLabs sesleri (hesabındaki ses kimlikleri) ve sabit ayarlar.
   // Dizi boyunca AYNI ayarları kullan → karakter sesleri tutarlı kalır.
@@ -26,6 +27,8 @@ const BOLUM = {
   // once: replikten önceki boşluk (sn) · plan: gösterilecek kamera planı
   // ek: replik ortasında plan değişimi [{ f: replik süresinin oranı, plan }]
   // oncePlan: replikten önceki boşlukta gösterilecek plan (ör. başlık kartı)
+  // vurgu: hedef süreyi tamamlamak için bu replikten önce eklenecek bekleme payı (varsayılan 0.3; sahne geçişlerinde büyük)
+  // kurulum: true → yeni sahneye bekleme başında geçilir (mekânı tanıtan sessiz an)
   // ses: ElevenLabs'a giden duygulu metin ([crying], [whispers], [sighs] gibi etiketler okunmaz, sese yansır). Yoksa metin kullanılır.
   // metin: ekrandaki altyazı
   // duygu: karakterlerin yüz ifadesi (o andan itibaren geçerli)
@@ -44,7 +47,7 @@ const BOLUM = {
       ses: "[shocked] Ne? [gasps] Ne... ne diyorsunuz siz? [crying] Defne'yi ben doğurdum!" },
 
     // ── BAŞLIK + GERİ DÖNÜŞ: 3 GÜN ÖNCE, MUTFAK ──
-    { id: "R04", kim: "SELIN_IC", once: 3.6, oncePlan: "baslik", plan: "mutfakGenis",
+    { id: "R04", vurgu: 1, kim: "SELIN_IC", once: 3.6, oncePlan: "baslik", plan: "mutfakGenis",
       duygu: { SELIN: "gulumse", DEFNE: "aci", MURAT: "gulumse" },
       metin: "Her şey üç gün önce… basit bir kulak ağrısıyla başladı.",
       ses: "[softly] Her şey üç gün önce... basit bir kulak ağrısıyla başladı." },
@@ -59,7 +62,7 @@ const BOLUM = {
       ses: "[sighs] Doktor, küçük bir tüp ameliyatı gerektiğini söyledi. Ameliyattan önce de hepimizden kan aldılar. [bitterly] Sadece bir formalite... dediler." },
 
     // ── ŞİMDİ: DOKTOR ODASI ──
-    { id: "R08", kim: "KEMAL", once: 0.9, plan: "doktor", duygu: { SELIN: "sok", KEMAL: "ciddi", MURAT: "sakin" },
+    { id: "R08", vurgu: 2, kurulum: true, kim: "KEMAL", once: 0.9, plan: "doktor", duygu: { SELIN: "sok", KEMAL: "ciddi", MURAT: "sakin" },
       metin: "Testi iki kez tekrarladık. Sonuç değişmedi.",
       ses: "[carefully] Testi iki kez tekrarladık. [sighs] Sonuç... değişmedi." },
     { id: "R09", kim: "SELIN", once: 0.4, plan: "ikili", duygu: { SELIN: "aglama" },
@@ -71,12 +74,12 @@ const BOLUM = {
     { id: "R11", kim: "KEMAL", once: 0.9, plan: "doktorYakin", duygu: { KEMAL: "supheli" },
       metin: "Murat Bey… siz hiç şaşırmadınız.",
       ses: "[suspicious] Murat Bey... [pause] siz hiç şaşırmadınız." },
-    { id: "R12", kim: "SELIN_IC", once: 0.5, plan: "muratYakin", ek: [{ f: 0.55, plan: "selinYakin" }], duygu: { SELIN: "uzgun" },
+    { id: "R12", vurgu: 1, kim: "SELIN_IC", once: 0.5, plan: "muratYakin", ek: [{ f: 0.55, plan: "selinYakin" }], duygu: { SELIN: "uzgun" },
       metin: "Doktor haklıydı. Kocam ne bir soru sordu… ne de bir an olsun kızına baktı.",
       ses: "[whispering] Doktor haklıydı. [trembling voice] Kocam ne bir soru sordu... ne de bir an olsun kızına baktı." },
 
     // ── HASTANE KORİDORU ──
-    { id: "R13", kim: "DEFNE", once: 0.9, plan: "koridorIkili", duygu: { DEFNE: "endise", SELIN: "uzgun" },
+    { id: "R13", vurgu: 2.5, kurulum: true, kim: "DEFNE", once: 0.9, plan: "koridorIkili", duygu: { DEFNE: "endise", SELIN: "uzgun" },
       metin: "Anne? Sen ağladın mı?",
       ses: "[worried] Anne? [softly] Sen... ağladın mı?" },
     { id: "R14", kim: "SELIN", once: 0.4, plan: "selinKoridor", duygu: { SELIN: "zorGulumse" },
@@ -90,21 +93,21 @@ const BOLUM = {
       ses: "[voice breaking] İyileşecek. [whispers] Her şey... iyileşecek." },
 
     // ── ARABA, GECE ──
-    { id: "R17", kim: "SELIN_IC", once: 1.0, plan: "araba", duygu: { DEFNE: "uyku", SELIN: "uzgun", MURAT: "notr" },
+    { id: "R17", vurgu: 2.5, kurulum: true, kim: "SELIN_IC", once: 1.0, plan: "araba", duygu: { DEFNE: "uyku", SELIN: "uzgun", MURAT: "notr" },
       metin: "Eve dönerken arabada kimse konuşmadı. Defne arka koltukta uyuyakalmıştı.",
       ses: "[quietly] Eve dönerken arabada kimse konuşmadı. Defne arka koltukta uyuyakalmıştı." },
     { id: "R18", kim: "SELIN_IC", once: 0.6, plan: "araba", ek: [{ f: 0.35, plan: "telefon" }],
       metin: "Sonra Murat'ın telefonu titredi. Ekrana hızlıca baktı… ve mesajı silmeye çalıştı.",
       ses: "[tense] Sonra Murat'ın telefonu titredi. Ekrana hızlıca baktı... [whispers] ve mesajı silmeye çalıştı." },
-    { id: "R19", kim: "SELIN_IC", once: 0.5, plan: "ayna", ek: [{ f: 0.62, plan: "selinAraba" }], duygu: { SELIN: "sok" },
+    { id: "R19", vurgu: 1, kim: "SELIN_IC", once: 0.5, plan: "ayna", ek: [{ f: 0.62, plan: "selinAraba" }], duygu: { SELIN: "sok" },
       metin: "Ama ben dikiz aynasından okumuştum. İki kelime: Doktor biliyor.",
       ses: "[whispers] Ama ben dikiz aynasından okumuştum. [pause] İki kelime... [frightened] Doktor biliyor." },
-    { id: "R20", kim: "SELIN_IC", once: 0.6, plan: "muratAraba", ek: [{ f: 0.5, plan: "selinAraba" }], duygu: { SELIN: "aglama" },
+    { id: "R20", vurgu: 1, kim: "SELIN_IC", once: 0.6, plan: "muratAraba", ek: [{ f: 0.5, plan: "selinAraba" }], duygu: { SELIN: "aglama" },
       metin: "O gece anladım… Kocam bu gerçeği benden çok önce biliyordu.",
       ses: "[crying softly] O gece anladım... Kocam bu gerçeği benden çok önce biliyordu." },
 
     // ── KAPANIŞ: SELİN İZLEYİCİYE KONUŞUR ──
-    { id: "R21", kim: "SELIN", once: 1.2, plan: "kapanis", duygu: { SELIN: "ciddi" },
+    { id: "R21", vurgu: 2.5, kurulum: true, kim: "SELIN", once: 1.2, plan: "kapanis", duygu: { SELIN: "ciddi" },
       metin: "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz.",
       ses: "[serious] Peki o mesajı kim attı? Murat benden ne saklıyor? [curious] Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz." },
     { id: "R22", kim: "SELIN", once: 0.4, plan: "kapanis",

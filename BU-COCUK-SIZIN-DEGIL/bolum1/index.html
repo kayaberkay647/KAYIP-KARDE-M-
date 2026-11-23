@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bu Çocuk Sizin Değil – Bölüm 1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600;1,700&family=Playfair+Display:wght@800;900&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Playfair+Display:wght@800;900&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#14100e; --panel:#211a17; --text:#f3e9dc; --soft:#a8998b; --accent:#e0915a; }
   * { box-sizing:border-box; }
@@ -66,13 +66,13 @@ function zamanla() {
   const tahmin = r => PAKET.sure[r.id] || Math.max(1.6, r.metin.length * 0.075);
   const sureler = L.map(tahmin), bosluk = L.map(r => r.once ?? 0.4);
   const dogal = sureler.reduce((a, b) => a + b, 0) + bosluk.reduce((a, b) => a + b, 0) + BOLUM.sonKartSure;
-  const fazla = Math.max(0, BOLUM.hedefSure - dogal), agirlik = L.length - 1;
+  const agr = L.map((r, i) => i === 0 ? 0 : (r.vurgu ?? 0.3)), fazla = Math.max(0, BOLUM.hedefSure - dogal), agirlik = agr.reduce((a, b) => a + b, 0);
   let t = 0;
-  L.forEach((r, i) => { const b = bosluk[i] + (i === 0 ? 0 : fazla / agirlik); /* ilk replik hemen başlar */ r._bosluk = b; t += b; r.bas = t; r.sure = sureler[i]; r.bit = t + r.sure; t = r.bit; });
+  L.forEach((r, i) => { const b = bosluk[i] + fazla * agr[i] / agirlik; /* ilk replik hemen başlar */ r._bosluk = b; t += b; r.bas = t; r.sure = sureler[i]; r.bit = t + r.sure; t = r.bit; });
   SONKART = t + 0.5; TOPLAM = SONKART + BOLUM.sonKartSure;
   PLANLAR = [];
   L.forEach((r, i) => {
-    const kes = r.bas - Math.min(0.35, r._bosluk * 0.5);
+    const kes = r.kurulum && i ? L[i - 1].bit + 0.5 : r.bas - Math.min(0.35, r._bosluk * 0.5);
     if (r.oncePlan) PLANLAR.push({ t: (i ? L[i - 1].bit : 0) + 0.25, plan: r.oncePlan });
     PLANLAR.push({ t: i === 0 ? 0 : kes, plan: r.plan });
     for (const e of r.ek || []) PLANLAR.push({ t: r.bas + r.sure * e.f, plan: e.plan });
@@ -494,21 +494,21 @@ const P = {
     c.save(); kam(c, 540, 960, 1 + lt * .008);
     c.drawImage(BG.hasta, 0, 0); sandalyeArka(c, 540, 1150, 520, 700, '#5b7a86');
     const d = S.duygu.SELIN, bak = d === 'uzgun' ? [0, .7] : [-.5, 0];
-    kar(c, 'SELIN', 540, 2000, 2.55, st('SELIN', { bak }));
+    kar(c, 'SELIN', 540, 1910, 2.55, st('SELIN', { bak }));
     c.restore();
   },
   ikili(lt) {
     c.save(); kam(c, 540, 1000, 1 + lt * .006);
     c.drawImage(BG.hasta, 0, 0);
     sandalyeArka(c, 320, 1230, 380, 560, '#5b7a86'); sandalyeArka(c, 770, 1230, 380, 560, '#5b7a86');
-    kar(c, 'SELIN', 320, 1800, 1.62, st('SELIN', { bak: [.7, 0], egim: .04 }));
-    kar(c, 'MURAT', 770, 1810, 1.68, st('MURAT', { bak: [-.1, .3] }));
+    kar(c, 'SELIN', 320, 1740, 1.62, st('SELIN', { bak: [.7, 0], egim: .04 }));
+    kar(c, 'MURAT', 770, 1750, 1.68, st('MURAT', { bak: [-.1, .3] }));
     c.restore();
   },
   muratYakin(lt) {
     c.save(); kam(c, 540, 960, 1 + lt * .012);
     c.drawImage(BG.hasta, 0, 0); sandalyeArka(c, 540, 1150, 520, 700, '#5b7a86');
-    kar(c, 'MURAT', 540, 2010, 2.5, st('MURAT', { bak: [.6, .25] }));
+    kar(c, 'MURAT', 540, 1920, 2.5, st('MURAT', { bak: [.6, .25] }));
     c.restore();
   },
   mutfakGenis(lt) {
@@ -520,13 +520,13 @@ const P = {
   },
   defneMutfak(lt) {
     bgCiz(c, 'mutfak', 1.5, 540, 900);
-    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'DEFNE', 540, 2020, 2.75, st('DEFNE', { kolSag: 'kulak', bak: [-.2, -.4] })); c.restore();
+    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'DEFNE', 540, 1930, 2.75, st('DEFNE', { kolSag: 'kulak', bak: [-.2, -.4] })); c.restore();
   },
   muratMutfak(lt) {
     bgCiz(c, 'mutfak', 1.35, 600, 900);
     c.save(); kam(c, 540, 960, 1 + lt * .008);
-    kar(c, 'DEFNE', 330, 2010, 2.2, st('DEFNE', { kolSag: 'kulak', bak: [.5, -.2] }));
-    kar(c, 'MURAT', 770, 2120, 2.3, st('MURAT', { bak: [-.7, .2], kolSol: 'omuz' }));
+    kar(c, 'DEFNE', 330, 1930, 2.2, st('DEFNE', { kolSag: 'kulak', bak: [.5, -.2] }));
+    kar(c, 'MURAT', 770, 2040, 2.3, st('MURAT', { bak: [-.7, .2], kolSol: 'omuz' }));
     c.restore();
   },
   kanTupu(lt) {
@@ -553,19 +553,19 @@ const P = {
   },
   selinKoridor(lt) {
     bgCiz(c, 'koridor', 1.4, 380, 900);
-    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'SELIN', 540, 2000, 2.5, st('SELIN', { bak: [.5, .3] })); c.restore();
+    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'SELIN', 540, 1910, 2.5, st('SELIN', { bak: [.5, .3] })); c.restore();
   },
   defneKoridor(lt) {
     bgCiz(c, 'koridor', 1.4, 760, 900);
-    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'DEFNE', 540, 2030, 2.75, st('DEFNE', { bak: [-.5, -.3], pamuk: true })); c.restore();
+    c.save(); kam(c, 540, 960, 1 + lt * .01); kar(c, 'DEFNE', 540, 1940, 2.75, st('DEFNE', { bak: [-.5, -.3], pamuk: true })); c.restore();
   },
   araba(lt) {
     const tel = S.telefon || 0;
     c.save(); kam(c, 540, 1050, 1.02 + lt * .006); c.drawImage(BG.araba, 0, 0); yagmur(c, S.t, 110, 250, 930, 570);
     kar(c, 'DEFNE', 540, 1330, 1.0, st('DEFNE', { egim: .32 }));
     for (const x of [300, 790]) { sandalyeArka(c, x, 1180, 380, 900, '#30353f'); rr(c, x - 110, 1040, 220, 120, 40); fs(c, '#30353f', 6); }
-    kar(c, 'MURAT', 300, 1900, 1.55, st('MURAT', { kolSol: 'direksiyon', kolSag: tel ? 'telefon' : 'direksiyon', telefon: tel, bak: tel ? [.3, .8] : [0, 0] }));
-    kar(c, 'SELIN', 790, 1900, 1.55, st('SELIN', { bak: tel ? [-.8, .4] : [-.3, .3] }));
+    kar(c, 'MURAT', 300, 1840, 1.55, st('MURAT', { kolSol: 'direksiyon', kolSag: tel ? 'telefon' : 'direksiyon', telefon: tel, bak: tel ? [.3, .8] : [0, 0] }));
+    kar(c, 'SELIN', 790, 1840, 1.55, st('SELIN', { bak: tel ? [-.8, .4] : [-.3, .3] }));
     c.beginPath(); c.arc(300, 1880, 230, Math.PI * 1.05, Math.PI * 1.95); c.strokeStyle = '#0d1018'; c.lineWidth = 46; c.stroke(); c.strokeStyle = '#262b36'; c.lineWidth = 32; c.stroke();
     c.fillStyle = '#0c0f16'; c.fillRect(0, 1830, W, 200);
     ARABA_ISIK(c, S.t);
@@ -609,17 +609,17 @@ const P = {
   selinAraba(lt) {
     c.save(); kam(c, 540, 1050, 1.5); c.drawImage(BG.araba, 0, 0); yagmur(c, S.t, 110, 250, 930, 570); c.restore();
     c.save(); kam(c, 540, 960, 1 + lt * .01); sandalyeArka(c, 540, 1060, 520, 1100, '#30353f'); rr(c, 380, 760, 320, 180, 60); fs(c, '#30353f', 6);
-    kar(c, 'SELIN', 540, 2000, 2.5, st('SELIN', { bak: [-.6, .1] })); ARABA_ISIK(c, S.t); c.restore();
+    kar(c, 'SELIN', 540, 1910, 2.5, st('SELIN', { bak: [-.6, .1] })); ARABA_ISIK(c, S.t); c.restore();
   },
   muratAraba(lt) {
     c.save(); kam(c, 540, 1050, 1.5); c.drawImage(BG.araba, 0, 0); yagmur(c, S.t, 110, 250, 930, 570); c.restore();
     c.save(); kam(c, 540, 960, 1 + lt * .012); sandalyeArka(c, 540, 1060, 520, 1100, '#30353f'); rr(c, 380, 760, 320, 180, 60); fs(c, '#30353f', 6);
-    kar(c, 'MURAT', 540, 2010, 2.5, st('MURAT', { bak: [0, 0], duygu: 'sakin' })); ARABA_ISIK(c, S.t); c.restore();
+    kar(c, 'MURAT', 540, 1920, 2.5, st('MURAT', { bak: [0, 0], duygu: 'sakin' })); ARABA_ISIK(c, S.t); c.restore();
   },
   kapanis(lt) {
     c.save(); kam(c, 540, 960, 1 + lt * .006); c.drawImage(BG.salon, 0, 0);
     const g = c.createRadialGradient(980, 700, 0, 980, 700, 700); g.addColorStop(0, 'rgba(255,200,120,.35)'); g.addColorStop(1, 'rgba(255,200,120,0)'); c.fillStyle = g; c.fillRect(0, 0, W, H);
-    kar(c, 'SELIN', 540, 2000, 2.55, st('SELIN', { bak: [0, 0] }));
+    kar(c, 'SELIN', 540, 1910, 2.55, st('SELIN', { bak: [0, 0] }));
     c.save(); c.globalCompositeOperation = 'multiply'; c.fillStyle = 'rgba(200,180,160,1)'; c.fillRect(-W, -H, W * 3, H * 3); c.restore();
     c.restore();
   },
@@ -651,10 +651,10 @@ function satirlaraBol(ctx, s, max) { const k = s.split(' '), out = []; let l = '
 let ALTYAZI = true;
 function altyazi(t) {
   if (!ALTYAZI) return; const r = L.find(r => t >= r.bas && t < r.bit + .2); if (!r) return;
-  const a = seg(t, r.bas, r.bas + .12) * (1 - seg(t, r.bit + .05, r.bit + .2));
-  c.save(); c.font = `italic 700 50px Lora, Georgia, serif`; c.textAlign = 'center'; c.lineJoin = 'round';
-  const sat = satirlaraBol(c, r.metin, 900), y0 = 1340 - (sat.length - 1) * 32;
-  sat.forEach((s, i) => { c.globalAlpha = a; c.lineWidth = 10; c.strokeStyle = '#24160f'; c.strokeText(s, 540, y0 + i * 66); c.fillStyle = r.kim === 'SELIN_IC' ? '#ffeec8' : '#ffffff'; c.fillText(s, 540, y0 + i * 66); });
+  const a = seg(t, r.bas, r.bas + .1) * (1 - seg(t, r.bit + .05, r.bit + .2));
+  c.save(); c.font = '700 54px Roboto, Arial, Helvetica, sans-serif'; c.textAlign = 'center'; c.lineJoin = 'round';
+  const sat = satirlaraBol(c, r.metin, 940), y0 = 1700 - (sat.length - 1) * 68;
+  sat.forEach((s, i) => { c.globalAlpha = a; c.lineWidth = 11; c.strokeStyle = '#000'; c.strokeText(s, 540, y0 + i * 68); c.fillStyle = '#fff'; c.fillText(s, 540, y0 + i * 68); });
   c.restore();
 }
 
