@@ -171,22 +171,22 @@
     "hiz": 1.12
   },
   "R21": {
-    "ozet": "ef5cd59a84305a0d1d025ee910499d3629b18e0d",
+    "ozet": "53948d6879e8bd2b7276a03bece76cb80bc7b7c2",
     "dosya": "B01_R21_SELIN.mp3",
-    "sure": 7.862857,
+    "hiz": 1.12,
+    "sure": 3.239184,
     "dogruluk": 1,
-    "canlilik": 9.6,
-    "duyulan": "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz",
-    "hiz": 1.12
+    "canlilik": 8.6,
+    "duyulan": "Sence o mesajı kim attı? Yorumlara yaz"
   },
   "R22": {
-    "ozet": "2795d064a4e51cbfd491511296ee30eaacef0b20",
+    "ozet": "75a9d5d56256a29ed9ddc4beaf71b2a7016e6354",
     "dosya": "B01_R22_SELIN.mp3",
-    "sure": 7.000816,
-    "dogruluk": 0.93,
-    "canlilik": 7.8,
-    "duyulan": "Hikayenin devamını kaçırmamak için takip et. Çünkü ikinci bölümde gizlice bir DNA testi yaptırıyorum",
-    "hiz": 1.12
+    "hiz": 1.12,
+    "sure": 4.04898,
+    "dogruluk": 1,
+    "canlilik": 5.6,
+    "duyulan": "İkinci bölümde gizlice bir DNA testi yaptırıyorum"
   },
   "R10": {
     "ozet": "a1fcf28a4efcff58660d273ae00d1a7624dcff89",

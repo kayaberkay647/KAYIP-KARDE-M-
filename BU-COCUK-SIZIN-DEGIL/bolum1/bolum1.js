@@ -42,7 +42,7 @@ const BOLUM = {
     { id: "R02", kim: "KEMAL", once: 0.6, plan: "doktorYakin",
       metin: "Bu çocuk… sizin olamaz.",
       ses: "[slowly] Bu çocuk... [pause] sizin olamaz." },
-    { id: "R03", kim: "SELIN", once: 0.5, plan: "selinYakin", duygu: { SELIN: "sok" },
+    { id: "R03", vurgu: 0.8, kim: "SELIN", once: 0.5, plan: "selinYakin", duygu: { SELIN: "sok" },
       metin: "Ne? Ne diyorsunuz siz? Defne'yi ben doğurdum!",
       ses: "[shocked] Ne? [gasps] Ne... ne diyorsunuz siz? [crying] Defne'yi ben doğurdum!" },
 
@@ -108,11 +108,11 @@ const BOLUM = {
 
     // ── KAPANIŞ: SELİN İZLEYİCİYE KONUŞUR ──
     { id: "R21", vurgu: 2.5, kurulum: true, kim: "SELIN", once: 1.2, plan: "kapanis", duygu: { SELIN: "ciddi" },
-      metin: "Peki o mesajı kim attı? Murat benden ne saklıyor? Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz.",
-      ses: "[serious] Peki o mesajı kim attı? Murat benden ne saklıyor? [curious] Sence Defne'nin gerçek annesi kim? Tahminini yorumlara yaz." },
+      metin: "Sence o mesajı kim attı? Yorumlara yaz.",
+      ses: "[curious] Sence o mesajı kim attı? [softly] Yorumlara yaz." },
     { id: "R22", kim: "SELIN", once: 0.4, plan: "kapanis",
-      metin: "Hikâyenin devamını kaçırmamak için takip et… Çünkü ikinci bölümde, gizlice bir DNA testi yaptırıyorum.",
-      ses: "[mysterious] Hikâyenin devamını kaçırmamak için takip et... [whispers] Çünkü ikinci bölümde, gizlice bir DNA testi yaptırıyorum." },
+      metin: "İkinci bölümde… gizlice bir DNA testi yaptırıyorum.",
+      ses: "[whispers] İkinci bölümde... gizlice bir DNA testi yaptırıyorum." },
   ],
 
   // Ekrandaki yazılar

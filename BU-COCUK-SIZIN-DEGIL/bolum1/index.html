@@ -664,7 +664,7 @@ function cizim(t) {
   const { p, onceki } = anlikPlan(t), lt = t - p.t;
   S = { t, duygu: duygular(t) };
   const r18 = L.find(r => r.id === 'R18');
-  S.telefon = r18 && t > r18.bas + .3 && t < r18.bit + 2 ? 1 : 0;
+  S.telefon = r18 && t > r18.bas - 1 && t < r18.bit + 2 ? 1 : 0;
   c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
   c.fillStyle = '#000'; c.fillRect(0, 0, W, H);
   c.save(); (P[p.plan] || P.doktor)(lt); c.restore();
@@ -684,15 +684,19 @@ window.cizim = cizim;
 /* ==========================================================================
    SES MOTORU
    ========================================================================== */
+// Ses miksajı: diyalog seviyesi, fon müziği seviyesi, konuşurken arka planın kısılma oranı (0.17 = konuşurken arka plan %83 kısılır)
+const SES_AYAR = { diyalog: 1.25, muzik: 0.8, kisma: 0.17 };
 const SES = { A: null, aktif: [] };
 function sesKur(A) {
   SES.A = A;
   const lim = A.createDynamicsCompressor(); lim.threshold.value = -12; lim.ratio.value = 8; lim.attack.value = .003; lim.release.value = .25; lim.connect(A.destination); SES.cikis = lim;
   SES.ana = A.createGain(); SES.ana.gain.value = .9; SES.ana.connect(lim);
-  SES.muzik = A.createGain(); SES.muzik.gain.value = 1; SES.muzik.connect(SES.ana);
+  SES.diyalog = A.createGain(); SES.diyalog.gain.value = SES_AYAR.diyalog; SES.diyalog.connect(SES.ana);
+  SES.arka = A.createGain(); SES.arka.gain.value = 1; SES.arka.connect(SES.ana);
+  SES.muzik = A.createGain(); SES.muzik.gain.value = SES_AYAR.muzik; SES.muzik.connect(SES.arka);
   const n = A.sampleRate * 2, nb = A.createBuffer(1, n, A.sampleRate), d = nb.getChannelData(0); const r = rng(9); for (let i = 0; i < n; i++) d[i] = r() * 2 - 1; SES.gurultu = nb;
   const ir = A.createBuffer(2, A.sampleRate * 2.5, A.sampleRate); for (let ch = 0; ch < 2; ch++) { const x = ir.getChannelData(ch); for (let i = 0; i < x.length; i++) x[i] = (r() * 2 - 1) * Math.pow(1 - i / x.length, 3); }
-  SES.yanki = A.createConvolver(); SES.yanki.buffer = ir; const yg = A.createGain(); yg.gain.value = .35; SES.yanki.connect(yg); yg.connect(SES.ana);
+  SES.yanki = A.createConvolver(); SES.yanki.buffer = ir; const yg = A.createGain(); yg.gain.value = .35; SES.yanki.connect(yg); yg.connect(SES.arka);
 }
 const iz = n => (SES.aktif.push(n), n);
 const kz = (v, h) => { const g = SES.A.createGain(); g.gain.value = v; if (h) g.connect(h); return g; };
@@ -709,43 +713,57 @@ function muzikPlanla(bas, bit, ofs, simdi) {
   for (let tt = bas, i = 0; tt < bit - 1; tt += adim, i++) {
     if (tt < ofs) continue; const a = akor[Math.floor(i / 8) % 4], w = simdi + tt - ofs, k = i % 8;
     const f = [a[0], a[1], a[2], a[1] * 2, a[2], a[1], a[0] * 2, a[1]][k];
-    nota(f, w, 1.6, .05, hedef);
-    if (k === 0) nota(a[0] / 2, w, 3.2, .06, hedef);
+    nota(f, w, 1.6, .034, hedef);
+    if (k === 0) nota(a[0] / 2, w, 3.2, .04, hedef);
   }
 }
 function pad(w, sure, v, ofs = 0) {
-  const A = SES.A, g = kz(0, SES.ana), lp = flt('lowpass', 380); lp.connect(g);
+  const A = SES.A, g = kz(0, SES.arka), lp = flt('lowpass', 380); lp.connect(g);
   for (const f of [55, 55.6, 82.4]) { const o = iz(A.createOscillator()); o.type = 'sawtooth'; o.frequency.value = f; o.connect(lp); o.start(w); o.stop(w + sure); }
   g.gain.setValueAtTime(0, w); g.gain.linearRampToValueAtTime(v, w + Math.min(1.5, sure / 3)); g.gain.setValueAtTime(v, w + sure - 1); g.gain.linearRampToValueAtTime(0, w + sure);
 }
 function efektler(ofs, simdi) {
   const A = SES.A, R = id => L.find(r => r.id === id), at = (t, fn) => { if (t >= ofs - .01) fn(simdi + t - ofs); };
   const bolge = (a, b, fn) => { if (b > ofs) fn(simdi + Math.max(0, a - ofs), b - Math.max(a, ofs)); };
-  bolge(0, R('R03').bit + .6, (w, s) => pad(w, s, .09));
-  at(R('R02').bas - .05, w => { const o = iz(A.createOscillator()), g = kz(0, SES.ana); o.frequency.setValueAtTime(60, w); o.frequency.exponentialRampToValueAtTime(30, w + 1.6); o.connect(g); g.gain.setValueAtTime(.7, w); g.gain.exponentialRampToValueAtTime(.001, w + 2); o.start(w); o.stop(w + 2.1);
+  bolge(0, R('R03').bit + .6, (w, s) => pad(w, s, .055));
+  at(R('R02').bas - .05, w => { const o = iz(A.createOscillator()), g = kz(0, SES.arka); o.frequency.setValueAtTime(60, w); o.frequency.exponentialRampToValueAtTime(30, w + 1.6); o.connect(g); g.gain.setValueAtTime(.7, w); g.gain.exponentialRampToValueAtTime(.001, w + 2); o.start(w); o.stop(w + 2.1);
     for (const f of [880, 932]) { const o2 = iz(A.createOscillator()), g2 = kz(0, SES.yanki); o2.frequency.value = f; o2.connect(g2); g2.gain.setValueAtTime(0, w); g2.gain.linearRampToValueAtTime(.05, w + .1); g2.gain.exponentialRampToValueAtTime(.001, w + 2.4); o2.start(w); o2.stop(w + 2.5); } });
   const bp = PLANLAR.find(p => p.plan === 'baslik');
-  if (bp) at(bp.t, w => { const s = grl(), f = flt('bandpass', 300, 2), g = kz(0, SES.ana); s.connect(f); f.connect(g); f.frequency.setValueAtTime(300, w); f.frequency.exponentialRampToValueAtTime(3500, w + .8); g.gain.setValueAtTime(0, w); g.gain.linearRampToValueAtTime(.3, w + .4); g.gain.linearRampToValueAtTime(0, w + .9); s.start(w); s.stop(w + 1); });
-  if (bp) bolge(bp.t, TOPLAM, (w, s) => muzikPlanla(bp.t, TOPLAM, Math.max(ofs, bp.t), simdi));
+  if (bp) at(bp.t, w => { const s = grl(), f = flt('bandpass', 300, 2), g = kz(0, SES.arka); s.connect(f); f.connect(g); f.frequency.setValueAtTime(300, w); f.frequency.exponentialRampToValueAtTime(3500, w + .8); g.gain.setValueAtTime(0, w); g.gain.linearRampToValueAtTime(.3, w + .4); g.gain.linearRampToValueAtTime(0, w + .9); s.start(w); s.stop(w + 1); });
+  if (bp) bolge(bp.t, TOPLAM, (w, s) => muzikPlanla(bp.t, TOPLAM, ofs, simdi));
   const ab = PLANLAR.find(p => p.plan === 'araba');
   bolge(ab.t, R('R20').bit + .8, (w, s) => {
-    const r1 = grl(), f1 = flt('highpass', 1400), f2 = flt('lowpass', 6000), g1 = kz(.07, SES.ana); r1.connect(f1); f1.connect(f2); f2.connect(g1); r1.start(w); r1.stop(w + s);
-    const o = iz(A.createOscillator()), g2 = kz(.06, SES.ana); o.frequency.value = 46; o.connect(g2); o.start(w); o.stop(w + s);
-    const r2 = grl(), f3 = flt('lowpass', 160), g3 = kz(.12, SES.ana); r2.connect(f3); f3.connect(g3); r2.start(w); r2.stop(w + s);
+    const r1 = grl(), f1 = flt('highpass', 1400), f2 = flt('lowpass', 6000), g1 = kz(.045, SES.arka); r1.connect(f1); f1.connect(f2); f2.connect(g1); r1.start(w); r1.stop(w + s);
+    const o = iz(A.createOscillator()), g2 = kz(.035, SES.arka); o.frequency.value = 46; o.connect(g2); o.start(w); o.stop(w + s);
+    const r2 = grl(), f3 = flt('lowpass', 160), g3 = kz(.07, SES.arka); r2.connect(f3); f3.connect(g3); r2.start(w); r2.stop(w + s);
   });
-  for (const dt of [.4, .85]) at(R('R18').bas + dt, w => { const o = iz(A.createOscillator()), f = flt('lowpass', 420), g = kz(0, SES.ana); o.type = 'square'; o.frequency.value = 150; o.connect(f); f.connect(g); g.gain.setValueAtTime(0, w); g.gain.linearRampToValueAtTime(.25, w + .03); g.gain.setValueAtTime(.25, w + .3); g.gain.linearRampToValueAtTime(0, w + .34); o.start(w); o.stop(w + .4); });
-  bolge(R('R19').bas - .3, R('R20').bit + .5, (w, s) => pad(w, s, .07));
+  for (const dt of [-.95, -.5]) at(R('R18').bas + dt, w => { const o = iz(A.createOscillator()), f = flt('lowpass', 420), g = kz(0, SES.ana); o.type = 'square'; o.frequency.value = 150; o.connect(f); f.connect(g); g.gain.setValueAtTime(0, w); g.gain.linearRampToValueAtTime(.12, w + .03); g.gain.setValueAtTime(.12, w + .3); g.gain.linearRampToValueAtTime(0, w + .34); o.start(w); o.stop(w + .4); });
+  bolge(R('R19').bas - .3, R('R20').bit + .5, (w, s) => pad(w, s, .045));
   at(SONKART + .1, w => { for (const [f, d] of [[1046.5, 0], [1568, .12]]) { const o = iz(A.createOscillator()), g = kz(0, SES.yanki); o.frequency.value = f; o.connect(g); g.gain.setValueAtTime(0, w + d); g.gain.linearRampToValueAtTime(.12, w + d + .01); g.gain.exponentialRampToValueAtTime(.001, w + d + 1.8); o.start(w + d); o.stop(w + d + 2); } });
 }
 function hepsiniPlanla(ofs) {
   const simdi = SES.A.currentTime + .06;
-  for (const r of L) { const b = TAMPON[r.id]; if (!b || r.bas + b.duration <= ofs) continue; const s = iz(SES.A.createBufferSource()); s.buffer = b; const g = kz(1, SES.ana); s.connect(g); s.start(simdi + Math.max(0, r.bas - ofs), Math.max(0, ofs - r.bas)); }
+  for (const r of L) { const b = TAMPON[r.id]; if (!b || r.bas + b.duration <= ofs) continue; const s = iz(SES.A.createBufferSource()); s.buffer = b; const g = kz(1, SES.diyalog); s.connect(g); s.start(simdi + Math.max(0, r.bas - ofs), Math.max(0, ofs - r.bas)); }
   efektler(ofs, simdi);
+  kisma(ofs, simdi);
   return simdi;
 }
+// Konuşma sırasında fon müziğini ve efektleri kıs (ducking), konuşma bitince geri aç
+function kisma(ofs, simdi) {
+  const g = SES.arka.gain, k = SES_AYAR.kisma, at = t => simdi + t - ofs;
+  const ici = L.some(r => ofs >= r.bas - .2 && ofs < r.bit + .15);
+  g.cancelScheduledValues(0); g.setValueAtTime(ici ? k : 1, simdi);
+  let son = ici ? k : 1;
+  for (const r of L) {
+    const a = r.bas - .2, b = r.bit + .15; if (b <= ofs) continue;
+    if (a > ofs) { g.setValueAtTime(son, at(a)); g.linearRampToValueAtTime(k, at(a + .15)); }
+    g.setValueAtTime(k, at(Math.max(ofs, b))); g.linearRampToValueAtTime(1, at(Math.max(ofs, b) + .45)); son = 1;
+  }
+}
 function hepsiniDurdur() { for (const n of SES.aktif) { try { n.stop(); } catch (e) { } } SES.aktif = []; }
-window.cevrimdisiSes = async () => {
+window.cevrimdisiSes = async (secim = {}) => {
   await HAZIR; const sr = 44100, off = new OfflineAudioContext(2, Math.ceil(sr * TOPLAM), sr); sesKur(off); hepsiniPlanla(0);
+  if (secim.diyalog === false) SES.diyalog.gain.value = 0; if (secim.arka === false) { SES.arka.gain.cancelScheduledValues(0); SES.arka.gain.value = 0; }
   const buf = await off.startRendering(), Lc = buf.getChannelData(0), Rc = buf.getChannelData(1), n = Lc.length, ab = new ArrayBuffer(44 + n * 4), v = new DataView(ab);
   const ws = (o, x) => { for (let i = 0; i < x.length; i++) v.setUint8(o + i, x.charCodeAt(i)); };
   ws(0, 'RIFF'); v.setUint32(4, 36 + n * 4, true); ws(8, 'WAVE'); ws(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 2, true); v.setUint32(24, sr, true); v.setUint32(28, sr * 4, true); v.setUint16(32, 4, true); v.setUint16(34, 16, true); ws(36, 'data'); v.setUint32(40, n * 4, true);

@@ -32,3 +32,9 @@ Zamanlama, seslerin gerçek süresine göre otomatik hesaplanır ve `hedefSure` 
 
 ## Duygular
 `notr, gulumse, uzgun, aglama, sok, endise, ciddi, supheli, sakin, aci, uyku, zorGulumse`
+
+## Ses miksajı
+`index.html` içindeki `SES_AYAR`:
+- `diyalog`: konuşma seviyesi (1.25)
+- `muzik`: fon müziği seviyesi (0.8)
+- `kisma`: biri konuşurken müzik ve efektler bu orana iner (0.17 → %83 kısılır), konuşma bitince geri açılır
