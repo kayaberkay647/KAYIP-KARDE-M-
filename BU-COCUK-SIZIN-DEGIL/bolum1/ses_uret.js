@@ -9,7 +9,7 @@ const fs = require('fs'), path = require('path'), crypto = require('crypto'), { 
 const BOLUM = require('./bolum1.js');
 const K = path.join(__dirname, 'ses'), HAM = path.join(K, 'ham');
 fs.mkdirSync(HAM, { recursive: true });
-const arg = process.argv.slice(2), DENEME = arg.includes('--deneme') ? +arg[arg.indexOf('--deneme') + 1] : 2, SECILI = arg.filter(a => /^S\d+$/.test(a));
+const arg = process.argv.slice(2), DENEME = arg.includes('--deneme') ? +arg[arg.indexOf('--deneme') + 1] : 3, SECILI = arg.filter(a => /^S\d+$/.test(a));
 const ANAHTAR = process.env.ELEVENLABS_API_KEY ? ['-H', `xi-api-key: ${process.env.ELEVENLABS_API_KEY}`] : [];
 const MAN = path.join(K, 'manifest.json'), man = fs.existsSync(MAN) ? JSON.parse(fs.readFileSync(MAN, 'utf8')) : {};
 const kaydet = () => fs.writeFileSync(MAN, JSON.stringify(man, null, 2));
@@ -42,6 +42,15 @@ function kelimeler(al, a, b) {
 }
 
 // ── 1) DİYALOGLAR ──
+// Her sahne için birkaç okuma üretilir. Her okuma yazıya çevrilir (kelime zamanlarıyla), senaryoyla eşleştirilir.
+// Doğru okumalar arasından ses perdesi en değişken (en duygulu, en az monoton) olan seçilir.
+function analiz(mp3, s) {
+  const stt = mp3 + '.stt.json', sat = mp3 + '.satir.json';
+  const out = execFileSync('curl', ['-sS', '-X', 'POST', 'https://api.elevenlabs.io/v1/speech-to-text', ...ANAHTAR, '-F', 'model_id=scribe_v1', '-F', 'language_code=tur', '-F', 'timestamps_granularity=word', '-F', `file=@${mp3}`], { maxBuffer: 1e8 }).toString();
+  fs.writeFileSync(stt, out); fs.writeFileSync(sat, JSON.stringify(s.replikler.map(r => ({ id: r.id, metin: r.metin }))));
+  const j = JSON.parse(execFileSync('python3', [path.join(__dirname, 'ses_analiz.py'), mp3, stt, sat], { maxBuffer: 1e8 }).toString());
+  j.duyulan = JSON.parse(out).text || ''; fs.unlinkSync(stt); fs.unlinkSync(sat); return j;
+}
 for (const s of BOLUM.sahneler) {
   const girdiler = s.replikler.map(r => ({ text: r.ses || r.metin, voice_id: BOLUM.karakterler[r.kim.replace('_IC', '')].ses }));
   const govde = { model_id: BOLUM.diyalogModeli, inputs: girdiler, settings: { stability: BOLUM.stabilite } };
@@ -49,26 +58,21 @@ for (const s of BOLUM.sahneler) {
   const zorla = SECILI.includes(s.id);
   if (SECILI.length && !zorla) continue;
   if (!zorla && man[s.id] && man[s.id].ozet === oz && fs.existsSync(hedef)) { console.log(`✓ ${s.id} diyalog (değişmedi)`); continue; }
-  const metin = s.replikler.map(r => r.metin).join(' '), adaylar = [];
+  const adaylar = [];
   for (let d = 0; d < DENEME; d++) {
-    const js = `${hedef}.${d}.json`;
-    const kod = istek('https://api.elevenlabs.io/v1/text-to-dialogue/with-timestamps?output_format=mp3_44100_192', govde, js);
-    if (kod !== '200') { console.log(`${s.id} HATA ${kod}: ${fs.readFileSync(js, 'utf8').slice(0, 300)}`); process.exit(1); }
-    const j = JSON.parse(fs.readFileSync(js, 'utf8')); fs.unlinkSync(js);
-    const mp3 = `${hedef}.${d}.mp3`; fs.writeFileSync(mp3, Buffer.from(j.audio_base64, 'base64'));
-    const seg = s.replikler.map((r, i) => {
-      const v = j.voice_segments.filter(x => x.dialogue_input_index === i); if (!v.length) return null;
-      const a = Math.min(...v.map(x => x.character_start_index)), b = Math.max(...v.map(x => x.character_end_index));
-      return { id: r.id, bas: Math.min(...v.map(x => x.start_time_seconds)), bit: Math.max(...v.map(x => x.end_time_seconds)), kelime: kelimeler(j.alignment, a, b) };
-    });
-    const duyulan = yaziyaCevir(mp3), dogruluk = benzerlik(metin, duyulan), tamam = seg.every(Boolean);
-    adaylar.push({ mp3, seg, duyulan, dogruluk, puan: dogruluk + (tamam ? 1 : 0) });
-    console.log(`  ${s.id} okuma ${d + 1}: doğruluk %${Math.round(dogruluk * 100)}${tamam ? '' : ' (eksik replik!)'}`);
+    const mp3 = `${hedef}.${d}.mp3`;
+    const kod = istek(`https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_192`, govde, mp3);
+    if (kod !== '200') { console.log(`${s.id} HATA ${kod}: ${fs.readFileSync(mp3, 'utf8').slice(0, 300)}`); process.exit(1); }
+    const a = analiz(mp3, s);
+    a.puan = a.dogruluk >= .95 ? a.perde : a.perde - 100 * (.95 - a.dogruluk);
+    adaylar.push({ mp3, a });
+    console.log(`  ${s.id} okuma ${d + 1}: doğruluk %${Math.round(a.dogruluk * 100)} · duygu (perde değişkenliği) ${a.perde.toFixed(2)}`);
   }
-  adaylar.sort((a, b) => b.puan - a.puan); const en = adaylar[0];
-  fs.renameSync(en.mp3, hedef); for (const a of adaylar.slice(1)) fs.unlinkSync(a.mp3);
-  man[s.id] = { ozet: oz, segmentler: en.seg, dogruluk: +en.dogruluk.toFixed(3), duyulan: en.duyulan }; kaydet();
-  console.log(`${en.dogruluk >= .9 ? '✓' : '⚠'} ${s.id} seçildi: %${Math.round(en.dogruluk * 100)}  "${en.duyulan.slice(0, 80)}…"`);
+  adaylar.sort((x, y) => y.a.puan - x.a.puan); const en = adaylar[0];
+  fs.renameSync(en.mp3, hedef); for (const x of adaylar.slice(1)) fs.unlinkSync(x.mp3);
+  man[s.id] = { ozet: oz, dogruluk: +en.a.dogruluk.toFixed(3), perde: +en.a.perde.toFixed(2), duyulan: en.a.duyulan, satirlar: en.a.satirlar }; kaydet();
+  const bit = en.a.satirlar.filter(x => x.bitisik).map(x => x.id);
+  console.log(`${en.a.dogruluk >= .95 ? '✓' : '⚠'} ${s.id} seçildi: %${Math.round(en.a.dogruluk * 100)} · duygu ${en.a.perde.toFixed(2)}${bit.length ? ' · bitişik akış: ' + bit.join(',') : ''}`);
 }
 
 // ── 2) MÜZİK + EFEKTLER ──
@@ -88,18 +92,15 @@ for (const [ad, e] of Object.entries(BOLUM.efektler)) uret('efekt_' + ad, 'https
 const paket = { sahneler: {}, efektler: {}, muzik: null };
 const b64 = f => fs.readFileSync(f).toString('base64');
 for (const s of BOLUM.sahneler) {
-  const ham = path.join(HAM, `diyalog_${s.id}.mp3`); if (!fs.existsSync(ham) || !man[s.id]) continue;
-  const son = path.join(K, `diyalog_${s.id}.mp3`), gecici = son + '.tmp.mp3';
-  const sg = man[s.id].segmentler, kelime = s.replikler.reduce((a, r) => a + r.metin.split(/\s+/).length, 0), ks = sg.reduce((a, g) => a + g.bit - g.bas, 0);
-  const HIZ = Math.min(1.15, Math.max(1, BOLUM.hedefTempo / (kelime / ks)));
-  console.log(`  ${s.id}: tempo ${(kelime / ks).toFixed(2)} → ${(kelime / ks * HIZ).toFixed(2)} kelime/sn (x${HIZ.toFixed(2)})`);
-  if (HIZ > 1.001) ff(['-i', ham, '-af', `rubberband=tempo=${HIZ}:transients=mixed:detector=compound:pitchq=quality`, '-c:a', 'libmp3lame', '-b:a', '192k', gecici]); else fs.copyFileSync(ham, gecici);
-  esitle(gecici, son, -16); fs.unlinkSync(gecici);
-  paket.sahneler[s.id] = { hiz: HIZ, sure: sure(son), veri: b64(son),
-    segmentler: sg.map(g => ({ id: g.id, bas: g.bas / HIZ, bit: g.bit / HIZ, kelime: g.kelime.map(k => ({ w: k.w, s: +(k.s / HIZ).toFixed(3), e: +(k.e / HIZ).toFixed(3) })) })) };
+  const ham = path.join(HAM, `diyalog_${s.id}.mp3`); if (!fs.existsSync(ham) || !man[s.id] || !man[s.id].satirlar) continue;
+  const son = path.join(K, `diyalog_${s.id}.mp3`);
+  esitle(ham, son, -16);   // sadece seviye; hızlandırma yok (doğal tempo, bozulma yok)
+  const sat = man[s.id].satirlar, kel = s.replikler.reduce((a, r) => a + r.metin.split(/\s+/).length, 0), ks = sat.reduce((a, x) => a + x.sesSon - x.sesBas, 0);
+  console.log(`  ${s.id}: tempo ${(kel / ks).toFixed(2)} kelime/sn (doğal)`);
+  paket.sahneler[s.id] = { sure: sure(son), veri: b64(son), satirlar: sat };
 }
 if (fs.existsSync(path.join(HAM, 'muzik.mp3'))) { const son = path.join(K, 'muzik.mp3'); esitle(path.join(HAM, 'muzik.mp3'), son, -20); paket.muzik = { sure: sure(son), veri: b64(son) }; }
 for (const ad of Object.keys(BOLUM.efektler)) { const ham = path.join(HAM, `efekt_${ad}.mp3`); if (!fs.existsSync(ham)) continue; const son = path.join(K, `efekt_${ad}.mp3`); esitle(ham, son, -20); paket.efektler[ad] = { sure: sure(son), veri: b64(son) }; }
 fs.writeFileSync(path.join(__dirname, 'ses_paketi.js'), 'window.SES_PAKETI = ' + JSON.stringify(paket) + ';\n');
-const konusma = Object.values(paket.sahneler).reduce((a, s) => a + s.segmentler.reduce((b, g) => b + g.bit - g.bas, 0), 0);
+const konusma = Object.values(paket.sahneler).reduce((a, s) => a + s.satirlar.reduce((b, g) => b + g.kesSon - g.kesBas, 0), 0);
 console.log(`\nses_paketi.js yazıldı · sahne: ${Object.keys(paket.sahneler).length} · müzik: ${paket.muzik ? 'var' : 'yok'} · efekt: ${Object.keys(paket.efektler).length} · toplam konuşma ≈ ${konusma.toFixed(1)} sn`);

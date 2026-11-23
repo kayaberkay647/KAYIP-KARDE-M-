@@ -83,14 +83,13 @@ function zamanla() {
   for (const s of SAHNELER) {
     const P = PAKET.sahneler[s.id];
     s.replikler.forEach((r, i) => {
-      const g = P && P.segmentler.find(x => x.id === r.id);
-      if (g) { const sn = P.segmentler[i + 1]; r.segBas = g.bas; r.kelime = g.kelime;
-        // bitiş: ses dalgasının gerçekten sustuğu an (yüklenince ölçülür), yoksa segment sonu
-        const son = r._sesSon != null ? r._sesSon : g.bit; r.konus = Math.max(g.bit, son) - g.bas; r.parca = Math.min(r.konus + .15, (sn ? sn.bas : P.sure) - g.bas); }
+      const g = P && P.satirlar.find(x => x.id === r.id);
+      // kesBas/kesSon: replikler arasındaki gerçek sessizlik noktaları (kelime asla bölünmez); sesSon: konuşmanın bittiği an
+      if (g) { r.segBas = g.kesBas; r.parca = g.kesSon - g.kesBas; r.konus = Math.max(.3, g.sesSon - g.kesBas); r.kelime = g.kelime; r.bitisik = !!g.bitisik; }
       else { r.segBas = null; r.konus = Math.max(1.2, r.metin.length * .065); r.parca = r.konus + .12; r.kelime = null; }
     });
   }
-  const taban = L.map(r => (r.si === 0 && r.ri === 0 ? 0 : (r.ri === 0 ? BOLUM.sahneArasi : BOLUM.replikArasi)) + (r.ekBosluk || 0));
+  const taban = L.map(r => (r.si === 0 && r.ri === 0 ? 0 : r.bitisik ? 0 : (r.ri === 0 ? BOLUM.sahneArasi : BOLUM.replikArasi)) + (r.ekBosluk || 0));
   const dogal = L.reduce((a, r) => a + r.parca, 0) + taban.reduce((a, b) => a + b, 0) + GORSEL.sonYaziSure;
   let fazla = BOLUM.hedefSure - dogal; const ek = L.map(() => 0);
   if (fazla > 0) {
@@ -140,11 +139,6 @@ const HAZIR = (async () => {
   const orta = sv.sort((x, y) => x - y)[Math.floor(sv.length / 2)] || 1; for (const r of L) r._kazanc = r._rms ? clamp(orta / r._rms, .75, 3.6) : 1;
   for (const [ad, v] of Object.entries(PAKET.efektler || {})) TAMPON.efekt[ad] = await coz(v.veri);
   if (PAKET.muzik) TAMPON.muzik = await coz(PAKET.muzik.veri);
-  // her repliğin gerçek bitişi: bir sonraki konuşmacıya (ya da dosya sonuna) kadar sesin son duyulduğu an
-  for (const s of SAHNELER) { const b = TAMPON.sahne[s.id], P = PAKET.sahneler[s.id]; if (!b || !P) continue; const d = b.getChannelData(0), sr = b.sampleRate;
-    P.segmentler.forEach((g, i) => { const r = s.replikler.find(x => x.id === g.id); if (!r) return; const sn = P.segmentler[i + 1], ust = Math.min(d.length - 1, Math.floor((sn ? sn.bas : b.duration) * sr)), alt = Math.floor(g.bas * sr);
-      let k = ust; const pen = Math.floor(sr * .02); while (k > alt) { let m = 0; for (let j = Math.max(alt, k - pen); j < k; j++) m = Math.max(m, Math.abs(d[j])); if (m > .02) break; k -= pen; }
-      r._sesSon = Math.max(g.bit, k / sr); }); }
   zamanla();
 })();
 function agizAc(id, t) {
@@ -628,7 +622,7 @@ function parcalar(r) {
   if (r._p) return r._p;
   const ic = r.kim.endsWith('_IC'); c.save(); c.font = FONT(ic);
   const tok = r.metin.split(/\s+/).filter(Boolean), kel = []; let ki = 0;
-  for (const w of tok) { if (/[\p{L}\p{N}]/u.test(w)) { const k = r.kelime ? r.kelime[ki++] : null; kel.push({ w, s: k ? r.bas + (k.s - r.segBas) : null, e: k ? r.bas + (k.e - r.segBas) : null }); } else if (kel.length) kel[kel.length - 1].w += ' ' + w; }
+  for (const w of tok) { if (/\w/.test(w) || /[\p{L}\p{N}]/u.test(w)) { const k = r.kelime ? r.kelime[ki++] : null; kel.push({ w, s: k ? r.bas + (k.s - r.segBas) : null, e: k ? r.bas + (k.e - r.segBas) : null }); } else if (kel.length) kel[kel.length - 1].w += ' ' + w; }
   if (!r.kelime || kel.some(x => x.s == null)) { const top = kel.reduce((a, x) => a + x.w.length + 1, 0); let acc = 0; for (const x of kel) { x.s = r.bas + acc / top * r.konus; acc += x.w.length + 1; x.e = r.bas + acc / top * r.konus; } }
   const out = []; let cur = [];
   for (const x of kel) {
