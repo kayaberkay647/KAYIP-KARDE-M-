@@ -1407,8 +1407,8 @@ function parcalar(r) {
 }
 let ALTYAZI = true;
 function altyazi(t) {
-  if (!ALTYAZI) return; let p = null;
-  for (const r of L) { if (t < r.bas - .1 || t > r.bit + .5) continue; for (const x of parcalar(r)) if (t >= x.bas && t < x.bit) p = x; }
+  if (!ALTYAZI) return; let p = null; const sh = anlikPlan(t).s;
+  for (const r of L) { if (t < r.bas - .1 || t > r.bit + .5 || r.sahne !== sh) continue; for (const x of parcalar(r)) if (t >= x.bas && t < x.bit) p = x; }
   if (!p) return;
   c.save(); c.font = FONT(p.ic); c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round';
   c.shadowColor = 'rgba(30,15,5,.6)'; c.shadowBlur = 10; c.shadowOffsetY = 3; c.lineWidth = 9; c.strokeStyle = '#3a2416'; c.strokeText(p.metin, 540, GORSEL.altyaziY);
