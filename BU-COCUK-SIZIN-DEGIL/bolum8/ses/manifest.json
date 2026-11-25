@@ -1,0 +1,1558 @@
+{
+  "muzik": {
+    "ozet": "29298bbcef34e42c"
+  },
+  "efekt_telefon": {
+    "ozet": "fbd85f898ac757d7"
+  },
+  "efekt_kalem": {
+    "ozet": "1f5f628e8fc21cce"
+  },
+  "efekt_sayfa": {
+    "ozet": "a6e07a250378546b"
+  },
+  "efekt_zil": {
+    "ozet": "5b6669b9d010949e"
+  },
+  "S1": {
+    "ozet": "f80402286341824a",
+    "dogruluk": 0.97,
+    "perde": 6.41,
+    "duyulan": "Bileklikleri değiştirdiğini gördüm ve sustum. Çünkü bana para verdiler. Ne? Ne dediniz siz? Dokuz yıl önce o hastanede stajierdim. O gece doğumhanede nöbetçi bendim. Hangi bileklikleri? Kimin bebeklerini? Sizin bebeğinizle Nur Aksoy'un bebeğini",
+    "satirlar": [
+      {
+        "id": "R01",
+        "sesBas": 0.18,
+        "sesSon": 6.12,
+        "kelime": [
+          {
+            "w": "Bileklikleri",
+            "s": 0.18,
+            "e": 0.88
+          },
+          {
+            "w": "değiştirdiğini",
+            "s": 0.94,
+            "e": 1.72
+          },
+          {
+            "w": "gördüm.",
+            "s": 1.78,
+            "e": 2.32
+          },
+          {
+            "w": "Ve",
+            "s": 3.1,
+            "e": 3.22
+          },
+          {
+            "w": "sustum.",
+            "s": 3.3,
+            "e": 3.82
+          },
+          {
+            "w": "Çünkü",
+            "s": 4.62,
+            "e": 4.9
+          },
+          {
+            "w": "bana",
+            "s": 4.94,
+            "e": 5.16
+          },
+          {
+            "w": "para",
+            "s": 5.22,
+            "e": 5.44
+          },
+          {
+            "w": "verdiler.",
+            "s": 5.48,
+            "e": 6.12
+          }
+        ],
+        "kesBas": 0.01,
+        "kesSon": 6.305,
+        "kesSonDb": -91.2
+      },
+      {
+        "id": "R02",
+        "sesBas": 6.54,
+        "sesSon": 8.6,
+        "kelime": [
+          {
+            "w": "Ne…",
+            "s": 6.54,
+            "e": 6.7
+          },
+          {
+            "w": "ne",
+            "s": 7.68,
+            "e": 7.78
+          },
+          {
+            "w": "dediniz",
+            "s": 7.82,
+            "e": 8.24
+          },
+          {
+            "w": "siz?",
+            "s": 8.32,
+            "e": 8.6
+          }
+        ],
+        "kesBas": 6.305,
+        "bitisik": false,
+        "kesSon": 8.94,
+        "kesSonDb": -89.9
+      },
+      {
+        "id": "R03",
+        "sesBas": 8.98,
+        "sesSon": 14.9,
+        "kelime": [
+          {
+            "w": "Dokuz",
+            "s": 8.98,
+            "e": 9.34
+          },
+          {
+            "w": "yıl",
+            "s": 9.38,
+            "e": 9.5
+          },
+          {
+            "w": "önce",
+            "s": 9.58,
+            "e": 9.92
+          },
+          {
+            "w": "o",
+            "s": 10.28,
+            "e": 10.34
+          },
+          {
+            "w": "hastanede",
+            "s": 10.38,
+            "e": 11.02
+          },
+          {
+            "w": "stajyerdim.",
+            "s": 11.02,
+            "e": 11.32
+          },
+          {
+            "w": "O",
+            "s": 12.68,
+            "e": 12.74
+          },
+          {
+            "w": "gece",
+            "s": 12.8,
+            "e": 13.08
+          },
+          {
+            "w": "doğumhanede",
+            "s": 13.28,
+            "e": 13.94
+          },
+          {
+            "w": "nöbetçi",
+            "s": 14,
+            "e": 14.42
+          },
+          {
+            "w": "bendim.",
+            "s": 14.46,
+            "e": 14.9
+          }
+        ],
+        "kesBas": 8.94,
+        "bitisik": false,
+        "kesSon": 15.065,
+        "kesSonDb": -89.2
+      },
+      {
+        "id": "R03b",
+        "sesBas": 15.3,
+        "sesSon": 18.14,
+        "kelime": [
+          {
+            "w": "Hangi",
+            "s": 15.3,
+            "e": 15.62
+          },
+          {
+            "w": "bileklikleri?",
+            "s": 15.64,
+            "e": 16.46
+          },
+          {
+            "w": "Kimin",
+            "s": 17.08,
+            "e": 17.36
+          },
+          {
+            "w": "bebeklerini?",
+            "s": 17.4,
+            "e": 18.14
+          }
+        ],
+        "kesBas": 15.065,
+        "bitisik": false,
+        "kesSon": 18.38,
+        "kesSonDb": -90.1
+      },
+      {
+        "id": "R03c",
+        "sesBas": 18.56,
+        "sesSon": 21.52,
+        "kelime": [
+          {
+            "w": "Sizin",
+            "s": 18.56,
+            "e": 18.88
+          },
+          {
+            "w": "bebeğinizle…",
+            "s": 18.94,
+            "e": 19.66
+          },
+          {
+            "w": "Nur",
+            "s": 20.4,
+            "e": 20.54
+          },
+          {
+            "w": "Aksoy'un",
+            "s": 20.64,
+            "e": 21.08
+          },
+          {
+            "w": "bebeğini.",
+            "s": 21.12,
+            "e": 21.52
+          }
+        ],
+        "kesBas": 18.38,
+        "bitisik": false,
+        "kesSon": 21.68
+      }
+    ]
+  },
+  "S2": {
+    "ozet": "143d7bb6fde6fdd9",
+    "dogruluk": 0.973,
+    "perde": 7.12,
+    "duyulan": "Saat gece yarısını geçmişti. Yenidoğan odasından bir ses duydum. Bir hemşire iki kız bebeğin başındaydı. Yüzünde maske vardı. Bebeklerin bilekliklerini çıkardı ve yerlerini değiştirdi. Kapının aralığından her şeyi gördüm. Sesimi bile çıkaramadım. Sonra bana döndü. O gözleri hâlâ unutamıyorum. Maskenin üstünden parmağını dudağına götürdü. Sus der gibi. Ertesi sabah dolabımda bir zarf buldum. İçinde para ve bir not. Susarsan kimseye bir şey olmaz. Sustum. Dokuz yıl boyunca her gün biraz daha sustum.",
+    "satirlar": [
+      {
+        "id": "R04",
+        "sesBas": 0.2,
+        "sesSon": 5.1,
+        "kelime": [
+          {
+            "w": "Saat",
+            "s": 0.2,
+            "e": 0.54
+          },
+          {
+            "w": "gece",
+            "s": 0.62,
+            "e": 0.86
+          },
+          {
+            "w": "yarısını",
+            "s": 0.88,
+            "e": 1.28
+          },
+          {
+            "w": "geçmişti.",
+            "s": 1.34,
+            "e": 2.02
+          },
+          {
+            "w": "Yeni",
+            "s": 2.02,
+            "e": 2.32
+          },
+          {
+            "w": "doğan",
+            "s": 2.32,
+            "e": 2.62
+          },
+          {
+            "w": "odasından…",
+            "s": 3.18,
+            "e": 3.8
+          },
+          {
+            "w": "bir",
+            "s": 4.26,
+            "e": 4.36
+          },
+          {
+            "w": "ses",
+            "s": 4.44,
+            "e": 4.64
+          },
+          {
+            "w": "duydum.",
+            "s": 4.72,
+            "e": 5.1
+          }
+        ],
+        "kesBas": 0.025,
+        "kesSon": 5.5,
+        "kesSonDb": -89.9
+      },
+      {
+        "id": "R05",
+        "sesBas": 5.58,
+        "sesSon": 9.9,
+        "kelime": [
+          {
+            "w": "Bir",
+            "s": 5.58,
+            "e": 5.68
+          },
+          {
+            "w": "hemşire,",
+            "s": 5.72,
+            "e": 6.28
+          },
+          {
+            "w": "iki",
+            "s": 6.6,
+            "e": 6.78
+          },
+          {
+            "w": "kız",
+            "s": 6.86,
+            "e": 7.02
+          },
+          {
+            "w": "bebeğin",
+            "s": 7.06,
+            "e": 7.4
+          },
+          {
+            "w": "başındaydı.",
+            "s": 7.46,
+            "e": 8.18
+          },
+          {
+            "w": "Yüzünde",
+            "s": 8.66,
+            "e": 9.06
+          },
+          {
+            "w": "maske",
+            "s": 9.12,
+            "e": 9.48
+          },
+          {
+            "w": "vardı.",
+            "s": 9.52,
+            "e": 9.9
+          }
+        ],
+        "kesBas": 5.5,
+        "bitisik": false,
+        "kesSon": 10.265,
+        "kesSonDb": -90.5
+      },
+      {
+        "id": "R06",
+        "sesBas": 10.32,
+        "sesSon": 13.98,
+        "kelime": [
+          {
+            "w": "Bebeklerin",
+            "s": 10.32,
+            "e": 10.88
+          },
+          {
+            "w": "bilekliklerini",
+            "s": 10.92,
+            "e": 11.64
+          },
+          {
+            "w": "çıkardı…",
+            "s": 11.7,
+            "e": 12.22
+          },
+          {
+            "w": "ve",
+            "s": 12.64,
+            "e": 12.74
+          },
+          {
+            "w": "yerlerini",
+            "s": 12.8,
+            "e": 13.3
+          },
+          {
+            "w": "değiştirdi.",
+            "s": 13.34,
+            "e": 13.98
+          }
+        ],
+        "kesBas": 10.265,
+        "bitisik": false,
+        "kesSon": 14.345,
+        "kesSonDb": -90.1
+      },
+      {
+        "id": "R07",
+        "sesBas": 14.44,
+        "sesSon": 18.22,
+        "kelime": [
+          {
+            "w": "Kapının",
+            "s": 14.44,
+            "e": 14.82
+          },
+          {
+            "w": "aralığından",
+            "s": 14.88,
+            "e": 15.48
+          },
+          {
+            "w": "her",
+            "s": 15.6,
+            "e": 15.76
+          },
+          {
+            "w": "şeyi",
+            "s": 15.86,
+            "e": 16.04
+          },
+          {
+            "w": "gördüm.",
+            "s": 16.12,
+            "e": 16.54
+          },
+          {
+            "w": "Sesimi",
+            "s": 16.94,
+            "e": 17.3
+          },
+          {
+            "w": "bile",
+            "s": 17.32,
+            "e": 17.52
+          },
+          {
+            "w": "çıkaramadım.",
+            "s": 17.58,
+            "e": 18.22
+          }
+        ],
+        "kesBas": 14.345,
+        "bitisik": false,
+        "kesSon": 18.535,
+        "kesSonDb": -90.1
+      },
+      {
+        "id": "R08",
+        "sesBas": 18.7,
+        "sesSon": 22.44,
+        "kelime": [
+          {
+            "w": "Sonra…",
+            "s": 18.7,
+            "e": 19.1
+          },
+          {
+            "w": "bana",
+            "s": 19.5,
+            "e": 19.72
+          },
+          {
+            "w": "döndü.",
+            "s": 19.78,
+            "e": 20.2
+          },
+          {
+            "w": "O",
+            "s": 20.64,
+            "e": 20.68
+          },
+          {
+            "w": "gözleri",
+            "s": 20.76,
+            "e": 21.22
+          },
+          {
+            "w": "hâlâ",
+            "s": 21.28,
+            "e": 21.68
+          },
+          {
+            "w": "unutamıyorum.",
+            "s": 21.74,
+            "e": 22.44
+          }
+        ],
+        "kesBas": 18.535,
+        "bitisik": false,
+        "kesSon": 22.765,
+        "kesSonDb": -90.1
+      },
+      {
+        "id": "R08b",
+        "sesBas": 22.82,
+        "sesSon": 27.16,
+        "kelime": [
+          {
+            "w": "Maskenin",
+            "s": 22.82,
+            "e": 23.34
+          },
+          {
+            "w": "üstünden",
+            "s": 23.38,
+            "e": 23.84
+          },
+          {
+            "w": "parmağını",
+            "s": 23.94,
+            "e": 24.42
+          },
+          {
+            "w": "dudağına",
+            "s": 24.46,
+            "e": 24.86
+          },
+          {
+            "w": "götürdü.",
+            "s": 24.92,
+            "e": 25.42
+          },
+          {
+            "w": "“Sus”",
+            "s": 25.88,
+            "e": 26.24
+          },
+          {
+            "w": "der",
+            "s": 26.56,
+            "e": 26.76
+          },
+          {
+            "w": "gibi.",
+            "s": 26.84,
+            "e": 27.16
+          }
+        ],
+        "kesBas": 22.765,
+        "bitisik": false,
+        "kesSon": 27.5,
+        "kesSonDb": -91
+      },
+      {
+        "id": "R09",
+        "sesBas": 27.58,
+        "sesSon": 31.82,
+        "kelime": [
+          {
+            "w": "Ertesi",
+            "s": 27.58,
+            "e": 27.94
+          },
+          {
+            "w": "sabah",
+            "s": 28,
+            "e": 28.32
+          },
+          {
+            "w": "dolabımda",
+            "s": 28.38,
+            "e": 28.84
+          },
+          {
+            "w": "bir",
+            "s": 28.88,
+            "e": 28.96
+          },
+          {
+            "w": "zarf",
+            "s": 29.02,
+            "e": 29.3
+          },
+          {
+            "w": "buldum.",
+            "s": 29.34,
+            "e": 29.74
+          },
+          {
+            "w": "İçinde",
+            "s": 30.08,
+            "e": 30.46
+          },
+          {
+            "w": "para…",
+            "s": 30.52,
+            "e": 30.82
+          },
+          {
+            "w": "ve",
+            "s": 31.18,
+            "e": 31.28
+          },
+          {
+            "w": "bir",
+            "s": 31.34,
+            "e": 31.44
+          },
+          {
+            "w": "not.",
+            "s": 31.48,
+            "e": 31.82
+          }
+        ],
+        "kesBas": 27.5,
+        "bitisik": false,
+        "kesSon": 32.095,
+        "kesSonDb": -90.2
+      },
+      {
+        "id": "R10",
+        "sesBas": 32.24,
+        "sesSon": 34.44,
+        "kelime": [
+          {
+            "w": "“Susarsan…",
+            "s": 32.24,
+            "e": 32.9
+          },
+          {
+            "w": "kimseye",
+            "s": 33.2,
+            "e": 33.62
+          },
+          {
+            "w": "bir",
+            "s": 33.66,
+            "e": 33.74
+          },
+          {
+            "w": "şey",
+            "s": 33.78,
+            "e": 33.92
+          },
+          {
+            "w": "olmaz.”",
+            "s": 33.96,
+            "e": 34.44
+          }
+        ],
+        "kesBas": 32.095,
+        "bitisik": false,
+        "kesSon": 34.705,
+        "kesSonDb": -89.1
+      },
+      {
+        "id": "R10b",
+        "sesBas": 34.94,
+        "sesSon": 38.94,
+        "kelime": [
+          {
+            "w": "Sustum.",
+            "s": 34.94,
+            "e": 35.42
+          },
+          {
+            "w": "Dokuz",
+            "s": 35.9,
+            "e": 36.28
+          },
+          {
+            "w": "yıl",
+            "s": 36.3,
+            "e": 36.46
+          },
+          {
+            "w": "boyunca…",
+            "s": 36.5,
+            "e": 37
+          },
+          {
+            "w": "her",
+            "s": 37.4,
+            "e": 37.6
+          },
+          {
+            "w": "gün",
+            "s": 37.66,
+            "e": 37.88
+          },
+          {
+            "w": "biraz",
+            "s": 37.94,
+            "e": 38.24
+          },
+          {
+            "w": "daha",
+            "s": 38.26,
+            "e": 38.46
+          },
+          {
+            "w": "sustum.",
+            "s": 38.52,
+            "e": 38.94
+          }
+        ],
+        "kesBas": 34.705,
+        "bitisik": false,
+        "kesSon": 39.06
+      }
+    ]
+  },
+  "S3": {
+    "ozet": "cface6a4c19905a6",
+    "dogruluk": 1,
+    "perde": 6.15,
+    "duyulan": "Dokuz yıl kızımı başka bir kadın büyüttü ve siz sustunuz. Haklısınız. Her gece o iki bebeği düşündüm. Her gece. Ve şimdi mi vicdanınız sızladı? Hayır, şimdi cesaretim geldi. Sonra bir gün Duru kulağı ağrıdığı için muayeneme geldi. Dosyada doğum tarihini gördüm. 14 Mart. Aynı hastane. O testi bilerek istedim. Kulak ağrısı bir tesadüftü ama o kan testi değildi.",
+    "satirlar": [
+      {
+        "id": "R11",
+        "sesBas": 0.1,
+        "sesSon": 4.8,
+        "kelime": [
+          {
+            "w": "Dokuz",
+            "s": 0.1,
+            "e": 0.66
+          },
+          {
+            "w": "yıl!",
+            "s": 0.72,
+            "e": 1
+          },
+          {
+            "w": "Kızımı",
+            "s": 1.52,
+            "e": 1.88
+          },
+          {
+            "w": "başka",
+            "s": 1.92,
+            "e": 2.26
+          },
+          {
+            "w": "bir",
+            "s": 2.28,
+            "e": 2.36
+          },
+          {
+            "w": "kadın",
+            "s": 2.42,
+            "e": 2.72
+          },
+          {
+            "w": "büyüttü…",
+            "s": 2.78,
+            "e": 3.22
+          },
+          {
+            "w": "ve",
+            "s": 3.58,
+            "e": 3.7
+          },
+          {
+            "w": "siz",
+            "s": 3.76,
+            "e": 3.98
+          },
+          {
+            "w": "sustunuz!",
+            "s": 4.059,
+            "e": 4.8
+          }
+        ],
+        "kesBas": 0.01,
+        "kesSon": 6.01,
+        "kesSonDb": -89.1
+      },
+      {
+        "id": "R12",
+        "sesBas": 6.12,
+        "sesSon": 10.96,
+        "kelime": [
+          {
+            "w": "Haklısınız.",
+            "s": 6.12,
+            "e": 6.98
+          },
+          {
+            "w": "Her",
+            "s": 7.9,
+            "e": 8.06
+          },
+          {
+            "w": "gece",
+            "s": 8.119,
+            "e": 8.38
+          },
+          {
+            "w": "o",
+            "s": 8.44,
+            "e": 8.52
+          },
+          {
+            "w": "iki",
+            "s": 8.6,
+            "e": 8.78
+          },
+          {
+            "w": "bebeği",
+            "s": 8.82,
+            "e": 9.14
+          },
+          {
+            "w": "düşündüm.",
+            "s": 9.2,
+            "e": 9.76
+          },
+          {
+            "w": "Her",
+            "s": 10.34,
+            "e": 10.56
+          },
+          {
+            "w": "gece.",
+            "s": 10.66,
+            "e": 10.96
+          }
+        ],
+        "kesBas": 6.01,
+        "bitisik": false,
+        "kesSon": 11.185,
+        "kesSonDb": -89.7
+      },
+      {
+        "id": "R12b",
+        "sesBas": 11.54,
+        "sesSon": 13.5,
+        "kelime": [
+          {
+            "w": "Ve",
+            "s": 11.54,
+            "e": 11.66
+          },
+          {
+            "w": "şimdi",
+            "s": 11.78,
+            "e": 12.12
+          },
+          {
+            "w": "mi",
+            "s": 12.16,
+            "e": 12.26
+          },
+          {
+            "w": "vicdanınız",
+            "s": 12.28,
+            "e": 12.98
+          },
+          {
+            "w": "sızladı?",
+            "s": 13.02,
+            "e": 13.5
+          }
+        ],
+        "kesBas": 11.185,
+        "bitisik": false,
+        "kesSon": 13.86,
+        "kesSonDb": -89
+      },
+      {
+        "id": "R12c",
+        "sesBas": 13.94,
+        "sesSon": 17.24,
+        "kelime": [
+          {
+            "w": "Hayır.",
+            "s": 13.94,
+            "e": 14.34
+          },
+          {
+            "w": "Şimdi…",
+            "s": 15.34,
+            "e": 15.72
+          },
+          {
+            "w": "cesaretim",
+            "s": 16.18,
+            "e": 16.78
+          },
+          {
+            "w": "geldi.",
+            "s": 16.82,
+            "e": 17.24
+          }
+        ],
+        "kesBas": 13.86,
+        "bitisik": false,
+        "kesSon": 17.82,
+        "kesSonDb": -90
+      },
+      {
+        "id": "R13",
+        "sesBas": 17.96,
+        "sesSon": 21.66,
+        "kelime": [
+          {
+            "w": "Sonra",
+            "s": 17.96,
+            "e": 18.26
+          },
+          {
+            "w": "bir",
+            "s": 18.3,
+            "e": 18.4
+          },
+          {
+            "w": "gün…",
+            "s": 18.46,
+            "e": 18.66
+          },
+          {
+            "w": "Duru,",
+            "s": 19.22,
+            "e": 19.46
+          },
+          {
+            "w": "kulağı",
+            "s": 19.62,
+            "e": 19.94
+          },
+          {
+            "w": "ağrıdığı",
+            "s": 20.04,
+            "e": 20.4
+          },
+          {
+            "w": "için",
+            "s": 20.46,
+            "e": 20.68
+          },
+          {
+            "w": "muayeneme",
+            "s": 20.72,
+            "e": 21.22
+          },
+          {
+            "w": "geldi.",
+            "s": 21.28,
+            "e": 21.66
+          }
+        ],
+        "kesBas": 17.82,
+        "bitisik": false,
+        "kesSon": 22.39,
+        "kesSonDb": -90
+      },
+      {
+        "id": "R14",
+        "sesBas": 22.46,
+        "sesSon": 29.02,
+        "kelime": [
+          {
+            "w": "Dosyada",
+            "s": 22.46,
+            "e": 22.9
+          },
+          {
+            "w": "doğum",
+            "s": 22.94,
+            "e": 23.18
+          },
+          {
+            "w": "tarihini",
+            "s": 23.26,
+            "e": 23.72
+          },
+          {
+            "w": "gördüm.",
+            "s": 23.78,
+            "e": 24.2
+          },
+          {
+            "w": "14",
+            "s": 24.8,
+            "e": 25.2
+          },
+          {
+            "w": "Mart,",
+            "s": 25.26,
+            "e": 25.54
+          },
+          {
+            "w": "aynı",
+            "s": 25.96,
+            "e": 26.2
+          },
+          {
+            "w": "hastane.",
+            "s": 26.24,
+            "e": 26.8
+          },
+          {
+            "w": "O",
+            "s": 27.72,
+            "e": 27.76
+          },
+          {
+            "w": "testi",
+            "s": 27.82,
+            "e": 28.12
+          },
+          {
+            "w": "bilerek",
+            "s": 28.16,
+            "e": 28.52
+          },
+          {
+            "w": "istedim.",
+            "s": 28.56,
+            "e": 29.02
+          }
+        ],
+        "kesBas": 22.39,
+        "bitisik": false,
+        "kesSon": 29.22,
+        "kesSonDb": -89.3
+      },
+      {
+        "id": "R15",
+        "sesBas": 29.46,
+        "sesSon": 34.42,
+        "kelime": [
+          {
+            "w": "Kulak",
+            "s": 29.46,
+            "e": 29.76
+          },
+          {
+            "w": "ağrısı",
+            "s": 29.84,
+            "e": 30.2
+          },
+          {
+            "w": "bir",
+            "s": 30.22,
+            "e": 30.34
+          },
+          {
+            "w": "tesadüftü.",
+            "s": 30.4,
+            "e": 31.26
+          },
+          {
+            "w": "Ama",
+            "s": 32.299,
+            "e": 32.479
+          },
+          {
+            "w": "o",
+            "s": 32.52,
+            "e": 32.56
+          },
+          {
+            "w": "kan",
+            "s": 32.659,
+            "e": 32.86
+          },
+          {
+            "w": "testi…",
+            "s": 32.94,
+            "e": 33.38
+          },
+          {
+            "w": "değildi.",
+            "s": 33.9,
+            "e": 34.42
+          }
+        ],
+        "kesBas": 29.22,
+        "bitisik": false,
+        "kesSon": 34.56
+      }
+    ]
+  },
+  "S4": {
+    "ozet": "8d739c605fb83434",
+    "dogruluk": 1,
+    "perde": 11.4,
+    "duyulan": "Aslı yine o doktora geldi. Yalnız doktor konuşursa her şey biter. Onu susturmanın bir yolunu bulmalıyım. Benim doktor her şeyi anlatıyor. Aslı seni ararsa sakın açma.",
+    "satirlar": [
+      {
+        "id": "R16",
+        "sesBas": 0.16,
+        "sesSon": 5.72,
+        "kelime": [
+          {
+            "w": "Aslı",
+            "s": 0.16,
+            "e": 0.5
+          },
+          {
+            "w": "yine",
+            "s": 0.54,
+            "e": 0.76
+          },
+          {
+            "w": "o",
+            "s": 0.8,
+            "e": 0.86
+          },
+          {
+            "w": "doktora",
+            "s": 0.92,
+            "e": 1.32
+          },
+          {
+            "w": "geldi.",
+            "s": 1.38,
+            "e": 1.72
+          },
+          {
+            "w": "Yalnız.",
+            "s": 2.26,
+            "e": 2.74
+          },
+          {
+            "w": "Doktor",
+            "s": 3.36,
+            "e": 3.68
+          },
+          {
+            "w": "konuşursa…",
+            "s": 3.76,
+            "e": 4.36
+          },
+          {
+            "w": "her",
+            "s": 4.96,
+            "e": 5.08
+          },
+          {
+            "w": "şey",
+            "s": 5.16,
+            "e": 5.3
+          },
+          {
+            "w": "biter.",
+            "s": 5.34,
+            "e": 5.72
+          }
+        ],
+        "kesBas": 0.05,
+        "kesSon": 6.03,
+        "kesSonDb": -89.2
+      },
+      {
+        "id": "R17",
+        "sesBas": 6.3,
+        "sesSon": 8.64,
+        "kelime": [
+          {
+            "w": "Onu",
+            "s": 6.3,
+            "e": 6.48
+          },
+          {
+            "w": "susturmanın…",
+            "s": 6.56,
+            "e": 7.28
+          },
+          {
+            "w": "bir",
+            "s": 7.62,
+            "e": 7.7
+          },
+          {
+            "w": "yolunu",
+            "s": 7.74,
+            "e": 8.06
+          },
+          {
+            "w": "bulmalıyım.",
+            "s": 8.1,
+            "e": 8.64
+          }
+        ],
+        "kesBas": 6.03,
+        "bitisik": false,
+        "kesSon": 9.145,
+        "kesSonDb": -89.7
+      },
+      {
+        "id": "R17b",
+        "sesBas": 9.22,
+        "sesSon": 13.76,
+        "kelime": [
+          {
+            "w": "Benim.",
+            "s": 9.22,
+            "e": 9.46
+          },
+          {
+            "w": "Doktor",
+            "s": 10.06,
+            "e": 10.38
+          },
+          {
+            "w": "her",
+            "s": 10.42,
+            "e": 10.54
+          },
+          {
+            "w": "şeyi",
+            "s": 10.62,
+            "e": 10.78
+          },
+          {
+            "w": "anlatıyor.",
+            "s": 10.82,
+            "e": 11.26
+          },
+          {
+            "w": "Aslı",
+            "s": 11.78,
+            "e": 12.02
+          },
+          {
+            "w": "seni",
+            "s": 12.06,
+            "e": 12.26
+          },
+          {
+            "w": "ararsa…",
+            "s": 12.32,
+            "e": 12.76
+          },
+          {
+            "w": "sakın",
+            "s": 13.14,
+            "e": 13.4
+          },
+          {
+            "w": "açma.",
+            "s": 13.48,
+            "e": 13.76
+          }
+        ],
+        "kesBas": 9.145,
+        "bitisik": false,
+        "kesSon": 13.88
+      }
+    ]
+  },
+  "S5": {
+    "ozet": "6a015191f65a907d",
+    "dogruluk": 1,
+    "perde": 4.78,
+    "duyulan": "O hemşire kimdi? Adını söyleyin bana. Maskesi vardı. Yüzünü tam göremedim ama yakasındaki ismi okudum. Gül. Gül Yılmaz. Yılmaz mı? Yılmaz. Sizin soyadınız. Kerem Bey'in akrabası mı? Gül. Kerem'in kız kardeşiydi. Yıllardır ailemizle görüşmeyen hemşire kız kardeşi. Kocamın kardeşi. Bu aileden kimseye güvenebilir miydim?",
+    "satirlar": [
+      {
+        "id": "R18",
+        "sesBas": 0.06,
+        "sesSon": 2.44,
+        "kelime": [
+          {
+            "w": "O",
+            "s": 0.06,
+            "e": 0.12
+          },
+          {
+            "w": "hemşire",
+            "s": 0.18,
+            "e": 0.58
+          },
+          {
+            "w": "kimdi?",
+            "s": 0.68,
+            "e": 1.02
+          },
+          {
+            "w": "Adını",
+            "s": 1.52,
+            "e": 1.78
+          },
+          {
+            "w": "söyleyin",
+            "s": 1.82,
+            "e": 2.18
+          },
+          {
+            "w": "bana!",
+            "s": 2.22,
+            "e": 2.44
+          }
+        ],
+        "kesBas": 0.01,
+        "kesSon": 2.79,
+        "kesSonDb": -89.7
+      },
+      {
+        "id": "R19",
+        "sesBas": 3.04,
+        "sesSon": 7.7,
+        "kelime": [
+          {
+            "w": "Maskesi",
+            "s": 3.04,
+            "e": 3.52
+          },
+          {
+            "w": "vardı,",
+            "s": 3.58,
+            "e": 4.019
+          },
+          {
+            "w": "yüzünü",
+            "s": 4.34,
+            "e": 4.66
+          },
+          {
+            "w": "tam",
+            "s": 4.7,
+            "e": 4.9
+          },
+          {
+            "w": "göremedim.",
+            "s": 4.94,
+            "e": 5.48
+          },
+          {
+            "w": "Ama",
+            "s": 6.02,
+            "e": 6.28
+          },
+          {
+            "w": "yakasındaki",
+            "s": 6.36,
+            "e": 6.98
+          },
+          {
+            "w": "ismi",
+            "s": 7.02,
+            "e": 7.26
+          },
+          {
+            "w": "okudum.",
+            "s": 7.3,
+            "e": 7.7
+          }
+        ],
+        "kesBas": 2.79,
+        "bitisik": false,
+        "kesSon": 8.23,
+        "kesSonDb": -89.7
+      },
+      {
+        "id": "R20",
+        "sesBas": 8.3,
+        "sesSon": 10.32,
+        "kelime": [
+          {
+            "w": "Gül.",
+            "s": 8.3,
+            "e": 8.62
+          },
+          {
+            "w": "Gül",
+            "s": 9.4,
+            "e": 9.62
+          },
+          {
+            "w": "Yılmaz.",
+            "s": 9.7,
+            "e": 10.32
+          }
+        ],
+        "kesBas": 8.23,
+        "bitisik": false,
+        "kesSon": 10.685,
+        "kesSonDb": -89.3
+      },
+      {
+        "id": "R21",
+        "sesBas": 10.84,
+        "sesSon": 11.62,
+        "kelime": [
+          {
+            "w": "Yılmaz",
+            "s": 10.84,
+            "e": 11.38
+          },
+          {
+            "w": "mı?",
+            "s": 11.44,
+            "e": 11.62
+          }
+        ],
+        "kesBas": 10.685,
+        "bitisik": false,
+        "kesSon": 11.985,
+        "kesSonDb": -89.9
+      },
+      {
+        "id": "R21b",
+        "sesBas": 12.12,
+        "sesSon": 16.5,
+        "kelime": [
+          {
+            "w": "Yılmaz…",
+            "s": 12.12,
+            "e": 12.7
+          },
+          {
+            "w": "sizin",
+            "s": 13.16,
+            "e": 13.46
+          },
+          {
+            "w": "soyadınız.",
+            "s": 13.52,
+            "e": 14.14
+          },
+          {
+            "w": "Kerem",
+            "s": 14.76,
+            "e": 15.08
+          },
+          {
+            "w": "Bey'in…",
+            "s": 15.12,
+            "e": 15.4
+          },
+          {
+            "w": "akrabası",
+            "s": 15.74,
+            "e": 16.3
+          },
+          {
+            "w": "mı?",
+            "s": 16.34,
+            "e": 16.5
+          }
+        ],
+        "kesBas": 11.985,
+        "bitisik": false,
+        "kesSon": 16.865,
+        "kesSonDb": -90.2
+      },
+      {
+        "id": "R22",
+        "sesBas": 16.96,
+        "sesSon": 23.64,
+        "kelime": [
+          {
+            "w": "Gül…",
+            "s": 16.96,
+            "e": 17.26
+          },
+          {
+            "w": "Kerem'in",
+            "s": 17.8,
+            "e": 18.22
+          },
+          {
+            "w": "kız",
+            "s": 18.32,
+            "e": 18.5
+          },
+          {
+            "w": "kardeşiydi.",
+            "s": 18.56,
+            "e": 19.34
+          },
+          {
+            "w": "Yıllardır",
+            "s": 19.96,
+            "e": 20.46
+          },
+          {
+            "w": "ailemizle",
+            "s": 20.58,
+            "e": 21.12
+          },
+          {
+            "w": "görüşmeyen…",
+            "s": 21.2,
+            "e": 21.84
+          },
+          {
+            "w": "hemşire",
+            "s": 22.28,
+            "e": 22.74
+          },
+          {
+            "w": "kız",
+            "s": 22.8,
+            "e": 22.98
+          },
+          {
+            "w": "kardeşi.",
+            "s": 23.06,
+            "e": 23.64
+          }
+        ],
+        "kesBas": 16.865,
+        "bitisik": false,
+        "kesSon": 23.91,
+        "kesSonDb": -89.1
+      },
+      {
+        "id": "R23",
+        "sesBas": 24.18,
+        "sesSon": 28.04,
+        "kelime": [
+          {
+            "w": "Kocamın",
+            "s": 24.18,
+            "e": 24.66
+          },
+          {
+            "w": "kardeşi…",
+            "s": 24.72,
+            "e": 25.32
+          },
+          {
+            "w": "Bu",
+            "s": 25.86,
+            "e": 25.96
+          },
+          {
+            "w": "aileden",
+            "s": 26.04,
+            "e": 26.5
+          },
+          {
+            "w": "kimseye",
+            "s": 26.58,
+            "e": 27.02
+          },
+          {
+            "w": "güvenebilir",
+            "s": 27.06,
+            "e": 27.62
+          },
+          {
+            "w": "miydim?",
+            "s": 27.68,
+            "e": 28.04
+          }
+        ],
+        "kesBas": 23.91,
+        "bitisik": false,
+        "kesSon": 28.16
+      }
+    ]
+  }
+}
