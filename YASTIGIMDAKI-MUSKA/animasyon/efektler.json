@@ -1,0 +1,20 @@
+{
+  "bilezik":      { "sure": 2.5, "dongu": false, "metin": "Several thin gold bangles jingling softly on an old woman's wrist as she moves her hand, close up, dry, no music" },
+  "mum_oda":      { "sure": 12,  "dongu": true,  "metin": "Silent dark room ambience, a candle flame flickering softly, very low eerie rumble, horror room tone, no music" },
+  "kagit":        { "sure": 2.5, "dongu": false, "metin": "Old paper envelope being opened slowly, paper rustling close up" },
+  "mum_sonme":    { "sure": 3,   "dongu": false, "metin": "A candle flame suddenly blown out with a short whoosh, followed by a deep cinematic horror boom" },
+  "baslik_hit":   { "sure": 4,   "dongu": false, "metin": "Deep cinematic horror impact with a long dark reverb tail and a faint ghostly female whisper" },
+  "mutfak":       { "sure": 12,  "dongu": true,  "metin": "Cozy morning kitchen ambience, eggs and tomatoes gently sizzling in a frying pan, birds chirping outside an open window" },
+  "anahtar_kapi": { "sure": 3,   "dongu": false, "metin": "A key turning in an apartment door lock, then the wooden door opening with a soft creak" },
+  "gece_saat":    { "sure": 12,  "dongu": true,  "metin": "Quiet bedroom at night, an analog wall clock ticking slowly and clearly, very low room tone" },
+  "yastik_nefes": { "sure": 4,   "dongu": false, "metin": "Slow muffled breathing coming from inside a pillow, creepy, intimate, close up" },
+  "nefes_kesik":  { "sure": 2,   "dongu": false, "metin": "A young woman waking up from a nightmare with a sharp frightened gasp" },
+  "sac_tarak":    { "sure": 3,   "dongu": false, "metin": "A hairbrush pulled slowly through long hair, strands of hair tearing softly, close up" },
+  "kapi_kapanma": { "sure": 2,   "dongu": false, "metin": "An apartment front door closing firmly with a latch click, hallway" },
+  "kumas":        { "sure": 2.5, "dongu": false, "metin": "Hands rustling a cotton pillowcase and pressing a soft pillow, close up" },
+  "makas":        { "sure": 1.5, "dongu": false, "metin": "Metal scissors opening slowly, close up, tense quiet room" },
+  "final_hit":    { "sure": 2.5, "dongu": false, "metin": "Sudden horror jump scare hit, sharp loud orchestral stab, then silence" },
+  "gerilim":      { "sure": 15,  "dongu": true,  "metin": "Dark ambient horror drone, low strings and a slow pulsing heartbeat-like tension, no melody" },
+  "piyano":       { "sure": 22,  "dongu": false, "metin": "Soft gentle solo piano melody, warm and tender, slow, intimate Turkish family drama, music only" },
+  "ninni_kutu":   { "sure": 8,   "dongu": false, "metin": "An old broken music box slowly playing a sad lullaby, detuned and eerie, slowing down" }
+}

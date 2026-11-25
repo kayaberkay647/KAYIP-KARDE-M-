@@ -1,0 +1,46 @@
+{
+  "model": "eleven_v4",
+  "sesler": {
+    "HATICE":  { "voice_id": "xyqF3vGMQlPk3e7yA4DI", "ad": "AYY NECLA",                   "ayar": { "stability": 0.40, "similarity_boost": 0.80, "style": 0.35, "use_speaker_boost": true } },
+    "NAZLI":   { "voice_id": "ZaoBgxgzPhoCm533Pb7B", "ad": "Zeynep Signature Voice Warm", "ayar": { "stability": 0.40, "similarity_boost": 0.80, "style": 0.35, "use_speaker_boost": true } },
+    "EMRE":    { "voice_id": "Q5n6GDIjpN0pLOlycRFT", "ad": "AYY MERT",                    "ayar": { "stability": 0.45, "similarity_boost": 0.80, "style": 0.25, "use_speaker_boost": true } },
+    "GULIZAR": { "voice_id": "phb4aIRkTrhyNsg49N27", "ad": "MUSKA - Gulizar Ana",         "ayar": { "stability": 0.35, "similarity_boost": 0.85, "style": 0.45, "use_speaker_boost": true } }
+  },
+  "replikler": [
+    { "id": "H01", "kim": "HATICE",  "tur": "diyalog", "metin": "[whispers] Gelinimin saçı bu. [coldly] Kırk gün içinde oğlumdan soğusun... kurusun... solsun.", "parca": ["Gelinimin saçı bu.", "Kırk gün içinde oğlumdan soğusun... kurusun... solsun."] },
+    { "id": "G01", "kim": "GULIZAR", "tur": "diyalog", "metin": "[raspy] [slowly] Ya kırk gün dolunca?" },
+    { "id": "H02", "kim": "HATICE",  "tur": "diyalog", "metin": "[slowly] [menacing] Kırk gün dolunca... mezarını ben kazdırırım." },
+    { "id": "G02", "kim": "GULIZAR", "tur": "diyalog", "metin": "[whispers] Bu iş geri dönmez Hatice. Ya o gider... ya sen.", "parca": ["Bu iş geri dönmez Hatice.", "Ya o gider... ya sen."] },
+    { "id": "H03", "kim": "HATICE",  "tur": "diyalog", "metin": "[whispers] [coldly] O gidecek." },
+
+    { "id": "N01", "kim": "NAZLI",   "tur": "sarki",   "metin": "[sings softly] [happy] Sabahın ilk ışığı sen... kalbimin evi sen...", "altyazi": "♪ Sabahın ilk ışığı sen, kalbimin evi sen ♪" },
+    { "id": "E01", "kim": "EMRE",    "tur": "diyalog", "metin": "[playful] Bu koku bütün apartmanı uyandırır." },
+    { "id": "N02", "kim": "NAZLI",   "tur": "diyalog", "metin": "[laughs softly] Bir kişiyi uyandırsın, yeter." },
+    { "id": "I01", "kim": "NAZLI",   "tur": "icses",   "metin": "[softly] Evleneli kırk gün olmuştu. Mutluyduk... [sighs] en azından ben öyle sanıyordum.", "parca": ["Evleneli kırk gün olmuştu. Mutluyduk...", "en azından ben öyle sanıyordum."] },
+    { "id": "H04", "kim": "HATICE",  "tur": "diyalog", "metin": "[cheerfully] Günaydın çocuklar! [sweetly] Kapıyı çalmadım... yabancı mıyız?", "parca": ["Günaydın çocuklar!", "Kapıyı çalmadım... yabancı mıyız?"] },
+    { "id": "H05", "kim": "HATICE",  "tur": "diyalog", "metin": "[sweetly] Yine mi menemen? [condescending] Emre'm sabahları zeytinle peynir yer. Midesi hassastır.", "parca": ["Yine mi menemen?", "Emre'm sabahları zeytinle peynir yer.", "Midesi hassastır."] },
+    { "id": "E02", "kim": "EMRE",    "tur": "diyalog", "metin": "[awkwardly] Anne... ben seviyorum menemeni..." },
+    { "id": "I02", "kim": "NAZLI",   "tur": "icses",   "metin": "[sadly] Her sabah... kendi evimde misafir gibi hissettiriyordu bana." },
+
+    { "id": "H06", "kim": "HATICE",  "tur": "diyalog", "metin": "[warmly] Çeyizimden ayırdım. Kendi ellerimle işledim... gelinime.", "parca": ["Çeyizimden ayırdım.", "Kendi ellerimle işledim... gelinime."] },
+    { "id": "N03", "kim": "NAZLI",   "tur": "diyalog", "metin": "[touched] [emotional] Anneciğim... çok teşekkür ederim." },
+    { "id": "I03", "kim": "NAZLI",   "tur": "icses",   "metin": "[whispers] Bana ilk kez bir şey hediye ediyordu." },
+    { "id": "E03", "kim": "EMRE",    "tur": "diyalog", "metin": "[relieved] [happy] Gördün mü? Annem seni seviyor işte." },
+    { "id": "H07", "kim": "HATICE",  "tur": "diyalog", "metin": "[whispers] [slowly] Üstünde güzel uyu gelin... her gece." },
+    { "id": "I04", "kim": "NAZLI",   "tur": "icses",   "metin": "[uneasy] Gülümsüyordu. Ama gözleri gülmüyordu." },
+
+    { "id": "G03", "kim": "GULIZAR", "tur": "fisilti", "metin": "[whispers] Solsun... kurusun... solsun...", "altyazi": "solsun… kurusun…" },
+    { "id": "G04", "kim": "GULIZAR", "tur": "sarki",   "metin": "[sings slowly] [eerie] Sabahın... ilk ışığı... sen...", "altyazi": "♪ Sabahın… ilk ışığı… sen… ♪" },
+    { "id": "I05", "kim": "NAZLI",   "tur": "icses",   "metin": "[trembling] [whispers] O gece yastığın üstünde... benim saçlarım vardı. Ve yastık... hâlâ ılıktı.", "parca": ["O gece yastığın üstünde... benim saçlarım vardı.", "Ve yastık... hâlâ ılıktı."] },
+
+    { "id": "E04", "kim": "EMRE",    "tur": "diyalog", "metin": "[flatly] Solgunsun. Annem akşam yemeğe çağırdı, geç kalma.", "parca": ["Solgunsun.", "Annem akşam yemeğe çağırdı, geç kalma."] },
+    { "id": "N05", "kim": "NAZLI",   "tur": "diyalog", "metin": "[hesitantly] Emre... dün gece çok kötü bir rüya gördüm..." },
+    { "id": "E05", "kim": "EMRE",    "tur": "diyalog", "metin": "[distracted] Akşam konuşuruz." },
+    { "id": "I06", "kim": "NAZLI",   "tur": "icses",   "metin": "[sadly] Kırk gündür her sabah kapıda beni öperdi. O sabah... dönüp bakmadı bile.", "parca": ["Kırk gündür her sabah kapıda beni öperdi.", "O sabah... dönüp bakmadı bile."] },
+
+    { "id": "H08", "kim": "HATICE",  "tur": "diyalog", "metin": "[calmly] [menacing] Ne yapıyorsun gelin?" },
+    { "id": "N06", "kim": "NAZLI",   "tur": "diyalog", "metin": "[nervously] Hiç... kılıfını değiştiriyordum." },
+    { "id": "H09", "kim": "HATICE",  "tur": "diyalog", "metin": "[whispers] O yastığı sakın sökme. Çeyizimin hatırası... [menacing] uğursuzluk getirir.", "parca": ["O yastığı sakın sökme.", "Çeyizimin hatırası... uğursuzluk getirir."] },
+    { "id": "G05", "kim": "GULIZAR", "tur": "fisilti", "metin": "[whispers] Nazlı...", "altyazi": "Nazlı…" }
+  ]
+}

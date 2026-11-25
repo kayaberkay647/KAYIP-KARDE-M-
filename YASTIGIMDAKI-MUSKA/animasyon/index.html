@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yastığımdaki Muska — 1. Bölüm</title>
+<style>
+  @font-face { font-family: 'Lora'; src: url('fontlar/Lora-Bold.ttf'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('fontlar/Lora-SemiBoldItalic.ttf'); font-weight: 600; font-style: italic; }
+  :root { --bg: #0b0708; --panel: #171012; --text: #f1e6d8; --soft: #a8968a; --accent: #c0262f; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 12px; box-sizing: border-box; }
+  canvas { height: min(82vh, 160vw); aspect-ratio: 9 / 16; max-width: 100%; border-radius: 10px; background: #000; cursor: pointer; }
+  .ui { display: flex; gap: 10px; align-items: center; width: min(92vw, 46vh); }
+  button { background: var(--panel); color: var(--text); border: 1px solid #3a2a2c; border-radius: 8px; padding: 8px 14px; font-size: 15px; cursor: pointer; }
+  input[type=range] { flex: 1; accent-color: var(--accent); }
+  .zaman { font-variant-numeric: tabular-nums; color: var(--soft); font-size: 14px; min-width: 92px; text-align: right; }
+  body.disa .ui { display: none; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="ui">
+  <button id="oynat">▶ Oynat</button>
+  <input id="cubuk" type="range" min="0" max="1000" value="0">
+  <span class="zaman" id="zaman">0:00 / 0:00</span>
+</div>
+<audio id="ses" src="ses/karisim.m4a" preload="auto"></audio>
+<script src="zaman.js"></script>
+<script src="motor.js"></script>
+<script src="sahneler.js"></script>
+<script>
+'use strict';
+const PARAM = new URLSearchParams(location.search);
+const ALTYAZI = PARAM.get('altyazi') !== '0';
+const tuvalAna = document.getElementById('c'), ctx = tuvalAna.getContext('2d');
+const sahneTuval = tuval(W, H), sg = sahneTuval.getContext('2d');
+
+// ───────────── renk düzeltme ─────────────
+const RENKLER = {
+  normal: { sat: 1, bri: 1, con: 1, mul: [255, 255, 255, 0], sicak: 0 },
+  sicak:  { sat: 1.03, bri: 1.02, con: 1.0, mul: [255, 255, 255, 0], sicak: .16 },
+  buyu:   { sat: 1.05, bri: 1.0, con: 1.06, mul: [255, 255, 255, 0], sicak: .08 },
+  korku:  { sat: .55, bri: .9, con: 1.1, mul: [120, 140, 170, .3], sicak: 0 },
+  gece:   { sat: .62, bri: .82, con: 1.05, mul: [80, 100, 160, .45], sicak: 0 },
+  soluk:  { sat: .62, bri: .98, con: 1.0, mul: [185, 195, 212, .3], sicak: 0 },
+  ruya:   { sat: .4, bri: .88, con: 1.22, mul: [140, 70, 80, .35], sicak: 0 },
+};
+function renkKarisim(r, lt, d) {
+  if (!Array.isArray(r)) return RENKLER[r] || RENKLER.normal;
+  const a = RENKLER[r[0]], b = RENKLER[r[1]], k = r[2] === 'ilerle' ? ease(lt / d) : r[2];
+  return { sat: lerp(a.sat, b.sat, k), bri: lerp(a.bri, b.bri, k), con: lerp(a.con, b.con, k), sicak: lerp(a.sicak, b.sicak, k),
+    mul: [0, 1, 2].map(i => lerp(a.mul[3] ? a.mul[i] : b.mul[i], b.mul[3] ? b.mul[i] : a.mul[i], k)).concat([lerp(a.mul[3], b.mul[3], k)]) };
+}
+
+// ───────────── altyazı ─────────────
+function satirlar(g, metin, max) {
+  const out = []; let s = '';
+  for (const k of metin.split(' ')) { const d = s ? s + ' ' + k : k; if (g.measureText(d).width > max && s) { out.push(s); s = k; } else s = d; }
+  if (s) out.push(s); return out;
+}
+function altyazi(g, t) {
+  for (const r of ZAMAN.replikler) for (let j = 0; j < r.parcalar.length; j++) {
+    const p = r.parcalar[j], son = j === r.parcalar.length - 1 ? p.bit + .25 : p.bit - .02;
+    if (t < p.bas - .02 || t > son) continue;
+    const a = clamp(Math.min((t - p.bas + .02) / .1, (son - t) / .1));
+    const italik = r.tur !== 'diyalog';
+    g.save(); g.globalAlpha = a;
+    g.font = italik ? 'italic 600 54px "Lora", "DejaVu Serif", serif' : '700 54px "Lora", "DejaVu Serif", serif';
+    g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineJoin = 'round';
+    const sat = satirlar(g, p.metin, 900), y0 = 1325 - (sat.length - 1) * 35;
+    sat.forEach((s, i) => {
+      const y = y0 + i * 70, jx = r.tur === 'fisilti' ? gurultu(t * 20, i) * 2 : 0;
+      g.lineWidth = 10; g.strokeStyle = 'rgba(28,16,12,.92)'; g.strokeText(s, W / 2 + jx, y);
+      g.fillStyle = r.tur === 'sarki' ? '#ffe4a0' : r.tur === 'fisilti' ? '#ead9d9' : '#ffffff';
+      g.fillText(s, W / 2 + jx, y);
+    });
+    g.restore();
+  }
+}
+
+// ───────────── kare çizimi ─────────────
+function aktifCekim(t) { const c = ZAMAN.cekimler; for (let i = c.length - 1; i >= 0; i--) if (t >= c[i].t0) return c[i]; return c[0]; }
+function cizim(t) {
+  t = clamp(t, 0, ZAMAN.sure - 1e-3);
+  const c = aktifCekim(t), C = CEKIM[c.id], lt = t - c.t0, d = c.t1 - c.t0;
+  const R = renkKarisim(C.renk, lt, d);
+  sg.setTransform(1, 0, 0, 1, 0, 0); sg.globalAlpha = 1; sg.globalCompositeOperation = 'source-over'; sg.filter = 'none';
+  sg.fillStyle = '#000'; sg.fillRect(0, 0, W, H);
+  if (C.ekran) C.ciz(sg, lt, d, t);
+  else {
+    const k = C.kam ? C.kam(lt, d) : { x: W / 2, y: H / 2, z: 1 };
+    sg.save(); sg.translate(W / 2, H / 2); if (k.r) sg.rotate(k.r); sg.scale(k.z, k.z); sg.translate(-k.x, -k.y);
+    C.ciz(sg, lt, d, t);
+    sg.restore();
+  }
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  ctx.filter = `saturate(${R.sat}) brightness(${R.bri}) contrast(${R.con})`;
+  ctx.drawImage(sahneTuval, 0, 0); ctx.filter = 'none';
+  if (R.mul[3] > 0) { ctx.globalCompositeOperation = 'multiply'; ctx.fillStyle = `rgba(${R.mul[0] | 0},${R.mul[1] | 0},${R.mul[2] | 0},${R.mul[3]})`; ctx.fillRect(0, 0, W, H); }
+  if (R.sicak > 0) { ctx.globalCompositeOperation = 'soft-light'; ctx.fillStyle = `rgba(255,180,110,${R.sicak})`; ctx.fillRect(0, 0, W, H); }
+  ctx.globalCompositeOperation = 'source-over';
+  const v = Array.isArray(C.vinyet) ? lerp(C.vinyet[0], C.vinyet[1], ease(lt / d)) : (C.vinyet ?? .38);
+  if (v > 0) { ctx.fillStyle = rg(ctx, W / 2, H * .45, 420, 1250, [[0, 'rgba(0,0,0,0)'], [1, C.kirmiziVinyet ? `rgba(70,0,6,${v})` : `rgba(10,5,3,${v})`]]); ctx.fillRect(0, 0, W, H); }
+  if (C.giris && lt < C.giris) { ctx.fillStyle = `rgba(0,0,0,${1 - lt / C.giris})`; ctx.fillRect(0, 0, W, H); }
+  if (ALTYAZI) altyazi(ctx, t);
+}
+
+// ───────────── oynatıcı ─────────────
+const ses = document.getElementById('ses'), btn = document.getElementById('oynat'), cubuk = document.getElementById('cubuk'), zEl = document.getElementById('zaman');
+const fmt = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+let oynuyor = false, sessizBas = 0, sessizOfs = 0;
+function simdi() { return ses.readyState >= 2 && !ses.error ? ses.currentTime : (oynuyor ? sessizOfs + (performance.now() - sessizBas) / 1000 : sessizOfs); }
+function oynat() { oynuyor = true; btn.textContent = '❚❚ Duraklat'; sessizBas = performance.now(); ses.play().catch(() => {}); }
+function durdur() { oynuyor = false; btn.textContent = '▶ Oynat'; sessizOfs = simdi(); ses.pause(); }
+btn.onclick = () => oynuyor ? durdur() : oynat();
+tuvalAna.onclick = btn.onclick;
+document.addEventListener('keydown', e => { if (e.code === 'Space') { e.preventDefault(); btn.onclick(); } });
+cubuk.oninput = () => { const t = cubuk.value / 1000 * ZAMAN.sure; sessizOfs = t; sessizBas = performance.now(); try { ses.currentTime = t; } catch (e) {} if (!oynuyor) cizim(t); };
+function dongu() {
+  const t = simdi();
+  if (t >= ZAMAN.sure) { durdur(); sessizOfs = 0; try { ses.currentTime = 0; } catch (e) {} }
+  if (oynuyor) { cizim(t); cubuk.value = t / ZAMAN.sure * 1000; }
+  zEl.textContent = `${fmt(t)} / ${fmt(ZAMAN.sure)}`;
+  requestAnimationFrame(dongu);
+}
+if (PARAM.get('disa')) document.body.classList.add('disa');
+document.fonts.load('700 54px "Lora"').then(() => document.fonts.load('italic 600 54px "Lora"')).finally(() => {
+  const t0 = +(PARAM.get('t') || 0); sessizOfs = t0; cizim(t0); window.HAZIR = true; requestAnimationFrame(dongu);
+});
+</script>
+</body>
+</html>
