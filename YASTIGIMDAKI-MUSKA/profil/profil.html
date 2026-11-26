@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yastığımdaki Muska — Profil Resimleri</title>
+<style>
+  @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-Bold.ttf'); font-weight: 700; }
+  body { margin: 0; background: #111; display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
+  canvas { width: 360px; height: 360px; border-radius: 50%; }
+</style>
+</head>
+<body>
+<canvas id="p1" width="1080" height="1080"></canvas>
+<canvas id="p2" width="1080" height="1080"></canvas>
+<canvas id="p3" width="1080" height="1080"></canvas>
+<script>const ZAMAN = { fps: 30, replikler: [] };</script>
+<script src="../animasyon/motor.js"></script>
+<script>
+'use strict';
+const S = 1080;
+
+function muska(g, x, y, s, aci = 0) { // üçgen muska: bez kaplı, kırmızı iplikle sarılı
+  g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s);
+  poly(g, [[0, -70], [66, 50], [-66, 50]]); g.fillStyle = dg(g, 0, -70, 0, 50, [[0, '#efe3c8'], [1, '#c9b48e']]); g.fill(); cizgi(g, 5, '#3a2416');
+  poly(g, [[0, -46], [42, 32], [-42, 32]]); g.lineWidth = 2.5; g.setLineDash([6, 5]); g.strokeStyle = '#8a6a44'; g.stroke(); g.setLineDash([]);
+  for (const k of [-.35, 0, .35]) { g.beginPath(); g.moveTo(-60 + k * 40, 38 + k * 10); g.lineTo(52 + k * 30, -10 + k * 40); cizgi(g, 5, '#b01f28'); }
+  g.beginPath(); g.moveTo(0, -70); g.bezierCurveTo(-10, -120, 30, -150, 10, -210); cizgi(g, 5, '#b01f28');
+  g.restore();
+}
+function kirmiziIplikCerceve(g, r, t = 0) { // dairenin içinde zikzak kırmızı dikiş
+  g.save(); g.translate(S / 2, S / 2);
+  const n = 120;
+  g.beginPath();
+  for (let i = 0; i <= n; i++) { const a = i / n * TAU, rr2 = r + (i % 2 ? 14 : -14); const x = Math.cos(a) * rr2, y = Math.sin(a) * rr2; i ? g.lineTo(x, y) : g.moveTo(x, y); }
+  cizgi(g, 6, '#b01f28');
+  g.restore();
+}
+function zemin(g, renk1, renk2) {
+  g.fillStyle = rg(g, S / 2, S * .42, 40, S * .78, [[0, renk1], [1, renk2]]); g.fillRect(0, 0, S, S);
+  g.save(); g.globalAlpha = .5;
+  g.fillStyle = 'rgba(255,200,190,.06)';
+  for (let y = 0, r = 0; y < S; y += 86, r++) for (let x = (r % 2) * 43; x < S; x += 86) { g.save(); g.translate(x, y); g.rotate(-.6); el(g, -5, 0, 5, 10, .5); g.fill(); el(g, 5, 0, 5, 10, -.5); g.fill(); g.restore(); }
+  g.restore();
+}
+function vinyet(g, a = .7) { g.fillStyle = rg(g, S / 2, S / 2, S * .3, S * .72, [[0, 'rgba(0,0,0,0)'], [1, `rgba(8,2,3,${a})`]]); g.fillRect(0, 0, S, S); }
+
+// ── 1: Nazlı yastığa sarılmış, arkasından buruşuk bir el saçına uzanıyor ──
+(function () {
+  const g = document.getElementById('p1').getContext('2d');
+  zemin(g, '#5a1d22', '#12070a');
+  isikHalesi(g, 540, 420, 520, '255,170,120', .28);
+  karakter(g, NAZLI, { x: 540, y: 430, s: 2.05, t: 1.4, T: 1.4, konus: 0, gozAcik: .95, kirpma: false, bebek: .8, bak: [-.05, 0], kas: 'endise', gulum: -.12, yas: .6, yasDamla: .35,
+    onGovde: g => yastik(g, 0, 250, 330, 210, { t: 0, gulX: 100, gulY: 50, dikis: { x: -80, y0: -70, y1: 70 } }),
+    kollar: { sol: { el: [-95, 255], on: true }, sag: { el: [85, 280], on: true } } });
+  // arkadan saçına uzanan buruşuk el (saçın üstüne değer)
+  gulizarEl(g, 930, 215, 1.55, 1.0, { parmak: [-.35, -.12, .1, .3] });
+  // dikişten sarkan kırmızı iplik
+  g.beginPath(); g.moveTo(540 - 80 * 2.05, 430 + 290 * 2.05); g.bezierCurveTo(330, 1100, 290, 980, 250, 1080); cizgi(g, 6, '#b01f28');
+  vinyet(g, .75);
+  kirmiziIplikCerceve(g, 500);
+})();
+
+// ── 2: Nazlı yastıkta uyuyor, yastığın dikişinden muska ve saç örgüsü çıkıyor ──
+(function () {
+  const g = document.getElementById('p2').getContext('2d');
+  zemin(g, '#26304d', '#07090f');
+  isikHalesi(g, 760, 200, 460, '200,210,255', .25);
+  yastik(g, 540, 640, 1050, 640, { t: 0, gulX: 360, gulY: 210, saclar: 14, dikis: { x: 330, y0: -200, y1: 160 } });
+  karakter(g, NAZLI, { x: 430, y: 500, s: 2.0, t: 2, T: 2, govdeYok: true, kollar: { sol: { gizli: true }, sag: { gizli: true } }, gozAcik: 0, kas: 'endise', gulum: -.1, sacUzun: 240, egim: -.18, kiyafet: 'pijama' });
+  orgu(g, 540 + 330, 640 - 10, 1.3, .8, 0);
+  muska(g, 830, 860, 1.05, -.25);
+  g.fillStyle = 'rgba(40,60,120,.22)'; g.globalCompositeOperation = 'multiply'; g.fillRect(0, 0, S, S); g.globalCompositeOperation = 'source-over';
+  vinyet(g, .8);
+  kirmiziIplikCerceve(g, 500);
+})();
+
+// ── 3: Nazlı önde korkmuş, omzunun arkasında gülümseyen Hatice ──
+(function () {
+  const g = document.getElementById('p3').getContext('2d');
+  zemin(g, '#4a1a20', '#0d0507');
+  g.save(); g.globalAlpha = .85;
+  karakter(g, HATICE, { x: 770, y: 360, s: 1.7, t: 3, T: 3, konus: 0, gozAcik: .95, kirpma: false, bebek: .5, donuk: true, bak: [-.4, .2], gulum: .5, kas: 'normal', don: -.3 });
+  g.restore();
+  g.fillStyle = 'rgba(20,4,8,.45)'; g.fillRect(0, 0, S, S); // Hatice gölgede kalsın
+  isikHalesi(g, 440, 500, 480, '255,180,130', .3);
+  karakter(g, NAZLI, { x: 430, y: 520, s: 2.15, t: 1.1, T: 1.1, konus: 0, gozAcik: 1.05, kirpma: false, bebek: .7, bak: [.55, -.05], kas: 'saskin', gulum: -.15, don: .25, ter: .8 });
+  muska(g, 720, 850, .85, .3);
+  vinyet(g, .7);
+  kirmiziIplikCerceve(g, 500);
+})();
+window.HAZIR = true;
+</script>
+</body>
+</html>
