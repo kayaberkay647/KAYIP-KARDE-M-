@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yastığımdaki Muska — Paylaşım Görselleri</title>
+<style>
+  @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-Bold.ttf'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-SemiBoldItalic.ttf'); font-weight: 600; font-style: italic; }
+  body { margin: 0; background: #111; display: flex; gap: 20px; padding: 20px; }
+  canvas { width: 405px; height: 720px; }
+</style>
+</head>
+<body>
+<canvas id="duyuru" width="1080" height="1920"></canvas>
+<canvas id="soru" width="1080" height="1920"></canvas>
+<script>const ZAMAN = { fps: 30, replikler: [] };</script>
+<script src="../animasyon/motor.js"></script>
+<script src="../animasyon/mekanlar.js"></script>
+<script>
+'use strict';
+const KREM = '#f3e6d0', KIRMIZI = '#c0262f', KOYU = '#1a0507';
+
+function zemin(g, r1, r2) {
+  g.fillStyle = rg(g, W / 2, H * .42, 60, H * .75, [[0, r1], [1, r2]]); g.fillRect(0, 0, W, H);
+  g.fillStyle = 'rgba(255,200,190,.05)';
+  for (let y = 0, r = 0; y < H; y += 90, r++) for (let x = (r % 2) * 45; x < W; x += 90) { g.save(); g.translate(x, y); g.rotate(-.6); el(g, -5, 0, 5, 10, .5); g.fill(); el(g, 5, 0, 5, 10, -.5); g.fill(); g.restore(); }
+}
+function vinyet(g, a) { g.fillStyle = rg(g, W / 2, H * .45, 380, 1250, [[0, 'rgba(0,0,0,0)'], [1, `rgba(6,1,2,${a})`]]); g.fillRect(0, 0, W, H); }
+function zikzak(g, x0, x1, y, renk = '#b01f28', k = 6) { g.beginPath(); for (let x = x0, i = 0; x <= x1; x += 17, i++) { const yy = y + (i % 2 ? 8 : -8); i ? g.lineTo(x, yy) : g.moveTo(x, yy); } cizgi(g, k, renk); }
+function yazi(g, s, x, y, font, renk, kontur = 0, aralik = 0) {
+  g.font = font; g.textAlign = 'center'; g.textBaseline = 'middle'; g.letterSpacing = aralik + 'px'; g.lineJoin = 'round';
+  if (kontur) { g.lineWidth = kontur; g.strokeStyle = KOYU; g.strokeText(s, x, y); }
+  g.fillStyle = renk; g.fillText(s, x, y); g.letterSpacing = '0px';
+}
+function logo(g, y) {
+  yazi(g, 'YASTIĞIMDAKİ', W / 2, y, '700 64px "Lora"', KREM, 0, 6);
+  yazi(g, 'MUSKA', W / 2, y + 112, '700 150px "Lora"', KIRMIZI, 12);
+}
+function saatIkon(g, x, y, r, saat) {
+  el(g, x, y, r, r); dol(g, '#f8efe0'); cizgi(g, 4, KOYU);
+  const a1 = (saat % 12) / 12 * TAU - Math.PI / 2;
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a1) * r * .55, y + Math.sin(a1) * r * .55); cizgi(g, 5, KOYU);
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x, y - r * .78); cizgi(g, 3.5, KOYU);
+  el(g, x, y, 4, 4); dol(g, KIRMIZI);
+}
+function hap(g, x, y, w, h, saat, yazi_) {
+  rr(g, x - w / 2, y - h / 2, w, h, h / 2); g.fillStyle = dg(g, 0, y - h / 2, 0, y + h / 2, [[0, '#d3323b'], [1, '#8e1820']]); g.fill(); cizgi(g, 5, KOYU);
+  saatIkon(g, x - w / 2 + h / 2 + 2, y, h * .34, saat);
+  yazi(g, yazi_, x + h * .28, y + 3, '700 58px "Lora"', '#fff4e4', 7);
+}
+
+// ═════ 1) YENİ VİDEO DUYURUSU ═════
+(function () {
+  const g = document.getElementById('duyuru').getContext('2d');
+  zemin(g, '#5a1d22', '#0e0507');
+  // Hatice arkada, gölgede, göz kırpmadan
+  g.save(); g.filter = 'brightness(.62) saturate(.8)';
+  karakter(g, HATICE, { x: 760, y: 700, s: 2.0, t: 3, T: 3, konus: 0, gozAcik: .95, kirpma: false, bebek: .5, donuk: true, bak: [-.45, .15], gulum: .45, kas: 'normal', don: -.3, isik: altIsik('255,150,80', .25) });
+  g.restore(); g.filter = 'none';
+  isikHalesi(g, 380, 760, 560, '255,180,130', .28);
+  // Nazlı önde, muskayı tutuyor
+  karakter(g, NAZLI, { x: 370, y: 770, s: 2.1, t: 1.2, T: 1.2, konus: 0, gozAcik: 1.04, kirpma: false, bebek: .7, bak: [.55, -.05], kas: 'saskin', gulum: -.15, don: .25, ter: .6, solgun: true, morluk: .4,
+    kollar: { sag: { el: [40, 215], on: true } }, kolSonrasi: g => { muskaCiz(g, 38, 228, .5, .1, { ipUzun: 120 }); elMitt(g, 44, 214, 1, .4, NAZLI.ten); } });
+  vinyet(g, .55);
+  g.fillStyle = dg(g, 0, 0, 0, 470, [[0, 'rgba(12,3,5,.96)'], [.62, 'rgba(12,3,5,.75)'], [1, 'rgba(12,3,5,0)']]); g.fillRect(0, 0, W, 470);
+  logo(g, 150);
+  zikzak(g, 150, 930, 360);
+  // başlık bandı
+  g.fillStyle = dg(g, 0, 1270, 0, 1920, [[0, 'rgba(14,4,6,0)'], [.18, 'rgba(14,4,6,.92)'], [1, 'rgba(10,3,4,1)']]); g.fillRect(0, 1270, W, 650);
+  yazi(g, 'YENİ VİDEO', W / 2, 1395, '700 118px "Lora"', KREM, 12, 2);
+  g.save(); g.translate(W / 2, 1515); g.rotate(-.03);
+  rr(g, -160, -50, 320, 100, 14); dol(g, KIRMIZI); cizgi(g, 6, KOYU); yazi(g, 'YARIN', 0, 4, '700 76px "Lora"', '#fff4e4', 0, 10);
+  g.restore();
+  hap(g, 205, 1655, 300, 104, 12, '12:00'); hap(g, 540, 1655, 300, 104, 3, '15:00'); hap(g, 875, 1655, 300, 104, 7, '19:00');
+  zikzak(g, 150, 930, 1748, '#7a1a1f', 4);
+  yazi(g, 'Kırk düğümden biri daha çözülüyor…', W / 2, 1800, 'italic 600 44px "Lora"', '#d9b9a0');
+  yazi(g, 'Bildirimleri aç, hiçbir bölümü kaçırma!', W / 2, 1864, '700 46px "Lora"', KREM);
+})();
+
+// ═════ 2) "SİZ OLSANIZ BU KAYNANAYA NE YAPARDINIZ?" ═════
+(function () {
+  const g = document.getElementById('soru').getContext('2d');
+  zemin(g, '#4a1418', '#0b0405');
+  isikHalesi(g, 560, 880, 640, '255,170,110', .25);
+  // Nazlı soldan korkuyla bakıyor
+  g.save(); g.globalAlpha = .95;
+  karakter(g, NAZLI, { x: 110, y: 1010, s: 1.45, t: 2, T: 2, konus: 0, gozAcik: 1.08, kirpma: false, bebek: .6, bak: [.75, -.15], kas: 'saskin', gulum: -.2, don: .45, solgun: true, morluk: .4 });
+  g.restore();
+  // Hatice büyük, muskayı sallıyor
+  const sw = .12;
+  karakter(g, HATICE, { x: 560, y: 820, s: 2.35, t: 4, T: 4, konus: 0, gozAcik: .95, kirpma: false, bebek: .5, donuk: true, bak: [-.2, 0], gulum: .5, kas: 'suphe', don: -.12,
+    kollar: { sag: { el: [152, 40], on: true } },
+    enUst: g => { g.save(); g.translate(152, 60); g.rotate(sw); muskaCiz(g, 0, 120, .5, 0, { ipUzun: 120 }); g.restore(); elMitt(g, 152, 40, 1.05, Math.PI + .25, HATICE.ten, -1); } });
+  vinyet(g, .6);
+  // üst yazı
+  g.fillStyle = dg(g, 0, 0, 0, 520, [[0, 'rgba(10,3,4,.95)'], [.7, 'rgba(10,3,4,.6)'], [1, 'rgba(10,3,4,0)']]); g.fillRect(0, 0, W, 520);
+  yazi(g, 'SİZ OLSANIZ', W / 2, 130, '700 84px "Lora"', KREM, 10, 4);
+  yazi(g, 'BU KAYNANAYA', W / 2, 250, '700 112px "Lora"', KIRMIZI, 12, 2);
+  yazi(g, 'NE YAPARDINIZ?', W / 2, 370, '700 92px "Lora"', KREM, 10, 2);
+  zikzak(g, 180, 900, 455);
+  // seçenekler
+  g.fillStyle = dg(g, 0, 1300, 0, 1920, [[0, 'rgba(10,3,4,0)'], [.15, 'rgba(10,3,4,.9)'], [1, 'rgba(8,2,3,1)']]); g.fillRect(0, 1300, W, 620);
+  const sec = [['A', 'Muskayı yüzüne atardım'], ['B', "Emre'ye her şeyi gösterirdim"], ['C', 'Hemen evden taşınırdım'], ['D', 'Ben de ona büyü yaptırırdım']];
+  sec.forEach(([h, s], i) => {
+    const y = 1440 + i * 104;
+    rr(g, 110, y - 42, 860, 84, 42); g.fillStyle = 'rgba(243,230,208,.94)'; g.fill(); cizgi(g, 4, KOYU);
+    el(g, 160, y, 34, 34); dol(g, KIRMIZI); cizgi(g, 4, KOYU); yazi(g, h, 160, y + 3, '700 44px "Lora"', '#fff4e4');
+    g.font = '700 44px "Lora"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#2a0b0e'; g.fillText(s, 215, y + 3);
+  });
+  yazi(g, 'Cevabını yorumlara yaz', W / 2, 1866, 'italic 600 48px "Lora"', '#e6c9ae');
+  g.beginPath(); g.moveTo(W / 2 + 280, 1850); g.lineTo(W / 2 + 306, 1878); g.lineTo(W / 2 + 332, 1850); cizgi(g, 8, KIRMIZI);
+  g.beginPath(); g.moveTo(W / 2 - 332, 1850); g.lineTo(W / 2 - 306, 1878); g.lineTo(W / 2 - 280, 1850); cizgi(g, 8, KIRMIZI);
+})();
+window.HAZIR = true;
+</script>
+</body>
+</html>
