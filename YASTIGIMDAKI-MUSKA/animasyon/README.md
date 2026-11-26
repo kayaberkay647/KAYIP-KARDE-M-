@@ -22,8 +22,9 @@ ALTYAZI=0 node video_disa_aktar.js    # altyazısız
 | `araclar/ses_uret.py` | Replikleri seslendirir (`--kontrol` yazıya döküp metinle karşılaştırır) |
 | `araclar/efekt_uret.py` | Efektleri üretir |
 | `araclar/zaman_cizelgesi.py` | Çekim listesini gerçek ses süreleriyle zamanlar, sesi karıştırır → `zaman.js`, `ses/karisim.wav` |
-| `motor.js` | Karakter iskeleti (göz kırpma, ağız senkronu, nefes, kollar), karakterler ve aksesuarlar |
-| `sahneler.js` | Mekânlar ve 38 çekimin her biri (kamera, renk, oyunculuk) |
+| `motor.js` | Karakter iskeleti (göz kırpma, ağız senkronu, nefes, kollar), karakterler ve aksesuarlar — bütün bölümler ortak kullanır |
+| `mekanlar.js` | Bütün bölümlerin ortak mekânları (mutfak, antre, yatak odası, banyo, büyü odası, salon, ofis) |
+| `sahneler.js` | 1. bölümün 38 çekimi (kamera, renk, oyunculuk) |
 | `araclar/onizle.js` | Her çekimden önizleme karesi alır |
 
 ## Sesler (ElevenLabs, model: Eleven v4)

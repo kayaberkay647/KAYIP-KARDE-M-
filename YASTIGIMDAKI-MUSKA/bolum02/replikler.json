@@ -1,0 +1,260 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] [trembling] Dikişi kestiğim anda... yastık nefes aldı."
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Benim saçımdı. Kırmızı iplikle örülmüş... ve ucunda bir muska vardı.",
+   "parca": [
+    "Benim saçımdı.",
+    "Kırmızı iplikle örülmüş... ve ucunda bir muska vardı."
+   ]
+  },
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [whispers] Muskayı buldu... Artık düğümler kendi kendine çözülecek.",
+   "parca": [
+    "Muskayı buldu...",
+    "Artık düğümler kendi kendine çözülecek."
+   ]
+  },
+  {
+   "id": "N01",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[panicked] Emre! Yastığın içinden saçım çıktı... saçımla örülmüş bir muska!",
+   "parca": [
+    "Emre! Yastığın içinden saçım çıktı...",
+    "saçımla örülmüş bir muska!"
+   ]
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[irritated] [sighs] Nazlı... yine mi o yastık?"
+  },
+  {
+   "id": "E02",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[coldly] Annem sana hediye verdi diye mi bu kadar rahatsızsın?"
+  },
+  {
+   "id": "N02",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[hurt] [shaky] Emre... bana inanmıyor musun?"
+  },
+  {
+   "id": "E03",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[flatly] Akşam annemde yemek var. Orada bunları konuşma, lütfen.",
+   "parca": [
+    "Akşam annemde yemek var.",
+    "Orada bunları konuşma, lütfen."
+   ]
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[sadly] Emre'nin sesi... sanki başka birinin sesiydi."
+  },
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sweetly] Gelin, bu tabak senin. Sana ayrı pişirdim."
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[uneasy] [whispers] Herkesin tabağı aynıydı... benimki hariç."
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[fake concern] Emre'm, bu kızın yüzü ne kadar solmuş... hasta mı ne?"
+  },
+  {
+   "id": "E04",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[sighs] Bütün gün o yastıkla uğraşmış anne."
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[slowly] [coldly] Yastıkla mı?"
+  },
+  {
+   "id": "N03",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[firmly] Bunu yastığın içinde buldum, anne."
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[laughs] Aaa! Nazar muskası o! [sweetly] Hocaya ben yazdırdım... sizi kem gözden korusun diye.",
+   "parca": [
+    "Aaa! Nazar muskası o!",
+    "Hocaya ben yazdırdım... sizi kem gözden korusun diye."
+   ]
+  },
+  {
+   "id": "E05",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[relieved] Gördün mü? Annem sizi korumak istemiş."
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Nazar muskasının içinde... neden benim saçım vardı?"
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [menacing] Ver onu bana gelin. Yanlış ellere düşmesin."
+  },
+  {
+   "id": "N04",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[nervously] Bende kalsın... anne."
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[coldly] [slowly] Peki... sende kalsın."
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Muskanın içinde adım yazıyordu. Ve bir iplik... üzerinde kırk düğüm vardı.",
+   "parca": [
+    "Muskanın içinde adım yazıyordu.",
+    "Ve bir iplik... üzerinde kırk düğüm vardı."
+   ]
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] [trembling] Kırk düğüm... kırk gün."
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "fisilti",
+   "metin": "[whispers] Gelin... muskayı geri ver.",
+   "altyazi": "Gelin… muskayı geri ver."
+  },
+  {
+   "id": "H08",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [coldly] Demek buldun gelin..."
+  },
+  {
+   "id": "I08",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] Ensemdeki saçın bir tutamı... kökünden kesilmişti. [whispers] Ne zaman? Kim?",
+   "parca": [
+    "Ensemdeki saçın bir tutamı... kökünden kesilmişti.",
+    "Ne zaman? Kim?"
+   ]
+  },
+  {
+   "id": "I09",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[determined] Akşam muskayı çantama koydum. Herkesin önünde soracaktım.",
+   "parca": [
+    "Akşam muskayı çantama koydum.",
+    "Herkesin önünde soracaktım."
+   ]
+  },
+  {
+   "id": "H09",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sweetly] [slowly] Ye gelin, ye... soğutma."
+  },
+  {
+   "id": "E06",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[sleepy] [mumbling] Tamam anne... tamam... yapacağım."
+  },
+  {
+   "id": "I10",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Emre uykusunda bile... annesiyle konuşuyordu."
+  }
+ ]
+}

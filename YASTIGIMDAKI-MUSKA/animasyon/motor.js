@@ -554,3 +554,79 @@ function dijitalSaat(g, x, y, s, yazi, gece) {
   g.restore();
   if (gece) isikHalesi(g, x, y, 160 * s, '255,40,30', .25);
 }
+
+// ───────────── 2. BÖLÜM AKSESUARLARI ─────────────
+function elMitt(g, x, y, s, aci, ten = TEN.nazli, ayna = 1) { // tek başına el (eldiven gibi)
+  g.save(); g.translate(x, y); g.rotate(aci); g.scale(s * ayna, s);
+  el(g, 0, 0, 23, 27); dol(g, ten[0]); cizgi(g);
+  g.beginPath(); g.ellipse(17, -8, 9, 13, -.5, 0, TAU); dol(g, ten[0]); cizgi(g, 3.5);
+  el(g, 0, 2, 16, 19); dol(g, ten[0]); g.globalAlpha = .25; el(g, -5, 8, 12, 14); dol(g, ten[1]);
+  g.restore();
+}
+function telefon(g, x, y, s, aci, ekran = '#3d5a7a', yazi) {
+  g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s);
+  rr(g, -30, -60, 60, 120, 13); dol(g, '#24272e'); cizgi(g, 4, '#0d0e10');
+  rr(g, -24, -52, 48, 100, 8); g.fillStyle = ekran; g.fill();
+  if (yazi) { g.fillStyle = '#e9eef5'; g.font = '700 9px "DejaVu Sans"'; g.textAlign = 'center'; yazi.split('\n').forEach((s, i) => g.fillText(s, 0, -8 + i * 12)); }
+  g.restore();
+}
+function muskaCiz(g, x, y, s, aci = 0, o = {}) { // üçgen bez muska, kırmızı iplikle sarılı
+  g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s);
+  if (o.ip !== false) { g.beginPath(); g.moveTo(0, -70); g.bezierCurveTo(-10, -110, 20, -140, 6, -(o.ipUzun || 190)); cizgi(g, 5, '#b01f28'); }
+  poly(g, [[0, -70], [66, 50], [-66, 50]]); g.fillStyle = dg(g, 0, -70, 0, 50, [[0, '#efe3c8'], [1, '#c9b48e']]); g.fill(); cizgi(g, 5, '#3a2416');
+  poly(g, [[0, -46], [42, 32], [-42, 32]]); g.lineWidth = 2.5; g.setLineDash([6, 5]); g.strokeStyle = '#8a6a44'; g.stroke(); g.setLineDash([]);
+  for (const k of [-.35, 0, .35]) { g.beginPath(); g.moveTo(-60 + k * 40, 38 + k * 10); g.lineTo(52 + k * 30, -10 + k * 40); cizgi(g, 5, '#b01f28'); }
+  g.restore();
+}
+function dugumluIp(g, x0, x1, y, n, o = {}) { // kırmızı iplik + n düğüm; o.cozulen düğüm o.cozulme (0-1) kadar çözülür
+  const t = o.t || 0, ad = (x1 - x0) / (n + 1);
+  g.beginPath(); for (let x = x0; x <= x1; x += 6) { const yy = y + Math.sin(x * .02 + t * .8) * 6; x === x0 ? g.moveTo(x, yy) : g.lineTo(x, yy); }
+  g.lineWidth = 9 + LW; g.strokeStyle = '#3a0a0e'; g.stroke(); g.lineWidth = 9; g.strokeStyle = '#b01f28'; g.stroke();
+  for (let i = 0; i < n; i++) {
+    const x = x0 + ad * (i + 1), yy = y + Math.sin(x * .02 + t * .8) * 6, c = i === o.cozulen ? clamp(o.cozulme || 0) : 0;
+    if (c >= 1) continue;
+    g.save(); g.translate(x, yy); g.scale(1 - c * .8, 1 - c * .6);
+    el(g, 0, 0, 17, 14); dol(g, '#9a1820'); cizgi(g, 3.5, '#3a0a0e');
+    g.beginPath(); g.moveTo(-12, -6); g.quadraticCurveTo(0, 8, 12, -6); cizgi(g, 3, '#d0434b');
+    if (o.sacli) { g.beginPath(); g.moveTo(-6, 10); g.quadraticCurveTo(-14, 30, -4, 44); cizgi(g, 2.2, '#8d5837'); }
+    g.restore();
+    if (c > 0) isikHalesi(g, x, yy, 120, '255,60,60', .35 * Math.sin(c * Math.PI));
+  }
+}
+function muskaKagit(g, x, y, s, acik = 1, t = 0) { // açılmış muska kâğıdı: tuhaf işaretler + kırmızı "NAZLI"
+  g.save(); g.translate(x, y); g.scale(s * lerp(.35, 1, acik), s * lerp(.35, 1, acik)); g.rotate(lerp(.6, -.04, acik));
+  rr(g, -300, -380, 600, 760, 10); g.fillStyle = dg(g, 0, -380, 0, 380, [[0, '#efe3c6'], [1, '#d9c59c']]); g.fill(); cizgi(g, 5, '#4a3420');
+  g.globalAlpha = .35; g.beginPath(); g.moveTo(-300, 0); g.lineTo(300, 0); g.moveTo(0, -380); g.lineTo(0, 380); g.moveTo(-300, -380); g.lineTo(300, 380); cizgi(g, 3, '#8a6a44'); g.globalAlpha = 1;
+  // uydurma işaretler (gerçek bir yazı değil)
+  for (let i = 0; i < 9; i++) for (let j = 0; j < 5; j++) {
+    const px = -230 + j * 115, py = -320 + i * 52; if (i > 2 && i < 6 && j > 0 && j < 4) continue;
+    g.beginPath(); g.moveTo(px - 20, py); g.quadraticCurveTo(px, py - 24 * hash(i * 9 + j), px + 18, py + 4); g.lineTo(px + 4, py + 14); g.arc(px + 4, py + 4, 6 + hash(i + j * 3) * 5, 0, 3); cizgi(g, 3.2, '#3a2416');
+  }
+  g.beginPath(); g.arc(0, -10, 118, 0, TAU); cizgi(g, 4, '#7a1a1f'); g.beginPath(); g.arc(0, -10, 104, 0, TAU); g.setLineDash([8, 7]); cizgi(g, 3, '#7a1a1f'); g.setLineDash([]);
+  g.font = '700 74px "Lora", serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#a3141c'; g.fillText('NAZLI', 0, -8);
+  g.restore();
+}
+function canta(g, x, y, s) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  g.beginPath(); g.moveTo(-60, -60); g.quadraticCurveTo(0, -150, 60, -60); cizgi(g, 12, '#5a3524');
+  g.beginPath(); g.moveTo(-110, -60); g.lineTo(110, -60); g.lineTo(130, 90); g.quadraticCurveTo(0, 110, -130, 90); g.closePath(); g.fillStyle = dg(g, 0, -60, 0, 100, [[0, '#9c5b3e'], [1, '#7a4430']]); g.fill(); cizgi(g);
+  rr(g, -24, -40, 48, 26, 6); dol(g, '#d8b84a'); cizgi(g, 3);
+  g.restore();
+}
+function sarmaTabak(g, x, y, s, o = {}) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  el(g, 0, 0, 210, 120); dol(g, '#fbfaf6'); cizgi(g, 4.5); el(g, 0, 0, 160, 88); g.lineWidth = 3; g.strokeStyle = '#d8d2c6'; g.stroke();
+  g.beginPath(); g.ellipse(0, 0, 200, 112, 0, 0, TAU); g.setLineDash([4, 10]); g.lineWidth = 3; g.strokeStyle = '#3d6ea8'; g.stroke(); g.setLineDash([]);
+  const n = o.adet ?? 7;
+  for (let i = 0; i < n; i++) { const a = (i / n) * TAU, rx = Math.cos(a) * 80, ry = Math.sin(a) * 40; g.save(); g.translate(rx, ry); g.rotate(a * .3); rr(g, -34, -15, 68, 30, 15); dol(g, i % 2 ? '#6b8a3c' : '#5f7d34'); cizgi(g, 3, '#2f4019'); g.beginPath(); g.moveTo(-20, -6); g.lineTo(20, 6); cizgi(g, 2, '#9cb866'); g.restore(); }
+  el(g, 0, 0, 44, 26); dol(g, '#fdfbf2'); cizgi(g, 2.5, '#c9c2b0');
+  if (o.sac) { g.beginPath(); g.moveTo(-150, -30); g.bezierCurveTo(-60, -90, 20, 60, 70, -10); g.bezierCurveTo(110, -60, 150, 20, 120, 60); cizgi(g, 3, '#6d3f25'); }
+  g.restore();
+}
+function cayBardagi(g, x, y, s) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  el(g, 0, 40, 46, 12); dol(g, '#f4f1ea'); cizgi(g, 3);
+  g.beginPath(); g.moveTo(-22, -40); g.quadraticCurveTo(-10, 0, -20, 36); g.lineTo(20, 36); g.quadraticCurveTo(10, 0, 22, -40); g.closePath();
+  g.fillStyle = dg(g, 0, -40, 0, 36, [[0, 'rgba(200,60,30,.7)'], [1, 'rgba(140,30,10,.9)']]); g.fill(); cizgi(g, 3);
+  g.restore();
+}
