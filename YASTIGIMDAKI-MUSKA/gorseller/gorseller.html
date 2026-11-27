@@ -13,6 +13,7 @@
 <body>
 <canvas id="duyuru" width="1080" height="1920"></canvas>
 <canvas id="soru" width="1080" height="1920"></canvas>
+<canvas id="soru2" width="1080" height="1920"></canvas>
 <script>const ZAMAN = { fps: 30, replikler: [] };</script>
 <script src="../animasyon/motor.js"></script>
 <script src="../animasyon/mekanlar.js"></script>
@@ -101,6 +102,37 @@ function hap(g, x, y, w, h, saat, yazi_) {
   // seçenekler
   g.fillStyle = dg(g, 0, 1300, 0, 1920, [[0, 'rgba(10,3,4,0)'], [.15, 'rgba(10,3,4,.9)'], [1, 'rgba(8,2,3,1)']]); g.fillRect(0, 1300, W, 620);
   const sec = [['A', 'Muskayı yüzüne atardım'], ['B', "Emre'ye her şeyi gösterirdim"], ['C', 'Hemen evden taşınırdım'], ['D', 'Ben de ona büyü yaptırırdım']];
+  sec.forEach(([h, s], i) => {
+    const y = 1440 + i * 104;
+    rr(g, 110, y - 42, 860, 84, 42); g.fillStyle = 'rgba(243,230,208,.94)'; g.fill(); cizgi(g, 4, KOYU);
+    el(g, 160, y, 34, 34); dol(g, KIRMIZI); cizgi(g, 4, KOYU); yazi(g, h, 160, y + 3, '700 44px "Lora"', '#fff4e4');
+    g.font = '700 44px "Lora"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#2a0b0e'; g.fillText(s, 215, y + 3);
+  });
+  yazi(g, 'Cevabını yorumlara yaz', W / 2, 1866, 'italic 600 48px "Lora"', '#e6c9ae');
+  g.beginPath(); g.moveTo(W / 2 + 280, 1850); g.lineTo(W / 2 + 306, 1878); g.lineTo(W / 2 + 332, 1850); cizgi(g, 8, KIRMIZI);
+  g.beginPath(); g.moveTo(W / 2 - 332, 1850); g.lineTo(W / 2 - 306, 1878); g.lineTo(W / 2 - 280, 1850); cizgi(g, 8, KIRMIZI);
+})();
+// ═════ 3) 2. BÖLÜM SORUSU: "GECE 3'TE KAPIDA KAYNANAN VAR" ═════
+(function () {
+  const g = document.getElementById('soru2').getContext('2d');
+  banyoArka(g);
+  g.save(); g.translate(W / 2 + 150, 330 - 160 * .62); g.scale(.62, .62); g.translate(-540, 0); banyoKapi(g, .62, 2, 1); g.restore();
+  g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(70,90,150,.55)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+  g.fillStyle = 'rgba(8,10,20,.35)'; g.fillRect(0, 0, W, H);
+  isikHalesi(g, W / 2 + 150, 330 - 160 * .62 + 1733 * .62, 360, '255,200,130', .45);
+  karakter(g, NAZLI, { x: 300, y: 870, s: 1.95, t: 2, T: 2, kiyafet: 'pijama', konus: 0, gozAcik: 1.15, kirpma: false, bebek: .45, bak: [.65, -.25], kas: 'saskin', gulum: -.2, yas: .9, yasDamla: .5, solgun: true, morluk: .6, don: .3,
+    kollar: { sag: { el: [20, 130], on: true }, sol: { el: [-70, 205], on: true } },
+    kolSonrasi: g => { muskaCiz(g, -74, 222, .5, -.1, { ipUzun: 110 }); elMitt(g, -70, 205, 1, -.4, NAZLI.ten, -1); },
+    enUst: g => elMitt(g, 6, 92, 1.25, -.25, NAZLI.ten) });
+  vinyet(g, .6);
+  g.fillStyle = dg(g, 0, 0, 0, 560, [[0, 'rgba(6,6,12,.97)'], [.68, 'rgba(6,6,12,.72)'], [1, 'rgba(6,6,12,0)']]); g.fillRect(0, 0, W, 560);
+  yazi(g, 'YASTIĞIMDAKİ MUSKA · 2. BÖLÜM', W / 2, 62, '700 34px "Lora"', '#a99a9a', 0, 5);
+  yazi(g, "GECE 3'TE KAPIDA", W / 2, 165, '700 84px "Lora"', KREM, 10, 3);
+  yazi(g, 'KAYNANAN VAR!', W / 2, 285, '700 116px "Lora"', KIRMIZI, 12, 2);
+  yazi(g, 'MUSKAYI GERİ VERİR MİYDİN?', W / 2, 400, '700 58px "Lora"', KREM, 9, 1);
+  zikzak(g, 180, 900, 470);
+  g.fillStyle = dg(g, 0, 1300, 0, 1920, [[0, 'rgba(6,6,12,0)'], [.15, 'rgba(6,6,12,.92)'], [1, 'rgba(4,4,8,1)']]); g.fillRect(0, 1300, W, 620);
+  const sec = [['A', 'Kapıyı açıp yüzüne atardım'], ['B', "Emre'yi hemen uyandırırdım"], ['C', 'Muskayı orada yakardım'], ['D', 'Sabaha kadar ses çıkarmazdım']];
   sec.forEach(([h, s], i) => {
     const y = 1440 + i * 104;
     rr(g, 110, y - 42, 860, 84, 42); g.fillStyle = 'rgba(243,230,208,.94)'; g.fill(); cizgi(g, 4, KOYU);
