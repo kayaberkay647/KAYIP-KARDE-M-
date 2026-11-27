@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yastığımdaki Muska — Yarın 3 Yeni Bölüm</title>
+<style>
+  @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-Bold.ttf'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-SemiBoldItalic.ttf'); font-weight: 600; font-style: italic; }
+  body { margin: 0; background: #111; } canvas { width: 405px; height: 720px; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>const ZAMAN = { fps: 30, replikler: [] };</script>
+<script src="../animasyon/motor.js"></script>
+<script src="../animasyon/mekanlar.js"></script>
+<script>
+'use strict';
+const KREM = '#f3e6d0', KIRMIZI = '#c0262f', KOYU = '#1a0507', ALTIN = '#e0b648';
+function yazi(g, s, x, y, font, renk, kontur = 0, aralik = 0, hiza = 'center') {
+  g.font = font; g.textAlign = hiza; g.textBaseline = 'middle'; g.letterSpacing = aralik + 'px'; g.lineJoin = 'round';
+  if (kontur) { g.lineWidth = kontur; g.strokeStyle = KOYU; g.strokeText(s, x, y); }
+  g.fillStyle = renk; g.fillText(s, x, y); g.letterSpacing = '0px';
+}
+function zikzak(g, x0, x1, y, renk = '#b01f28', k = 6) { g.beginPath(); for (let x = x0, i = 0; x <= x1; x += 17, i++) { const yy = y + (i % 2 ? 8 : -8); i ? g.lineTo(x, yy) : g.moveTo(x, yy); } cizgi(g, k, renk); }
+function saatIkon(g, x, y, r, saat) {
+  el(g, x, y, r, r); dol(g, '#f8efe0'); cizgi(g, 4, KOYU);
+  const a1 = (saat % 12) / 12 * TAU - Math.PI / 2;
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a1) * r * .55, y + Math.sin(a1) * r * .55); cizgi(g, 5, KOYU);
+  g.beginPath(); g.moveTo(x, y); g.lineTo(x, y - r * .78); cizgi(g, 3.5, KOYU); el(g, x, y, 4, 4); dol(g, KIRMIZI);
+}
+function kucukSahne(ciz) { const k = tuval(1080, 1080), c = k.getContext('2d'); ciz(c); return k; }
+
+// ── spoiler görselleri ──
+const S5 = kucukSahne(g => { // Gülizar'ın avucunda kırmızı iplikle sarılı bilezik
+  g.save(); g.translate(0, -300); arka(g, 'buyu', buyuDuvar, { olcek: 1.3, merkez: [540, 700], blur: 4 }); g.restore();
+  g.save(); g.translate(0, -420);
+  gulizarEl(g, 540, 1120, 1.9, Math.PI, { parmak: [-.45, -.15, .15, .45] });
+  g.restore();
+  isikHalesi(g, 540, 470, 420, '255,210,120', .55);
+  tekBilezik(g, 540, 470, 3.2, -.15);
+  g.beginPath(); for (let i = 0; i <= 40; i++) { const a = i / 40 * TAU * 3, r = 150 + Math.sin(i) * 6; const x = 540 + Math.cos(a) * r * .9, y = 470 + Math.sin(a) * r * .36 + (i - 20) * 1.5; i ? g.lineTo(x, y) : g.moveTo(x, y); } cizgi(g, 6, '#b01f28');
+  g.beginPath(); g.moveTo(700, 500); g.bezierCurveTo(820, 600, 760, 760, 860, 900); cizgi(g, 6, '#b01f28');
+  karanlik(g, 540, 520, 260, 760, .75);
+});
+const S6 = kucukSahne(g => { // Hatice'nin çeyiz sandığı: içinde eski bir gelin fotoğrafı
+  g.fillStyle = rg(g, 540, 600, 40, 900, [[0, '#3a1a14'], [1, '#0d0605']]); g.fillRect(0, 0, 1080, 1080);
+  // açık kapak
+  g.beginPath(); g.moveTo(170, 520); g.lineTo(230, 190); g.lineTo(850, 190); g.lineTo(910, 520); g.closePath(); g.fillStyle = dg(g, 0, 190, 0, 520, [[0, '#7a4a2c'], [1, '#5a341e']]); g.fill(); cizgi(g, 7);
+  for (const x of [330, 540, 750]) { g.beginPath(); g.moveTo(x, 200); g.lineTo(x + (x - 540) * .1, 515); cizgi(g, 10, '#c9a24f'); }
+  // gövde + içten kızıl ışık
+  rr(g, 150, 520, 780, 430, 18); g.fillStyle = dg(g, 0, 520, 0, 950, [[0, '#8a5634'], [1, '#5e3820']]); g.fill(); cizgi(g, 7);
+  g.fillStyle = '#1a0806'; g.fillRect(170, 520, 740, 70); isikHalesi(g, 540, 540, 420, '255,60,40', .6);
+  // eski fotoğraf
+  g.save(); g.translate(540, 470); g.rotate(-.08);
+  rr(g, -150, -200, 300, 380, 6); dol(g, '#e9dcc0'); cizgi(g, 5, '#3a2416'); rr(g, -128, -178, 256, 300, 4); dol(g, '#bba98a');
+  g.globalAlpha = .9; el(g, 0, -90, 46, 50); dol(g, '#d9c4a6'); el(g, 0, -112, 52, 30); dol(g, '#8a7a66');
+  g.beginPath(); g.moveTo(-40, -150); g.quadraticCurveTo(0, -190, 40, -150); g.lineTo(90, 110); g.lineTo(-90, 110); g.closePath(); g.fillStyle = 'rgba(255,255,250,.55)'; g.fill();
+  poly(g, [[-60, -40], [60, -40], [96, 110], [-96, 110]]); dol(g, '#f6f1e6'); g.globalAlpha = 1;
+  g.font = 'italic 600 30px "Lora", serif'; g.textAlign = 'center'; g.fillStyle = '#5a3a26'; g.fillText('1984', 0, 158);
+  g.restore();
+  for (const [x, y] of [[150, 520], [930, 520], [150, 950], [930, 950]]) { rr(g, x - 26, y - 26, 52, 52, 6); dol(g, '#c9a24f'); cizgi(g, 4); }
+  el(g, 540, 720, 40, 46); dol(g, '#c9a24f'); cizgi(g, 5); rr(g, 528, 715, 24, 40, 6); dol(g, '#3a2416');
+  for (let i = 0; i < 4; i++) { g.beginPath(); g.moveTo(260 + i * 160, 950); g.bezierCurveTo(240 + i * 160, 1000, 300 + i * 160, 1040, 270 + i * 160, 1080); cizgi(g, 5, '#b01f28'); }
+  karanlik(g, 540, 560, 300, 800, .6);
+});
+const S7 = kucukSahne(g => { // büyü geri döndü: ilk kez korkan Hatice
+  g.fillStyle = rg(g, 540, 500, 40, 800, [[0, '#4a1418'], [1, '#0b0304']]); g.fillRect(0, 0, 1080, 1080);
+  karakter(g, HATICE, { x: 540, y: 560, s: 2.6, t: 3, T: 3, konus: .35, gozAcik: 1.15, kirpma: false, bebek: .4, kas: 'saskin', gulum: -.35, ter: 1, bak: [0, -.2], bilezikSay: 3 });
+  g.save(); g.translate(540, 600); g.rotate(-.42); dugumluIp(g, -800, 800, 0, 9, { t: 2, sacli: false }); g.restore();
+  g.fillStyle = rg(g, 540, 560, 260, 700, [[0, 'rgba(60,0,8,0)'], [1, 'rgba(40,0,6,.7)']]); g.fillRect(0, 0, 1080, 1080);
+});
+
+function bolumKarti(g, y, img, saat, saatYazi, no, baslik, ipucu, vurgu) {
+  g.save();
+  if (vurgu) { g.shadowColor = 'rgba(220,40,50,.75)'; g.shadowBlur = 40; }
+  rr(g, 40, y, 1000, 370, 30); g.fillStyle = 'rgba(18,6,9,.94)'; g.fill(); g.shadowBlur = 0;
+  rr(g, 40, y, 1000, 370, 30); cizgi(g, 6, vurgu ? KIRMIZI : '#7a1a1f');
+  // görsel
+  g.save(); rr(g, 62, y + 20, 330, 330, 22); g.clip(); g.drawImage(img, 62, y + 20, 330, 330); g.restore();
+  rr(g, 62, y + 20, 330, 330, 22); cizgi(g, 5, KOYU);
+  rr(g, 74, y + 32, 120, 46, 12); dol(g, 'rgba(192,38,47,.95)'); cizgi(g, 3, KOYU); yazi(g, 'SPOİLER', 134, y + 56, '700 22px "Lora"', '#fff4e4', 0, 2);
+  // saat
+  rr(g, 422, y + 28, 270, 84, 42); g.fillStyle = dg(g, 0, y + 28, 0, y + 112, [[0, '#d3323b'], [1, '#8e1820']]); g.fill(); cizgi(g, 4, KOYU);
+  saatIkon(g, 466, y + 70, 28, saat); yazi(g, saatYazi, 590, y + 73, '700 50px "Lora"', '#fff4e4', 6);
+  yazi(g, no, 424, y + 160, '700 36px "Lora"', ALTIN, 0, 4, 'left');
+  if (baslik.length === 1) { yazi(g, baslik[0], 424, y + 225, '700 58px "Lora"', KREM, 7, 0, 'left'); yazi(g, ipucu, 424, y + 305, 'italic 600 34px "Lora"', '#d9b9a0', 0, 0, 'left'); }
+  else { yazi(g, baslik[0], 424, y + 212, '700 54px "Lora"', KREM, 7, 0, 'left'); yazi(g, baslik[1], 424, y + 272, '700 54px "Lora"', KREM, 7, 0, 'left'); yazi(g, ipucu, 424, y + 332, 'italic 600 32px "Lora"', '#d9b9a0', 0, 0, 'left'); }
+  g.restore();
+}
+
+(async () => {
+  await document.fonts.load('700 40px "Lora"'); await document.fonts.load('italic 600 40px "Lora"');
+  const g = document.getElementById('c').getContext('2d');
+  g.fillStyle = rg(g, W / 2, H * .45, 60, H * .78, [[0, '#4e161b'], [1, '#090304']]); g.fillRect(0, 0, W, H);
+  g.fillStyle = 'rgba(255,200,190,.05)';
+  for (let y = 0, r = 0; y < H; y += 90, r++) for (let x = (r % 2) * 45; x < W; x += 90) { g.save(); g.translate(x, y); g.rotate(-.6); el(g, -5, 0, 5, 10, .5); g.fill(); el(g, 5, 0, 5, 10, -.5); g.fill(); g.restore(); }
+  // logo + başlık
+  yazi(g, 'YASTIĞIMDAKİ', W / 2, 100, '700 54px "Lora"', KREM, 0, 6);
+  yazi(g, 'MUSKA', W / 2, 192, '700 124px "Lora"', KIRMIZI, 12);
+  zikzak(g, 220, 860, 276);
+  g.save(); g.translate(W / 2, 360); g.rotate(-.025); rr(g, -150, -46, 300, 92, 14); g.fillStyle = dg(g, 0, -46, 0, 46, [[0, '#d3323b'], [1, '#8e1820']]); g.fill(); cizgi(g, 6, KOYU); yazi(g, 'YARIN', 0, 4, '700 64px "Lora"', '#fff4e4', 0, 8); g.restore();
+  yazi(g, '3 YENİ BÖLÜM', W / 2, 466, '700 84px "Lora"', KREM, 10, 4);
+  // bölüm kartları
+  bolumKarti(g, 540, S5, 12, '12:00', '5. BÖLÜM', ['Dördüncü Bilezik'], 'Bilezik büyücünün elinde…', false);
+  bolumKarti(g, 940, S6, 3, '15:00', '6. BÖLÜM', ["Hatice'nin", 'Çeyiz Sandığı'], '40 yıllık sır açılıyor…', false);
+  bolumKarti(g, 1340, S7, 7, '19:00', '7. BÖLÜM', ['Büyü Geri Döndü'], 'Bu sefer düğümler onu bekliyor…', true);
+  // alt mesaj
+  zikzak(g, 200, 880, 1752, '#7a1a1f', 4);
+  yazi(g, 'Bildirimleri aç, hiçbir bölümü kaçırma!', W / 2, 1812, '700 44px "Lora"', KREM, 6);
+  yazi(g, 'Önceki 4 bölüm profilimizde', W / 2, 1872, 'italic 600 40px "Lora"', '#d9b9a0');
+  window.HAZIR = true;
+})();
+</script>
+</body>
+</html>
