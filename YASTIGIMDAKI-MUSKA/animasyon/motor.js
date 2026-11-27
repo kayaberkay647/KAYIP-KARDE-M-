@@ -81,7 +81,7 @@ function kol(g, omuz, hedef, o) {
   g.beginPath(); g.ellipse((o.basparmak || 1) * 17, 12, 9, 13, (o.basparmak || 1) * -.5, 0, TAU); dol(g, tr[0]); cizgi(g, 3.5);
   el(g, 0, 22, 17, 20); dol(g, tr[0]);
   g.save(); g.globalAlpha = .25; el(g, 6, 28, 12, 14); dol(g, tr[1]); g.restore();
-  if (o.bilezik) for (let i = 0; i < 4; i++) {
+  if (o.bilezik) for (let i = 0; i < (o.bilezikSay ?? 4); i++) {
     el(g, 0, -10 - i * 8, k / 2 + 5, 5); g.lineWidth = 5; g.strokeStyle = i % 2 ? '#e0b648' : '#f3cf63'; g.stroke();
     g.beginPath(); g.ellipse(-8, -12 - i * 8, 5, 2, 0, 0, TAU); g.fillStyle = 'rgba(255,250,210,.8)'; g.fill();
   }
@@ -215,7 +215,7 @@ function karakter(g, K, o) {
   const kollar = Object.assign({ sol: { el: [-132, 420] }, sag: { el: [132, 420] } }, o.kollar || {});
   const omuz = { sol: [-(K.omuz - 16), omuzY + 34], sag: [K.omuz - 16, omuzY + 34] };
   const kolCiz = (yan, on) => { const k = kollar[yan]; if (!k || !!k.on !== on || k.gizli) return;
-    kol(g, omuz[yan], k.el, { renk: K.kolRenk, ten: K.ten, bukum: k.bukum, bilezik: K.bilezik, basparmak: yan === 'sol' ? 1 : -1, tut: k.tut, kalin: K.kolKalin, mansetRenk: K.manset }); };
+    kol(g, omuz[yan], k.el, { renk: K.kolRenk, ten: K.ten, bukum: k.bukum, bilezik: K.bilezik, bilezikSay: o.bilezikSay, basparmak: yan === 'sol' ? 1 : -1, tut: k.tut, kalin: K.kolKalin, mansetRenk: K.manset }); };
   kolCiz('sol', false); kolCiz('sag', false);
   if (!o.govdeYok) { g.save(); g.translate(0, nefes * .25 - 16); K.beden(g, o); g.restore(); }
   if (o.onGovde) o.onGovde(g);
@@ -645,14 +645,16 @@ function corbaKase(g, x, y, s, t = 0, o = {}) {
   g.globalAlpha = .4; for (let i = 0; i < 3; i++) { const ph = (t * .35 + i / 3) % 1; g.save(); g.globalAlpha = .4 * Math.sin(ph * Math.PI); g.beginPath(); const bx = -60 + i * 60; g.moveTo(bx, -30); g.bezierCurveTo(bx - 30, -90 - ph * 100, bx + 30, -140 - ph * 120, bx + gurultu(t + i, i) * 20, -200 - ph * 160); cizgi(g, 12, '#ffffff'); g.restore(); }
   g.restore();
 }
-function defter(g, x, y, s, yazi, aci = 0) {
+function defter(g, x, y, s, yazi, aci = 0, boyut) {
   g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s);
   rr(g, -230, -170, 460, 340, 10); dol(g, '#fbf8f0'); cizgi(g);
   g.globalAlpha = .7; for (let yy = -110; yy < 160; yy += 40) { g.beginPath(); g.moveTo(-210, yy); g.lineTo(210, yy); cizgi(g, 2.5, '#b9cde0'); } g.globalAlpha = 1;
   g.beginPath(); g.moveTo(-170, -170); g.lineTo(-170, 170); cizgi(g, 3, '#e3a3a3');
   for (let i = 0; i < 7; i++) { el(g, -230, -140 + i * 46, 10, 10); dol(g, '#7d7d84'); cizgi(g, 2.5); }
-  g.font = 'italic 600 82px "Lora", serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#b01f28'; g.fillText(yazi, 20, -10);
-  g.beginPath(); g.moveTo(-120, 50); g.quadraticCurveTo(20, 66, 160, 44); cizgi(g, 5, '#b01f28');
+  const satir = String(yazi).split('\n'), fb = boyut ?? (satir.length > 1 ? 62 : 82), ara = fb * 1.08, y0 = satir.length > 1 ? -10 - (satir.length - 1) * ara / 2 : -10;
+  g.font = `italic 600 ${fb}px "Lora", serif`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#b01f28';
+  satir.forEach((s_, i) => g.fillText(s_, 20, y0 + i * ara));
+  const alt = y0 + (satir.length - 1) * ara + 60; g.beginPath(); g.moveTo(-120, alt); g.quadraticCurveTo(20, alt + 16, 160, alt - 6); cizgi(g, 5, '#b01f28');
   g.restore();
 }
 function kapiZinciri(g, x0, y0, aci, s = 1) { // kasadan sarkan güvenlik zinciri (aci: sallanma)
@@ -676,4 +678,29 @@ function muskaKagitArka(g, x, y, s, t = 0, muhurParlak = .8) { // kâğıdın ar
   for (let i = 0; i < 26; i++) { const lx = (hash(i) - .5) * 280, ly = (hash(i + 9) - .5) * 280; if (Math.abs(ly) < 75 && Math.abs(lx) < 110) continue; el(g, lx, ly, 10 + hash(i + 2) * 18, 6 + hash(i + 4) * 8); dol(g, '#e2d3b0'); }
   g.restore();
   g.restore();
+}
+
+// ───────────── 4. BÖLÜM AKSESUARLARI ─────────────
+function kristalKase(g, x, y, s, adet = 4, t = 0) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  g.beginPath(); g.moveTo(-150, -40); g.quadraticCurveTo(-140, 70, 0, 80); g.quadraticCurveTo(140, 70, 150, -40); g.closePath();
+  g.fillStyle = 'rgba(210,230,240,.45)'; g.fill(); cizgi(g, 4, '#5a7280');
+  for (let i = 0; i < adet; i++) { el(g, -60 + i * 40, 0 - (i % 2) * 10, 46, 18, (i - 1.5) * .15); g.lineWidth = 8; g.strokeStyle = i % 2 ? '#e0b648' : '#f3cf63'; g.stroke(); el(g, -74 + i * 40, -6 - (i % 2) * 10, 8, 3); dol(g, 'rgba(255,250,210,.9)'); }
+  el(g, 0, -40, 150, 30); g.lineWidth = 4; g.strokeStyle = '#5a7280'; g.stroke(); g.globalAlpha = .5; el(g, -60, -42, 50, 8); dol(g, '#ffffff'); g.globalAlpha = 1;
+  rr(g, -40, 78, 80, 22, 6); dol(g, 'rgba(210,230,240,.6)'); cizgi(g, 3, '#5a7280');
+  g.restore();
+}
+function tekBilezik(g, x, y, s, aci = 0) { g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s); el(g, 0, 0, 50, 20); g.lineWidth = 10; g.strokeStyle = '#f3cf63'; g.stroke(); el(g, -18, -10, 10, 3); dol(g, 'rgba(255,250,215,.95)'); g.restore(); }
+function tavanIpleri(g, t, o = {}) { // Gülizar'ın odası: tavandan sarkan düğümlü kırmızı iplikler
+  const n = o.n ?? 34;
+  for (let i = 0; i < n; i++) {
+    const x = -100 + hash(i * 3 + 1) * (W + 200), uz = 400 + hash(i * 5 + 2) * 900, sw = Math.sin(t * .9 + i) * 10 * (uz / 1300), kal = 3 + hash(i) * 2.5;
+    const yak = o.derinlik ? .55 + hash(i + 7) * .45 : 1;
+    g.save(); g.globalAlpha = yak;
+    g.beginPath(); g.moveTo(x, -PAY); g.quadraticCurveTo(x + sw * .5, uz * .5, x + sw, uz); cizgi(g, kal + 2, '#2a0508'); g.beginPath(); g.moveTo(x, -PAY); g.quadraticCurveTo(x + sw * .5, uz * .5, x + sw, uz); cizgi(g, kal, '#b01f28');
+    const dn = 2 + Math.floor(hash(i + 11) * 4);
+    for (let k = 1; k <= dn; k++) { const yy = uz * k / (dn + .5), xx = x + sw * (yy / uz); el(g, xx, yy, kal * 2.6, kal * 2.2); dol(g, '#8e1820'); cizgi(g, 2, '#2a0508'); }
+    if (hash(i + 21) > .55) { g.save(); g.translate(x + sw, uz + 14); g.rotate(sw * .01); rr(g, -18, 0, 36, 46, 4); dol(g, '#e2d3b0'); cizgi(g, 2.5, '#4a3420'); g.restore(); }
+    g.restore();
+  }
 }

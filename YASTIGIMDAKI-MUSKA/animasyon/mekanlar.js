@@ -314,3 +314,38 @@ function banyoKapi(g, kol, t, ayak = 1) { // kol: kolun aşağı inme miktarı (
   el(g, 0, 0, 20, 20); dol(g, '#dde1e4'); cizgi(g, 3); g.restore();
   g.fillStyle = 'rgba(255,255,255,0)';
 }
+
+// ───────────── MEZARLIK SOKAĞI ─────────────
+function mezarlikSokagi(g) {
+  g.fillStyle = dg(g, 0, -PAY, 0, 1100, [[0, '#2a2140'], [.55, '#6a3a5a'], [1, '#d07a4a']]); g.fillRect(-PAY, -PAY, W + PAY * 2, 1300);
+  el(g, 860, 420, 60, 60); dol(g, 'rgba(255,220,170,.85)'); isikHalesi(g, 860, 420, 300, '255,200,150', .3);
+  // selviler
+  for (const [x, h] of [[90, 760], [210, 900], [330, 700]]) { g.beginPath(); g.moveTo(x, 1120 - h); g.quadraticCurveTo(x + 70, 1120 - h * .5, x + 46, 1120); g.lineTo(x - 46, 1120); g.quadraticCurveTo(x - 70, 1120 - h * .5, x, 1120 - h); dol(g, '#1d2a22'); cizgi(g, 3, '#0d140f'); }
+  // mezarlık duvarı + taşlar
+  for (let i = 0; i < 7; i++) { const x = -60 + i * 72, h = 90 + hash(i) * 60; rr(g, x, 1060 - h, 52, h + 20, 22); dol(g, '#8a8790'); cizgi(g, 3, '#3a3840'); }
+  rr(g, -PAY, 1050, 520 + PAY, 200, 0); dol(g, '#6f6a70'); cizgi(g); for (let y = 1080; y < 1250; y += 50) for (let x = -PAY + ((y / 50) % 2) * 40; x < 520; x += 80) { rr(g, x, y, 76, 46, 4); g.lineWidth = 2.5; g.strokeStyle = '#4e4a52'; g.stroke(); }
+  // eski ev cephesi
+  rr(g, 300, 380, W - 300 + PAY, 1100, 0); g.fillStyle = dg(g, 300, 0, W, 0, [[0, '#6b5450'], [1, '#4e3c3a']]); g.fill(); cizgi(g);
+  g.globalAlpha = .35; for (let i = 0; i < 14; i++) { g.beginPath(); g.moveTo(330 + hash(i) * 700, 400 + hash(i + 1) * 900); g.lineTo(350 + hash(i) * 700, 440 + hash(i + 1) * 900); cizgi(g, 3, '#2a1d1c'); } g.globalAlpha = 1;
+  rr(g, 820, 520, 180, 220, 6); dol(g, '#1f1a22'); cizgi(g); g.beginPath(); g.moveTo(910, 520); g.lineTo(910, 740); g.moveTo(820, 630); g.lineTo(1000, 630); cizgi(g, 8, '#4e3c3a');
+  // kapı kemeri ve numara
+  g.beginPath(); g.moveTo(380, 1460); g.lineTo(380, 760); g.arc(570, 760, 190, Math.PI, 0); g.lineTo(760, 1460); g.closePath(); dol(g, '#3a2a26'); cizgi(g, 6);
+  rr(g, 520, 500, 100, 70, 8); dol(g, '#2c4a7a'); cizgi(g, 4); g.font = '700 50px "Lora", serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#f3ead6'; g.fillText('13', 570, 538);
+  // fener
+  g.beginPath(); g.moveTo(1010, 700); g.lineTo(1060, 700); cizgi(g, 6, '#1a1416'); rr(g, 1020, 700, 50, 80, 8); dol(g, '#e9b060'); cizgi(g, 4, '#1a1416'); isikHalesi(g, 1045, 740, 260, '255,190,110', .35);
+  // kaldırım
+  g.fillStyle = dg(g, 0, 1460, 0, H, [[0, '#4a4248'], [1, '#2a2428']]); g.fillRect(-PAY, 1460, W + PAY * 2, H - 1460 + PAY);
+  for (let y = 1480, r = 0; y < H + PAY; y += 70, r++) for (let x = -PAY + (r % 2) * 50; x < W + PAY; x += 100) { el(g, x, y, 44, 26); g.lineWidth = 3; g.strokeStyle = '#1e1a1d'; g.stroke(); }
+  // kargalar
+  for (const [x, y, s] of [[120, 1035, 1], [420, 1045, .8], [700, 360, .7]]) { g.save(); g.translate(x, y); g.scale(s, s); el(g, 0, 0, 30, 18); dol(g, '#0d0b0d'); el(g, 24, -14, 13, 12); dol(g, '#0d0b0d'); poly(g, [[34, -14], [52, -10], [34, -8]]); g.fillStyle = '#3a3030'; g.fill(); el(g, 27, -17, 2.5, 2.5); dol(g, '#e9d38a'); poly(g, [[-26, -2], [-52, 6], [-26, 8]]); g.fillStyle = '#0d0b0d'; g.fill(); g.restore(); }
+}
+function mezarlikKapisi(g, acik, t) { // 13 numaranın kapısı: kemerin içine çizilir
+  g.save(); g.beginPath(); g.moveTo(400, 1460); g.lineTo(400, 760); g.arc(570, 760, 170, Math.PI, 0); g.lineTo(740, 1460); g.closePath(); g.clip();
+  g.fillStyle = '#0a0607'; g.fillRect(380, 560, 380, 920);
+  isikHalesi(g, 600, 1100, 260 * acik, '255,150,70', .5 * acik, t);
+  const gen = 340 * Math.cos(acik * 1.3);
+  g.beginPath(); g.moveTo(400, 560); g.lineTo(400 + gen, 560 + 30 * acik); g.lineTo(400 + gen, 1460 - 20 * acik); g.lineTo(400, 1460); g.closePath();
+  g.fillStyle = dg(g, 400, 0, 400 + gen, 0, [[0, '#4a2e22'], [1, '#6a4430']]); g.fill(); cizgi(g, 5);
+  if (acik < .5) { for (let i = 1; i < 5; i++) { g.beginPath(); g.moveTo(400 + gen * i / 5, 600); g.lineTo(400 + gen * i / 5, 1440); cizgi(g, 3, '#3a2218'); } el(g, 400 + gen - 40, 1050, 14, 14); dol(g, '#8a7a50'); cizgi(g, 3); }
+  g.restore();
+}

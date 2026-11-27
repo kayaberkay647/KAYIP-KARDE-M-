@@ -1,0 +1,235 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [whispers] Sesini geri istiyorsan gelin... karşılığında bir şey vereceksin.",
+   "parca": [
+    "Sesini geri istiyorsan gelin…",
+    "karşılığında bir şey vereceksin."
+   ]
+  },
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Mezarlık Sokağı, on üç numara... Kapı, ben daha çalmadan açılmıştı.",
+   "parca": [
+    "Mezarlık Sokağı, on üç numara...",
+    "Kapı, ben daha çalmadan açılmıştı."
+   ]
+  },
+  {
+   "id": "I08",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] İçerisi mum ve toprak kokuyordu. Tavandan... yüzlerce kırmızı iplik sarkıyordu.",
+   "parca": [
+    "İçerisi mum ve toprak kokuyordu.",
+    "Tavandan... yüzlerce kırmızı iplik sarkıyordu."
+   ]
+  },
+  {
+   "id": "G06",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [slowly] Hepsi birinin kaderi gelin... Seninki de şurada."
+  },
+  {
+   "id": "G02",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [laughs softly] Sesin bende değil gelin. Onu kaynanan aldı... ben sadece düğümü attım.",
+   "parca": [
+    "Sesin bende değil gelin.",
+    "Onu kaynanan aldı... ben sadece düğümü attım."
+   ]
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Hatice'yi durdurabilecek tek kişi... bu kadındı."
+  },
+  {
+   "id": "G03",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] Kaynanan bana senin saçını getirdi... Sen de bana onun bir şeyini getireceksin.",
+   "parca": [
+    "Kaynanan bana senin saçını getirdi...",
+    "Sen de bana onun bir şeyini getireceksin."
+   ]
+  },
+  {
+   "id": "G04",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[slowly] [menacing] Bileziğini. O altın bileziklerden birini."
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "Hatice'nin bileklerinden hiç çıkarmadığı bilezikler... Birini çalmam gerekiyordu.",
+   "parca": [
+    "Hatice'nin bileklerinden hiç çıkarmadığı bilezikler...",
+    "Birini çalmam gerekiyordu."
+   ]
+  },
+  {
+   "id": "G05",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] Acele et gelin... Bu gece saat üçte ikinci düğüm çözülecek.",
+   "parca": [
+    "Acele et gelin...",
+    "Bu gece saat üçte ikinci düğüm çözülecek."
+   ]
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] İkinci düğüm... Bu sefer benden ne alacaktı?"
+  },
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sweetly] Aa, gelin! Gel gel... Emre'm de burada."
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[coldly] Ne işin var burada Nazlı?"
+  },
+  {
+   "id": "E04",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[tired] Annem bana her şeyi anlattı zaten."
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[fake sad] Oğlum sana kızgın değil gelin... sadece kırgın."
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Hatice bulaşığa girmeden önce bileziklerini çıkardı... Onları ilk kez bileklerinin dışında görüyordum.",
+   "parca": [
+    "Hatice bulaşığa girmeden önce bileziklerini çıkardı...",
+    "Onları ilk kez bileklerinin dışında görüyordum."
+   ]
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "fisilti",
+   "metin": "[calling out] Gelin? Bir ses duydum sanki...",
+   "altyazi": "Gelin? Bir ses duydum sanki…"
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[slowly] Bir... iki... üç..."
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[coldly] Dördüncüsü nerede?"
+  },
+  {
+   "id": "E02",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[irritated] Anne, bir yere düşürmüşsündür."
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [menacing] Bulurum... Ben her şeyi bulurum gelin."
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Saat üçte... ikinci düğüm çözülmeye başladı."
+  },
+  {
+   "id": "E03",
+   "kim": "EMRE",
+   "tur": "telefon",
+   "metin": "[confused] [sleepy] Alo? Kimsiniz? Numaranız telefonumda... 'Hayatım' diye kayıtlı.",
+   "parca": [
+    "Alo? Kimsiniz?",
+    "Numaranız telefonumda... 'Hayatım' diye kayıtlı."
+   ]
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "telefon",
+   "metin": "[distant] [sweetly] Kim o oğlum? Kapat... yabancı biri.",
+   "altyazi": "Kim o oğlum? Kapat… yabancı biri."
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[sad] [whispers] [slowly] İkinci düğüm... Emre'nin aklındaki beni götürmüştü."
+  }
+ ]
+}
