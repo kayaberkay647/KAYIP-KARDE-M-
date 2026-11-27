@@ -15,6 +15,7 @@
 <canvas id="soru" width="1080" height="1920"></canvas>
 <canvas id="soru2" width="1080" height="1920"></canvas>
 <canvas id="soru3" width="1080" height="1920"></canvas>
+<canvas id="soru4" width="1080" height="1920"></canvas>
 <script>const ZAMAN = { fps: 30, replikler: [] };</script>
 <script src="../animasyon/motor.js"></script>
 <script src="../animasyon/mekanlar.js"></script>
@@ -190,6 +191,45 @@ function hap(g, x, y, w, h, saat, yazi_) {
   kart(570, 'B', 'ONA İNANMAYAN', 'KOCA', '#3d5a9a');
   yazi(g, 'Yorumlara yaz: A mı, B mi?', W / 2, 1830, 'italic 600 52px "Lora"', '#e6c9ae');
   for (const x of [W / 2 - 400, W / 2 + 400]) { g.beginPath(); g.moveTo(x - 26, 1815); g.lineTo(x, 1843); g.lineTo(x + 26, 1815); cizgi(g, 8, KIRMIZI); }
+})();
+// ═════ 5) 4. BÖLÜM SORUSU: "KOCAN SENİ TANIMIYOR!" (3 şık) ═════
+(function () {
+  const g = document.getElementById('soru4').getContext('2d');
+  arka(g, 'yatakGece', g => yatakOdasi(g, true), { olcek: 1.5, merkez: [500, 950], blur: 6 });
+  g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(60,80,150,.6)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+  g.fillStyle = 'rgba(6,8,18,.45)'; g.fillRect(0, 0, W, H);
+  // yorganın üstünde çalınan bilezik
+  isikHalesi(g, 860, 1240, 260, '255,215,120', .45); tekBilezik(g, 860, 1240, 1.6, .25);
+  // telefonu tutan el
+  g.beginPath(); g.moveTo(470, 1240); g.lineTo(330, H + 200); g.lineCap = 'round'; g.lineWidth = 150 + LW * 2; g.strokeStyle = OUT; g.stroke(); g.lineWidth = 150; g.strokeStyle = '#c3b1dc'; g.stroke();
+  isikHalesi(g, 520, 880, 620, '140,180,255', .45);
+  telefon(g, 520, 880, 6.2, -.06, '#3d5a7a', 'Emre\narıyor…');
+  elMitt(g, 470, 1200, 3.4, -.3, NAZLI.ten);
+  // konuşma balonu
+  g.save(); g.translate(790, 640);
+  rr(g, -250, -80, 500, 160, 40); dol(g, '#f8f3ea'); cizgi(g, 6, KOYU);
+  g.beginPath(); g.moveTo(-160, 70); g.lineTo(-230, 160); g.lineTo(-90, 76); g.closePath(); dol(g, '#f8f3ea'); cizgi(g, 6, KOYU);
+  g.fillStyle = '#f8f3ea'; g.fillRect(-170, 60, 90, 22);
+  yazi(g, 'Alo? Kimsiniz?', 0, 4, '700 60px "Lora"', '#2a0b0e');
+  g.restore();
+  vinyet(g, .55);
+  // başlık
+  g.fillStyle = dg(g, 0, 0, 0, 500, [[0, 'rgba(5,6,14,.97)'], [.72, 'rgba(5,6,14,.75)'], [1, 'rgba(5,6,14,0)']]); g.fillRect(0, 0, W, 500);
+  yazi(g, 'YASTIĞIMDAKİ MUSKA · 4. BÖLÜM', W / 2, 62, '700 34px "Lora"', '#a99a9a', 0, 5);
+  yazi(g, 'KOCAN SENİ', W / 2, 170, '700 92px "Lora"', KREM, 10, 4);
+  yazi(g, 'TANIMIYOR!', W / 2, 300, '700 140px "Lora"', KIRMIZI, 13, 2);
+  yazi(g, 'Sen olsan ne yapardın?', W / 2, 415, 'italic 600 60px "Lora"', KREM, 8);
+  // üç şık
+  g.fillStyle = dg(g, 0, 1300, 0, 1920, [[0, 'rgba(5,6,14,0)'], [.16, 'rgba(5,6,14,.93)'], [1, 'rgba(4,4,8,1)']]); g.fillRect(0, 1300, W, 620);
+  const sec = [['A', 'Bileziği hemen büyücüye götürürdüm', '#c9a24f'], ['B', 'Kaynanamın kapısına dayanırdım', KIRMIZI], ['C', 'Emre\'ye düğün fotoğraflarımızı gösterirdim', '#3d5a9a']];
+  sec.forEach(([h, s_, renk], i) => {
+    const y = 1440 + i * 112;
+    rr(g, 60, y - 46, 960, 92, 46); g.fillStyle = 'rgba(243,230,208,.95)'; g.fill(); cizgi(g, 4, KOYU);
+    el(g, 112, y, 36, 36); dol(g, renk); cizgi(g, 4, KOYU); yazi(g, h, 112, y + 3, '700 46px "Lora"', '#fff4e4');
+    g.font = '700 38px "Lora"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#2a0b0e'; g.fillText(s_, 168, y + 3);
+  });
+  yazi(g, 'Cevabını yorumlara yaz: A, B, C?', W / 2, 1800, 'italic 600 50px "Lora"', '#e6c9ae');
+  for (const x of [W / 2 - 440, W / 2 + 440]) { g.beginPath(); g.moveTo(x - 24, 1786); g.lineTo(x, 1812); g.lineTo(x + 24, 1786); cizgi(g, 8, KIRMIZI); }
 })();
 window.HAZIR = true;
 </script>
