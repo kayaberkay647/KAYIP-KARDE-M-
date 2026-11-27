@@ -14,6 +14,7 @@
 <canvas id="duyuru" width="1080" height="1920"></canvas>
 <canvas id="soru" width="1080" height="1920"></canvas>
 <canvas id="soru2" width="1080" height="1920"></canvas>
+<canvas id="soru3" width="1080" height="1920"></canvas>
 <script>const ZAMAN = { fps: 30, replikler: [] };</script>
 <script src="../animasyon/motor.js"></script>
 <script src="../animasyon/mekanlar.js"></script>
@@ -142,6 +143,53 @@ function hap(g, x, y, w, h, saat, yazi_) {
   yazi(g, 'Cevabını yorumlara yaz', W / 2, 1866, 'italic 600 48px "Lora"', '#e6c9ae');
   g.beginPath(); g.moveTo(W / 2 + 280, 1850); g.lineTo(W / 2 + 306, 1878); g.lineTo(W / 2 + 332, 1850); cizgi(g, 8, KIRMIZI);
   g.beginPath(); g.moveTo(W / 2 - 332, 1850); g.lineTo(W / 2 - 306, 1878); g.lineTo(W / 2 - 280, 1850); cizgi(g, 8, KIRMIZI);
+})();
+// ═════ 4) 3. BÖLÜM SORUSU: "SİZCE KİM DAHA SUÇLU?" (2 şık) ═════
+(function () {
+  const g = document.getElementById('soru3').getContext('2d');
+  g.fillStyle = '#0b0607'; g.fillRect(0, 0, W, H);
+  const SOL = [[0, 430], [610, 430], [470, 1460], [0, 1460]], SAG = [[610, 430], [W, 430], [W, 1460], [470, 1460]];
+  const panel = (pts, ciz) => { g.save(); poly(g, pts); g.clip(); ciz(); g.restore(); };
+  panel(SOL, () => {
+    arka(g, 'mutfak', mutfakArka, { olcek: 1.5, merkez: [300, 700], blur: 3 });
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(200,60,60,.6)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+    karakter(g, HATICE, { x: 270, y: 900, s: 1.85, t: 3, T: 3, konus: 0, gozAcik: .95, kirpma: false, bebek: .5, donuk: true, bak: [.45, 0], gulum: .48, kas: 'suphe', don: .2 });
+    g.fillStyle = rg(g, 270, 900, 200, 800, [[0, 'rgba(60,0,8,0)'], [1, 'rgba(60,0,8,.55)']]); g.fillRect(0, 0, W, H);
+  });
+  panel(SAG, () => {
+    arka(g, 'mutfak', mutfakArka, { olcek: 1.5, merkez: [760, 700], blur: 3 });
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(80,110,190,.6)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+    karakter(g, EMRE, { x: 820, y: 900, s: 1.85, t: 2, T: 2, konus: 0, gozAcik: .6, bak: [.7, .05], gulum: -.22, kas: 'normal', don: .3 });
+    g.fillStyle = rg(g, 820, 900, 200, 800, [[0, 'rgba(5,10,30,0)'], [1, 'rgba(5,10,30,.55)']]); g.fillRect(0, 0, W, H);
+  });
+  // ayırıcı kırmızı dikiş
+  g.beginPath(); g.moveTo(610, 430); g.lineTo(470, 1460); cizgi(g, 16, KOYU);
+  { const n = 46; g.beginPath(); for (let i = 0; i <= n; i++) { const p = i / n, x = lerp(610, 470, p) + (i % 2 ? 14 : -14), y = lerp(430, 1460, p); i ? g.lineTo(x, y) : g.moveTo(x, y); } cizgi(g, 6, '#d0303a'); }
+  el(g, 540, 930, 70, 70); dol(g, KIRMIZI); cizgi(g, 6, KOYU); yazi(g, 'VS', 540, 935, '700 60px "Lora"', '#fff4e4');
+  // ortada ağzı dikilmiş Nazlı (madalyon)
+  g.save(); el(g, 540, 1300, 158, 158); g.fillStyle = rg(g, 540, 1300, 20, 160, [[0, '#3a2a30'], [1, '#140a0d']]); g.fill(); g.clip();
+  karakter(g, NAZLI, { x: 540, y: 1300, s: 1.0, t: 1, T: 1, konus: 0, gozAcik: .95, kirpma: false, bebek: .7, kas: 'uzgun', gulum: 0, yas: .9, yasDamla: .45, solgun: true, morluk: .5, kiyafet: 'pijama',
+    enUst: g => { g.beginPath(); g.moveTo(-28, 86); g.lineTo(28, 86); cizgi(g, 3.5, '#b01f28'); for (const x of [-21, -7, 7, 21]) { g.beginPath(); g.moveTo(x - 3, 76); g.lineTo(x + 3, 96); cizgi(g, 3.5, '#b01f28'); } } });
+  g.restore(); el(g, 540, 1300, 158, 158); cizgi(g, 8, KOYU); el(g, 540, 1300, 150, 150); cizgi(g, 4, '#b01f28');
+  // üst başlık
+  g.fillStyle = dg(g, 0, 0, 0, 470, [[0, '#0b0607'], [.85, '#0b0607'], [1, 'rgba(11,6,7,0)']]); g.fillRect(0, 0, W, 470);
+  yazi(g, 'YASTIĞIMDAKİ MUSKA · 3. BÖLÜM', W / 2, 62, '700 34px "Lora"', '#a99a9a', 0, 5);
+  yazi(g, 'SİZCE KİM', W / 2, 175, '700 96px "Lora"', KREM, 10, 4);
+  yazi(g, 'DAHA SUÇLU?', W / 2, 310, '700 136px "Lora"', KIRMIZI, 13, 2);
+  zikzak(g, 180, 900, 405);
+  // iki şık
+  g.fillStyle = dg(g, 0, 1430, 0, 1920, [[0, 'rgba(11,6,7,0)'], [.12, '#0b0607'], [1, '#070304']]); g.fillRect(0, 1430, W, 490);
+  const kart = (x, harf, ust, alt, renk) => {
+    rr(g, x, 1500, 470, 220, 28); g.fillStyle = 'rgba(243,230,208,.96)'; g.fill(); cizgi(g, 6, KOYU);
+    rr(g, x + 10, 1510, 450, 200, 22); g.lineWidth = 5; g.strokeStyle = renk; g.stroke();
+    el(g, x + 235, 1500, 44, 44); dol(g, renk); cizgi(g, 5, KOYU); yazi(g, harf, x + 235, 1504, '700 54px "Lora"', '#fff4e4');
+    yazi(g, ust, x + 235, 1590, '700 40px "Lora"', '#5a2a2e', 0, 1);
+    yazi(g, alt, x + 235, 1665, '700 76px "Lora"', '#2a0b0e', 0, 2);
+  };
+  kart(40, 'A', 'SESİNİ ÇALAN', 'KAYNANA', KIRMIZI);
+  kart(570, 'B', 'ONA İNANMAYAN', 'KOCA', '#3d5a9a');
+  yazi(g, 'Yorumlara yaz: A mı, B mi?', W / 2, 1830, 'italic 600 52px "Lora"', '#e6c9ae');
+  for (const x of [W / 2 - 400, W / 2 + 400]) { g.beginPath(); g.moveTo(x - 26, 1815); g.lineTo(x, 1843); g.lineTo(x + 26, 1815); cizgi(g, 8, KIRMIZI); }
 })();
 window.HAZIR = true;
 </script>
