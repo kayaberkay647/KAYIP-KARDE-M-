@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<title>Yastığımdaki Muska — Bugün 3 Bölüm</title>
+<title>Yastığımdaki Muska — 4. Bölüm 19:00</title>
 <style>
   @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-Bold.ttf'); font-weight: 700; font-style: normal; }
   @font-face { font-family: 'Lora'; src: url('../animasyon/fontlar/Lora-SemiBoldItalic.ttf'); font-weight: 600; font-style: italic; }
@@ -29,55 +29,60 @@ function saatIkon(g, x, y, r) {
   const a1 = 7 / 12 * TAU - Math.PI / 2; g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a1) * r * .5, y + Math.sin(a1) * r * .5); cizgi(g, 7, KOYU);
   g.beginPath(); g.moveTo(x, y); g.lineTo(x, y - r * .72); cizgi(g, 5, KOYU); el(g, x, y, 6, 6); dol(g, KIRMIZI);
 }
-function kart(g, img, x, y, w, h, bolum, ad, etiket, vurgu) {
-  g.save();
-  if (vurgu) { g.shadowColor = 'rgba(230,40,50,.9)'; g.shadowBlur = 50; }
-  rr(g, x - 8, y - 8, w + 16, h + 16, 26); dol(g, vurgu ? KIRMIZI : '#e8dcc6'); g.shadowBlur = 0;
-  g.save(); rr(g, x, y, w, h, 20); g.clip(); g.drawImage(img, x, y, w, h);
-  g.fillStyle = dg(g, 0, y + h * .55, 0, y + h, [[0, 'rgba(8,2,3,0)'], [1, 'rgba(8,2,3,.92)']]); g.fillRect(x, y, w, h);
-  if (!vurgu) { g.fillStyle = 'rgba(10,4,6,.18)'; g.fillRect(x, y, w, h); }
-  g.restore(); rr(g, x, y, w, h, 20); cizgi(g, 5, KOYU);
-  yazi(g, bolum, x + w / 2, y + h - 92, '700 40px "Lora"', '#fff4e4', 8, 2);
-  yazi(g, ad, x + w / 2, y + h - 46, 'italic 600 27px "Lora"', '#e6c9ae');
-  // alt etiket
-  const ew = vurgu ? w + 20 : w - 30, ex = x + w / 2 - ew / 2, ey = y + h + 22;
-  rr(g, ex, ey, ew, 66, 33); g.fillStyle = vurgu ? dg(g, 0, ey, 0, ey + 66, [[0, '#d3323b'], [1, '#8e1820']]) : 'rgba(243,230,208,.95)'; g.fill(); cizgi(g, 4, KOYU);
-  yazi(g, etiket, x + w / 2, ey + 35, '700 32px "Lora"', vurgu ? '#fff4e4' : '#2a0b0e', 0, 1);
+function kucukKart(g, img, x, y, w, h, bolum, ad) { // yayındaki bölüm (kırpılmış kare)
+  g.save(); rr(g, x - 6, y - 6, w + 12, h + 12, 22); dol(g, '#e8dcc6');
+  g.save(); rr(g, x, y, w, h, 16); g.clip();
+  const sw = 540, sh = sw * h / w; g.drawImage(img, 0, 960 * .5 - sh * .62, sw, sh, x, y, w, h);
+  g.fillStyle = dg(g, 0, y + h * .45, 0, y + h, [[0, 'rgba(8,2,3,0)'], [1, 'rgba(8,2,3,.93)']]); g.fillRect(x, y, w, h);
+  g.restore(); rr(g, x, y, w, h, 16); cizgi(g, 5, KOYU);
+  yazi(g, bolum, x + w / 2, y + h - 70, '700 38px "Lora"', '#fff4e4', 8, 2);
+  yazi(g, ad, x + w / 2, y + h - 30, 'italic 600 25px "Lora"', '#e6c9ae');
+  rr(g, x + 30, y + h + 20, w - 60, 56, 28); g.fillStyle = 'rgba(243,230,208,.95)'; g.fill(); cizgi(g, 4, KOYU);
+  g.beginPath(); g.moveTo(x + 50, y + h + 48); g.lineTo(x + 61, y + h + 59); g.lineTo(x + 80, y + h + 37); cizgi(g, 6, '#2f7a3a');
+  yazi(g, 'PROFİLDE', x + w / 2 + 22, y + h + 50, '700 26px "Lora"', '#2a0b0e', 0, 1);
+  g.restore();
+}
+function buyukKart(g, img, x, y, w, h) { // bu akşamki bölüm: mühür ipucu
+  g.save(); g.shadowColor = 'rgba(230,40,50,.95)'; g.shadowBlur = 60;
+  rr(g, x - 10, y - 10, w + 20, h + 20, 30); dol(g, KIRMIZI); g.shadowBlur = 0;
+  g.save(); rr(g, x, y, w, h, 22); g.clip();
+  const sw = 380, sh = sw * h / w; g.drawImage(img, 280 - sw / 2, 520 - sh / 2, sw, sh, x, y, w, h);
+  g.fillStyle = rg(g, x + w / 2, y + h * .45, 60, w * .9, [[0, 'rgba(40,0,6,0)'], [1, 'rgba(40,0,6,.75)']]); g.fillRect(x, y, w, h);
+  g.fillStyle = dg(g, 0, y + h * .5, 0, y + h, [[0, 'rgba(8,2,3,0)'], [1, 'rgba(8,2,3,.95)']]); g.fillRect(x, y, w, h);
+  g.restore(); rr(g, x, y, w, h, 22); cizgi(g, 6, KOYU);
+  // YENİ rozeti
+  g.save(); g.translate(x + w - 20, y + 20); g.rotate(.22); rr(g, -90, -34, 180, 68, 14); dol(g, '#f3e6d0'); cizgi(g, 5, KOYU); yazi(g, 'YENİ', 0, 4, '700 44px "Lora"', KIRMIZI, 0, 4); g.restore();
+  yazi(g, '4. BÖLÜM', x + w / 2, y + h - 104, '700 64px "Lora"', '#fff4e4', 10, 3);
+  yazi(g, 'Mezarlık Sokağı', x + w / 2, y + h - 42, 'italic 600 46px "Lora"', '#f0cfae', 7);
   g.restore();
 }
 (async () => {
   await document.fonts.load('700 40px "Lora"'); await document.fonts.load('italic 600 40px "Lora"');
-  const [k1, k2, k3] = await Promise.all(['kapaklar/bolum1.jpg', 'kapaklar/bolum2.jpg', 'kapaklar/bolum3.jpg'].map(resim));
+  const [k1, k2, k3, k4] = await Promise.all(['kapaklar/bolum1.jpg', 'kapaklar/bolum2.jpg', 'kapaklar/bolum3.jpg', 'kapaklar/bolum4_ipucu.jpg'].map(resim));
   const g = document.getElementById('c').getContext('2d');
-  // zemin: koyu bordo + yaprak deseni + kırmızı iplik
   g.fillStyle = rg(g, W / 2, H * .45, 60, H * .78, [[0, '#4e161b'], [1, '#090304']]); g.fillRect(0, 0, W, H);
   g.fillStyle = 'rgba(255,200,190,.05)';
   for (let y = 0, r = 0; y < H; y += 90, r++) for (let x = (r % 2) * 45; x < W; x += 90) { g.save(); g.translate(x, y); g.rotate(-.6); el(g, -5, 0, 5, 10, .5); g.fill(); el(g, 5, 0, 5, 10, -.5); g.fill(); g.restore(); }
-  g.save(); g.globalAlpha = .35; dugumluIp(g, -40, 1120, 1395, 14, { t: 1, cozulmus: [0], cozulen: 1, cozulme: .4 }); g.restore();
+  g.save(); g.globalAlpha = .3; dugumluIp(g, -40, 1120, 1180, 14, { t: 1, cozulmus: [0], cozulen: 1, cozulme: .4 }); g.restore();
   // logo
-  yazi(g, 'YASTIĞIMDAKİ', W / 2, 120, '700 58px "Lora"', KREM, 0, 6);
-  yazi(g, 'MUSKA', W / 2, 220, '700 132px "Lora"', KIRMIZI, 12);
-  zikzak(g, 200, 880, 312);
-  // başlık
-  yazi(g, 'BUGÜN SİZLER İÇİN', W / 2, 400, '700 60px "Lora"', KREM, 9, 3);
-  g.save(); g.translate(W / 2, 512); g.rotate(-.025);
-  rr(g, -250, -70, 500, 140, 18); g.fillStyle = dg(g, 0, -70, 0, 70, [[0, '#d3323b'], [1, '#8e1820']]); g.fill(); cizgi(g, 7, KOYU);
-  yazi(g, '3 BÖLÜM', 0, 6, '700 104px "Lora"', '#fff4e4', 0, 4); g.restore();
-  yazi(g, 'PAYLAŞIYORUZ', W / 2, 640, '700 60px "Lora"', KREM, 9, 6);
-  // bölüm kartları
-  const w = 300, h = 533, y = 715;
-  kart(g, k1, 40, y + 24, w, h, '1. BÖLÜM', 'Çeyizden Gelen Hediye', 'PROFİLDE', false);
-  kart(g, k2, 390, y + 24, w, h, '2. BÖLÜM', 'Kırmızı İplik', 'PROFİLDE', false);
-  kart(g, k3, 740, y, w, h + 10, '3. BÖLÜM', 'Kırk Düğüm', 'BU AKŞAM 19:00', true);
-  // sonraki bölüm saati
-  yazi(g, 'SONRAKİ BÖLÜM', W / 2, 1420, '700 54px "Lora"', '#e6c9ae', 8, 8);
-  saatIkon(g, 290, 1555, 70);
-  yazi(g, '19:00', 625, 1562, '700 168px "Lora"', KIRMIZI, 14, 2);
-  zikzak(g, 200, 880, 1680, '#7a1a1f', 4);
-  // mesaj
-  yazi(g, 'Önceki 2 bölümü profilimizden', W / 2, 1752, 'italic 600 50px "Lora"', KREM);
-  yazi(g, 'izleyebilirsiniz!', W / 2, 1815, 'italic 600 50px "Lora"', KREM);
-  yazi(g, 'Bildirimleri aç, hiçbir bölümü kaçırma', W / 2, 1880, '700 36px "Lora"', '#c9a98a', 0, 1);
+  yazi(g, 'YASTIĞIMDAKİ', W / 2, 105, '700 54px "Lora"', KREM, 0, 6);
+  yazi(g, 'MUSKA', W / 2, 198, '700 124px "Lora"', KIRMIZI, 12);
+  zikzak(g, 220, 860, 282);
+  // bugün yayında olan 3 bölüm
+  yazi(g, 'BUGÜN 3 BÖLÜM YAYINDA', W / 2, 352, '700 50px "Lora"', '#e6c9ae', 8, 3);
+  const w = 300, h = 360, y = 405;
+  kucukKart(g, k1, 45, y, w, h, '1. BÖLÜM', 'Çeyizden Gelen Hediye');
+  kucukKart(g, k2, 390, y, w, h, '2. BÖLÜM', 'Kırmızı İplik');
+  kucukKart(g, k3, 735, y, w, h, '3. BÖLÜM', 'Kırk Düğüm');
+  // bu akşam: 4. bölüm
+  buyukKart(g, k4, 240, 905, 600, 520);
+  yazi(g, 'BU AKŞAM', W / 2, 1500, '700 58px "Lora"', KREM, 9, 10);
+  saatIkon(g, 290, 1608, 70);
+  yazi(g, '19:00', 625, 1615, '700 168px "Lora"', KIRMIZI, 14, 2);
+  zikzak(g, 200, 880, 1722, '#7a1a1f', 4);
+  yazi(g, 'Önceki 3 bölümü profilimizden', W / 2, 1782, 'italic 600 48px "Lora"', KREM);
+  yazi(g, 'izleyebilirsiniz!', W / 2, 1840, 'italic 600 48px "Lora"', KREM);
+  yazi(g, 'Bildirimleri aç, hiçbir bölümü kaçırma', W / 2, 1895, '700 34px "Lora"', '#c9a98a', 0, 1);
   window.HAZIR = true;
 })();
 </script>
