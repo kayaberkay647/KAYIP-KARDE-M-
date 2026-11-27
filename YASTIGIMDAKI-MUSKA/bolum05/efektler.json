@@ -1,0 +1,177 @@
+{
+ "bilezik": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "Several thin gold bangles jingling softly on an old woman's wrist as she moves her hand, close up, dry, no music"
+ },
+ "mum_oda": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Silent dark room ambience, a candle flame flickering softly, very low eerie rumble, horror room tone, no music"
+ },
+ "gerilim": {
+  "sure": 15,
+  "dongu": true,
+  "metin": "Dark ambient horror drone, low strings and a slow pulsing heartbeat-like tension, no melody"
+ },
+ "gece_saat": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Quiet bedroom at night, an analog wall clock ticking slowly and clearly, very low room tone"
+ },
+ "yastik_nefes": {
+  "sure": 4,
+  "dongu": false,
+  "metin": "Slow muffled breathing coming from inside a pillow, creepy, intimate, close up"
+ },
+ "kumas": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "Hands rustling a cotton pillowcase and pressing a soft pillow, close up"
+ },
+ "makas": {
+  "sure": 1.5,
+  "dongu": false,
+  "metin": "Metal scissors opening slowly, close up, tense quiet room"
+ },
+ "final_hit": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "Sudden horror jump scare hit, sharp loud orchestral stab, then silence"
+ },
+ "baslik_hit": {
+  "sure": 4,
+  "dongu": false,
+  "metin": "Deep cinematic horror impact with a long dark reverb tail and a faint ghostly female whisper"
+ },
+ "piyano": {
+  "sure": 22,
+  "dongu": false,
+  "metin": "Soft gentle solo piano melody, warm and tender, slow, intimate Turkish family drama, music only"
+ },
+ "kagit": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "Old paper envelope being opened slowly, paper rustling close up"
+ },
+ "ninni_kutu": {
+  "sure": 8,
+  "dongu": false,
+  "metin": "An old broken music box slowly playing a sad lullaby, detuned and eerie, slowing down"
+ },
+ "kapi_kapanma": {
+  "sure": 2,
+  "dongu": false,
+  "metin": "An apartment front door closing firmly with a latch click, hallway"
+ },
+ "iplik_kesme": {
+  "sure": 1.5,
+  "dongu": false,
+  "metin": "Scissors snipping through a thick tight thread, one sharp crisp snip, close up, quiet room"
+ },
+ "yastik_soluk": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A pillow slowly exhaling a long breath of air, eerie hollow sigh, fabric deflating, close up"
+ },
+ "telefon_kapat": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "Phone call abruptly hung up, then a repeating busy tone beep beep beep"
+ },
+ "ofis": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Quiet office ambience, distant keyboard typing, air conditioner hum, muffled chatter"
+ },
+ "sofra": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Quiet family dinner table ambience, forks and spoons clinking on porcelain plates, tea glasses, indoor"
+ },
+ "masaya_birak": {
+  "sure": 1.5,
+  "dongu": false,
+  "metin": "A small cloth amulet dropped on a wooden dinner table covered with a lace tablecloth, soft thud"
+ },
+ "duvar_saati": {
+  "sure": 10,
+  "dongu": true,
+  "metin": "An old pendulum wall clock ticking loudly in a silent dining room"
+ },
+ "dugum": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A tight thread knot slowly loosening and slipping by itself, creaking fibers, close up, eerie silence"
+ },
+ "damla": {
+  "sure": 10,
+  "dongu": true,
+  "metin": "Bathroom at night, a faucet dripping slowly into a sink, quiet echo, tiled room"
+ },
+ "kapi_kolu": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A bathroom door handle being pushed down very slowly from the other side, metallic creak, tense"
+ },
+ "kagit_acma": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "Unfolding an old tightly folded small paper amulet, crisp paper crinkling, close up"
+ },
+ "anahtar_kapi": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A key turning in an apartment door lock, then the wooden door opening with a soft creak"
+ },
+ "mutfak": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Cozy morning kitchen ambience, eggs and tomatoes gently sizzling in a frying pan, birds chirping outside an open window"
+ },
+ "ayak_uzaklasma": {
+  "sure": 4,
+  "dongu": false,
+  "metin": "Slow soft footsteps walking away down a dark apartment hallway, faint gold bangles jingling, then a front door closing very quietly"
+ },
+ "zincir": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A metal door security chain swinging and gently clinking against a wooden door in a silent dark hallway"
+ },
+ "sokak": {
+  "sure": 12,
+  "dongu": true,
+  "metin": "Eerie narrow old street beside a cemetery at dusk, cold wind, distant crows cawing, dry leaves, no music"
+ },
+ "kapi_gicirti": {
+  "sure": 3.5,
+  "dongu": false,
+  "metin": "An old heavy wooden door slowly creaking open by itself, long eerie creak"
+ },
+ "su_akisi": {
+  "sure": 10,
+  "dongu": true,
+  "metin": "Kitchen sink tap running water, dishes clinking softly, heard from a nearby room"
+ },
+ "telefon_titresim": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A smartphone vibrating on a wooden nightstand in a silent dark bedroom"
+ },
+ "dolap_kapi": {
+  "sure": 2.5,
+  "dongu": false,
+  "metin": "A hand slowly grabbing a wooden wardrobe door handle, the louvered door rattling slightly, tense silence"
+ },
+ "kosu": {
+  "sure": 4,
+  "dongu": false,
+  "metin": "A woman running barefoot down apartment stairs in panic, a man shouting faintly behind, door slamming"
+ },
+ "telefon_zil": {
+  "sure": 3,
+  "dongu": false,
+  "metin": "A cheerful old-fashioned mobile phone ringtone ringing muffled from inside a cardigan pocket"
+ }
+}

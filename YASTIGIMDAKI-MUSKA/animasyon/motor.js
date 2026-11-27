@@ -495,7 +495,7 @@ function yastik(g, x, y, w, h, o = {}) {
   }
   if (o.saclar) for (let i = 0; i < o.saclar; i++) {
     const sx = (hash(i * 3 + 1) - .5) * w * .85, sy = (hash(i * 7 + 2) - .5) * h * .8;
-    sacTeli(g, sx, sy, 60 + hash(i + 11) * 160, hash(i + 4) * TAU, (hash(i + 8) - .5) * 2.2, i % 4 ? '#8d5837' : '#6d3f25', 3.4);
+    sacTeli(g, sx, sy, 60 + hash(i + 11) * 160, hash(i + 4) * TAU, (hash(i + 8) - .5) * 2.2, i % 4 ? (o.sacRenk || '#8d5837') : (o.sacRenk2 || '#6d3f25'), 3.4);
   }
   g.restore();
   g.restore();
@@ -703,4 +703,47 @@ function tavanIpleri(g, t, o = {}) { // Gülizar'ın odası: tavandan sarkan dü
     if (hash(i + 21) > .55) { g.save(); g.translate(x + sw, uz + 14); g.rotate(sw * .01); rr(g, -18, 0, 36, 46, 4); dol(g, '#e2d3b0'); cizgi(g, 2.5, '#4a3420'); g.restore(); }
     g.restore();
   }
+}
+
+// ───────────── 5. BÖLÜM AKSESUARLARI ─────────────
+function dolapPanjur(g, o = {}) { // dolabın içinden bakış: aralıklı tahta kapak çıtaları
+  const ara = o.ara ?? 150, kalin = o.kalin ?? 104;
+  for (let y = -PAY - 40; y < H + PAY; y += ara) {
+    g.beginPath(); g.moveTo(-PAY, y); g.lineTo(W + PAY, y); g.lineTo(W + PAY, y + kalin); g.lineTo(-PAY, y + kalin + 18); g.closePath();
+    g.fillStyle = dg(g, 0, y, 0, y + kalin, [[0, '#2a1a12'], [.5, '#3e2818'], [1, '#160d08']]); g.fill();
+    g.beginPath(); g.moveTo(-PAY, y + kalin + 18); g.lineTo(W + PAY, y + kalin); cizgi(g, 4, '#0a0604');
+  }
+  g.fillStyle = '#120a06'; g.fillRect(-PAY, -PAY, 120 + PAY, H + PAY * 2); g.fillRect(W - 120, -PAY, 120 + PAY, H + PAY * 2);
+}
+function isikSeritleri(g, a = .35, ara = 150) { // dolabın içine sızan ışık çizgileri
+  g.save(); g.globalCompositeOperation = 'lighter'; g.fillStyle = `rgba(255,220,170,${a})`;
+  for (let y = -PAY - 40 + 104; y < H + PAY; y += ara) { g.beginPath(); g.moveTo(-PAY, y + 10); g.lineTo(W + PAY, y - 6); g.lineTo(W + PAY, y + 26); g.lineTo(-PAY, y + 44); g.closePath(); g.fill(); }
+  g.restore();
+}
+function dolapDis(g) { // kapalı, panjurlu gardırop
+  g.fillStyle = '#c9b2a6'; g.fillRect(-PAY, -PAY, W + PAY * 2, H + PAY * 2);
+  rr(g, 80, -PAY, 920, H + PAY * 2, 10); g.fillStyle = dg(g, 80, 0, 1000, 0, [[0, '#8a5a3a'], [.5, '#9c6a46'], [1, '#7a4c30']]); g.fill(); cizgi(g, 6);
+  g.beginPath(); g.moveTo(540, -PAY); g.lineTo(540, H + PAY); cizgi(g, 6);
+  for (const x0 of [130, 580]) for (let y = 120; y < 1760; y += 46) { g.beginPath(); g.moveTo(x0, y); g.lineTo(x0 + 370, y); g.lineTo(x0 + 370, y + 22); g.lineTo(x0, y + 30); g.closePath(); dol(g, '#6a4228'); cizgi(g, 2.5, '#3a2216'); }
+  for (const x of [500, 580]) { rr(g, x - 12, 880, 24, 120, 12); dol(g, '#d8b84a'); cizgi(g, 3.5); }
+}
+function cekmeceAnahtar(g, x, y, s, alindi = 0) { // açık çekmece + anahtarlık
+  g.save(); g.translate(x, y); g.scale(s, s);
+  rr(g, -420, -300, 840, 600, 16); dol(g, '#6a4228'); cizgi(g, 6);
+  rr(g, -380, -260, 760, 520, 10); dol(g, '#3a2216'); cizgi(g, 4);
+  g.save(); g.rotate(.12); rr(g, -300, -200, 300, 200, 6); dol(g, '#efe6d6'); cizgi(g, 3); g.restore();
+  g.save(); g.rotate(-.2); rr(g, 60, -160, 200, 260, 6); dol(g, '#d9c4a6'); cizgi(g, 3); g.restore();
+  g.save(); g.translate(40 - alindi * 200, 40 - alindi * 400);
+  el(g, 0, 0, 46, 46); g.lineWidth = 10; g.strokeStyle = '#c9cdd1'; g.stroke();
+  for (const [a, r] of [[.3, 1], [1.2, 1], [2.3, 1]]) { g.save(); g.rotate(a); g.translate(0, 46); anahtar(g); g.restore(); }
+  rr(g, -70, -100, 60, 40, 6); dol(g, '#b01f28'); cizgi(g, 3); g.font = '700 20px "Lora", serif'; g.fillStyle = '#fff4e4'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('Ev', -40, -80);
+  g.restore();
+  rr(g, -440, 280, 880, 80, 10); dol(g, '#8a5a3a'); cizgi(g, 6); rr(g, -60, 300, 120, 30, 15); dol(g, '#d8b84a'); cizgi(g, 3);
+  g.restore();
+}
+function kanepeArkasi(g, x, y, s) { // uyuyan Emre için kanepe minderi
+  g.save(); g.translate(x, y); g.scale(s, s);
+  rr(g, -520, -260, 1040, 420, 80); dol(g, '#6e2a33'); cizgi(g, 6);
+  rr(g, -480, -40, 960, 300, 60); dol(g, '#7d3440'); cizgi(g, 5);
+  g.restore();
 }

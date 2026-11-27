@@ -1,0 +1,228 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [slowly] Bileziğimin kokusunu alıyorum gelin... Bu evde, bir yerde.",
+   "parca": [
+    "Bileziğimin kokusunu alıyorum gelin…",
+    "Bu evde, bir yerde."
+   ]
+  },
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] [trembling] Dolabın içinde nefesimi tuttum. Bilezik avucumda... buz gibiydi.",
+   "parca": [
+    "Dolabın içinde nefesimi tuttum.",
+    "Bilezik avucumda... buz gibiydi."
+   ]
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sniffing] [whispers] Yastığın da kokusu değişmiş gelin... Ne yaptın sen ona?",
+   "parca": [
+    "Yastığın da kokusu değişmiş gelin...",
+    "Ne yaptın sen ona?"
+   ]
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[mocking] 'Sesimi geri ver'... Ah gelin, ah."
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "telefon",
+   "metin": "[cheerful] Anne, neredesin? Kahvaltı hazır!"
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sweetly] Geliyorum oğlum, geliyorum..."
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [menacing] Kaçamazsın gelin."
+  },
+  {
+   "id": "I08",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Mezarlık Sokağı'na ikinci kez gidiyordum... Bu sefer elim boş değildi.",
+   "parca": [
+    "Mezarlık Sokağı'na ikinci kez gidiyordum...",
+    "Bu sefer elim boş değildi."
+   ]
+  },
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [pleased] Getirdin demek... Hatice'nin dördüncü bileziği."
+  },
+  {
+   "id": "G02",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] Bu bileziği kırk yıl önce... kendi kayınvalidesinden almıştı."
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Kırk yıl önce mi? Hatice de mi... bir zamanlar gelindi?"
+  },
+  {
+   "id": "G03",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[slowly] [menacing] Şimdi sıra düğümü ters bağlamakta... Ama bir şartla.",
+   "parca": [
+    "Şimdi sıra düğümü ters bağlamakta...",
+    "Ama bir şartla."
+   ]
+  },
+  {
+   "id": "G04",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] Bileziği bu gece... onun yastığının altına koyacaksın."
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] Onun evine... gece yarısı... gizlice girecektim."
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Emre'nin anahtarları hâlâ bizim evdeki çekmecedeydi."
+  },
+  {
+   "id": "I09",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Hatice'nin evi gece başka kokuyordu... Toprak... ve gül suyu."
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sleepy] [whispers] Gelin... sen misin?"
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Uykusunda konuşuyordu. Bileziği yastığının altına itip... geri çekildim.",
+   "parca": [
+    "Uykusunda konuşuyordu.",
+    "Bileziği yastığının altına itip... geri çekildim."
+   ]
+  },
+  {
+   "id": "I10",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[softly] [sad] Uyurken eskisi gibiydi... Dokunmadan duramadım."
+  },
+  {
+   "id": "E02",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[startled] [shouting] Kimsin sen?! Evimde ne arıyorsun?!"
+  },
+  {
+   "id": "E03",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[shouting] Anne! Evde biri var!"
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[sad] [whispers] Beni bir hırsız gibi kovaladı... kendi kocam."
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Saat üçte düğümler... bu sefer ters yöne dönmeye başladı."
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[terrified] [whispers] Bu... bu benim saçım..."
+  },
+  {
+   "id": "H08",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[panicked] [angry] Gülizar! Bunu bana yapamazsın!"
+  },
+  {
+   "id": "G05",
+   "kim": "GULIZAR",
+   "tur": "fisilti",
+   "metin": "[whispers] Düğüm döndü Hatice... Şimdi sıra sende.",
+   "altyazi": "Düğüm döndü Hatice… Şimdi sıra sende."
+  }
+ ]
+}
