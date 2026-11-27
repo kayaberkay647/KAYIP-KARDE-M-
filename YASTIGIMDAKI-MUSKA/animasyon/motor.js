@@ -584,6 +584,7 @@ function dugumluIp(g, x0, x1, y, n, o = {}) { // kırmızı iplik + n düğüm; 
   g.lineWidth = 9 + LW; g.strokeStyle = '#3a0a0e'; g.stroke(); g.lineWidth = 9; g.strokeStyle = '#b01f28'; g.stroke();
   for (let i = 0; i < n; i++) {
     const x = x0 + ad * (i + 1), yy = y + Math.sin(x * .02 + t * .8) * 6, c = i === o.cozulen ? clamp(o.cozulme || 0) : 0;
+    if (o.cozulmus && o.cozulmus.includes(i)) continue;
     if (c >= 1) continue;
     g.save(); g.translate(x, yy); g.scale(1 - c * .8, 1 - c * .6);
     el(g, 0, 0, 17, 14); dol(g, '#9a1820'); cizgi(g, 3.5, '#3a0a0e');
@@ -628,5 +629,51 @@ function cayBardagi(g, x, y, s) {
   el(g, 0, 40, 46, 12); dol(g, '#f4f1ea'); cizgi(g, 3);
   g.beginPath(); g.moveTo(-22, -40); g.quadraticCurveTo(-10, 0, -20, 36); g.lineTo(20, 36); g.quadraticCurveTo(10, 0, 22, -40); g.closePath();
   g.fillStyle = dg(g, 0, -40, 0, 36, [[0, 'rgba(200,60,30,.7)'], [1, 'rgba(140,30,10,.9)']]); g.fill(); cizgi(g, 3);
+  g.restore();
+}
+
+// ───────────── 3. BÖLÜM AKSESUARLARI ─────────────
+function corbaKase(g, x, y, s, t = 0, o = {}) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  if (o.tepsi) { el(g, 0, 40, 260, 70); dol(g, '#c9a24f'); cizgi(g); el(g, 0, 34, 236, 58); dol(g, '#dcb75e'); }
+  g.beginPath(); g.moveTo(-150, -10); g.quadraticCurveTo(-140, 110, 0, 120); g.quadraticCurveTo(140, 110, 150, -10); g.closePath(); dol(g, '#f7f3ea'); cizgi(g);
+  g.beginPath(); g.moveTo(-150, -10); g.quadraticCurveTo(0, 30, 150, -10); g.lineWidth = 5; g.strokeStyle = '#3d6ea8'; g.stroke();
+  el(g, 0, -10, 150, 34); dol(g, '#d9652b'); cizgi(g, 4);
+  for (let i = 0; i < 6; i++) { el(g, -90 + hash(i) * 180, -14 + hash(i + 3) * 10, 8, 4); dol(g, '#f0a04a'); }
+  el(g, 40, -16, 18, 6); dol(g, '#3d5a2a');
+  if (o.sac) { g.beginPath(); g.moveTo(-110, -6); g.bezierCurveTo(-50, -30, 0, 6, 40, -16); g.bezierCurveTo(80, -30, 110, -4, 96, 6); cizgi(g, 2.6, '#6d3f25'); }
+  g.globalAlpha = .4; for (let i = 0; i < 3; i++) { const ph = (t * .35 + i / 3) % 1; g.save(); g.globalAlpha = .4 * Math.sin(ph * Math.PI); g.beginPath(); const bx = -60 + i * 60; g.moveTo(bx, -30); g.bezierCurveTo(bx - 30, -90 - ph * 100, bx + 30, -140 - ph * 120, bx + gurultu(t + i, i) * 20, -200 - ph * 160); cizgi(g, 12, '#ffffff'); g.restore(); }
+  g.restore();
+}
+function defter(g, x, y, s, yazi, aci = 0) {
+  g.save(); g.translate(x, y); g.rotate(aci); g.scale(s, s);
+  rr(g, -230, -170, 460, 340, 10); dol(g, '#fbf8f0'); cizgi(g);
+  g.globalAlpha = .7; for (let yy = -110; yy < 160; yy += 40) { g.beginPath(); g.moveTo(-210, yy); g.lineTo(210, yy); cizgi(g, 2.5, '#b9cde0'); } g.globalAlpha = 1;
+  g.beginPath(); g.moveTo(-170, -170); g.lineTo(-170, 170); cizgi(g, 3, '#e3a3a3');
+  for (let i = 0; i < 7; i++) { el(g, -230, -140 + i * 46, 10, 10); dol(g, '#7d7d84'); cizgi(g, 2.5); }
+  g.font = 'italic 600 82px "Lora", serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#b01f28'; g.fillText(yazi, 20, -10);
+  g.beginPath(); g.moveTo(-120, 50); g.quadraticCurveTo(20, 66, 160, 44); cizgi(g, 5, '#b01f28');
+  g.restore();
+}
+function kapiZinciri(g, x0, y0, aci, s = 1) { // kasadan sarkan güvenlik zinciri (aci: sallanma)
+  g.save(); g.translate(x0, y0); g.scale(s, s);
+  rr(g, -16, -30, 32, 60, 6); dol(g, '#b9bec3'); cizgi(g, 3.5);
+  g.rotate(aci);
+  for (let i = 0; i < 9; i++) { const yy = 20 + i * 22; el(g, 0, yy, i % 2 ? 6 : 10, 12); g.lineWidth = 5; g.strokeStyle = '#2a2d31'; g.stroke(); g.lineWidth = 3; g.strokeStyle = '#c9cdd1'; g.stroke(); }
+  el(g, 0, 230, 16, 16); dol(g, '#9aa0a6'); cizgi(g, 3.5);
+  g.restore();
+}
+function muskaKagitArka(g, x, y, s, t = 0, muhurParlak = .8) { // kâğıdın arkası: silik mühür
+  g.save(); g.translate(x, y); g.scale(s, s); g.rotate(.03);
+  rr(g, -300, -380, 600, 760, 10); g.fillStyle = dg(g, 0, -380, 0, 380, [[0, '#e6d8b8'], [1, '#cdb88c']]); g.fill(); cizgi(g, 5, '#4a3420');
+  g.globalAlpha = .3; g.beginPath(); g.moveTo(-300, 0); g.lineTo(300, 0); g.moveTo(0, -380); g.lineTo(0, 380); cizgi(g, 3, '#8a6a44'); g.globalAlpha = 1;
+  g.globalAlpha = .18; g.font = '700 74px "Lora", serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#a3141c'; g.save(); g.scale(-1, 1); g.fillText('NAZLI', 0, -8); g.restore(); g.globalAlpha = 1;
+  g.save(); g.translate(60, 200); g.rotate(-.18); g.globalAlpha = muhurParlak;
+  g.beginPath(); g.arc(0, 0, 150, 0, TAU); cizgi(g, 8, '#3c4f7a'); g.beginPath(); g.arc(0, 0, 118, 0, TAU); cizgi(g, 4, '#3c4f7a');
+  g.font = '700 30px "Lora", serif'; g.fillStyle = '#3c4f7a'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const ust = 'GÜLİZAR ANA'; for (let i = 0; i < ust.length; i++) { const a = -Math.PI / 2 + (i - (ust.length - 1) / 2) * .2; g.save(); g.rotate(a + Math.PI / 2); g.fillText(ust[i], 0, -134); g.restore(); }
+  g.font = '700 30px "Lora", serif'; g.fillText('MEZARLIK SK.', 0, -12); g.font = '700 46px "Lora", serif'; g.fillText('NO: 13', 0, 34);
+  for (let i = 0; i < 26; i++) { const lx = (hash(i) - .5) * 280, ly = (hash(i + 9) - .5) * 280; if (Math.abs(ly) < 75 && Math.abs(lx) < 110) continue; el(g, lx, ly, 10 + hash(i + 2) * 18, 6 + hash(i + 4) * 8); dol(g, '#e2d3b0'); }
+  g.restore();
   g.restore();
 }

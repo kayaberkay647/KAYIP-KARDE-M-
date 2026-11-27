@@ -1,0 +1,238 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "fisilti",
+   "metin": "[whispers] [menacing] Kapıyı açmazsan gelin... ikinci düğümü ben çözerim.",
+   "parca": [
+    "Kapıyı açmazsan gelin…",
+    "ikinci düğümü ben çözerim."
+   ]
+  },
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] [whispers] Muskayı göğsüme bastırdım. Nefes bile almadım."
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Kapıyı açtığımda koridor boştu... Ama dış kapının zinciri... hâlâ sallanıyordu.",
+   "parca": [
+    "Kapıyı açtığımda koridor boştu...",
+    "Ama dış kapının zinciri... hâlâ sallanıyordu."
+   ]
+  },
+  {
+   "id": "I12",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[softly] [determined] O sabah Emre'ye her şeyi anlatacaktım..."
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[sleepy] Günaydın... Nazlı? Neyin var?"
+  },
+  {
+   "id": "E02",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[annoyed] Konuşsana! Ne bu oyun şimdi?"
+  },
+  {
+   "id": "E06",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[sighs] [irritated] Bir de yazıyla mı oynayacağız şimdi?"
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] Bağırdım... ama sesim çıkmadı. Birinci düğüm çözülmüştü... ve sesimi götürmüştü.",
+   "parca": [
+    "Bağırdım... ama sesim çıkmadı.",
+    "Birinci düğüm çözülmüştü... ve sesimi götürmüştü."
+   ]
+  },
+  {
+   "id": "E03",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[coldly] Annem haklı... Sen iyi değilsin Nazlı."
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[cheerfully] Günaydın çocuklar! [sweetly] Gelinime çorba getirdim... boğazına iyi gelir.",
+   "parca": [
+    "Günaydın çocuklar!",
+    "Gelinime çorba getirdim... boğazına iyi gelir."
+   ]
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Sesimin gittiğini... nereden biliyordu?"
+  },
+  {
+   "id": "H08",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sweetly] [slowly] İç gelin, iç... son damlasına kadar."
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[fake pity] Ah kuzum... sesin mi kısıldı? Hiç mi konuşamıyorsun?"
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "ses": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[coldly] [clearly] Emre... ben seni artık sevmiyorum."
+  },
+  {
+   "id": "E04",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[shocked] [hurt] Ne... ne dedin sen?"
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[panicked] [whispers] O ben değildim! O benim sesimdi... ama ben değildim!",
+   "parca": [
+    "O ben değildim!",
+    "O benim sesimdi... ama ben değildim!"
+   ]
+  },
+  {
+   "id": "E05",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[hurt] [angry] Tamam Nazlı. Anladım."
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] [sweetly] Kırk düğüm gelin... daha otuz dokuz tane var."
+  },
+  {
+   "id": "I11",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] [whispers] İkinci düğüm... şimdiden gevşemeye başlamıştı."
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[determined] Muskanın arkasında silik bir mühür vardı. Bir isim... ve bir adres.",
+   "parca": [
+    "Muskanın arkasında silik bir mühür vardı.",
+    "Bir isim... ve bir adres."
+   ]
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Gülizar Ana. Mezarlık Sokağı, on üç numara."
+  },
+  {
+   "id": "I10",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[determined] [whispers] Sesimi... o kadından geri alacaktım."
+  },
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [whispers] Gelin beni arıyor... Gelsin. Kapım hep açık."
+  },
+  {
+   "id": "I08",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[sadly] Emre o gece eve dönmedi. Annesinin yanında kaldı."
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "ses": "NAZLI",
+   "tur": "sarki",
+   "metin": "[sings softly] Sabahın ilk ışığı sen... kalbimin evi sen...",
+   "altyazi": "♪ Sabahın ilk ışığı sen, kalbimin evi sen ♪"
+  },
+  {
+   "id": "I09",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] [whispers] Alt kattan... benim sesim geliyordu."
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "ses": "NAZLI",
+   "tur": "fisilti",
+   "metin": "[whispers] Seni duyuyorum gelin...",
+   "altyazi": "Seni duyuyorum gelin…"
+  }
+ ]
+}
