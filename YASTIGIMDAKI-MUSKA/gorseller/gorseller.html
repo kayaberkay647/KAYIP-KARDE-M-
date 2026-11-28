@@ -16,6 +16,7 @@
 <canvas id="soru2" width="1080" height="1920"></canvas>
 <canvas id="soru3" width="1080" height="1920"></canvas>
 <canvas id="soru4" width="1080" height="1920"></canvas>
+<canvas id="anket5" width="1080" height="1920"></canvas>
 <script>const ZAMAN = { fps: 30, replikler: [] };</script>
 <script src="../animasyon/motor.js"></script>
 <script src="../animasyon/mekanlar.js"></script>
@@ -232,6 +233,44 @@ function hap(g, x, y, w, h, saat, yazi_) {
   yazi(g, 'Cevabını yorumlara yaz:', W / 2, 1710, 'italic 600 56px "Lora"', '#fff4e4', 8);
   yazi(g, 'A, B, C?', W / 2, 1790, '700 70px "Lora"', '#e0313b', 9, 6);
   for (const x of [W / 2 - 260, W / 2 + 260]) { g.beginPath(); g.moveTo(x - 26, 1776); g.lineTo(x, 1804); g.lineTo(x + 26, 1776); cizgi(g, 9, KIRMIZI); }
+})();
+// ═════ 6) 5. BÖLÜM ANKETİ: "HATİCE BUNU HAK ETTİ Mİ?" ═════
+(function () {
+  const g = document.getElementById('anket5').getContext('2d');
+  arka(g, 'yatakGece', g => yatakOdasi(g, true), { olcek: 1.6, merkez: [500, 900], blur: 5 });
+  g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(90,60,110,.6)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+  g.fillStyle = 'rgba(10,4,8,.35)'; g.fillRect(0, 0, W, H);
+  // gri saçlarla dolu yastıkta Hatice
+  yastik(g, 540, 560, 1000, 560, { t: 0, gulX: 1e4, saclar: 46, sacRenk: '#d2ccc6', sacRenk2: '#a29c96' });
+  isikHalesi(g, 880, 590, 280, '255,40,30', .7); tekBilezik(g, 880, 590, 1.5, .2);
+  karakter(g, HATICE, { x: 520, y: 470, s: 1.5, t: 3, T: 3, govdeYok: true, kollar: { sol: { gizli: true }, sag: { gizli: true } }, konus: .75, gozAcik: 1.25, kirpma: false, bebek: .35, kas: 'saskin', gulum: -.5, ter: 1, bak: [0, .55], egim: .06 });
+  rr(g, 40, 40, 200, 70, 18); g.fillStyle = dg(g, 0, 40, 0, 110, [[0, '#d3323b'], [1, '#8e1820']]); g.fill(); cizgi(g, 5, KOYU);
+  yazi(g, 'ANKET', 140, 78, '700 44px "Lora"', '#fff4e4', 0, 6);
+  yazi(g, '5. BÖLÜM', 960, 78, '700 34px "Lora"', '#e6c9ae', 6, 4);
+  // ortada soru paneli
+  g.fillStyle = dg(g, 0, 640, 0, 1300, [[0, 'rgba(5,4,8,0)'], [.15, 'rgba(5,4,8,.88)'], [1, 'rgba(5,4,8,.95)']]); g.fillRect(0, 640, W, 1280);
+  g.save(); g.shadowColor = 'rgba(200,30,40,.7)'; g.shadowBlur = 40;
+  rr(g, 50, 760, 980, 420, 34); g.fillStyle = 'rgba(14,5,8,.96)'; g.fill(); g.shadowBlur = 0;
+  rr(g, 50, 760, 980, 420, 34); cizgi(g, 8, KIRMIZI); rr(g, 68, 778, 944, 384, 26); cizgi(g, 3, '#7a1a1f');
+  g.restore();
+  yazi(g, 'HATİCE BUNU', W / 2, 870, '700 92px "Lora"', '#fff4e4', 10, 4);
+  yazi(g, 'HAK ETTİ Mİ?', W / 2, 1000, '700 126px "Lora"', '#e0313b', 14, 2);
+  zikzak(g, 250, 830, 1078, '#b01f28', 5);
+  yazi(g, 'Düğüm döndü… saçları dökülüyor', W / 2, 1128, 'italic 600 48px "Lora"', '#e6c9ae', 6);
+  // iki oy butonu
+  const buton = (y, renk1, renk2, ikon, metin) => {
+    g.save(); g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 20;
+    rr(g, 70, y, 940, 150, 75); g.fillStyle = dg(g, 0, y, 0, y + 150, [[0, renk1], [1, renk2]]); g.fill(); g.shadowBlur = 0; cizgi(g, 6, KOYU);
+    g.restore();
+    el(g, 160, y + 75, 52, 52); dol(g, '#fff4e4'); cizgi(g, 5, KOYU);
+    if (ikon === 'evet') { g.beginPath(); g.moveTo(136, y + 76); g.lineTo(154, y + 96); g.lineTo(186, y + 56); cizgi(g, 11, '#2f7a3a'); }
+    else { g.beginPath(); g.moveTo(140, y + 55); g.lineTo(180, y + 95); g.moveTo(180, y + 55); g.lineTo(140, y + 95); cizgi(g, 11, '#a3141c'); }
+    yazi(g, metin, 600, y + 80, '700 60px "Lora"', '#fff4e4', 9, 2);
+  };
+  buton(1270, '#3e8a4a', '#24572e', 'evet', 'EVET, HAK ETTİ');
+  buton(1460, '#c0262f', '#7a1219', 'hayir', 'HAYIR, FAZLA OLDU');
+  yazi(g, 'Oyunu yorumlara yaz:', W / 2, 1720, 'italic 600 56px "Lora"', '#fff4e4', 8);
+  yazi(g, 'EVET mi, HAYIR mı?', W / 2, 1805, '700 66px "Lora"', '#e0313b', 9, 3);
 })();
 window.HAZIR = true;
 </script>
