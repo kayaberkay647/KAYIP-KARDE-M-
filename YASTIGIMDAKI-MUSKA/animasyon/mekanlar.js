@@ -349,3 +349,28 @@ function mezarlikKapisi(g, acik, t) { // 13 numaranın kapısı: kemerin içine 
   if (acik < .5) { for (let i = 1; i < 5; i++) { g.beginPath(); g.moveTo(400 + gen * i / 5, 600); g.lineTo(400 + gen * i / 5, 1440); cizgi(g, 3, '#3a2218'); } el(g, 400 + gen - 40, 1050, 14, 14); dol(g, '#8a7a50'); cizgi(g, 3); }
   g.restore();
 }
+
+// ───────────── DEPO (Hatice'nin evinde) ─────────────
+function depoArka(g) {
+  g.fillStyle = '#2a1a12'; g.fillRect(-PAY, -PAY, W + PAY * 2, H + PAY * 2);
+  for (let x = -PAY, i = 0; x < W + PAY; x += 130, i++) { g.fillStyle = i % 2 ? '#33200f' : '#2c1b0e'; g.fillRect(x, -PAY, 130, H + PAY * 2); g.beginPath(); g.moveTo(x, -PAY); g.lineTo(x, H + PAY); cizgi(g, 4, '#140b06'); }
+  for (const [x0, x1] of [[-PAY, 600], [480, W + PAY]]) { g.beginPath(); g.moveTo(x0, 120); g.lineTo(x1, 220); cizgi(g, 40, '#1d1209'); }
+  // pencere (ay ışığı)
+  rr(g, 760, 300, 200, 260, 6); dol(g, '#1a2238'); cizgi(g, 6, '#140b06'); el(g, 880, 360, 30, 30); dol(g, '#e9e6d0');
+  g.beginPath(); g.moveTo(860, 300); g.lineTo(860, 560); g.moveTo(760, 430); g.lineTo(960, 430); cizgi(g, 8, '#140b06');
+  g.save(); g.globalCompositeOperation = 'lighter'; g.globalAlpha = .08; g.fillStyle = '#c9d6ff'; poly(g, [[760, 300], [960, 300], [700, 1600], [200, 1600]]); g.fill(); g.restore();
+  // kutular + örtülü ayna
+  for (const [x, y, w, h] of [[40, 1100, 280, 240], [90, 900, 200, 200], [820, 1180, 240, 200]]) { rr(g, x, y, w, h, 6); dol(g, '#7a5a3a'); cizgi(g, 4, '#140b06'); g.beginPath(); g.moveTo(x, y + h / 2); g.lineTo(x + w, y + h / 2); cizgi(g, 3, '#4a3420'); }
+  g.beginPath(); g.moveTo(80, 330); g.quadraticCurveTo(200, 290, 320, 330); g.lineTo(350, 860); g.quadraticCurveTo(200, 900, 50, 860); g.closePath(); dol(g, '#d9d2c4'); cizgi(g, 4, '#140b06');
+  g.globalAlpha = .4; for (let i = 0; i < 4; i++) { g.beginPath(); g.moveTo(110 + i * 60, 340); g.quadraticCurveTo(100 + i * 64, 600, 90 + i * 70, 860); cizgi(g, 3, '#8a8478'); } g.globalAlpha = 1;
+  g.fillStyle = dg(g, 0, 1500, 0, H, [[0, '#3a2414'], [1, '#22140a']]); g.fillRect(-PAY, 1500, W + PAY * 2, H - 1500 + PAY);
+  g.beginPath(); g.moveTo(-PAY, 1500); g.lineTo(W + PAY, 1500); cizgi(g, 5, '#140b06');
+}
+function depoKapi(g, acik, t) { // depo kapısı (içeriden)
+  depoArka(g);
+  rr(g, 300, 300, 480, 1220, 6); dol(g, '#1d1209'); cizgi(g, 6, '#0a0603');
+  g.fillStyle = '#05030a'; g.fillRect(320, 320, 440, 1190);
+  const gen = 440 * Math.cos(acik * 1.25);
+  g.beginPath(); g.moveTo(320, 320); g.lineTo(320 + gen, 320 + 40 * acik); g.lineTo(320 + gen, 1510 - 30 * acik); g.lineTo(320, 1510); g.closePath();
+  g.fillStyle = dg(g, 320, 0, 320 + gen, 0, [[0, '#4a2e1c'], [1, '#5e3a24']]); g.fill(); cizgi(g, 5, '#0a0603');
+}

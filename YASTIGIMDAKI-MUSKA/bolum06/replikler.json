@@ -1,0 +1,231 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] Kırk yıl önce o yastıkta... ben yatıyordum, gelin.",
+   "parca": [
+    "Kırk yıl önce o yastıkta…",
+    "ben yatıyordum, gelin."
+   ]
+  },
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Gülizar'ın sözü aklımdaydı... Hatice'nin sırrı, çeyiz sandığındaydı.",
+   "parca": [
+    "Gülizar'ın sözü aklımdaydı...",
+    "Hatice'nin sırrı, çeyiz sandığındaydı."
+   ]
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Sandığın içinde bir gelinlik, bir yastık kılıfı... ve eski bir fotoğraf vardı.",
+   "parca": [
+    "Sandığın içinde bir gelinlik, bir yastık kılıfı...",
+    "ve eski bir fotoğraf vardı."
+   ]
+  },
+  {
+   "id": "H10",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[weak] [tired] Saçlarım her gece biraz daha dökülüyor gelin... Senin gibi.",
+   "parca": [
+    "Saçlarım her gece biraz daha dökülüyor gelin...",
+    "Senin gibi."
+   ]
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[tired] [slowly] O fotoğraftaki gelin benim. Bin dokuz yüz seksen dört."
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[slowly] Kaynanam bana çeyizinden bir yastık hediye etti... Bu yastığı.",
+   "parca": [
+    "Kaynanam bana çeyizinden bir yastık hediye etti...",
+    "Bu yastığı."
+   ]
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[bitter] Saçlarım döküldü. Sesim gitti. Kocam beni tanımadı... Tıpkı senin gibi.",
+   "parca": [
+    "Saçlarım döküldü. Sesim gitti.",
+    "Kocam beni tanımadı... Tıpkı senin gibi."
+   ]
+  },
+  {
+   "id": "H11",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[slowly] [sad] Kocam... Emre'nin babası... bir sabah bana 'Kimsiniz?' dedi."
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Benim yaşadığım her şeyi... kırk yıl önce o da yaşamıştı."
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[whispers] Ben de Gülizar'a gittim. Ben de bir bilezik çaldım... Kaynanamın dördüncü bileziğini.",
+   "parca": [
+    "Ben de Gülizar'a gittim.",
+    "Ben de bir bilezik çaldım... Kaynanamın dördüncü bileziğini."
+   ]
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[coldly] [slowly] Düğüm döndü... ve kaynanam kırkıncı gün öldü."
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] Hatice'nin bileğindeki bilezikler... bir ölünün bilezikleriydi."
+  },
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [whispers] Bu düğüm hiç bitmez gelin... Her gelin, bir gün kaynana olur.",
+   "parca": [
+    "Bu düğüm hiç bitmez gelin...",
+    "Her gelin, bir gün kaynana olur."
+   ]
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] [whispers] Kırk yıl sonra ben de mi... oğlumun karısına aynı yastığı verecektim?",
+   "parca": [
+    "Kırk yıl sonra ben de mi...",
+    "oğlumun karısına aynı yastığı verecektim?"
+   ]
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[sad] [coldly] Ben de seni kırk günde bitirecektim... Çünkü bana öyle öğretildi.",
+   "parca": [
+    "Ben de seni kırk günde bitirecektim...",
+    "Çünkü bana öyle öğretildi."
+   ]
+  },
+  {
+   "id": "H08",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[weak] [whispers] Bir yolu var... Sandığın dibinde."
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Sandığın dibinde yüz yıllık bir fotoğraf vardı... Gelinin adı: Gülizar.",
+   "parca": [
+    "Sandığın dibinde yüz yıllık bir fotoğraf vardı...",
+    "Gelinin adı: Gülizar."
+   ]
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] Gülizar... bu laneti başlatan ilk gelin miydi?"
+  },
+  {
+   "id": "H12",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[shocked] [whispers] Demek kırk düğümü... ilk o atmış."
+  },
+  {
+   "id": "G02",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [slowly] Sırrımı buldun demek gelin... Artık sıra ikinizde.",
+   "parca": [
+    "Sırrımı buldun demek gelin...",
+    "Artık sıra ikinizde."
+   ]
+  },
+  {
+   "id": "G03",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] [menacing] Kırk düğüm... kırk gelin. Seninki kırk birinci olacak.",
+   "parca": [
+    "Kırk düğüm... kırk gelin.",
+    "Seninki kırk birinci olacak."
+   ]
+  },
+  {
+   "id": "H09",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[terrified] [whispers] O geldi..."
+  }
+ ]
+}

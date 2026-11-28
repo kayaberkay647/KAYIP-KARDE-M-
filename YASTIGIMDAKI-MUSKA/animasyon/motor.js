@@ -747,3 +747,51 @@ function kanepeArkasi(g, x, y, s) { // uyuyan Emre için kanepe minderi
   rr(g, -480, -40, 960, 300, 60); dol(g, '#7d3440'); cizgi(g, 5);
   g.restore();
 }
+
+// ───────────── 6. BÖLÜM AKSESUARLARI ─────────────
+function sandikCiz(g, x, y, s, acik = 0, t = 0) { // çeyiz sandığı (acik: kapak açıklığı 0-1)
+  g.save(); g.translate(x, y); g.scale(s, s);
+  const ky = lerp(-60, -420, acik);
+  if (acik > .02) { // iç + kızıl ışık
+    g.fillStyle = '#1a0806'; g.fillRect(-370, -70, 740, 80);
+    isikHalesi(g, 0, -40, 520 * acik, '255,60,40', .6 * acik, t);
+  }
+  // kapak
+  g.beginPath(); g.moveTo(-390, -60); g.lineTo(-360, ky); g.lineTo(360, ky); g.lineTo(390, -60); g.closePath();
+  g.fillStyle = dg(g, 0, ky, 0, -60, [[0, '#7a4a2c'], [1, '#5a341e']]); g.fill(); cizgi(g, 7);
+  for (const k of [-.55, 0, .55]) { g.beginPath(); g.moveTo(k * 390, -60); g.lineTo(k * 360, ky); cizgi(g, 10, '#c9a24f'); }
+  // gövde
+  rr(g, -400, -60, 800, 440, 18); g.fillStyle = dg(g, 0, -60, 0, 380, [[0, '#8a5634'], [1, '#5e3820']]); g.fill(); cizgi(g, 7);
+  g.globalAlpha = .35; for (let i = 0; i < 4; i++) { g.beginPath(); g.moveTo(-390, 40 + i * 90); g.bezierCurveTo(-100, 30 + i * 90, 100, 60 + i * 90, 390, 40 + i * 90); cizgi(g, 3, '#3a2010'); } g.globalAlpha = 1;
+  for (const [cx, cy] of [[-400, -60], [400, -60], [-400, 380], [400, 380]]) { rr(g, cx - 30, cy - 30, 60, 60, 8); dol(g, '#c9a24f'); cizgi(g, 4); }
+  for (const k of [-.55, .55]) { rr(g, k * 400 - 14, -60, 28, 440, 4); dol(g, '#b08a3e'); cizgi(g, 3); }
+  el(g, 0, 140, 44, 50); dol(g, '#c9a24f'); cizgi(g, 5); rr(g, -12, 135, 24, 44, 6); dol(g, '#2a1408');
+  g.restore();
+}
+function eskiFoto(g, x, y, s, o = {}) { // sepya, gelinlikli kadın fotoğrafı
+  g.save(); g.translate(x, y); g.scale(s, s); g.rotate(o.aci ?? -.06); g.globalAlpha *= (o.a ?? 1);
+  const kag = o.cokEski ? '#d9c39a' : '#e9dcc0', ic = o.cokEski ? '#8a7454' : '#bba98a';
+  rr(g, -150, -200, 300, 380, 6); dol(g, kag); cizgi(g, 5, '#3a2416'); rr(g, -128, -178, 256, 300, 4); dol(g, ic);
+  el(g, 0, -90, 46, 50); dol(g, o.cokEski ? '#b8a07a' : '#d9c4a6'); el(g, 0, -112, 52, 30); dol(g, o.cokEski ? '#4a3a2a' : '#8a7a66');
+  g.beginPath(); g.moveTo(-40, -150); g.quadraticCurveTo(0, -190, 40, -150); g.lineTo(90, 110); g.lineTo(-90, 110); g.closePath(); g.fillStyle = 'rgba(255,255,250,.5)'; g.fill();
+  poly(g, [[-60, -40], [60, -40], [96, 110], [-96, 110]]); dol(g, o.cokEski ? '#e6dcc4' : '#f6f1e6');
+  if (o.cokEski) { // yırtık köşe ve lekeler
+    g.fillStyle = '#2a1408'; poly(g, [[150, -200], [150, -120], [90, -200]]); g.fill();
+    for (let i = 0; i < 8; i++) { el(g, (hash(i) - .5) * 240, (hash(i + 3) - .5) * 300, 10 + hash(i + 5) * 16, 6 + hash(i + 7) * 10); g.fillStyle = 'rgba(90,60,30,.35)'; g.fill(); }
+  }
+  g.font = 'italic 600 30px "Lora", serif'; g.textAlign = 'center'; g.fillStyle = '#5a3a26'; g.fillText(o.yazi || '1984', 0, 158);
+  g.restore();
+}
+function gelinlikKatli(g, x, y, s) {
+  g.save(); g.translate(x, y); g.scale(s, s);
+  rr(g, -220, -140, 440, 280, 30); dol(g, '#f6f1e6'); cizgi(g, 5);
+  for (let i = 0; i < 14; i++) { const a = i / 14 * TAU; el(g, Math.cos(a) * 230, Math.sin(a) * 150, 16, 12); dol(g, '#fbf8f0'); }
+  g.globalAlpha = .4; for (let i = 0; i < 5; i++) { g.beginPath(); g.moveTo(-180, -80 + i * 40); g.quadraticCurveTo(0, -60 + i * 40, 180, -80 + i * 40); cizgi(g, 3, '#d9cfbd'); } g.globalAlpha = 1;
+  el(g, 0, -20, 40, 40); dol(g, '#f0e6d2'); cizgi(g, 3, '#c9b896');
+  g.restore();
+}
+const GENC_HATICE = Object.assign({}, HATICE, { yasli: false, sac: ['#5a3a28', '#3a2418', '#7a5640'], kasRenk: '#3a2418', dudak: '#c4515a', bilezik: false, allik: .55, kolRenk: '#efe8da' });
+function seyrekSac(g) { // Hatice'nin dökülen saçları (karakterin enUst katmanında)
+  for (const [x, y, rx, ry] of [[-44, -112, 26, 14], [34, -100, 22, 12], [-6, -128, 18, 10], [70, -60, 14, 18]]) { el(g, x, y, rx, ry); dol(g, TEN.hatice[0]); g.globalAlpha = .5; el(g, x + 4, y + 2, rx * .7, ry * .6); dol(g, TEN.hatice[1]); g.globalAlpha = 1; }
+  for (let i = 0; i < 5; i++) sacTeli(g, -60 + i * 30, -118 + (i % 2) * 10, 40 + i * 6, -1.2 + i * .5, .6, '#c9c3bd', 2.4);
+}
