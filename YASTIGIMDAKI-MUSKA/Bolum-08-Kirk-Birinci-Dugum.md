@@ -1,41 +1,45 @@
 # YASTIĞIMDAKİ MUSKA · 8. Bölüm: Kırk Birinci Düğüm
-**Süre:** 2:13 · **Format:** 9:16 dikey · **Ters köşe:** 7. bölümdeki barışma Hatice'nin oyunuydu.
+**Süre:** 2:17 · **Format:** 9:16 dikey · **Ters köşe:** 7. bölümdeki barışma Hatice'nin oyunuydu.
+**Yeniden çekim:** fısıltı yok, kameraya konuşma yok; herkes doğal ve net sesle konuşuyor.
 
 ## Senaryo
 
-### SAHNE 1 · Küllerdeki düğüm (0:00–0:36)
-*Gece, mutfak. Hatice sobanın küllerinden parlayan kırmızı düğümü çıplak eliyle alır; eli yanmaz.*
-- **HATİCE:** *(sırıtarak, fısıltı)* 'Kızım' dedim… inandı.
-- **HATİCE:** Kırk yıldır Gülizar'dan kurtulmak için… bir gelin bekliyordum.
-- *Düğümü bileziklerinin yanına, bileğine bağlar.* **HATİCE:** Artık kırk düğümün sahibi… benim.
-- **HATİCE:** *(kameraya, göz kırpmadan)* Bana saf bir gelin lazımdı… Seni seçtim, Nazlı.
-- *Sobanın camında genç Hatice'nin yansıması gülümser.* **HATİCE:** Gençliğim… geri geliyor.
+### SAHNE 1 · Kaynananın portresi (0:00–0:24)
+*Gece, karanlık mutfak. Duvarda Hatice'nin rahmetli kaynanasının siyah kurdeleli portresi, önünde bir mum. Hatice'nin saçları hâlâ seyrek.*
+- **HATİCE:** *(sakin, soğuk)* Gelinim Gülizar'ı benim için yok etti… ve bana teşekkür etti.
+- *Portre yakın plan.* **HATİCE:** Kırk yıl önce sen de beni bu yastıkla bitirecektin anne. Ben de senden öğrendim.
+- *Sobanın külleri. Hatice çıplak eliyle parlayan kırmızı düğümü alır; eli yanmaz.* **HATİCE:** Gülizar gitti. Ama onun düğümü… ateşte yanmaz.
+- *Düğümü bileziklerinin yanına, bileğine bağlar.*
+- **HATİCE:** Bundan sonra bu evde düğümü ben atarım.
 
 **BAŞLIK KARTI:** YASTIĞIMDAKİ MUSKA · 8. Bölüm · Kırk Birinci Düğüm
 
-### SAHNE 2 · Kahvaltı (0:36–1:12)
-- *Güneşli mutfak, piyano.* *İÇ SES:* O sabah… ilk kez bir aile gibi kahvaltı yaptık.
+### SAHNE 2 · Kahvaltı (0:28–1:07)
+- *Güneşli mutfak, piyano.* *İÇ SES:* Kırk gece bitmişti. O sabah evimiz ilk kez… gerçekten bir ev gibiydi.
 - **HATİCE:** Çayını tazeleyeyim mi kızım?
-- **EMRE:** Annemle sizi böyle görmek… ne güzel.
+- **EMRE:** Annemle sizi böyle görmek… inanamıyorum.
 - **NAZLI:** Annen artık benim de annem, Emre.
-- **HATİCE:** Bu akşam size yeni bir hediyem var çocuklar. **EMRE:** Yine mi yastık anne? **HATİCE:** Bu sefer… daha güzeli.
-- *Bilezikli el (bileğinde kırmızı düğüm) Nazlı'nın omzundan bir saç teli alır.* **HATİCE:** Omzuna bir saç düşmüş kızım… Dur, alayım.
-- *İÇ SES:* Saçımı aldı… ve gülümsedi. O an hiçbir şey düşünmedim.
-- *Hatice saç telini parmaklarının arasında tutar; gülümsemesi donar, göz kırpmaz.*
+- *Hatice yakın plan; saçları gür.* *İÇ SES:* Ama bir şey gözüme takıldı. Hatice'nin saçları… bir gecede gürleşmişti.
+- *Bilezikli el (bileğinde kırmızı düğüm) Nazlı'nın omzundan bir saç teli alır.* **HATİCE:** Omzuna saç düşmüş kızım. Dur, ben alayım.
+- **NAZLI:** Zahmet etme anne, ben alırdım.
+- **HATİCE:** Olur mu hiç? Senin saçın artık bana emanet.
+- *Saç telini beyaz bir mendile sarar, cebine koyar.* *İÇ SES:* Saçımı mendiline sarıp cebine koydu. O an… hiçbir şey düşünmedim.
 
-### SAHNE 3 · Yeni muska (1:12–2:13)
-- *İÇ SES:* Hediyeyi merak edip… onun odasına girdim. Ta ki o gece… Hatice'nin çekmecesinde onu bulana kadar.
-- *Çekmecede yeni bir muska.* *İÇ SES:* Yeni bir muska. Üstünde benim adım… ve kırk bir düğüm.
-- **NAZLI:** Hayır… Hayır, bu olamaz…
-- **HATİCE:** *(kapıda)* Bu sefer Gülizar yok kızım… Bu sefer düğümü ben atıyorum.
-- **NAZLI:** Gülizar'ı… benim elimle yok ettin. **HATİCE:** Elinle değil kızım… saflığınla.
-- **NAZLI:** Ama sen bana… 'kızım' dedin!
-- **HATİCE:** *(kırmızı vinyet)* Kaynanam da bana 'kızım' derdi.
-- **NAZLI:** Emre! Emre, yardım et!
-- *Emre gelir; gözleri bomboş, elinde kırmızı dikişli yeni bir yastık.* **EMRE:** Annemi üzme, Nazlı.
-- *İÇ SES:* Emre'nin gözleri… boştu. Elinde… yeni bir yastık vardı.
-- **HATİCE:** Kırk birinci gelin… hoş geldin.
-- **HATİCE:** Oğlum… yastığı yatağına koy. **EMRE:** Tamam anne.
+### SAHNE 3 · Çekmecedeki muska (1:07–2:17)
+- *Gece, karanlık salon.* *İÇ SES:* O gece Hatice'nin odasının kapısı aralık kalmıştı. Çekmecesinden kırmızı bir ışık sızıyordu.
+- *Çekmecede yeni bir muska.* *İÇ SES:* Çekmecede yeni bir muska vardı. Üstünde… benim adım.
+- *Muska kâğıdında "NAZLI", yanında düğümlü ip.* *İÇ SES:* Düğümlerin arasında da… kendi saçım.
+- **NAZLI:** Bu benim saçım… Bu sabah aldığın saç!
+- *Kapıda Hatice.* **HATİCE:** Kırk birinci düğüm, kızım. Onu senin saçınla atıyorum.
+- **NAZLI:** Sen bana 'kızım' dedin! Ben sana teşekkür ettim!
+- **HATİCE:** Ben de kaynanama teşekkür etmiştim. Kırk yıl önce… bu evde.
+- **NAZLI:** O zaman Gülizar'ı neden yok ettirdin?
+- **HATİCE:** Çünkü düğümler onundu. Şimdi hepsi benim.
+- **NAZLI:** Emre! Emre, gel buraya!
+- *Emre gelir; gözleri bomboş, elinde kırmızı dikişli yeni bir yastık.* **EMRE:** Bağırma Nazlı. Annem senin iyiliğini istiyor.
+- *İÇ SES:* Emre bana bakıyordu ama… beni görmüyordu. Elinde yeni bir yastık vardı.
+- **HATİCE:** Oğlum, yastığı yatağına koy. **EMRE:** Tamam anne.
+- **HATİCE:** *(yakın plan)* Kırk gün sayacağız kızım. Bu gece… birinci gece.
 - *Siyah ekran, korku vuruşu.*
 
 **SORU KARTI:** Sizce Nazlı bu sefer kurtulabilecek mi?

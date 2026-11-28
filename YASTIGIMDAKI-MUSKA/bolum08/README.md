@@ -1,7 +1,9 @@
 # YASTIĞIMDAKİ MUSKA — 8. Bölüm: "Kırk Birinci Düğüm"
 
-1. bölümle aynı tarz, karakterler, sesler ve çizim motoru. Süre 2:13, 1080×1920, 30 fps.
+1. bölümle aynı tarz, karakterler, sesler ve çizim motoru. Süre 2:17, 1080×1920, 30 fps.
 Senaryo: `../Bolum-08-Kirk-Birinci-Dugum.md`
+
+Yeniden çekim (v2): fısıltı yok, replikler doğal ses tonunda. Giriş: Hatice kaynanasının portresinin karşısında.
 
 ## İzlemek / video almak
 ```

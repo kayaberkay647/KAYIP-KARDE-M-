@@ -5,7 +5,7 @@
    "voice_id": "xyqF3vGMQlPk3e7yA4DI",
    "ad": "AYY NECLA",
    "ayar": {
-    "stability": 0.4,
+    "stability": 0.45,
     "similarity_boost": 0.8,
     "style": 0.35,
     "use_speaker_boost": true
@@ -47,199 +47,237 @@
    "id": "H01",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[whispers] [sinister] 'Kızım' dedim... inandı."
+   "metin": "[calm] [cold] Gelinim Gülizar'ı benim için yok etti... ve bana teşekkür etti.",
+   "parca": [
+    "Gelinim Gülizar'ı benim için yok etti...",
+    "ve bana teşekkür etti."
+   ]
   },
   {
    "id": "H02",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[whispers] Kırk yıldır Gülizar'dan kurtulmak için... bir gelin bekliyordum.",
+   "metin": "[cold] Kırk yıl önce sen de beni bu yastıkla bitirecektin anne. Ben de senden öğrendim.",
    "parca": [
-    "Kırk yıldır Gülizar'dan kurtulmak için...",
-    "bir gelin bekliyordum."
+    "Kırk yıl önce sen de beni bu yastıkla bitirecektin anne.",
+    "Ben de senden öğrendim."
    ]
   },
   {
    "id": "H03",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[slowly] [menacing] Artık kırk düğümün sahibi... benim."
-  },
-  {
-   "id": "H09",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[whispers] [sinister] Bana saf bir gelin lazımdı... Seni seçtim, Nazlı.",
+   "metin": "[calm] Gülizar gitti. Ama onun düğümü... ateşte yanmaz.",
    "parca": [
-    "Bana saf bir gelin lazımdı...",
-    "Seni seçtim, Nazlı."
+    "Gülizar gitti.",
+    "Ama onun düğümü... ateşte yanmaz."
    ]
-  },
-  {
-   "id": "H13",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[whispers] [pleased] Gençliğim... geri geliyor."
-  },
-  {
-   "id": "I01",
-   "kim": "NAZLI",
-   "tur": "icses",
-   "metin": "[softly] [warmly] O sabah... ilk kez bir aile gibi kahvaltı yaptık."
   },
   {
    "id": "H04",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[sweetly] Çayını tazeleyeyim mi kızım?"
+   "metin": "[firm] [cold] Bundan sonra bu evde düğümü ben atarım."
   },
   {
-   "id": "E01",
-   "kim": "EMRE",
-   "tur": "diyalog",
-   "metin": "[happy] Annemle sizi böyle görmek... ne güzel."
-  },
-  {
-   "id": "N01",
+   "id": "I01",
    "kim": "NAZLI",
-   "tur": "diyalog",
-   "metin": "[warmly] [softly] Annen artık benim de annem, Emre."
-  },
-  {
-   "id": "H10",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[sweetly] Bu akşam size yeni bir hediyem var çocuklar."
-  },
-  {
-   "id": "E03",
-   "kim": "EMRE",
-   "tur": "diyalog",
-   "metin": "[laughs] Yine mi yastık anne?"
-  },
-  {
-   "id": "H11",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[laughs softly] [sweetly] Bu sefer... daha güzeli."
+   "tur": "icses",
+   "metin": "[calmly] [warmly] Kırk gece bitmişti. O sabah evimiz ilk kez... gerçekten bir ev gibiydi.",
+   "parca": [
+    "Kırk gece bitmişti.",
+    "O sabah evimiz ilk kez... gerçekten bir ev gibiydi."
+   ]
   },
   {
    "id": "H05",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[sweetly] [softly] Omzuna bir saç düşmüş kızım... Dur, alayım."
+   "metin": "[warm] Çayını tazeleyeyim mi kızım?"
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[happy] Annemle sizi böyle görmek... inanamıyorum."
+  },
+  {
+   "id": "N01",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[warmly] Annen artık benim de annem, Emre."
   },
   {
    "id": "I02",
    "kim": "NAZLI",
    "tur": "icses",
-   "metin": "[softly] Saçımı aldı... ve gülümsedi. O an hiçbir şey düşünmedim.",
+   "metin": "[calmly] [curious] Ama bir şey gözüme takıldı. Hatice'nin saçları... bir gecede gürleşmişti.",
    "parca": [
-    "Saçımı aldı... ve gülümsedi.",
-    "O an hiçbir şey düşünmedim."
+    "Ama bir şey gözüme takıldı.",
+    "Hatice'nin saçları... bir gecede gürleşmişti."
+   ]
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[warm] Omzuna saç düşmüş kızım. Dur, ben alayım."
+  },
+  {
+   "id": "N02",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[warmly] Zahmet etme anne, ben alırdım."
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[warm] [firm] Olur mu hiç? Senin saçın artık bana emanet.",
+   "parca": [
+    "Olur mu hiç?",
+    "Senin saçın artık bana emanet."
+   ]
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[calmly] Saçımı mendiline sarıp cebine koydu. O an... hiçbir şey düşünmedim.",
+   "parca": [
+    "Saçımı mendiline sarıp cebine koydu.",
+    "O an... hiçbir şey düşünmedim."
+   ]
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[tense] O gece Hatice'nin odasının kapısı aralık kalmıştı. Çekmecesinden kırmızı bir ışık sızıyordu.",
+   "parca": [
+    "O gece Hatice'nin odasının kapısı aralık kalmıştı.",
+    "Çekmecesinden kırmızı bir ışık sızıyordu."
+   ]
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[tense] Çekmecede yeni bir muska vardı. Üstünde... benim adım.",
+   "parca": [
+    "Çekmecede yeni bir muska vardı.",
+    "Üstünde... benim adım."
    ]
   },
   {
    "id": "I06",
    "kim": "NAZLI",
    "tur": "icses",
-   "metin": "[whispers] Hediyeyi merak edip... onun odasına girdim."
-  },
-  {
-   "id": "I03",
-   "kim": "NAZLI",
-   "tur": "icses",
-   "metin": "[whispers] Ta ki o gece... Hatice'nin çekmecesinde onu bulana kadar."
-  },
-  {
-   "id": "I04",
-   "kim": "NAZLI",
-   "tur": "icses",
-   "metin": "[trembling] [whispers] Yeni bir muska. Üstünde benim adım... ve kırk bir düğüm.",
-   "parca": [
-    "Yeni bir muska.",
-    "Üstünde benim adım... ve kırk bir düğüm."
-   ]
-  },
-  {
-   "id": "N02",
-   "kim": "NAZLI",
-   "tur": "diyalog",
-   "metin": "[shocked] [whispers] Hayır... Hayır, bu olamaz..."
-  },
-  {
-   "id": "H06",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[calmly] Bu sefer Gülizar yok kızım... Bu sefer düğümü ben atıyorum.",
-   "parca": [
-    "Bu sefer Gülizar yok kızım...",
-    "Bu sefer düğümü ben atıyorum."
-   ]
-  },
-  {
-   "id": "N05",
-   "kim": "NAZLI",
-   "tur": "diyalog",
-   "metin": "[trembling] [hurt] Gülizar'ı... benim elimle yok ettin."
-  },
-  {
-   "id": "H12",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[smiling] [coldly] Elinle değil kızım... saflığınla."
+   "metin": "[tense] [shaky] Düğümlerin arasında da... kendi saçım."
   },
   {
    "id": "N03",
    "kim": "NAZLI",
    "tur": "diyalog",
-   "metin": "[hurt] [shaky] Ama sen bana... 'kızım' dedin!"
-  },
-  {
-   "id": "H07",
-   "kim": "HATICE",
-   "tur": "diyalog",
-   "metin": "[coldly] [slowly] Kaynanam da bana 'kızım' derdi."
-  },
-  {
-   "id": "N04",
-   "kim": "NAZLI",
-   "tur": "diyalog",
-   "metin": "[desperate] [shouting] Emre! Emre, yardım et!"
-  },
-  {
-   "id": "E02",
-   "kim": "EMRE",
-   "tur": "diyalog",
-   "metin": "[flat] [monotone] Annemi üzme, Nazlı."
-  },
-  {
-   "id": "I05",
-   "kim": "NAZLI",
-   "tur": "icses",
-   "metin": "[whispers] [trembling] Emre'nin gözleri... boştu. Elinde... yeni bir yastık vardı.",
+   "metin": "[shocked] Bu benim saçım... Bu sabah aldığın saç!",
    "parca": [
-    "Emre'nin gözleri... boştu.",
-    "Elinde... yeni bir yastık vardı."
+    "Bu benim saçım...",
+    "Bu sabah aldığın saç!"
    ]
   },
   {
    "id": "H08",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[whispers] [menacing] Kırk birinci gelin... hoş geldin."
+   "metin": "[calm] [firm] Kırk birinci düğüm, kızım. Onu senin saçınla atıyorum.",
+   "parca": [
+    "Kırk birinci düğüm, kızım.",
+    "Onu senin saçınla atıyorum."
+   ]
   },
   {
-   "id": "H14",
+   "id": "N04",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[hurt] [angry] Sen bana 'kızım' dedin! Ben sana teşekkür ettim!",
+   "parca": [
+    "Sen bana 'kızım' dedin!",
+    "Ben sana teşekkür ettim!"
+   ]
+  },
+  {
+   "id": "H09",
    "kim": "HATICE",
    "tur": "diyalog",
-   "metin": "[sweetly] [slowly] Oğlum... yastığı yatağına koy."
+   "metin": "[cold] Ben de kaynanama teşekkür etmiştim. Kırk yıl önce... bu evde.",
+   "parca": [
+    "Ben de kaynanama teşekkür etmiştim.",
+    "Kırk yıl önce... bu evde."
+   ]
   },
   {
-   "id": "E04",
+   "id": "N05",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[angry] O zaman Gülizar'ı neden yok ettirdin?"
+  },
+  {
+   "id": "H10",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[cold] [firm] Çünkü düğümler onundu. Şimdi hepsi benim.",
+   "parca": [
+    "Çünkü düğümler onundu.",
+    "Şimdi hepsi benim."
+   ]
+  },
+  {
+   "id": "N06",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[desperate] [shouting] Emre! Emre, gel buraya!"
+  },
+  {
+   "id": "E02",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[flat] [monotone] Bağırma Nazlı. Annem senin iyiliğini istiyor.",
+   "parca": [
+    "Bağırma Nazlı.",
+    "Annem senin iyiliğini istiyor."
+   ]
+  },
+  {
+   "id": "I07",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[tense] [shaky] Emre bana bakıyordu ama... beni görmüyordu. Elinde yeni bir yastık vardı.",
+   "parca": [
+    "Emre bana bakıyordu ama... beni görmüyordu.",
+    "Elinde yeni bir yastık vardı."
+   ]
+  },
+  {
+   "id": "H11",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[calm] Oğlum, yastığı yatağına koy."
+  },
+  {
+   "id": "E03",
    "kim": "EMRE",
    "tur": "diyalog",
    "metin": "[flat] [monotone] Tamam anne."
+  },
+  {
+   "id": "H12",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[cold] [slowly] Kırk gün sayacağız kızım. Bu gece... birinci gece.",
+   "parca": [
+    "Kırk gün sayacağız kızım.",
+    "Bu gece... birinci gece."
+   ]
   }
  ]
 }
