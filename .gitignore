@@ -2,3 +2,4 @@
 *.webm
 .gecici_ses.wav
 node_modules/
+__pycache__/
