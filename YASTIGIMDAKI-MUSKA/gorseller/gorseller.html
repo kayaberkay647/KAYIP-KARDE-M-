@@ -17,6 +17,7 @@
 <canvas id="soru3" width="1080" height="1920"></canvas>
 <canvas id="soru4" width="1080" height="1920"></canvas>
 <canvas id="anket5" width="1080" height="1920"></canvas>
+<canvas id="soru8" width="1080" height="1920"></canvas>
 <script>const ZAMAN = { fps: 30, replikler: [] };</script>
 <script src="../animasyon/motor.js"></script>
 <script src="../animasyon/mekanlar.js"></script>
@@ -271,6 +272,49 @@ function hap(g, x, y, w, h, saat, yazi_) {
   buton(1460, '#c0262f', '#7a1219', 'hayir', 'HAYIR, FAZLA OLDU');
   yazi(g, 'Oyunu yorumlara yaz:', W / 2, 1720, 'italic 600 56px "Lora"', '#fff4e4', 8);
   yazi(g, 'EVET mi, HAYIR mı?', W / 2, 1805, '700 66px "Lora"', '#e0313b', 9, 3);
+})();
+// ═════ 7) 8. BÖLÜM SORUSU: "NAZLI ŞİMDİ NE YAPMALI?" ═════
+(function () {
+  const g = document.getElementById('soru8').getContext('2d');
+  arka(g, 'salonGece8', haticeSalon, { olcek: 1.5, merkez: [540, 700], blur: 4 });
+  g.globalCompositeOperation = 'multiply'; g.fillStyle = 'rgba(70,95,70,.7)'; g.fillRect(0, 0, W, H); g.globalCompositeOperation = 'source-over';
+  g.fillStyle = 'rgba(6,10,6,.35)'; g.fillRect(0, 0, W, H);
+  // kaynananın siyah kurdeleli portresi ve mum
+  g.save(); g.translate(230, 400); g.scale(.78, .78);
+  rr(g, -220, -300, 440, 560, 10); dol(g, '#3a2414'); cizgi(g, 8); rr(g, -186, -266, 372, 492, 6); dol(g, '#9a8a6e');
+  el(g, 0, -60, 90, 100); dol(g, '#c9b38e'); el(g, 0, -160, 60, 40); dol(g, '#6a6258'); el(g, 0, -110, 96, 60); dol(g, '#7a7268');
+  for (const k of [-1, 1]) { el(g, k * 34, -60, 12, 6); dol(g, '#3a2a1a'); }
+  g.beginPath(); g.moveTo(-26, 0); g.quadraticCurveTo(0, -8, 26, 0); cizgi(g, 5, '#3a2a1a');
+  poly(g, [[-150, 60], [150, 60], [186, 226], [-186, 226]]); dol(g, '#3a3030');
+  poly(g, [[110, -300], [220, -300], [220, -190]]); dol(g, '#0a0606'); g.beginPath(); g.moveTo(110, -300); g.lineTo(220, -190); cizgi(g, 18, '#0a0606');
+  g.restore();
+  isikHalesi(g, 230, 560, 420, '255,170,80', .45); mum(g, 230, 690, .75, 0);
+  // Hatice: soğuk gülümseme, elinde saç sarılı mendil
+  isikHalesi(g, 700, 420, 520, '255,60,40', .25);
+  karakter(g, HATICE, { x: 700, y: 370, s: 1.35, t: 2, T: 2, bilezikSay: 3, konus: 0, gozAcik: .78, kirpma: false, bebek: .55, kas: 'normal', gulum: .38, bak: [-.25, .1], don: -.15,
+    kollar: { sag: { el: [80, 190], on: true } },
+    enUst: g => { g.save(); g.translate(70, 150); g.rotate(-.2); rr(g, -70, -52, 140, 104, 8); dol(g, '#f4f0e8'); cizgi(g, 4); g.globalAlpha = .6; rr(g, -58, -40, 116, 80, 4); cizgi(g, 2, '#c0262f'); g.globalAlpha = 1; sacTeli(g, -40, -20, 120, .3, .6, '#8d5837', 3.5); g.restore(); elMitt(g, 80, 200, 1, -.4, HATICE.ten, -1); } });
+  yazi(g, 'YASTIĞIMDAKİ MUSKA · 8. BÖLÜM', W / 2, 58, '700 32px "Lora"', '#d6cfc0', 6, 5);
+  // ortada soru paneli
+  g.fillStyle = dg(g, 0, 640, 0, 1300, [[0, 'rgba(4,8,5,0)'], [.15, 'rgba(4,8,5,.88)'], [1, 'rgba(4,8,5,.95)']]); g.fillRect(0, 640, W, 1280);
+  g.save(); g.shadowColor = 'rgba(200,30,40,.7)'; g.shadowBlur = 40;
+  rr(g, 50, 745, 980, 450, 34); g.fillStyle = 'rgba(12,6,7,.96)'; g.fill(); g.shadowBlur = 0;
+  rr(g, 50, 745, 980, 450, 34); cizgi(g, 8, KIRMIZI); rr(g, 68, 763, 944, 414, 26); cizgi(g, 3, '#7a1a1f');
+  g.restore();
+  yazi(g, "SANA 'KIZIM' DEDİ…", W / 2, 850, '700 82px "Lora"', '#fff4e4', 10, 2);
+  yazi(g, 'TUZAKMIŞ!', W / 2, 985, '700 132px "Lora"', '#e0313b', 14, 3);
+  zikzak(g, 250, 830, 1068, '#b01f28', 5);
+  yazi(g, 'Nazlı şimdi ne yapmalı?', W / 2, 1125, 'italic 600 62px "Lora"', '#fff4e4', 8);
+  const sec = [['A', 'Muskayı çalıp evden kaçmalı', '#c9a24f'], ['B', "Emre'nin yastığını gizlice yakmalı", KIRMIZI], ['C', "Hatice'nin oyununu ona karşı kullanmalı", '#3d7a5a']];
+  sec.forEach(([h, s_, renk], i) => {
+    const y = 1320 + i * 122;
+    rr(g, 50, y - 50, 980, 100, 50); g.fillStyle = 'rgba(248,240,226,.98)'; g.fill(); cizgi(g, 5, KOYU);
+    el(g, 104, y, 40, 40); dol(g, renk); cizgi(g, 5, KOYU); yazi(g, h, 104, y + 3, '700 50px "Lora"', '#fff4e4');
+    g.font = '700 40px "Lora"'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#1e0709'; g.fillText(s_, 164, y + 3);
+  });
+  yazi(g, 'Cevabını yorumlara yaz:', W / 2, 1710, 'italic 600 56px "Lora"', '#fff4e4', 8);
+  yazi(g, 'A, B, C?', W / 2, 1790, '700 70px "Lora"', '#e0313b', 9, 6);
+  for (const x of [W / 2 - 260, W / 2 + 260]) { g.beginPath(); g.moveTo(x - 26, 1776); g.lineTo(x, 1804); g.lineTo(x + 26, 1776); cizgi(g, 9, KIRMIZI); }
 })();
 window.HAZIR = true;
 </script>
