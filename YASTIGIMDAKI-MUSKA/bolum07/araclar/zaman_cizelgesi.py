@@ -18,49 +18,49 @@ SR, FPS = 48000, 30
 # id, en kısa süre, replikler [(id, öncesindeki boşluk)], kuyruk, efektler [(ad, çekim içi saniye, ses düzeyi)]
 C = lambda id, **k: dict(id=id, **k)
 CEKIMLER = [
-    # SAHNE 1 · İKİ GELİN
-    C('A1', min=6.4, bas=0.4, rep=[('G01', 0)], kuyruk=0.7),
-    C('A2', min=4.2, bas=0.6, rep=[('H01', 0)], kuyruk=0.8, efekt=[('iplik_sarma', 0.0, 1.0)]),
-    C('A3', min=5.0, bas=0.5, rep=[('I01', 0)], kuyruk=0.6, efekt=[('iplik_sarma', 0.2, .6)]),
-    C('A4', bas=0.4, rep=[('G02', 0)], kuyruk=0.8),
-    C('A5', bas=0.4, rep=[('G06', 0)], kuyruk=0.8),
+    # SAHNE 1 · KAPIDAKİ GÜLİZAR
+    C('A1', min=5.8, bas=0.4, rep=[('G01', 0)], kuyruk=0.9),
+    C('A2', bas=0.3, rep=[('H01', 0)], kuyruk=0.7),
+    C('A3', bas=0.3, rep=[('G02', 0)], kuyruk=0.7),
+    C('A4', bas=0.4, rep=[('I01', 0)], kuyruk=0.6),
+    C('A5', bas=0.3, rep=[('G03', 0)], kuyruk=0.9),
+    C('A6', min=4.0, bas=0.6, rep=[('I06', 0)], kuyruk=0.8),
     C('T1', min=3.4, efekt=[('baslik_hit', 0.15, .9)]),
-    # SAHNE 2 · KARŞI BÜYÜ
-    C('B0', bas=0.5, rep=[('I05', 0)], kuyruk=0.5),
-    C('B1', bas=0.3, rep=[('H02', 0)], kuyruk=0.5),
-    C('B2', min=4.4, bas=0.5, rep=[('I02', 0)], kuyruk=0.6, efekt=[('kagit', 0.2, .6)]),
-    C('B3', bas=0.2, rep=[('H03', 0)], kuyruk=0.4),
-    C('B4', min=4.4, efekt=[('kumas', 0.3, .8)]),
-    C('B5', bas=0.5, rep=[('H04', 0)], kuyruk=0.5, efekt=[('bilezik', 0.3, .8), ('bilezik', 2.6, .7)]),
-    C('B6', min=4.6, bas=0.6, rep=[('I06', 0)], kuyruk=0.8, efekt=[('dugum', 0.6, .9), ('bilezik', 0.2, .5)]),
-    C('B7', bas=0.3, rep=[('G03', 0)], kuyruk=0.6),
-    # SAHNE 3 · BÜYÜ GERİ DÖNDÜ
-    C('C1', bas=0.5, rep=[('H05', 0)], kuyruk=0.5),
-    C('C2', min=5.8, bas=0.6, rep=[('G04', 0)], kuyruk=1.0, efekt=[('dagilma', 0.3, 1.0)]),
-    C('C3', min=3.4, efekt=[('mum_sonme', 0.4, .8)]),
-    C('C4', bas=0.8, rep=[('I03', 0)], kuyruk=0.8),
-    C('C5', min=4.0, bas=1.0, rep=[('N01', 0)], kuyruk=1.0),
-    C('C6', bas=0.4, rep=[('H06', 0)], kuyruk=0.8),
-    C('C7', min=4.2, bas=0.8, rep=[('H08', 0)], kuyruk=2.0),
+    # SAHNE 2 · KIRK DÜĞÜM
+    C('B1', bas=0.4, rep=[('H02', 0), ('H03', 0.4)], kuyruk=0.6),
+    C('B2', min=3.6, efekt=[('kagit', 0.3, .6)]),
+    C('B3', bas=0.3, rep=[('G04', 0)], kuyruk=0.6),
+    C('B4', min=7.0, bas=0.6, rep=[('I02', 0)], kuyruk=0.6, efekt=[('dugum', 0.3, .7), ('dugum', 2.4, .7), ('dugum', 4.5, .7)]),
+    C('B5', bas=0.3, rep=[('G05', 0)], kuyruk=0.6),
+    C('B6', bas=0.4, rep=[('H04', 0)], kuyruk=1.0),
+    C('B7', min=3.2, efekt=[('dugum', 0.6, 1.0)]),
+    # SAHNE 3 · BİR AVUÇ KÜL
+    C('C1', min=5.4, bas=0.3, rep=[('G06', 0)], kuyruk=1.8, efekt=[('dagilma', 1.8, .6)]),
+    C('C2', bas=0.8, rep=[('I03', 0)], kuyruk=0.6),
+    C('C3', bas=1.2, rep=[('N01', 0)], kuyruk=0.7),
+    C('C4', bas=0.4, rep=[('H05', 0)], kuyruk=1.0),
+    C('C5', bas=0.3, rep=[('I04', 0)], kuyruk=0.6),
+    C('C6', bas=0.3, rep=[('H06', 0)], kuyruk=0.5),
+    C('C7', bas=0.3, rep=[('N04', 0)], kuyruk=0.9),
     # SAHNE 4 · SABAH
-    C('D1', min=5.6, bas=0.8, rep=[('I04', 0)], kuyruk=0.4, efekt=[('anahtar_kapi', 3.2, .7)]),
-    C('D2', bas=0.4, rep=[('E01', 0)], kuyruk=0.6),
-    C('D3', min=5.4, bas=0.6, rep=[('N02', 0)], kuyruk=1.2),
-    C('D4', bas=0.8, rep=[('H07', 0)], kuyruk=1.6),
-    C('D5', min=5.8, bas=1.6, rep=[('G05', 0)], kuyruk=0.8),
-    C('D6', min=1.4, efekt=[('final_hit', 0.0, 1.0)]),
-    C('D7', min=5.6),
+    C('D1', min=4.4, bas=1.6, rep=[('E01', 0)], kuyruk=0.4, efekt=[('anahtar_kapi', 0.0, .7)]),
+    C('D2', bas=0.3, rep=[('N02', 0)], kuyruk=0.5),
+    C('D3', bas=0.5, rep=[('E02', 0), ('N03', 0.4)], kuyruk=1.0),
+    C('D4', bas=0.6, rep=[('H07', 0)], kuyruk=0.7),
+    C('D5', min=6.8, bas=1.2, rep=[('I05', 0)], kuyruk=1.0),
+    C('D6', min=1.4, efekt=[('final_hit', 0.0, .9)]),
+    C('D7', min=5.4),
 ]
 
 # Fon sesleri: ad, başlangıç çekimi, bitiş çekimi, düzey, giriş, çıkış (saniye), [ofset]
 FONLAR = [
-    ('gerilim', 'A1', 'B7', .40, 0.5, 0.4),
-    ('mum_oda', 'A1', 'B7', .35, 0.5, 0.4, 2.0),
-    ('gerilim', 'C1', 'C2', .55, 0.2, 0.6, 6.0),
-    ('piyano', 'C5', 'D3', .32, 1.5, 1.0),
+    ('gerilim', 'A1', 'B7', .32, 0.6, 0.4),
+    ('mum_oda', 'A1', 'C2', .30, 0.6, 0.6, 2.0),
+    ('gece_saat', 'C2', 'C7', .25, 0.6, 0.4),
+    ('piyano', 'C4', 'C7', .18, 1.5, 0.8),
     ('mutfak', 'D1', 'D3', .14, 0.8, 0.6),
-    ('soba', 'D4', 'D5', .45, 0.5, 0.6),
-    ('gerilim', 'D5', 'D5', .40, 1.2, 0.05),
+    ('soba', 'D4', 'D5', .40, 0.5, 0.6),
+    ('gerilim', 'D5', 'D5', .30, 1.5, 0.05),
 ]
 
 # ───────────────────────── SES İŞLEME ─────────────────────────

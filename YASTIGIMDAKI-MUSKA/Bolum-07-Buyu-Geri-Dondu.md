@@ -1,44 +1,44 @@
 # YASTIĞIMDAKİ MUSKA · 7. Bölüm: Büyü Geri Döndü
-**Süre:** 2:15 · **Format:** 9:16 dikey
+**Süre:** 2:16 · **Format:** 9:16 dikey · **Yeniden çekim:** sade ve gergin anlatım, uçan iplik efekti yok, fısıltı yok; herkes doğal ve net sesle konuşuyor.
 
 ## Senaryo
 
-### SAHNE 1 · İki gelin (0:00–0:38)
-*Depo kapısında Gülizar.*
-- **GÜLİZAR:** Bu gece iki gelin alacağım… biri eski, biri yeni.
-- *Gülizar'dan fırlayan kırmızı iplikler Nazlı'nın ve Hatice'nin bileklerine dolanır.* **HATİCE:** Gelin, kaç!
-- *İÇ SES:* Kırmızı iplikler… bileklerimize dolanmaya başladı.
-- **GÜLİZAR:** Yüz yıl önce kaynanam beni toprağa gömdü… Ben de her gelinin kırk gününü yedim.
-- **GÜLİZAR:** Kırk birinci gelin olacaksın Nazlı… Ve kayınvaliden… benimle gelecek.
+### SAHNE 1 · Kapıdaki Gülizar (0:00–0:36)
+*Depo kapısı açık. Kapı eşiğinde Gülizar.*
+- **GÜLİZAR:** O sandığı açan gelin… kırkıncı gecesini görmez.
+- **HATİCE:** *(soğuk, kararlı)* Benim kırkıncı gecem kırk yıl önce geçti, Gülizar.
+- **GÜLİZAR:** Geçmedi Hatice. Sadece ertelendi. Senin yerine kaynanan öldü… unuttun mu?
+- *Nazlı 1924 fotoğrafını arkasına saklar.* *İÇ SES:* Fotoğrafı arkama sakladım. Hatice'nin dediği yol… buydu.
+- **GÜLİZAR:** Bu gece biriniz benimle gelecek. Hangisi olacağına… siz karar verin.
+- *Nazlı ve Hatice yan yana.* *İÇ SES:* Hatice bir an bana baktı. O bakışı… hiç unutmayacağım.
 
 **BAŞLIK KARTI:** YASTIĞIMDAKİ MUSKA · 7. Bölüm · Büyü Geri Döndü
 
-### SAHNE 2 · Karşı büyü (0:38–1:15)
-- *İÇ SES:* İlk kez… Hatice'nin gözlerinde benim korkumu gördüm.
-- **HATİCE:** Düğümü atan çözer… ama atanın kendi saçı lazım!
-- *1924 fotoğrafının arkasında bantlı bir tutam saç.* *İÇ SES:* Fotoğrafın arkasında… yüz yıllık bir tutam saç vardı.
-- **HATİCE:** Onun saçı! Gelin, yastığa koy!
-- *Nazlı saçı lanetli yastığın yarığına iter.*
-- *Hatice cebinden parlayan dördüncü bileziği çıkarır.* **HATİCE:** Dördüncü bilezik bende… Dört bilezik, tek yastık!
-- *Yerde yastık, üstünde dört bilezik, çevresinde kırk düğümlü iplik.* *İÇ SES:* Son düğümü… kendi ellerimle attım.
-- **GÜLİZAR:** Yapmayın! O düğüm… bana döner!
+### SAHNE 2 · Kırk düğüm (0:39–1:13)
+- **HATİCE:** Bana bak gelin. Bu kadını yüz yıldır kimse yenemedi. Ama düğümü atanın saçı sendeyse… kırk düğümü tek tek çözebilirsin.
+- *Fotoğrafın arkasında bantlı bir tutam saç.*
+- **GÜLİZAR:** O fotoğrafı bana ver!
+- *Nazlı'nın elleri kırk düğümlü ipi tek tek çözer.* *İÇ SES:* Parmaklarım titriyordu. Her düğüm çözüldükçe… Gülizar'ın yüzü biraz daha çöküyordu.
+- *Gülizar'ın yüzünde çatlaklar.* **GÜLİZAR:** Dur! O düğümler senin kaderin değil… benim!
+- **HATİCE:** *(sakin, yarım gülümseme)* Kırk yıldır bu anı bekliyordum, Gülizar.
+- *Son düğüm çözülür.*
 
-### SAHNE 3 · Büyü geri döndü (1:15–1:55)
-- **HATİCE:** Kırk düğüm, kırk gelin… Hepsi sana dönsün, Gülizar!
-- *Gülizar kırmızı ipliklere dönüşerek dağılır.* **GÜLİZAR:** Hayııır!
-- *Mum söner. Sessizlik.*
-- *İÇ SES:* Ve o an… boğazımda bir sıcaklık hissettim.
-- **NAZLI:** *(dört bölüm sonra ilk kez kendi sesiyle)* Anne…?
-- **HATİCE:** *(ağlayarak, ilk kez "kızım" der)* Sesin… sesin geri geldi kızım.
-- *Sarılırlar.* **HATİCE:** Affet beni kızım… Kırk yıl bana da kimse 'kızım' demedi.
+### SAHNE 3 · Bir avuç kül (1:13–1:43)
+- **GÜLİZAR:** *(sarsılmış, zayıf)* Hatice… sen bunu…
+- *Gülizar çöker; yerde siyah örtü ve kül kalır.* *İÇ SES:* Son düğümü çözdüğümde… geriye sadece bir avuç kül kaldı.
+- **NAZLI:** *(eli boğazında, dört bölüm sonra ilk kez kendi sesiyle)* Bitti mi…? Gerçekten bitti mi?
+- **HATİCE:** Bitti kızım.
+- *İÇ SES:* İlk kez bana 'kızım' demişti. Sesim geri gelmişti… ve ona inanmak istedim.
+- *Hatice güllü yastığı kucağına alır.* **HATİCE:** O yastığı da, o ipliği de yakacağız. Hepsini.
+- **NAZLI:** Teşekkür ederim.
 
-### SAHNE 4 · Sabah (1:55–2:15)
-- *Güneşli antre.* *İÇ SES:* Kırk gece bitmişti. Sabah… kapı çaldı.
-- **EMRE:** Nazlı…? Nazlı! Rüyamda seni kaybettiğimi gördüm…
-- *Sarılırlar.* **NAZLI:** Buradayım Emre… buradayım.
-- *Hatice yastığı sobaya atar.* **HATİCE:** Bu yastık… bu evde bir gelini daha yakmayacak.
-- *Küllerin arasında tek bir kırmızı düğüm hâlâ parlıyor.* **GÜLİZAR:** *(fısıltı)* Kırk birinci düğüm… hâlâ bağlı.
+### SAHNE 4 · Sabah (1:43–2:16)
+- *Antre kapısı açılır, Emre telaşla girer.* **EMRE:** Nazlı? Dün geceden beri arıyorum, neden açmıyorsun?
+- **NAZLI:** Uzun hikâye Emre… Gel buraya.
+- *Sarılırlar.* **EMRE:** Rüyamda seni hiç tanımıyordum. Çok kötüydü. **NAZLI:** Sadece bir rüyaydı.
+- *Mutfak. Hatice yastığı sobaya atar.* **HATİCE:** Bu yastık, bu evde bir gelini daha yakmayacak.
+- *Ateşin ışığında Hatice sobanın kapağını kapatır, yavaşça gülümser.* *İÇ SES:* Ama o sabah görmedim… Hatice sobanın kapağını kapatırken gülümsüyordu.
 - *Siyah ekran, korku vuruşu.*
 
-**SORU KARTI:** Sizce Gülizar gerçekten gitti mi?
+**SORU KARTI:** Sizce Hatice neden gülümsedi?
 *Sonraki bölüm: Kırk Birinci Düğüm*

@@ -1,7 +1,10 @@
 # YASTIĞIMDAKİ MUSKA — 7. Bölüm: "Büyü Geri Döndü"
 
-1. bölümle aynı tarz, karakterler, sesler ve çizim motoru. Süre 2:15, 1080×1920, 30 fps.
+1. bölümle aynı tarz, karakterler, sesler ve çizim motoru. Süre 2:16, 1080×1920, 30 fps.
 Senaryo: `../Bolum-07-Buyu-Geri-Dondu.md`
+
+Yeniden çekim (v2): daha sade, gergin anlatım. Uçan iplik efekti kaldırıldı, fısıltı yok, replikler doğal ses tonunda.
+Gülizar'ın ses ayarı daha sabit (stability 0.5).
 
 ## İzlemek / video almak
 ```
