@@ -1,0 +1,218 @@
+{
+ "model": "eleven_v4",
+ "sesler": {
+  "HATICE": {
+   "voice_id": "xyqF3vGMQlPk3e7yA4DI",
+   "ad": "AYY NECLA",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "NAZLI": {
+   "voice_id": "ZaoBgxgzPhoCm533Pb7B",
+   "ad": "Zeynep Signature Voice Warm",
+   "ayar": {
+    "stability": 0.4,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+   }
+  },
+  "EMRE": {
+   "voice_id": "Q5n6GDIjpN0pLOlycRFT",
+   "ad": "AYY MERT",
+   "ayar": {
+    "stability": 0.45,
+    "similarity_boost": 0.8,
+    "style": 0.25,
+    "use_speaker_boost": true
+   }
+  },
+  "GULIZAR": {
+   "voice_id": "phb4aIRkTrhyNsg49N27",
+   "ad": "MUSKA - Gulizar Ana",
+   "ayar": {
+    "stability": 0.35,
+    "similarity_boost": 0.85,
+    "style": 0.45,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "replikler": [
+  {
+   "id": "G01",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [whispers] [menacing] Bu gece iki gelin alacağım... biri eski, biri yeni.",
+   "parca": [
+    "Bu gece iki gelin alacağım…",
+    "biri eski, biri yeni."
+   ]
+  },
+  {
+   "id": "H01",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[terrified] [shouting] Gelin, kaç!"
+  },
+  {
+   "id": "I01",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[trembling] [whispers] Kırmızı iplikler... bileklerimize dolanmaya başladı."
+  },
+  {
+   "id": "G02",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [slowly] Yüz yıl önce kaynanam beni toprağa gömdü... Ben de her gelinin kırk gününü yedim.",
+   "parca": [
+    "Yüz yıl önce kaynanam beni toprağa gömdü...",
+    "Ben de her gelinin kırk gününü yedim."
+   ]
+  },
+  {
+   "id": "G06",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[whispers] [menacing] Kırk birinci gelin olacaksın Nazlı... Ve kayınvaliden... benimle gelecek.",
+   "parca": [
+    "Kırk birinci gelin olacaksın Nazlı...",
+    "Ve kayınvaliden... benimle gelecek."
+   ]
+  },
+  {
+   "id": "I05",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] İlk kez... Hatice'nin gözlerinde benim korkumu gördüm."
+  },
+  {
+   "id": "H02",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[panicked] [fast] Düğümü atan çözer... ama atanın kendi saçı lazım!",
+   "parca": [
+    "Düğümü atan çözer...",
+    "ama atanın kendi saçı lazım!"
+   ]
+  },
+  {
+   "id": "I02",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Fotoğrafın arkasında... yüz yıllık bir tutam saç vardı."
+  },
+  {
+   "id": "H03",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[shouting] Onun saçı! Gelin, yastığa koy!"
+  },
+  {
+   "id": "H04",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[determined] Dördüncü bilezik bende... Dört bilezik, tek yastık!",
+   "parca": [
+    "Dördüncü bilezik bende...",
+    "Dört bilezik, tek yastık!"
+   ]
+  },
+  {
+   "id": "I06",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[determined] [whispers] Son düğümü... kendi ellerimle attım."
+  },
+  {
+   "id": "G03",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[raspy] [panicked] Yapmayın! O düğüm... bana döner!"
+  },
+  {
+   "id": "H05",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[firmly] [loudly] Kırk düğüm, kırk gelin... Hepsi sana dönsün, Gülizar!",
+   "parca": [
+    "Kırk düğüm, kırk gelin...",
+    "Hepsi sana dönsün, Gülizar!"
+   ]
+  },
+  {
+   "id": "G04",
+   "kim": "GULIZAR",
+   "tur": "diyalog",
+   "metin": "[screaming] Hayııır!"
+  },
+  {
+   "id": "I03",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[whispers] Ve o an... boğazımda bir sıcaklık hissettim."
+  },
+  {
+   "id": "N01",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[softly] [emotional] Anne...?"
+  },
+  {
+   "id": "H06",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[emotional] [softly] Sesin... sesin geri geldi kızım."
+  },
+  {
+   "id": "H08",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[emotional] [softly] Affet beni kızım... Kırk yıl bana da kimse 'kızım' demedi.",
+   "parca": [
+    "Affet beni kızım...",
+    "Kırk yıl bana da kimse 'kızım' demedi."
+   ]
+  },
+  {
+   "id": "I04",
+   "kim": "NAZLI",
+   "tur": "icses",
+   "metin": "[softly] Kırk gece bitmişti. Sabah... kapı çaldı."
+  },
+  {
+   "id": "E01",
+   "kim": "EMRE",
+   "tur": "diyalog",
+   "metin": "[emotional] Nazlı...? Nazlı! Rüyamda seni kaybettiğimi gördüm...",
+   "parca": [
+    "Nazlı...? Nazlı!",
+    "Rüyamda seni kaybettiğimi gördüm..."
+   ]
+  },
+  {
+   "id": "N02",
+   "kim": "NAZLI",
+   "tur": "diyalog",
+   "metin": "[emotional] [softly] Buradayım Emre... buradayım."
+  },
+  {
+   "id": "H07",
+   "kim": "HATICE",
+   "tur": "diyalog",
+   "metin": "[firmly] [slowly] Bu yastık... bu evde bir gelini daha yakmayacak."
+  },
+  {
+   "id": "G05",
+   "kim": "GULIZAR",
+   "tur": "fisilti",
+   "metin": "[whispers] Kırk birinci düğüm... hâlâ bağlı.",
+   "altyazi": "Kırk birinci düğüm… hâlâ bağlı."
+  }
+ ]
+}
